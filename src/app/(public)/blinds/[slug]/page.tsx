@@ -1,8 +1,5 @@
-
 const page = () => {
-  return (
-    <div>blind details</div>
-  )
-}
+  return <div>blind details</div>;
+};
 
-export default page
+export default page;

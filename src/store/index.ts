@@ -6,11 +6,10 @@ import { appReducer } from "./app";
 export const makeStore = () =>
   configureStore({
     reducer: {
-      app:appReducer,
+      app: appReducer,
     },
   });
 
 export type RootState = ReturnType<ReturnType<typeof makeStore>["getState"]>;
 export type AppDispatch = ReturnType<typeof makeStore>["dispatch"];
 export const wrapper = createWrapper(makeStore);
-
