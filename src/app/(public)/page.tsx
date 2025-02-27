@@ -3,6 +3,7 @@ import BlindsShowcase from "@/components/common/BlindsShowcase";
 import ProductionSteps from "@/components/common/ProductionSteps";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import BlindsCustomization from "@/components/home/BlindsCustomization";
+import MediaSpotlight from "@/components/home/MediaSpotlight";
 import ServicesLocation from "@/components/home/ServicesLocation";
 // importing home page data to show
 import { homePage } from "@/configs/home";
@@ -34,6 +35,10 @@ const page = () => {
        * production steps
        */}
       <ProductionSteps data={homePage.productionSteps} />
+      {/*
+       *media spotlight section
+       */}
+      <MediaSpotlight data={homePage.mediaSpotlight} />
     </div>
   );
 };

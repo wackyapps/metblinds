@@ -166,6 +166,9 @@ export const homePage = {
       buttonText: "Learn More",
     },
   ],
+  /**
+   * production steps data for homepage
+   */
   productionSteps: {
     heading: "Why met blinds?",
     subHeading: "The Met Blinds Post-Sale Manufacturing Process",
@@ -201,5 +204,15 @@ export const homePage = {
           "Your beautiful custom blinds are packed and ready to be installed in your home!",
       },
     ],
+  },
+  /**
+   * media spotlight section data for homepage
+   */
+  mediaSpotlight: {
+    heading: "As seen on HGTV’S hoarder house flippers",
+    subHeading:
+      "Metbinds Calgary is the official sponsor of the show. Our blinds are used in all renovations",
+    buttonText: "Give us a call",
+    background: "/images/home/media-spotlight-bg.png",
   },
 };
