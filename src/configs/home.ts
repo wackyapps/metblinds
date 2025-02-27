@@ -1,4 +1,7 @@
 export const homePage = {
+  /**
+   * homepage banner data
+   */
   banner: [
     {
       coverImage: "/banners/home-banner-1.png",
@@ -6,7 +9,7 @@ export const homePage = {
       description:
         "Met Blinds, your trusted Canadian blinds company in Calgary, Alberta, takes pride in transforming your living spaces with high-quality window coverings that seamlessly marry style and functionality.",
       buttonText: "Shop Sales",
-      link: "/blinds",
+      link: "/",
     },
     {
       coverImage: "/banners/home-banner-2.png",
@@ -29,6 +32,9 @@ export const homePage = {
       textPosition: "right",
     },
   ],
+  /**
+   * services locatoin section data
+   */
   servicesLocation: {
     heading: "Serving Your Windows",
     description:
@@ -47,5 +53,33 @@ export const homePage = {
       src: "/images/home/services-location-image.PNG",
       alt: "Services Location",
     },
+  },
+  /**
+   * blinds customizaton data
+   */
+  blindsCustomization: {
+    heading:
+      "Customize your window blinds, Calgary homeowners, and have them installed within 8 - 10 business days!",
+    subHeading: "BYOB (Build Your Own Blinds)",
+    buttonText: "Request a Free Quote",
+    background: "/images/home/custom-blind-bg.png",
+    features: [
+      {
+        image: "/images/home/choose-style.svg",
+        title: "Choose Your Style",
+      },
+      {
+        image: "/images/home/choose-hardware.svg",
+        title: "Choose Your Hardware",
+      },
+      {
+        image: "/images/home/choose-fabric.svg",
+        title: "Choose Your Fabric",
+      },
+      {
+        image: "/images/home/choose-control.svg",
+        title: "Choose Your Control System",
+      },
+    ],
   },
 };

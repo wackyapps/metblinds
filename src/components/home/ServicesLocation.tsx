@@ -2,13 +2,15 @@ import { homePage } from "@/configs/home";
 import Image from "next/image";
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
+
+// defining props of data and className
 const ServicesLocation: React.FC<{
   data: typeof homePage.servicesLocation;
   className?: string;
 }> = ({ data, className }) => {
   return (
     <div className={`bg-[#F7F9FA] px-3 ${className}`}>
-      <div className="global-container rounded-3xl bg-white shadow-lg">
+      <div className="global-container relative z-50 -translate-y-5 rounded-3xl bg-white shadow-lg">
         <div className="flex items-center justify-between p-10">
           {/*
            * text containe of the heading and desctiption and locations
