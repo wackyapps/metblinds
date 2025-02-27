@@ -1,4 +1,5 @@
 import BannerAdvanced from "@/components/common/BannerAdvanced";
+import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import BlindsCustomization from "@/components/home/BlindsCustomization";
 import ServicesLocation from "@/components/home/ServicesLocation";
 // importing home page data to show
@@ -19,6 +20,10 @@ const page = () => {
        * blinds customization section
        */}
       <BlindsCustomization data={homePage.blindsCustomization} />
+      {/*
+       * blind advantages section
+       */}
+      <BlindsAdvantages data={homePage.blindsAdvantages} />
     </div>
   );
 };

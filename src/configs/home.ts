@@ -1,3 +1,7 @@
+import { BsCalendar2Check } from "react-icons/bs";
+import { PiMedal } from "react-icons/pi";
+import { GiSandsOfTime } from "react-icons/gi";
+import { GiUpgrade } from "react-icons/gi";
 export const homePage = {
   /**
    * homepage banner data
@@ -79,6 +83,39 @@ export const homePage = {
       {
         image: "/images/home/choose-control.svg",
         title: "Choose Your Control System",
+      },
+    ],
+  },
+  /**
+   * blind advantages data
+   */
+  blindsAdvantages: {
+    heading: "Premium Window Blinds in Calgary ",
+    subHeading: "That Enhance Your Home",
+    features: [
+      {
+        icon: BsCalendar2Check,
+        title: "FREE ESTIMATES",
+        description:
+          "Get a no-obligation quote for your custom blinds at no cost.",
+      },
+      {
+        icon: PiMedal,
+        title: "10 years warranty",
+        description: "Enjoy peace of mind with a durable 10-year warranty.",
+        isHighlited: true,
+      },
+      {
+        icon: GiSandsOfTime,
+        title: "INSTALLED IN 8-10 BUSINESS DAYS",
+        description:
+          "Get a no-obligation quote for your custom blinds at no cost.",
+      },
+      {
+        icon: GiUpgrade,
+        title: "UPGRADE AS NEEDED",
+        description:
+          "Get a no-obligation quote for your custom blinds at no cost.",
       },
     ],
   },
