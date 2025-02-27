@@ -1,0 +1,12 @@
+.banner-text-container * {
+  visibility: hidden;
+  @apply translate-y-2 duration-500;
+}
+.glide__slide.glide__slide--active .banner-text-container * {
+  visibility: visible;
+  @apply translate-y-0;
+}
+.border-effect {
+  filter: drop-shadow(6px 6px 0px #ffa600) drop-shadow(-6px -6px 0px #ffa600)
+    drop-shadow(6px -6px 0px #ffa600) drop-shadow(-6px 6px 0px #ffa600);
+}
