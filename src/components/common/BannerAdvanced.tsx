@@ -7,9 +7,21 @@ import "./BannerAdvanced.css";
 import Link from "next/link";
 import Image from "next/image";
 
-const BannerAdvanced: React.FC<{ banners: any[] }> = ({ banners }) => {
-  const sliderRef = useRef<HTMLDivElement>(null);
+type Props = {
+  banners: {
+    coverImage: string;
+    heading: string;
+    subheading?: string;
+    description: string;
+    buttonText: string;
+    link: string;
+    bannerImage?: string;
+    textPosition?: string;
+  }[];
+};
 
+const BannerAdvanced: React.FC<Props> = ({ banners }) => {
+  const sliderRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (sliderRef.current) {
       const glide = new Glide(sliderRef.current, {
@@ -19,17 +31,18 @@ const BannerAdvanced: React.FC<{ banners: any[] }> = ({ banners }) => {
         gap: 20,
         autoplay: 3000,
         hoverpause: true,
-        loop: true,
       });
       glide.mount();
-      return () => glide.destroy();
+      return () => {
+        glide.destroy();
+      };
     }
   }, []);
   return (
     <div className="relative overflow-hidden" ref={sliderRef}>
       <div className="glide__track" data-glide-el="track">
         <ul className="glide__slides">
-          {banners.map((banner, index) => (
+          {banners.map((banner, index: number) => (
             <li key={index} className="glide__slide">
               <div
                 className="h-[700px] bg-cover bg-center"

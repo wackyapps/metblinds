@@ -11,7 +11,7 @@ type NavigationType = {
   link?: string;
   icon: IconType;
   isButton?: boolean;
-  items?: any;
+  items?: string[];
 };
 
 // main navbarLinks

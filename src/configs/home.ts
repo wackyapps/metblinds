@@ -2,6 +2,17 @@ import { BsCalendar2Check } from "react-icons/bs";
 import { PiMedal } from "react-icons/pi";
 import { GiSandsOfTime } from "react-icons/gi";
 import { GiUpgrade } from "react-icons/gi";
+
+type BannerType = {
+  coverImage: string;
+  heading: string;
+  subheading?: string;
+  description: string;
+  buttonText: string;
+  link: string;
+  bannerImage?: string;
+  textPosition?: string;
+}[];
 export const homePage = {
   /**
    * homepage banner data
@@ -35,7 +46,7 @@ export const homePage = {
       bannerImage: "/images/banner-side-image-3.png",
       textPosition: "right",
     },
-  ],
+  ] as BannerType,
   /**
    * services locatoin section data
    */
@@ -214,5 +225,37 @@ export const homePage = {
       "Metbinds Calgary is the official sponsor of the show. Our blinds are used in all renovations",
     buttonText: "Give us a call",
     background: "/images/home/media-spotlight-bg.png",
+  },
+  /**
+   * data for our partners section
+   */
+  ourPartners: {
+    heading: "OUR PARTNERS",
+    partners: [
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+      {
+        image: "/images/logo-text.png",
+      },
+    ],
   },
 };

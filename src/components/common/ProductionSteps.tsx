@@ -1,7 +1,14 @@
 import React from "react";
 import ProcessStepCard from "./cards/ProcessStepCard";
 
-type Props = { heading: string; subHeading: string; features: any[] };
+type Props = {
+  heading: string;
+  subHeading: string;
+  features: {
+    title: string;
+    description: string;
+  }[];
+};
 const ProductionSteps: React.FC<{
   data: Props;
 }> = ({ data }) => {

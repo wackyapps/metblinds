@@ -1,7 +1,8 @@
 import React from "react";
+import { IconType } from "react-icons";
 
 type Props = {
-  icon?: any;
+  icon?: IconType;
   isHighlighted: boolean;
   title: string;
   description: string;

@@ -1,6 +1,5 @@
 import { homePage } from "@/configs/home";
 import Image from "next/image";
-import Link from "next/link";
 
 const BlindsCustomization: React.FC<{
   data: typeof homePage.blindsCustomization;

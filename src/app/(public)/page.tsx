@@ -1,5 +1,6 @@
 import BannerAdvanced from "@/components/common/BannerAdvanced";
 import BlindsShowcase from "@/components/common/BlindsShowcase";
+import OurPartners from "@/components/common/OurPartners";
 import ProductionSteps from "@/components/common/ProductionSteps";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import BlindsCustomization from "@/components/home/BlindsCustomization";
@@ -39,6 +40,10 @@ const page = () => {
        *media spotlight section
        */}
       <MediaSpotlight data={homePage.mediaSpotlight} />
+      {/*
+       * our partners section
+       */}
+      <OurPartners data={homePage.ourPartners} />
     </div>
   );
 };
