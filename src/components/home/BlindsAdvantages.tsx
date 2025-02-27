@@ -5,7 +5,7 @@ const BlindsAdvantages: React.FC<{
   data: typeof homePage.blindsAdvantages;
 }> = ({ data }) => {
   return (
-    <div className="py-20">
+    <div className="py-24">
       <div className="global-container">
         {/*
          * heading and subheading

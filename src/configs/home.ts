@@ -119,4 +119,87 @@ export const homePage = {
       },
     ],
   },
+  /**
+   * blinds showcase  data for homepage
+   */
+  blindsShowcase: [
+    {
+      title: "Zebra Blinds",
+      description:
+        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+      image: "/images/blinds/zebra-blind.png",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Roller Shades",
+      description:
+        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+      image: "/images/blinds/roller-shades-blind.png",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Solar Shades",
+      description:
+        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+      image: "/images/blinds/solar-shades-blind.png",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Drapery",
+      description:
+        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+      image: "/images/blinds/drapery-blind.png",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Trifold",
+      description:
+        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+      image: "/images/blinds/triflod-blind.png",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Honeycomb Blinds",
+      description:
+        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+      image: "/images/blinds/honey-comb-blind.png",
+      buttonText: "Learn More",
+    },
+  ],
+  productionSteps: {
+    heading: "Why met blinds?",
+    subHeading: "The Met Blinds Post-Sale Manufacturing Process",
+    features: [
+      {
+        title: "Work Order Processing",
+        description:
+          "The work order is entered and fabricating instructions are prepared.",
+      },
+      {
+        title: "Material Preparation",
+        description:
+          "Your chosen colour of aluminum and desired fabric are cut to size.",
+      },
+      {
+        title: "Component Assembly",
+        description:
+          "The cut pieces of aluminum and fabric go to our assembly tables.",
+      },
+      {
+        title: "Hardware Installation",
+        description:
+          "End caps, clutch and control systems are added to the aluminum and fabric.",
+      },
+      {
+        title: "Quality Inspection",
+        description:
+          "Blinds are mounted on inspector machine for quality assurance.",
+      },
+      {
+        title: "Final Packaging & Delivery",
+        description:
+          "Your beautiful custom blinds are packed and ready to be installed in your home!",
+      },
+    ],
+  },
 };
