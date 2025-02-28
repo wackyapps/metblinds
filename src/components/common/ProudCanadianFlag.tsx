@@ -1,0 +1,35 @@
+import Image from "next/image";
+
+const ProudCanadianFlag = () => {
+  return (
+    <div className="py-32">
+      <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[92px] shadow-lg">
+        <div className="">
+          <div className="flex">
+            <div className="flex-1 bg-[#EC1A23]"></div>
+            <div className="flex flex-1 items-center justify-center p-16">
+              <Image
+                src={"/images/canadian-leaf.svg"}
+                className="aspect-square w-44 object-contain"
+                alt="canadian leaf"
+                width={174}
+                height={174}
+              />
+            </div>
+            <div className="flex-1 bg-[#EC1A23]"></div>
+          </div>
+          <div className="flex flex-col items-center gap-16 p-32">
+            <h3 className="text-center text-6xl text-[#013F68]">
+              PROUD CANADIAN BLINDS
+            </h3>
+            <button className="rounded-full bg-[#EC1A23] px-12 py-4 text-2xl font-medium text-white">
+              GIVE US A CALL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProudCanadianFlag;

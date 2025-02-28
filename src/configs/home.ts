@@ -258,4 +258,44 @@ export const homePage = {
       },
     ],
   },
+  // testimonial section  data for home
+  testimonials: {
+    heading: "THE TRUST WE HAVE EARNED",
+    reviews: [
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Maria arnold",
+        rating: 4,
+        date: "2023-10-12",
+        comment: "Great product, highly recommend!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Maria arnold",
+        rating: 4,
+        date: "2023-10-12",
+        comment: "Great product, highly recommend!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Maria arnold",
+        rating: 4,
+        date: "2023-10-12",
+        comment: "Great product, highly recommend!",
+      },
+    ],
+  },
+  /**
+   * infobanner banner data for home
+   */
+  infoBanner: {
+    heading: "What We Have to Offer?",
+    backgroundImage: "/images/home/info-banner-bg.png",
+    points: [
+      "Discover a premium collection of blinds, including zebra, roller, solar, motorized, and smart blinds—crafted for style and function. Personalize every detail with expert design consultants and high-performance materials built to last",
+      "Exclusive luxury fabrics, patented and inspired by snakeskin, are available only at Met Blinds. Whether you seek elegance, energy efficiency, or UV protection, we have the perfect solution.",
+      ,
+      "Upgrade your home with the finest blinds in Calgary.",
+    ],
+  },
 };

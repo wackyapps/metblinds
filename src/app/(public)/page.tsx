@@ -2,8 +2,11 @@ import BannerAdvanced from "@/components/common/BannerAdvanced";
 import BlindsShowcase from "@/components/common/BlindsShowcase";
 import OurPartners from "@/components/common/OurPartners";
 import ProductionSteps from "@/components/common/ProductionSteps";
+import ProudCanadianFlag from "@/components/common/ProudCanadianFlag";
+import Testimonials from "@/components/common/Testimonials";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import BlindsCustomization from "@/components/home/BlindsCustomization";
+import InfoBanner from "@/components/home/InfoBanner";
 import MediaSpotlight from "@/components/home/MediaSpotlight";
 import ServicesLocation from "@/components/home/ServicesLocation";
 // importing home page data to show
@@ -44,6 +47,18 @@ const page = () => {
        * our partners section
        */}
       <OurPartners data={homePage.ourPartners} />
+      {/*
+       * testimonials section for home
+       */}
+      <Testimonials data={homePage.testimonials} />
+      {/*
+       * Info banner for home
+       */}
+      <InfoBanner data={homePage.infoBanner} />
+      {/*
+       * end of homepage content 1*
+       */}
+      <ProudCanadianFlag />
     </div>
   );
 };
