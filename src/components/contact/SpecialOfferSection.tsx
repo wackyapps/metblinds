@@ -40,8 +40,8 @@ const SpecialOfferSection = () => {
 
             {/* Quote */}
             <p className="text-2xl font-bold text-[#736D6D]">
-              "Mention this offer when you request an estimate (phone, form, or
-              email) & save!"
+              {`"Mention this offer when you request an estimate (phone, form, or
+              email) & save!"`}
             </p>
 
             {/* CTA Button */}

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { IoIosArrowDown } from "react-icons/io";
 import ContactForm from "./forms/ContactForm";
 
 const ContactSection = () => {
