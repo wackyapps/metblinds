@@ -34,7 +34,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mx-auto grid grid-cols-2 gap-5 rounded-lg bg-white p-4 shadow-md"
+      className="grid w-full grid-cols-1 gap-5 rounded-lg p-4 md:grid-cols-2"
     >
       {/* Your Name Field */}
       <div>

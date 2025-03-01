@@ -43,3 +43,22 @@ export const mainNavbarNavigation: NavigationType[] = [
     isButton: true,
   },
 ];
+
+export const footer = {
+  contactInfoHeading: "Contact Info",
+  hoursDescription:
+    "Hours:\n Monday to Friday: 10am - 6pm \n Saturday & Sunday: By Appointment Only",
+  footerNavigationHeading: "Window Coverings",
+  footerNavigations: [
+    { title: "Zebra Blinds", link: "/" },
+    { title: "Roller Blinds", link: "/" },
+    { title: "Solar Shades", link: "/" },
+    { title: "Motorized Blinds", link: "/" },
+    { title: "Smart Blinds", link: "/" },
+    { title: "Warranty", link: "/" },
+    { title: "Testimonials", link: "/" },
+    { title: "Request a Consultation", link: "/" },
+    { title: "Blinds Calgary", link: "/" },
+    { title: "Blinds Red Deer", link: "/" },
+  ],
+};

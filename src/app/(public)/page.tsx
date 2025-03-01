@@ -1,5 +1,6 @@
 import BannerAdvanced from "@/components/common/BannerAdvanced";
 import BlindsShowcase from "@/components/common/BlindsShowcase";
+import ContactSection from "@/components/common/ContactSection";
 import OurPartners from "@/components/common/OurPartners";
 import ProductionSteps from "@/components/common/ProductionSteps";
 import ProudCanadianFlag from "@/components/common/ProudCanadianFlag";
@@ -59,6 +60,10 @@ const page = () => {
        * end of homepage content 1*
        */}
       <ProudCanadianFlag />
+      {/*
+       * contact section
+       */}
+      <ContactSection />
     </div>
   );
 };

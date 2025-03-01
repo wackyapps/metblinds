@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import Glide from "@glidejs/glide";
+import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
+import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
 import RatingCard from "./cards/RatingCard";
 import Image from "next/image";
 import { IoStar } from "react-icons/io5";
@@ -16,6 +20,30 @@ type Props = {
 };
 
 const Testimonials: React.FC<Props> = ({ data }) => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (sliderRef.current) {
+      const glide = new Glide(sliderRef.current, {
+        type: "carousel",
+        startAt: 0,
+        perView: 1,
+        gap: 20,
+        autoplay: 200000,
+        hoverpause: true,
+        breakpoints: {
+          4000: { perView: 4 },
+          1200: { perView: 3 },
+          1000: { perView: 2 },
+          700: { perView: 1 },
+        },
+      });
+      glide.mount();
+      return () => {
+        glide.destroy();
+      };
+    }
+  }, []);
+
   return (
     <div className="py-24">
       <div className="global-container">
@@ -66,17 +94,27 @@ const Testimonials: React.FC<Props> = ({ data }) => {
           </div>
         </div>
         {/* showing the customer reviews */}
-        <div className="mb-16 flex items-center justify-center gap-4">
-          {data.reviews.map((review, index) => (
-            <RatingCard
-              key={index}
-              userName={review.userName}
-              userImage={review.userImage}
-              rating={review.rating}
-              date={review.date}
-              comment={review.comment}
-            />
-          ))}
+        {/* <div className="mb-16 flex items-center justify-center gap-4"> */}
+        <div className="relative mb-16 overflow-hidden" ref={sliderRef}>
+          <div className="glide__track" data-glide-el="track">
+            <ul className="glide__slides">
+              {data.reviews.map((review, index) => (
+                <li
+                  key={index}
+                  className="glide__slide py-2 [height:100%_!important]"
+                >
+                  <RatingCard
+                    className="h-full"
+                    userName={review.userName}
+                    userImage={review.userImage}
+                    rating={review.rating}
+                    date={review.date}
+                    comment={review.comment}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="flex justify-center">
           <button

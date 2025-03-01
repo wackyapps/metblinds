@@ -8,6 +8,7 @@ interface RatingCardProps {
   rating?: number;
   date: string | Date;
   comment: string;
+  className?: string;
 }
 
 const RatingCard: React.FC<RatingCardProps> = ({
@@ -16,6 +17,7 @@ const RatingCard: React.FC<RatingCardProps> = ({
   date,
   comment,
   userName,
+  className,
 }) => {
   // Default image if userImage is not provided
   const defaultImage = "/profile-image.jpg";
@@ -49,7 +51,9 @@ const RatingCard: React.FC<RatingCardProps> = ({
   ));
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-white px-10 py-7 shadow-md">
+    <div
+      className={`flex flex-col items-center justify-center gap-4 rounded-lg bg-white px-10 py-7 shadow-md ${className}`}
+    >
       {/* User Image */}
       <Image
         width={107}
@@ -66,7 +70,7 @@ const RatingCard: React.FC<RatingCardProps> = ({
       <div className="flex justify-center space-x-1">{stars}</div>
 
       {/* Comment (if provided) */}
-      <p className="text-center text-lg">{comment}</p>
+      <p className="w-full text-center text-lg">{comment}</p>
       <div>
         <Image
           alt=""

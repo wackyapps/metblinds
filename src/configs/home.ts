@@ -271,17 +271,35 @@ export const homePage = {
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
-        rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
+        userName: "John Smith",
+        rating: 5,
+        date: "2023-11-15",
+        comment:
+          "Excellent service and quality blinds. The installation team was very professional.",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
+        userName: "Sarah Johnson",
+        rating: 5,
+        date: "2023-11-01",
+        comment:
+          "Love my new motorized blinds! They work perfectly and look amazing.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Michael Chen",
         rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
+        date: "2023-10-25",
+        comment:
+          "Very happy with the zebra blinds. Great quality and reasonable prices.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Emma Wilson",
+        rating: 5,
+        date: "2023-10-18",
+        comment:
+          "The smart blinds are a game changer! Customer service was outstanding.",
       },
     ],
   },

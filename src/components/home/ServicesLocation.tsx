@@ -11,16 +11,14 @@ const ServicesLocation: React.FC<{
   return (
     <div className={`bg-[#F7F9FA] px-3 ${className}`}>
       <div className="global-container relative z-50 -translate-y-5 rounded-3xl bg-white shadow-lg">
-        <div className="flex items-center justify-between p-10">
-          {/*
-           * text containe of the heading and desctiption and locations
-           */}
-          <div className="flex max-w-[600px] flex-col items-stretch gap-4">
-            <h2 className="text-4xl font-bold text-[#013F68]">
+        <div className="flex flex-col items-start justify-between gap-8 p-4 lg:flex-row lg:items-center lg:p-10">
+          {/* Text container with heading, description and locations */}
+          <div className="flex w-full flex-col items-stretch gap-4 lg:max-w-[500px]">
+            <h2 className="text-2xl font-bold text-[#013F68] lg:text-4xl">
               {data.heading}
             </h2>
             <h5 className="text-[#767676]">{data.description}</h5>
-            <div className="grid max-w-[530px] grid-cols-2 gap-3">
+            <div className="grid max-w-[460px] grid-cols-1 gap-3 sm:grid-cols-2">
               {data.locations.map((loc, index) => (
                 <div
                   key={index}
@@ -32,13 +30,15 @@ const ServicesLocation: React.FC<{
               ))}
             </div>
           </div>
-          {/* image of the section */}
-          <div>
+
+          {/* Image section */}
+          <div className="w-full lg:w-auto">
             <Image
               src={data.image.src}
               width={600}
               height={500}
               alt={data.image.alt}
+              className="h-auto w-full object-contain"
             />
           </div>
         </div>
