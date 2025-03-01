@@ -133,50 +133,52 @@ export const homePage = {
   /**
    * blinds showcase  data for homepage
    */
-  blindsShowcase: [
-    {
-      title: "Zebra Blinds",
-      description:
-        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-      image: "/images/blinds/zebra-blind.png",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Roller Shades",
-      description:
-        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-      image: "/images/blinds/roller-shades-blind.png",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Solar Shades",
-      description:
-        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-      image: "/images/blinds/solar-shades-blind.png",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Drapery",
-      description:
-        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-      image: "/images/blinds/drapery-blind.png",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Trifold",
-      description:
-        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-      image: "/images/blinds/triflod-blind.png",
-      buttonText: "Learn More",
-    },
-    {
-      title: "Honeycomb Blinds",
-      description:
-        "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-      image: "/images/blinds/honey-comb-blind.png",
-      buttonText: "Learn More",
-    },
-  ],
+  blindsShowcase: {
+    blinds: [
+      {
+        title: "Zebra Blinds",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/zebra-blind.png",
+        buttonText: "Learn More",
+      },
+      {
+        title: "Roller Shades",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/roller-shades-blind.png",
+        buttonText: "Learn More",
+      },
+      {
+        title: "Solar Shades",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/solar-shades-blind.png",
+        buttonText: "Learn More",
+      },
+      {
+        title: "Drapery",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/drapery-blind.png",
+        buttonText: "Learn More",
+      },
+      {
+        title: "Trifold",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/triflod-blind.png",
+        buttonText: "Learn More",
+      },
+      {
+        title: "Honeycomb Blinds",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/honey-comb-blind.png",
+        buttonText: "Learn More",
+      },
+    ],
+  },
   /**
    * production steps data for homepage
    */

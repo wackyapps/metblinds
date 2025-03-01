@@ -1,4 +1,4 @@
-import { homePage } from "@/configs/home";
+import { homePage } from "@/configs/pages/home";
 import React from "react";
 
 const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({

@@ -1,4 +1,4 @@
-import { homePage } from "@/configs/home";
+import { homePage } from "@/configs/pages/home";
 import React from "react";
 
 const BlindsAdvantages: React.FC<{
@@ -29,7 +29,7 @@ const BlindsAdvantages: React.FC<{
             >
               <div>
                 <feature.icon
-                  className={`h-10 w-10 ${feature.isHighlited ? "text-white" : "text-[#FFBB3D]"}`}
+                  className={`text-6xl ${feature.isHighlited ? "text-white" : "text-[#FFBB3D]"}`}
                 />
               </div>
               <h3

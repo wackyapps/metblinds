@@ -11,7 +11,7 @@ import InfoBanner from "@/components/home/InfoBanner";
 import MediaSpotlight from "@/components/home/MediaSpotlight";
 import ServicesLocation from "@/components/home/ServicesLocation";
 // importing home page data to show
-import { homePage } from "@/configs/home";
+import { homePage } from "@/configs/pages/home";
 
 const page = () => {
   return (

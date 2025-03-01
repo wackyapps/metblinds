@@ -5,7 +5,7 @@ import ContactForm from "./forms/ContactForm";
 const ContactSection = () => {
   return (
     <section className="w-full bg-[#F7F9FA]">
-      <div className="global-container mx-auto flex flex-col gap-[122px] py-16 xl:flex-row">
+      <div className="global-container mx-auto flex flex-col gap-[122px] xl:flex-row">
         {/* Left Image Section */}
         <div className="relative hidden min-h-[500px] max-w-[894px] overflow-hidden bg-[#D9D9D9] xl:block">
           <Image
@@ -22,9 +22,9 @@ const ContactSection = () => {
           <div className="flex flex-col gap-5">
             {/* Header */}
             <div className="flex flex-col gap-[18px]">
-              <div className="relative h-[73px] w-[249px]">
-                <div className="absolute left-[20px] top-[6px] h-[61px] w-[218px] rounded-[42px] bg-[#FFA600]" />
-                <h2 className="absolute text-[32px] font-semibold text-[#014768]">
+              <div className="relative mb-2 w-[249px]">
+                <div className="absolute left-[20px] top-[6px] z-0 h-[61px] w-[218px] rounded-[42px] bg-[#FFA600]" />
+                <h2 className="relative z-10 text-[32px] font-semibold text-[#014768]">
                   Contact us
                 </h2>
               </div>
