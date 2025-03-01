@@ -1,4 +1,5 @@
 import { IoHomeOutline } from "react-icons/io5";
+import { LuInfo } from "react-icons/lu";
 import { LuBlinds } from "react-icons/lu";
 import { CiSettings } from "react-icons/ci";
 import { TiDocumentText } from "react-icons/ti";
@@ -20,6 +21,11 @@ export const mainNavbarNavigation: NavigationType[] = [
     title: "Home",
     link: "/",
     icon: IoHomeOutline,
+  },
+  {
+    title: "About Us",
+    link: "/about",
+    icon: LuInfo,
   },
   {
     title: "Blinds",
