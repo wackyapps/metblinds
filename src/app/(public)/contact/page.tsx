@@ -4,10 +4,15 @@ import WarrantyInfoSection from "@/components/common/WarrantyInfoSection";
 import SpecialOfferSection from "@/components/contact/SpecialOfferSection";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import { contactPage } from "@/configs/pages/contact";
+import BannerAdvanced from "@/components/common/BannerAdvanced";
 
 const page = () => {
   return (
     <div>
+      {/*
+       * advanced banner component for homepage
+       */}
+      <BannerAdvanced banners={contactPage.banners} />
       {/*
        * speacial offer hero section
        */}

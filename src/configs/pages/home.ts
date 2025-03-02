@@ -17,7 +17,7 @@ export const homePage = {
   /**
    * homepage banner data
    */
-  banner: [
+  banners: [
     {
       coverImage: "/banners/home-banner-1.png",
       heading: "Leading Calgary Blinds Company!",
