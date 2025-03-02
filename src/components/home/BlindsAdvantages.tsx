@@ -25,20 +25,20 @@ const BlindsAdvantages: React.FC<{
           {data.features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col items-start gap-5 rounded-3xl p-10 ${feature.isHighlited ? "bg-[#FFA600]" : "bg-[#F7F9FA]"}`}
+              className={`group flex flex-col items-start gap-5 rounded-3xl bg-[#F7F9FA] p-10 duration-500 hover:scale-105 hover:bg-[#FFA600]`}
             >
               <div>
                 <feature.icon
-                  className={`text-6xl ${feature.isHighlited ? "text-white" : "text-[#FFBB3D]"}`}
+                  className={`text-6xl text-[#FFBB3D] duration-500 group-hover:text-white`}
                 />
               </div>
               <h3
-                className={`text-2xl font-semibold ${feature.isHighlited ? "text-white" : "text-[#666666]"}`}
+                className={`text-2xl font-semibold text-[#666666] duration-500 group-hover:text-white`}
               >
                 {feature.title}
               </h3>
               <p
-                className={` ${feature.isHighlited ? "text-white" : "text-[#666666]"}`}
+                className={`text-[#666666] duration-500 group-hover:text-white`}
               >
                 {feature.description}
               </p>

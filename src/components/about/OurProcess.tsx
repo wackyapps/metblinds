@@ -9,7 +9,7 @@ const processData = [
     id: 1,
     title: "Free Consultation",
     description: "Our experts help you choose the best blinds for your space.",
-    icon: <FaComments className="h-16 w-16 text-white" />,
+    icon: FaComments,
     bgColor: "bg-[#FFA633]",
     textColor: "text-white",
   },
@@ -17,7 +17,7 @@ const processData = [
     id: 2,
     title: "Custom Manufacturing",
     description: "Each blind is made to your specifications.",
-    icon: <MdFactory className="h-16 w-16 text-[#FFA633]" />,
+    icon: MdFactory,
     bgColor: "bg-[#F7F9FA]",
     textColor: "text-gray-600",
   },
@@ -25,7 +25,7 @@ const processData = [
     id: 3,
     title: "Professional Installation",
     description: "We ensure a perfect fit and seamless operation.",
-    icon: <BsTools className="h-16 w-16 text-[#FFA633]" />,
+    icon: BsTools,
     bgColor: "bg-[#F7F9FA]",
     textColor: "text-gray-600",
   },
@@ -33,7 +33,7 @@ const processData = [
     id: 4,
     title: "After-Sales Support",
     description: "We provide guidance on maintenance and smart features.",
-    icon: <BiSupport className="h-16 w-16 text-[#FFA633]" />,
+    icon: BiSupport,
     bgColor: "bg-[#F7F9FA]",
     textColor: "text-gray-600",
   },
@@ -56,17 +56,23 @@ const OurProcess = () => {
           {processData.map((item) => (
             <div
               key={item.id}
-              className={`${item.bgColor} flex flex-col items-start gap-8 rounded-[35px] p-12 md:flex-row`}
+              className={`group flex flex-col items-start gap-8 rounded-[35px] bg-[#F7F9FA] p-12 duration-500 hover:bg-[#FFA633] md:flex-row`}
             >
               <div className="flex-1">
-                <h3 className={`mb-8 text-3xl font-semibold ${item.textColor}`}>
+                <h3
+                  className={`mb-8 text-3xl font-semibold text-gray-600 duration-500 group-hover:text-white`}
+                >
                   {item.title}
                 </h3>
-                <p className={`text-lg ${item.textColor}`}>
+                <p
+                  className={`text-lg text-gray-600 duration-500 group-hover:text-white`}
+                >
                   {item.description}
                 </p>
               </div>
-              <div className="flex-shrink-0">{item.icon}</div>
+              <div className="flex-shrink-0">
+                <item.icon className="h-16 w-16 text-[#FFA633] duration-500 group-hover:text-white" />
+              </div>
             </div>
           ))}
         </div>

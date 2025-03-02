@@ -18,7 +18,7 @@ const formSchema = z.object({
 // Infer TypeScript type from schema
 type FormData = z.infer<typeof formSchema>;
 
-export default function ContactForm() {
+export default function ContactForm({ isSmall }: { isSmall?: boolean }) {
   const {
     register,
     handleSubmit,
@@ -34,17 +34,24 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid w-full grid-cols-1 gap-5 rounded-lg p-4 md:grid-cols-2"
+      className={`grid w-full grid-cols-1 gap-${isSmall ? "3" : "5"} rounded-lg ${
+        isSmall ? "p-3" : "p-4"
+      } md:grid-cols-2`}
     >
       {/* Your Name Field */}
       <div>
-        <label htmlFor="name" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="name"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Your Name:
         </label>
         <input
           id="name"
           placeholder="Enter Your Name*"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("name")}
         />
         {errors.name && (
@@ -54,13 +61,18 @@ export default function ContactForm() {
 
       {/* Your Email Address Field */}
       <div>
-        <label htmlFor="email" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="email"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Your Email Address:
         </label>
         <input
           id="email"
           placeholder="Enter Your Email Address*"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("email")}
         />
         {errors.email && (
@@ -70,12 +82,17 @@ export default function ContactForm() {
 
       {/* Choose Your Location Dropdown */}
       <div>
-        <label htmlFor="location" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="location"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Choose Your Location:
         </label>
         <select
           id="location"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("location")}
         >
           <option value="">Location</option>
@@ -90,12 +107,17 @@ export default function ContactForm() {
 
       {/* Product of Interest Dropdown */}
       <div>
-        <label htmlFor="product" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="product"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Product of Interest:
         </label>
         <select
           id="product"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("product")}
         >
           <option value="">Products</option>
@@ -110,12 +132,17 @@ export default function ContactForm() {
 
       {/* Type of Inquiry Dropdown */}
       <div className="col-span-full">
-        <label htmlFor="inquiry" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="inquiry"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Type of Inquiry:
         </label>
         <select
           id="inquiry"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("inquiry")}
         >
           <option value="">What Are You Looking For?</option>
@@ -130,12 +157,17 @@ export default function ContactForm() {
 
       {/* Where Did You Hear About Us? Dropdown */}
       <div className="col-span-full">
-        <label htmlFor="source" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="source"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Where Did You Hear About Us?:
         </label>
         <select
           id="source"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("source")}
         >
           <option value="">Friends And Family</option>
@@ -150,13 +182,18 @@ export default function ContactForm() {
 
       {/* Message Textarea */}
       <div className="col-span-full">
-        <label htmlFor="message" className="mb-3 block text-sm text-[#878787]">
+        <label
+          htmlFor="message"
+          className={`mb-${isSmall ? "2" : "3"} block text-sm text-[#878787]`}
+        >
           Message:
         </label>
         <textarea
           id="message"
           placeholder="Enter Your Message"
-          className="w-full rounded-[23px] bg-[#EFEFEF] p-4 text-sm"
+          className={`w-full rounded-[23px] bg-[#EFEFEF] ${
+            isSmall ? "p-3 text-xs" : "p-4 text-sm"
+          }`}
           {...register("message")}
         />
         {errors.message && (
@@ -168,7 +205,9 @@ export default function ContactForm() {
       <div className="col-span-full flex justify-end">
         <button
           type="submit"
-          className="rounded-full bg-[#FFA600] px-11 py-4 text-lg text-white"
+          className={`rounded-full bg-[#FFA600] text-white ${
+            isSmall ? "w-full px-8 py-3 text-base" : "px-11 py-4 text-lg"
+          }`}
         >
           Send Message
         </button>
