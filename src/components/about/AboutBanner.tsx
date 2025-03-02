@@ -1,14 +1,13 @@
 "use client";
 import ContactForm from "@/components/common/forms/ContactForm";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@heroui/react";
+import {} from // Modal,
+// ModalContent,
+// ModalHeader,
+// ModalBody,
+// ModalFooter,
+// Button,
+// useDisclosure,
+"@heroui/react";
 
 const bannerData = {
   title: "Who We Are",
@@ -17,7 +16,7 @@ const bannerData = {
 };
 
 const AboutBanner = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  // const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <div>
@@ -43,7 +42,7 @@ const AboutBanner = () => {
             </p>
             <div>
               <button
-                onClick={onOpen}
+                // onClick={onOpen}
                 type="submit"
                 className={`inline-block rounded-full bg-[#FFA600] px-6 py-2 text-white lg:hidden`}
               >

@@ -1,12 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-} from "react-icons/fa";
+
 // import footer details
 import { footer } from "@/configs/navigation";
 import { websiteInfo } from "@/configs/info";
@@ -140,7 +135,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={social.link}
-                  className="rounded border border-[#FFA600] bg-[#FFA600] p-2.5 transition-colors hover:bg-[#01405F]"
+                  className="rounded bg-[#01405F] p-2.5 transition-colors hover:bg-[#FFA600]"
                 >
                   <social.icon className="h-5 w-5" />
                 </Link>

@@ -54,15 +54,12 @@ const FAQsSection = () => {
               key={index}
               aria-label={faq.question}
               title={faq.question}
-              children={
-                <div className="px-6 py-4 ps-4">
-                  <div className="border-l-4 border-[#FFBB3D] ps-2">
-                    {faq.answer}
-                  </div>
-                </div>
-              }
             >
-              {/* {faq.answer} */}
+              <div className="px-6 py-4 ps-4">
+                <div className="border-l-4 border-[#FFBB3D] ps-2">
+                  {faq.answer}
+                </div>
+              </div>
             </AccordionItem>
           ))}
         </Accordion>
