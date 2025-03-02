@@ -5,7 +5,12 @@ import { CiSettings } from "react-icons/ci";
 import { TiDocumentText } from "react-icons/ti";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 import { IconType } from "react-icons";
-
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 // main navbar navigation type
 type NavigationType = {
   title: string;
@@ -54,8 +59,50 @@ export const footer = {
   contactInfoHeading: "Contact Info",
   hoursDescription:
     "Hours:\n Monday to Friday: 10am - 6pm \n Saturday & Sunday: By Appointment Only",
-  footerNavigationHeading: "Window Coverings",
-  footerNavigations: [
+  quickLinksHeading: "QUICK LINKS",
+  quickLinks: [
+    {
+      title: "Warranty",
+      link: "/",
+    },
+    {
+      title: "Testimonials",
+      link: "/",
+    },
+    {
+      title: "Request a Consultation",
+      link: "/",
+    },
+  ],
+  constrolSystemsHeading: "Control system",
+  controlSystem: [
+    {
+      title: "Corded Blinds",
+      link: "/",
+    },
+    {
+      title: "Cordless Blinds",
+      link: "/",
+    },
+    {
+      title: "Electric Blinds",
+      link: "/",
+    },
+    {
+      title: "Manual wand Blinds",
+      link: "/",
+    },
+    {
+      title: "Motorized Blinds",
+      link: "/",
+    },
+    {
+      title: "Smart Control",
+      link: "/",
+    },
+  ],
+  blindsNavigationHeading: "Blinds",
+  blindsNavigation: [
     { title: "Zebra Blinds", link: "/" },
     { title: "Roller Blinds", link: "/" },
     { title: "Solar Shades", link: "/" },
@@ -66,5 +113,23 @@ export const footer = {
     { title: "Request a Consultation", link: "/" },
     { title: "Blinds Calgary", link: "/" },
     { title: "Blinds Red Deer", link: "/" },
+  ],
+  socialLinks: [
+    {
+      icon: FaFacebookF,
+      link: "/",
+    },
+    {
+      icon: FaInstagram,
+      link: "/",
+    },
+    {
+      icon: FaTwitter,
+      link: "/",
+    },
+    {
+      icon: FaLinkedinIn,
+      link: "/",
+    },
   ],
 };

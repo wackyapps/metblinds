@@ -71,42 +71,52 @@ const Footer = () => {
 
           {/* Second Column: Contact Information */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-[#FFA600]">
-              {footer.contactInfoHeading}
-            </h3>
-            <div className="space-y-4 text-sm">
-              {/* Business hours */}
-              <p>{footer.hoursDescription}</p>
-              {/* Phone numbers with clickable links */}
-              <p>
-                Phone:{" "}
-                <a href={`tel:${websiteInfo.tollFreeNumber.link}`}>
-                  {websiteInfo.tollFreeNumber.display}
-                </a>
-              </p>
-              <p>
-                Toll-free:{" "}
-                <a href={`tel:${websiteInfo.phoneNumber.link}`}>
-                  {websiteInfo.phoneNumber.display}
-                </a>
-              </p>
-              {/* Email link */}
-              <p>
-                <a href={`mailto:${websiteInfo.email.link}`}>
-                  {websiteInfo.email.display}
-                </a>
-              </p>
+            {/* quick links  */}
+            <div>
+              <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+                {footer.quickLinksHeading}
+              </h3>
+              <ul className="space-y-3 text-sm">
+                {footer.quickLinks?.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.link}
+                      className="transition-colors hover:text-[#FFA600]"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* control systems */}
+            <div className="mt-4">
+              <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+                {footer.constrolSystemsHeading}
+              </h3>
+              <ul className="space-y-3 text-sm">
+                {footer.controlSystem?.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.link}
+                      className="transition-colors hover:text-[#FFA600]"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
           {/* Third Column: Navigation Links */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-[#FFA600]">
-              {footer.footerNavigationHeading}
+            <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+              {footer.blindsNavigationHeading}
             </h3>
             {/* Navigation links with hover effect */}
             <ul className="space-y-3 text-sm">
-              {footer.footerNavigations.map((item, index) => (
+              {footer.blindsNavigation?.map((item, index) => (
                 <li key={index}>
                   <Link
                     href={item.link}
@@ -122,45 +132,49 @@ const Footer = () => {
           {/* Fourth Column: Social Media and Additional Location Info */}
           <div>
             {/* Social Media Links */}
-            <h3 className="mb-6 text-xl font-semibold text-[#FFA600]">
+            <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
               Follow us
             </h3>
             <div className="flex space-x-4">
-              {/* Facebook - orange background */}
-              <Link
-                href="/"
-                className="rounded border border-[#FFA600] bg-[#FFA600] p-2.5 transition-colors hover:bg-[#01405F]"
-              >
-                <FaFacebookF className="h-5 w-5" />
-              </Link>
-              {/* Other social media icons - dark background with hover effect */}
-              <Link
-                href="/"
-                className="rounded border border-[#01405F] bg-[#01405F] p-2.5 transition-colors hover:bg-[#FFA600]"
-              >
-                <FaInstagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="/"
-                className="rounded border border-[#01405F] bg-[#01405F] p-2.5 transition-colors hover:bg-[#FFA600]"
-              >
-                <FaTwitter className="h-5 w-5" />
-              </Link>
-              <Link
-                href="/"
-                className="rounded border border-[#01405F] bg-[#01405F] p-2.5 transition-colors hover:bg-[#FFA600]"
-              >
-                <FaLinkedinIn className="h-5 w-5" />
-              </Link>
+              {footer.socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.link}
+                  className="rounded border border-[#FFA600] bg-[#FFA600] p-2.5 transition-colors hover:bg-[#01405F]"
+                >
+                  <social.icon className="h-5 w-5" />
+                </Link>
+              ))}
             </div>
 
-            {/* Additional Location Information */}
             <div className="mt-12">
-              <h4 className="mb-4 font-semibold text-[#FFA600]">Locations</h4>
-              <p className="mb-2 text-sm">Calgary</p>
-              <p className="text-sm">
-                2221 41 Ave NE Unit #14, Calgary, AB T2E 6P2, Canada
-              </p>
+              {/* contact info */}
+              <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+                {footer.contactInfoHeading}
+              </h3>
+              <div className="space-y-4 text-sm">
+                {/* Business hours */}
+                <p>{footer.hoursDescription}</p>
+                {/* Phone numbers with clickable links */}
+                <p>
+                  Phone:{" "}
+                  <a href={`tel:${websiteInfo.tollFreeNumber.link}`}>
+                    {websiteInfo.tollFreeNumber.display}
+                  </a>
+                </p>
+                <p>
+                  Toll-free:{" "}
+                  <a href={`tel:${websiteInfo.phoneNumber.link}`}>
+                    {websiteInfo.phoneNumber.display}
+                  </a>
+                </p>
+                {/* Email link */}
+                <p>
+                  <a href={`mailto:${websiteInfo.email.link}`}>
+                    {websiteInfo.email.display}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
