@@ -9,6 +9,7 @@ import { PiVolleyballLight } from "react-icons/pi";
 import QuoteCTASection from "@/components/control-system/QuoteCTASection";
 import CompatibleBlinds from "@/components/control-system/CompatibleBlinds";
 import SafetyMaintenanceSection from "@/components/control-system/SafetyMaintenanceSection";
+import HowItWorks from "@/components/control-system/HowItWorks";
 
 export async function generateStaticParams() {
   // Replace this with your actual logic to fetch slugs
@@ -57,6 +58,7 @@ const page = () => {
       <WhyChooseControlSlider />
       <ProductionSteps data={productionSteps} />
       <CompatibleBlinds />
+      <HowItWorks />
       <SafetyMaintenanceSection />
       <QuoteCTASection />
     </div>

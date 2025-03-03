@@ -17,17 +17,14 @@ const ProductionSteps: React.FC<{
   return (
     <section className="global-container mx-auto px-4 py-24">
       {/* Header */}
-      <div className="mb-24 flex flex-col items-center text-center">
-        <div className="relative mb-3">
-          <h2 className="text-center text-5xl font-bold text-[#004168]">
-            {data.heading}
-          </h2>
-          <div
-            className="absolute -top-4 left-1/2 h-[61px] w-[217px] -translate-x-1/2 rounded-[42px] bg-[#FFA600]"
-            style={{ zIndex: -1 }}
-          />
-        </div>
-        <p className="text-center text-xl text-[#767676]">{data.subHeading}</p>
+
+      <div className="mb-14 flex flex-col items-center">
+        <h2 className="relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]">
+          {data.heading}
+        </h2>
+        <p className="max-w-[1300px] text-center text-xl text-[#767676] sm:text-2xl">
+          {data.subHeading}
+        </p>
       </div>
 
       {/* Process Steps Grid */}
