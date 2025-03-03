@@ -1,5 +1,5 @@
 import { homePage } from "@/configs/pages/home";
-import Image from "next/image";
+
 import React from "react";
 
 const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
@@ -15,7 +15,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
           <div className="flex flex-wrap items-center justify-center [column-gap:10px] [row-gap:40px]">
             {data.partners.map((partner, index) => (
               <div key={index} className="rounded-full border px-6 py-4">
-                <Image src={partner.image} width={135} height={25} alt="" />
+                <img src={partner.image} width={135} height={25} alt="" />
               </div>
             ))}
           </div>

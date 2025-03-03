@@ -1,6 +1,5 @@
 import React from "react";
 import { HiArrowRight, HiCheck } from "react-icons/hi";
-import Image from "next/image";
 
 const WarrantyInfoSection = () => {
   return (
@@ -9,12 +8,10 @@ const WarrantyInfoSection = () => {
         <div className="flex flex-col items-center justify-between gap-10 min-[1100px]:flex-row">
           {/* 10 Year Warranty Image */}
           <div className="relative h-[530px] w-[530px] flex-shrink-0">
-            <Image
+            <img
               src="/images/ten-year-warranty.svg"
               alt="10 Year Warranty"
-              fill
               className="h-full w-full object-contain"
-              priority
             />
           </div>
 

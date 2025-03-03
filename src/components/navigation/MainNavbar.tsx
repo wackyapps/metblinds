@@ -1,7 +1,7 @@
 "use client";
 import { websiteInfo } from "@/configs/info";
 import { mainNavbarNavigation } from "@/configs/navigation";
-import Image from "next/image";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
@@ -22,7 +22,7 @@ const MainNavbar = () => {
           {/* Left: Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <Image width={200} height={50} src={logo.src} alt={logo.alt} />
+              <img width={200} height={50} src={logo.src} alt={logo.alt} />
             </Link>
           </div>
           {/* Right: Navigation */}

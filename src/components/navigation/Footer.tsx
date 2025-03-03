@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 // import footer details
 import { footer } from "@/configs/navigation";
@@ -28,7 +27,7 @@ const Footer = () => {
           <div className="space-y-6">
             {/* Logo and company description */}
             <div>
-              <Image
+              <img
                 src="/metblinds-logo.png"
                 alt="Met Blinds Logo"
                 width={200}

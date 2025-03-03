@@ -4,7 +4,7 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
 import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
 import RatingCard from "./cards/RatingCard";
-import Image from "next/image";
+
 import { IoStar } from "react-icons/io5";
 type Props = {
   data: {
@@ -58,7 +58,7 @@ const Testimonials: React.FC<Props> = ({ data }) => {
         <div className="mb-16 flex items-center justify-between">
           <div>
             <div className="mb-3 flex items-center gap-5">
-              <Image
+              <img
                 src={"/google.svg"}
                 alt="google image"
                 width={131}

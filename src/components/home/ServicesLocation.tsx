@@ -1,5 +1,5 @@
 import { homePage } from "@/configs/pages/home";
-import Image from "next/image";
+
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -33,7 +33,7 @@ const ServicesLocation: React.FC<{
 
           {/* Image section */}
           <div className="w-full lg:w-auto">
-            <Image
+            <img
               src={data.image.src}
               width={600}
               height={500}

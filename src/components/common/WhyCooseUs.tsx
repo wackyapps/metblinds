@@ -1,6 +1,5 @@
 import React from "react";
 import { HiArrowRight, HiCheck } from "react-icons/hi";
-import Image from "next/image";
 
 type Props = {
   data: {
@@ -14,7 +13,7 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
       <div className="global-container mx-auto px-4">
         <div className="flex flex-col items-center justify-start gap-20 min-[1100px]:flex-row">
           <div className="relative hidden min-h-[400px] max-w-[894px] overflow-hidden rounded-3xl bg-[#D9D9D9] xl:block">
-            <Image
+            <img
               src="/images/contact-section-image-1.png" // Add your image path here
               alt="Contact background"
               width={900}

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const ProudCanadianFlag = () => {
   return (
     <div className="py-32">
@@ -8,7 +6,7 @@ const ProudCanadianFlag = () => {
           <div className="flex">
             <div className="flex-1 bg-[#EC1A23]"></div>
             <div className="flex flex-1 items-center justify-center p-16">
-              <Image
+              <img
                 src={"/images/canadian-leaf.svg"}
                 className="aspect-square w-44 object-contain"
                 alt="canadian leaf"

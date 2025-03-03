@@ -1,5 +1,4 @@
 import { homePage } from "@/configs/pages/home";
-import Image from "next/image";
 
 const BlindsCustomization: React.FC<{
   data: typeof homePage.blindsCustomization;
@@ -23,7 +22,7 @@ const BlindsCustomization: React.FC<{
                 className="flex flex-col items-center gap-3 text-center"
                 key={index}
               >
-                <Image
+                <img
                   src={feature.image}
                   alt={feature.title}
                   width={100}

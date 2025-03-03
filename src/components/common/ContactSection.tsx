@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ContactForm from "./forms/ContactForm";
 
 const ContactSection = () => {
@@ -7,7 +6,7 @@ const ContactSection = () => {
       <div className="global-container mx-auto flex flex-col gap-[122px] xl:flex-row">
         {/* Left Image Section */}
         <div className="relative hidden min-h-[500px] max-w-[894px] overflow-hidden bg-[#D9D9D9] xl:block">
-          <Image
+          <img
             src="/images/contact-section-image-1.png" // Add your image path here
             alt="Contact background"
             width={900}

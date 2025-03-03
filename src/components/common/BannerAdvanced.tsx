@@ -5,7 +5,6 @@ import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
 import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
 import "./BannerAdvanced.css";
 import Link from "next/link";
-import Image from "next/image";
 
 type Props = {
   banners: {
@@ -86,7 +85,7 @@ const BannerAdvanced: React.FC<Props> = ({ banners }) => {
                     </div>
                     {banner.bannerImage && (
                       <div className="">
-                        <Image
+                        <img
                           alt="banner image"
                           className="border-effect rounded-3xl"
                           src={banner.bannerImage}

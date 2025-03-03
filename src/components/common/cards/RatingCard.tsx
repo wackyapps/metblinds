@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { IoStar } from "react-icons/io5";
 
@@ -55,7 +54,7 @@ const RatingCard: React.FC<RatingCardProps> = ({
       className={`flex flex-col items-center justify-center gap-4 rounded-lg bg-white px-10 py-7 shadow-md ${className}`}
     >
       {/* User Image */}
-      <Image
+      <img
         width={107}
         height={107}
         src={displayImage}
@@ -72,7 +71,7 @@ const RatingCard: React.FC<RatingCardProps> = ({
       {/* Comment (if provided) */}
       <p className="w-full text-center text-lg">{comment}</p>
       <div>
-        <Image
+        <img
           alt=""
           src={"/G-icon.svg"}
           width={28}

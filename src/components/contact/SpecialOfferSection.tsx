@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+
 import { HiArrowRight } from "react-icons/hi";
 
 const SpecialOfferSection = () => {
@@ -55,12 +55,10 @@ const SpecialOfferSection = () => {
 
           {/* Right Image */}
           <div className="relative min-h-[400px] w-full lg:w-[747px]">
-            <Image
+            <img
               src="/images/white-blind.png"
               alt="Special Offer Blinds"
-              fill
               className="h-full object-cover"
-              priority
             />
           </div>
         </div>

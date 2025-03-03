@@ -6,7 +6,6 @@ import { WiDaySunny } from "react-icons/wi";
 import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { IconType } from "react-icons";
-import Image from "next/image";
 
 interface Feature {
   icon: IconType;
@@ -134,7 +133,7 @@ const WhyChooseBlindsSlider = () => {
                   {features.map((feature, index) => (
                     <li key={index} className="glide__slide h-full">
                       <div className="relative h-full">
-                        <Image
+                        <img
                           width={1000}
                           height={1000}
                           src={feature.image}
