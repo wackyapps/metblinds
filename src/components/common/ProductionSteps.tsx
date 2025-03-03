@@ -1,5 +1,6 @@
 import React from "react";
 import ProcessStepCard from "./cards/ProcessStepCard";
+import { IconType } from "react-icons";
 
 type Props = {
   heading: string;
@@ -7,6 +8,7 @@ type Props = {
   features: {
     title: string;
     description: string;
+    icon?: IconType;
   }[];
 };
 const ProductionSteps: React.FC<{
@@ -36,7 +38,6 @@ const ProductionSteps: React.FC<{
             data={{
               ...feature,
               index,
-              isHighlighted: index === 1,
             }}
           />
         ))}

@@ -3,7 +3,6 @@ import { IconType } from "react-icons";
 
 type Props = {
   icon?: IconType;
-  isHighlighted: boolean;
   title: string;
   description: string;
   index: number;
@@ -18,7 +17,7 @@ const ProcessStepCard: React.FC<{ data: Props }> = ({ data }) => {
         className={`flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#FFA600] duration-500 group-hover:bg-[#FFA600] group-hover:text-white`}
       >
         {data.icon ? (
-          <data.icon className="h-5 w-5" />
+          <data.icon className="text-3xl" />
         ) : (
           <span className="text-3xl font-bold">{data.index}</span>
         )}

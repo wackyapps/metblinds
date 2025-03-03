@@ -7,7 +7,7 @@ import ProudCanadianFlag from "@/components/common/ProudCanadianFlag";
 import Testimonials from "@/components/common/Testimonials";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import BlindsCustomization from "@/components/home/BlindsCustomization";
-import InfoBanner from "@/components/home/InfoBanner";
+import InfoBanner from "@/components/common/InfoBanner";
 import MediaSpotlight from "@/components/home/MediaSpotlight";
 import ServicesLocation from "@/components/home/ServicesLocation";
 // importing home page data to show
