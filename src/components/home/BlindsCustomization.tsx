@@ -1,4 +1,4 @@
-import { homePage } from "@/configs/pages/home";
+import { homePage } from "@/configs/pages-data/home";
 
 const BlindsCustomization: React.FC<{
   data: typeof homePage.blindsCustomization;

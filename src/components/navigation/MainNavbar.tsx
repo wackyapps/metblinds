@@ -15,6 +15,29 @@ const MainNavbar = () => {
     console.log("pathname:", pathname);
   }, [pathname]);
 
+  const ImageInnerNavigation = ({
+    title,
+    link,
+    image,
+  }: {
+    title: string;
+    link: string;
+    image: string;
+  }) => {
+    return (
+      <Link
+        className="group/link flex flex-col items-center gap-2 p-4"
+        href={link}
+      >
+        <img
+          src={image}
+          alt={title}
+          className="aspect-square w-full max-w-24 duration-300 group-hover/link:brightness-125 group-hover/link:filter"
+        />
+        <span className="text-[#A6A3A3]">{title}</span>
+      </Link>
+    );
+  };
   return (
     <div>
       <div className="global-container">
@@ -58,7 +81,16 @@ const MainNavbar = () => {
                   >
                     <navigation.icon className="h-5 w-5" />
                     <span> {navigation.title}</span>
-                    <div className="absolute top-[calc(100%+20px)] z-50 h-[500px] w-[400px] -translate-x-1/2 cursor-default bg-blue-400 opacity-0 duration-300 [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100"></div>
+                    <div className="absolute top-[calc(100%+20px)] z-50 grid h-[500px] min-w-[300px] max-w-[400px] -translate-x-1/2 cursor-default grid-cols-2 overflow-auto rounded-lg bg-white opacity-0 duration-300 [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100">
+                      {navigation.items.map((item, index) => (
+                        <ImageInnerNavigation
+                          key={index}
+                          title={item.title}
+                          link={item.link}
+                          image={item.image}
+                        />
+                      ))}
+                    </div>
                   </button>
                 );
               }

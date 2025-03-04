@@ -5,19 +5,21 @@ import { CiSettings } from "react-icons/ci";
 import { TiDocumentText } from "react-icons/ti";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 import { IconType } from "react-icons";
+
 import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import controlSystemPages from "./pages-data/control-systems";
 // main navbar navigation type
 type NavigationType = {
   title: string;
   link?: string;
   icon: IconType;
   isButton?: boolean;
-  items?: string[];
+  items?: { title: string; link: string; image: string }[];
 };
 
 // main navbarLinks
@@ -40,7 +42,11 @@ export const mainNavbarNavigation: NavigationType[] = [
   {
     title: "Control System",
     icon: CiSettings,
-    items: [],
+    items: controlSystemPages.map((controlSystem) => ({
+      title: controlSystem.title,
+      link: `/control-systems/${controlSystem.slug}`,
+      image: controlSystem.icon,
+    })),
   },
   {
     title: "Blogs",

@@ -3,7 +3,7 @@ import ContactSection from "@/components/common/ContactSection";
 import WarrantyInfoSection from "@/components/common/WarrantyInfoSection";
 import SpecialOfferSection from "@/components/contact/SpecialOfferSection";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
-import { contactPage } from "@/configs/pages/contact";
+import { contactPage } from "@/configs/pages-data/contact";
 import BannerAdvanced from "@/components/common/BannerAdvanced";
 
 const page = () => {

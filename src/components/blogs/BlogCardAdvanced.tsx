@@ -1,0 +1,70 @@
+import React from "react";
+
+interface BlogCardAdvancedProps {
+  textDirection?: "left" | "right";
+  data: {
+    category: string;
+    title: string;
+    description: string;
+    date: string | Date;
+    image: string;
+  };
+}
+
+const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
+  textDirection = "left",
+  data,
+}) => {
+  const { category, title, description, date, image } = data;
+  const formattedDate = new Date(date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  return (
+    <div className="w-full overflow-hidden rounded-[42px] bg-[#FAFAFA]">
+      <div className="relative flex flex-col items-center lg:flex-row">
+        {/* Image Section */}
+        <div
+          className={`relative h-full max-h-[600px] min-h-96 w-full lg:flex-1 ${textDirection == "left" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}
+        >
+          <img
+            src={image}
+            alt={title}
+            className="absolute left-0 top-0 h-full w-full object-cover"
+          />
+        </div>
+        {/* Content Section */}
+        <div
+          className={`w-full bg-[#F7F9FA] p-8 lg:w-1/2 lg:max-w-[600px] lg:p-12 xl:max-w-[700px] ${textDirection == "left" ? "order-2 lg:order-1" : "order-2 lg:order-2"}`}
+        >
+          <div className="flex h-full flex-col">
+            {/* Category */}
+            <p className="mb-6 text-sm font-semibold text-[#6E6E73]">
+              {category}
+            </p>
+
+            {/* Title and Description */}
+            <div className="flex-grow">
+              <h2 className="mb-8 text-2xl font-semibold lg:text-3xl">
+                {title}
+              </h2>
+              <p className="mb-8 text-base text-[#999999] lg:text-lg">
+                {description}
+              </p>
+              {/* Footer */}
+              <div className="flex items-center justify-between text-sm text-[#6E6E73]">
+                <span className="font-bold">{formattedDate}</span>
+                <span className="cursor-pointer transition-colors hover:text-black">
+                  Read More
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogCardAdvanced;

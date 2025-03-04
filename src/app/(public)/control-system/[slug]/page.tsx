@@ -10,12 +10,12 @@ import QuoteCTASection from "@/components/control-system/QuoteCTASection";
 import CompatibleBlinds from "@/components/control-system/CompatibleBlinds";
 import SafetyMaintenanceSection from "@/components/control-system/SafetyMaintenanceSection";
 import HowItWorks from "@/components/control-system/HowItWorks";
+import controlSystemPages from "@/configs/pages-data/control-systems";
 
 export async function generateStaticParams() {
   // Replace this with your actual logic to fetch slugs
-  const slugs = ["post-1", "post-2", "post-3"]; // Example slugs
-  return slugs.map((slug) => ({
-    slug, // Maps each slug to the [slug] param
+  return controlSystemPages.map((controlSystem) => ({
+    slug: controlSystem.slug, // Maps each slug to the [slug] param
   }));
 }
 

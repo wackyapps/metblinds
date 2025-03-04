@@ -1,4 +1,4 @@
-import { homePage } from "@/configs/pages/home";
+import { homePage } from "@/configs/pages-data/home";
 
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";

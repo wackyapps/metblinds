@@ -1,4 +1,4 @@
-import { homePage } from "@/configs/pages/home";
+import { homePage } from "@/configs/pages-data/home";
 import React from "react";
 
 const MediaSpotlight: React.FC<{ data: typeof homePage.mediaSpotlight }> = ({
