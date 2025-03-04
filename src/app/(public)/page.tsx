@@ -63,7 +63,7 @@ const page = () => {
       {/*
        * contact section
        */}
-      <ContactSection />
+      <ContactSection data={homePage.contactSection} />
     </div>
   );
 };

@@ -1,11 +1,16 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowUp, FaLock, FaSun } from "react-icons/fa";
-
+import Glide from "@glidejs/glide";
+import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
+import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
+import { IconType } from "react-icons";
 interface Step {
-  icon: React.ReactNode;
+  icon: IconType;
   title: string;
   description: string;
   isFilled?: boolean;
+  image: string;
 }
 
 interface HowItWorksData {
@@ -23,23 +28,26 @@ const howItWorksData: HowItWorksData = {
   subHeading: "Operating Corded Blinds in 3 Simple Steps",
   steps: [
     {
-      icon: <FaArrowUp className="text-2xl text-white" />,
+      icon: FaArrowUp,
       title: "Adjust the Cord",
       description: "Pull the cord up or down to position the blinds as needed.",
       isFilled: true,
+      image: "/images/white-blind.png",
     },
     {
-      icon: <FaLock className="text-2xl text-[#FFA600]" />,
+      icon: FaLock,
       title: "Lock in Place",
       description:
         "Secure the blinds with the MET Sleeve & bottom safety lock.",
       isFilled: false,
+      image: "/images/white-blind.png",
     },
     {
-      icon: <FaSun className="text-2xl text-[#FFA600]" />,
+      icon: FaSun,
       title: "Enjoy Precise Light Control",
       description: "Adjust the tilt for privacy & lighting preferences.",
       isFilled: false,
+      image: "/images/white-blind.png",
     },
   ],
   image: {
@@ -48,36 +56,75 @@ const howItWorksData: HowItWorksData = {
   },
 };
 
-const StepItem: React.FC<Step> = ({
-  icon,
-  title,
-  description,
-  isFilled = false,
-}) => (
-  <div className="flex flex-row items-center gap-4 sm:gap-6">
-    <div className="relative mx-auto sm:mx-0">
+const StepItem: React.FC<{
+  data: Step & { isActive: boolean; onClick: () => void };
+}> = ({ data }) => (
+  <div
+    className={`flex cursor-pointer items-center gap-5 rounded-xl px-5 py-3 transition duration-300`}
+    onClick={data.onClick}
+  >
+    <div className="relative">
       <div className="h-[98px] w-[98px] rounded-full bg-[#F7F9FA]"></div>
       <div
-        className={`absolute inset-[10px] flex items-center justify-center rounded-full ${
-          isFilled ? "bg-[#FFA600]" : "border-8 border-[#FFA600]"
-        }`}
+        className={`absolute inset-[10px] flex items-center justify-center rounded-full border-8 border-[#FFA600] ${data.isActive ? "bg-[#FFA600]" : "bg-white"} `}
       >
-        {icon}
+        <data.icon
+          className={`text-3xl ${data.isActive ? "text-white" : "text-[#FFA600]"}`}
+        />
       </div>
     </div>
-    <div className="flex flex-col gap-2">
-      <div className="text-xl text-[#767676]">
-        <h3 className="inline-block text-[22px] font-semibold text-black">
-          {title}
-        </h3>{" "}
-        {" - "}
-        {description}
-      </div>
+    <div
+      className={`text-2xl leading-7 ${
+        data.isActive ? "text-gray-500" : "text-gray-950"
+      }`}
+    >
+      <h3
+        className={`inline-block text-3xl font-bold ${data.isActive ? "text-gray-700" : "text-gray-950"}`}
+      >
+        {data.title}
+      </h3>
+      {" - "}
+      {data.description}
     </div>
   </div>
 );
 
 const HowItWorks: React.FC = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const glideInstance = useRef<Glide | null>(null);
+
+  useEffect(() => {
+    if (!sliderRef.current) return;
+
+    glideInstance.current = new Glide(sliderRef.current, {
+      type: "carousel",
+      perView: 1,
+      gap: 0,
+      autoplay: 10000,
+    });
+
+    glideInstance.current.on("run.after", () => {
+      setActiveIndex(glideInstance.current!.index);
+    });
+
+    glideInstance.current.mount();
+
+    return () => {
+      if (glideInstance.current) {
+        glideInstance.current.destroy();
+        glideInstance.current = null;
+      }
+    };
+  }, []);
+
+  const handleStepClick = (index: number) => {
+    if (glideInstance.current) {
+      setActiveIndex(index);
+      glideInstance.current.go(`=${index}`);
+    }
+  };
+
   return (
     <div className="bg-[#F7F9FA] px-4 py-24">
       <section className="global-container flex w-full flex-col items-center px-4 py-8 sm:py-16">
@@ -92,22 +139,57 @@ const HowItWorks: React.FC = () => {
         </div>
 
         {/* Steps Section */}
-        <div className="flex flex-col items-start gap-8 sm:gap-10 lg:flex-row lg:items-center lg:gap-[110px]">
+        <div className="flex flex-col items-center justify-between gap-16 px-8 lg:flex-row">
           {/* Left Column - Steps */}
-          <div className="flex w-full flex-col gap-10 lg:w-1/2">
-            {howItWorksData.steps.map((step, index) => (
-              <StepItem key={index} {...step} />
-            ))}
+          <div className="w-full lg:w-1/2">
+            <div className="flex flex-col items-stretch gap-10">
+              {howItWorksData.steps.map((step, index) => (
+                <StepItem
+                  key={index}
+                  data={{
+                    ...step,
+                    isActive: activeIndex === index,
+                    onClick: () => handleStepClick(index),
+                  }}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-[42px] sm:h-[400px] lg:h-[626px]">
-              <img
-                src={howItWorksData.image.src}
-                alt={howItWorksData.image.alt}
-                className="h-full w-full object-cover"
-              />
+          {/* Right Column - Image Slider */}
+          <div className="aspect-[749/753] h-full max-h-[650px] w-full lg:w-1/2">
+            <div className="glide h-full" ref={sliderRef}>
+              <div className="glide__track h-full" data-glide-el="track">
+                <ul className="glide__slides h-full">
+                  {howItWorksData.steps.map((step, index) => (
+                    <li key={index} className="glide__slide h-full">
+                      <div className="relative h-full">
+                        <img
+                          width={1000}
+                          height={1000}
+                          src={step.image}
+                          alt={`${step.title} - ${step.description}`}
+                          className="h-full w-full rounded-[42px] object-cover"
+                        />
+                        {/* Dots Indicator */}
+                        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+                          {howItWorksData.steps.map((_, i) => (
+                            <button
+                              key={i}
+                              onClick={() => handleStepClick(i)}
+                              className={`h-3 w-3 rounded-full transition-all ${
+                                activeIndex === i
+                                  ? "w-6 bg-gray-500"
+                                  : "bg-gray-300"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

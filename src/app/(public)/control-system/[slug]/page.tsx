@@ -10,7 +10,9 @@ import QuoteCTASection from "@/components/control-system/QuoteCTASection";
 import CompatibleBlinds from "@/components/control-system/CompatibleBlinds";
 import SafetyMaintenanceSection from "@/components/control-system/SafetyMaintenanceSection";
 import HowItWorks from "@/components/control-system/HowItWorks";
-import controlSystemPages from "@/configs/pages-data/control-systems";
+import controlSystemPages, {
+  controlSystemPage,
+} from "@/configs/pages-data/control-systems";
 
 export async function generateStaticParams() {
   // Replace this with your actual logic to fetch slugs
@@ -54,13 +56,13 @@ const productionSteps = {
 const page = () => {
   return (
     <div>
-      <ControlSystemBanner />
+      <ControlSystemBanner data={controlSystemPage.controlSystemBanner} />
       <WhyChooseControlSlider />
       <ProductionSteps data={productionSteps} />
       <CompatibleBlinds />
       <HowItWorks />
       <SafetyMaintenanceSection />
-      <QuoteCTASection />
+      <QuoteCTASection data={controlSystemPage.quoteCTASection} />
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import BlindsBanner from "@/components/blinds/BlindsBanner";
+// import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
+import KeyFeatures from "@/components/blinds/KeyFeatures";
 import WhyChooseBlindsSlider from "@/components/blinds/WhyChooseBlindsSlider";
 import FAQsSection from "@/components/common/FAQsSection";
 import InfoBanner from "@/components/common/InfoBanner";
-import WhyCooseUS from "@/components/common/WhyCooseUs";
 
 const page = () => {
   const data = {
@@ -38,7 +39,8 @@ const page = () => {
     <div>
       <BlindsBanner />
       <WhyChooseBlindsSlider />
-      <WhyCooseUS data={data} />
+      <KeyFeatures data={data} />
+      {/* <ChooseYourFabric /> */}
       <FAQsSection />
       <InfoBanner data={infoBanner} />
       <div className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"></div>

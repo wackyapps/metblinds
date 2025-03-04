@@ -44,7 +44,7 @@ export const mainNavbarNavigation: NavigationType[] = [
     icon: CiSettings,
     items: controlSystemPages.map((controlSystem) => ({
       title: controlSystem.title,
-      link: `/control-systems/${controlSystem.slug}`,
+      link: `/control-system/${controlSystem.slug}`,
       image: controlSystem.icon,
     })),
   },

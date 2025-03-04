@@ -11,10 +11,10 @@ const BlindsAdvantages: React.FC<{
          * heading and subheading
          */}
         <div className="mb-14 flex flex-col items-center justify-center gap-3">
-          <h2 className="text-[40px] font-semibold text-[#013F68]">
+          <h2 className="text-center text-[40px] font-semibold text-[#013F68]">
             {data.heading}
           </h2>
-          <h3 className="rounded-full bg-[#FFA600] px-4 py-2 text-3xl font-semibold text-[#013F68]">
+          <h3 className="rounded-full bg-[#FFA600] px-4 py-2 text-center text-3xl font-semibold text-[#013F68]">
             {data.subHeading}
           </h3>
         </div>

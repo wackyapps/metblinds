@@ -49,7 +49,7 @@ const MainNavbar = () => {
             </Link>
           </div>
           {/* Right: Navigation */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-10">
             {mainNavbarNavigation.map((navigation, index) => {
               if (navigation.isButton && navigation.link) {
                 return (

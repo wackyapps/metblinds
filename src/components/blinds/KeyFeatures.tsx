@@ -7,7 +7,7 @@ type Props = {
     features: { title: string; description: string }[];
   };
 };
-const WhyCooseUS: React.FC<Props> = ({ data }) => {
+const KeyFeatures: React.FC<Props> = ({ data }) => {
   return (
     <section className={`py-16 xl:py-0`}>
       <div className="global-container mx-auto px-4">
@@ -22,9 +22,9 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
             />
           </div>
 
-          <div className="flex max-w-[1000px] flex-col space-y-12">
+          <div className="flex max-w-[1000px] flex-col items-start space-y-12">
             {/* Heading */}
-            <h2 className="text-3xl font-bold text-[#FFA600] lg:text-4xl">
+            <h2 className="relative mb-10 w-auto text-left text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]">
               {data.heading}
             </h2>
             {/* Warranty Points */}
@@ -35,8 +35,8 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FFA600]">
                       <FaCheck className="h-5 w-5 text-white" />
                     </div>
-                    <div className="text-lg">
-                      <h3 className="inline-block font-semibold">
+                    <div className="text-2xl text-[#717171]">
+                      <h3 className="inline-block font-semibold text-black">
                         {feature.title}
                       </h3>
                       {" - "}
@@ -53,4 +53,4 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default WhyCooseUS;
+export default KeyFeatures;

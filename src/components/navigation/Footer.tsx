@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="bg-[#01405F] text-white">
       <div className="global-container mx-auto px-4 py-16">
         {/* Main grid container - responsive layout */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4 lg:justify-items-center">
           {/* First Column: Logo, Description and Location */}
           <div className="space-y-6">
             {/* Logo and company description */}

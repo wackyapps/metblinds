@@ -15,7 +15,7 @@ const ProductionSteps: React.FC<{
   data: Props;
 }> = ({ data }) => {
   return (
-    <section className="global-container mx-auto px-4 py-24">
+    <section className="mx-auto max-w-[1400px] px-4 py-24">
       {/* Header */}
 
       <div className="mb-14 flex flex-col items-center">

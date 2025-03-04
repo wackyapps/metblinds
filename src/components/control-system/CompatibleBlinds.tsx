@@ -56,7 +56,7 @@ const CompatibleBlinds = () => {
       const glide = new Glide(sliderRef.current, {
         type: "carousel",
         startAt: 0,
-        perView: 1,
+        perView: 4,
         gap: 20,
         autoplay: 200000,
         hoverpause: true,

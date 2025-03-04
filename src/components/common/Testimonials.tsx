@@ -45,40 +45,41 @@ const Testimonials: React.FC<Props> = ({ data }) => {
   }, []);
 
   return (
-    <div className="py-24">
+    <div className="py-12 md:py-24">
       <div className="global-container">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="relative mb-10 text-center text-[40px] font-semibold text-[#013F68]">
+          <h2 className="relative mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl">
             {data.heading}
           </h2>
         </div>
-        {/*
-         * showing the rating
-         */}
-        <div className="mb-16 flex items-center justify-between">
+        {/* showing the rating */}
+        <div className="mb-8 flex flex-col items-center justify-between gap-4 md:mb-16 md:flex-row md:gap-0">
           <div>
-            <div className="mb-3 flex items-center gap-5">
+            <div className="mb-3 flex items-center gap-3 md:gap-5">
               <img
                 src={"/google.svg"}
                 alt="google image"
-                width={131}
-                height={50}
+                width={100}
+                height={38}
+                className="md:h-[50px] md:w-[131px]"
               />
-              <h4 className="text-[28px]">Rating</h4>
+              <h4 className="text-xl md:text-[28px]">Rating</h4>
             </div>
-            {/*
-             * showing the stars and ratings
-             */}
-            <div className="flex items-center gap-3">
+            {/* showing the stars and ratings */}
+            <div className="flex flex-col items-center gap-2 md:flex-row md:gap-3">
               <div className="flex items-center gap-2">
                 {Array.from({ length: 5 }).map((_, index) => {
                   return (
-                    <IoStar color="#FFA600" className="text-3xl" key={index} />
+                    <IoStar
+                      color="#FFA600"
+                      className="text-2xl md:text-3xl"
+                      key={index}
+                    />
                   );
                 })}
               </div>
               <div>
-                <h6 className="text-center text-lg">
+                <h6 className="text-center text-base md:text-lg">
                   4.9 rating of 89 reviews
                 </h6>
               </div>
@@ -87,15 +88,14 @@ const Testimonials: React.FC<Props> = ({ data }) => {
           {/* right side rating button  */}
           <div>
             <button
-              className={`rounded-xl bg-[#FFA600] px-8 py-3 text-xl text-white`}
+              className={`w-full rounded-xl bg-[#FFA600] px-6 py-2 text-base text-white md:w-auto md:px-8 md:py-3 md:text-xl`}
             >
               <span> Post A review </span>
             </button>
           </div>
         </div>
         {/* showing the customer reviews */}
-        {/* <div className="mb-16 flex items-center justify-center gap-4"> */}
-        <div className="relative mb-16 overflow-hidden" ref={sliderRef}>
+        <div className="relative mb-8 overflow-hidden md:mb-16" ref={sliderRef}>
           <div className="glide__track" data-glide-el="track">
             <ul className="glide__slides">
               {data.reviews.map((review, index) => (
@@ -118,7 +118,7 @@ const Testimonials: React.FC<Props> = ({ data }) => {
         </div>
         <div className="flex justify-center">
           <button
-            className={`rounded-full bg-[#FFA600] px-8 py-3 text-xl text-white`}
+            className={`rounded-full bg-[#FFA600] px-6 py-2 text-base text-white md:px-8 md:py-3 md:text-xl`}
           >
             <span> See more {">"} </span>
           </button>

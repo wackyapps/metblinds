@@ -222,7 +222,7 @@ export const homePage = {
    * media spotlight section data for homepage
    */
   mediaSpotlight: {
-    heading: "As seen on HGTV’S hoarder house flippers",
+    heading: "As seen on *HGTV’S* hoarder house flippers",
     subHeading:
       "Metbinds Calgary is the official sponsor of the show. Our blinds are used in all renovations",
     buttonText: "Give us a call",
@@ -317,5 +317,11 @@ export const homePage = {
       ,
       "Upgrade your home with the finest blinds in Calgary.",
     ],
+  },
+  contactSection: {
+    heading: "Contact Us",
+    subHeading:
+      "Have any questions? Feel free to contact us at help@metblindsx.com or fill out the form.",
+    image: "/images/contact-section-image-1.png",
   },
 };
