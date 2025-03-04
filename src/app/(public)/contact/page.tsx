@@ -16,7 +16,7 @@ const page = () => {
       {/*
        * speacial offer hero section
        */}
-      <SpecialOfferSection />
+      <SpecialOfferSection data={contactPage.specialOffer} />
       {/*
        * blids showcase
        */}
@@ -24,7 +24,7 @@ const page = () => {
       {/*
        * warranty info section
        */}
-      <WarrantyInfoSection />
+      <WarrantyInfoSection data={contactPage.warrantyInfoSection} />
       {/*
        *  Blind Advantages
        */}
@@ -33,7 +33,7 @@ const page = () => {
       {/*
        * contact form section
        */}
-      <ContactSection />
+      <ContactSection data={contactPage.contactSection} />
     </div>
   );
 };

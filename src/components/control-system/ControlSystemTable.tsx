@@ -1,167 +1,21 @@
-interface ControlSystem {
-  blindType: string;
-  controls: Record<string, boolean>;
-}
-
-const controlOptions = [
-  "Corded",
-  "Cordless",
-  "Manual Wand",
-  "Electric Wand",
-  "Motorized Control",
-  "Smart Control",
-];
-
-const controlSystems: ControlSystem[] = [
-  {
-    blindType: "Zebra Blinds",
-    controls: {
-      Corded: true,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": true,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Roller Blinds",
-    controls: {
-      Corded: true,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": true,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Double Roller Blinds",
-    controls: {
-      Corded: false,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": true,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Sunscreen Blinds",
-    controls: {
-      Corded: true,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": true,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Trifold Blinds",
-    controls: {
-      Corded: true,
-      Cordless: false,
-      "Manual Wand": false,
-      "Electric Wand": true,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Honeycomb Blinds",
-    controls: {
-      Corded: false,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Honeycomb DNN Blinds",
-    controls: {
-      Corded: false,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Roman Shades",
-    controls: {
-      Corded: false,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Luxury Roman Shades",
-    controls: {
-      Corded: false,
-      Cordless: true,
-      "Manual Wand": false,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Dream Curtains",
-    controls: {
-      Corded: true,
-      Cordless: false,
-      "Manual Wand": true,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Drapery",
-    controls: {
-      Corded: false,
-      Cordless: false,
-      "Manual Wand": true,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-  {
-    blindType: "Skylights",
-    controls: {
-      Corded: false,
-      Cordless: true,
-      "Manual Wand": true,
-      "Electric Wand": false,
-      "Motorized Control": true,
-      "Smart Control": true,
-    },
-  },
-];
-
+import { controlSystemPage } from "@/configs/pages-data/control-systems";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiCloseCircleFill } from "react-icons/ri";
+type Props = {
+  data: typeof controlSystemPage.controlSystemTable;
+};
 
-const ControlSystemTable: React.FC = () => {
+const ControlSystemTable: React.FC<Props> = ({ data }) => {
   return (
     <div className="py-24">
       <div className="global-container">
         <div className="mb-12 flex flex-col justify-center">
           <h2 className="mb-6 text-center text-3xl font-semibold text-[#023D64] sm:text-4xl md:text-5xl">
-            Find the Right Control System for Your Blinds
+            {data.heading}
           </h2>
           <p className="text-center text-sm text-[#767676] sm:text-xl md:text-[22px]">
-            Use the table below to check which control options are available for
-            your preferred blinds. Click to expand and view details.
+            {data.subHeading}
           </p>
         </div>
         <div className="overflow-x-auto rounded-lg bg-white shadow-md">
@@ -174,7 +28,7 @@ const ControlSystemTable: React.FC = () => {
                 >
                   Blinds
                 </th>
-                {controlOptions.map((option) => (
+                {data.controlOptions.map((option) => (
                   <th
                     key={option}
                     scope="col"
@@ -186,17 +40,19 @@ const ControlSystemTable: React.FC = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white">
-              {controlSystems.map((system) => (
+              {data.blindsDetails.map((system) => (
                 <tr key={system.blindType}>
                   <td className="whitespace-nowrap px-6 py-4 text-xl font-medium text-[#504D4D]">
                     {system.blindType}
                   </td>
-                  {controlOptions.map((option) => (
+                  {data.controlOptions.map((option) => (
                     <td
                       key={option}
                       className="whitespace-nowrap px-6 py-4 text-center"
                     >
-                      {system.controls[option] ? (
+                      {system.controls[
+                        option as keyof typeof system.controls
+                      ] ? (
                         <FaCheckCircle className="mx-auto text-3xl text-amber-400" />
                       ) : (
                         <RiCloseCircleFill className="mx-auto text-3xl text-gray-500" />

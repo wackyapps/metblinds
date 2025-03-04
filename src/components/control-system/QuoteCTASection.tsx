@@ -1,4 +1,9 @@
-export default function QuoteCTASection() {
+import { controlSystemPage } from "@/configs/pages-data/control-systems";
+type Props = {
+  data: typeof controlSystemPage.quoteCTASection;
+};
+
+export default function QuoteCTASection({ data }: Props) {
   return (
     <div className="px-6 py-24">
       <section
@@ -16,16 +21,16 @@ export default function QuoteCTASection() {
           {/* Text Container */}
           <div className="flex flex-col items-center gap-[30px]">
             <h2 className="max-w-[778px] text-center text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-              Need Help Choosing the Right Control System?
+              {data.heading}
             </h2>
             <p className="w-full text-center text-lg text-white md:text-xl">
-              Contact us for expert recommendations and customized solutions
+              {data.subHeading}
             </p>
           </div>
 
           {/* Button */}
           <button className="rounded-[31px] bg-white px-8 py-4 text-lg font-medium text-orange-500">
-            Request a Free Quote
+            {data.buttonText}
           </button>
         </div>
       </section>

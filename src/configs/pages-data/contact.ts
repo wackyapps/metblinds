@@ -44,6 +44,22 @@ export const contactPage = {
       textPosition: "right",
     },
   ] as BannerType,
+
+  specialOffer: {
+    title: "SPECIAL OFFER",
+    mainHeading: "40% OFF Custom Blinds",
+    features: [
+      "FREE Window Blinds Installation",
+      "Discounted Motorization Upgrade",
+    ],
+    originalPrice: 250,
+    discountedPrice: 200,
+    quote:
+      "Mention this offer when you request an estimate (phone, form, or email) & save!",
+    ctaText: "Request a free estimate",
+    imageSrc: "/images/white-blind.png",
+    imageAlt: "Special Offer Blinds",
+  },
   blindsShowCase: {
     heading: "Blinds Catalogue",
     blinds: [
@@ -91,6 +107,16 @@ export const contactPage = {
       },
     ],
   },
+  warrantyInfoSection: {
+    heading: "Met Blinds Warranty Details",
+    features: [
+      "10-Year Warranty on all products",
+      "2-Year Warranty on installation",
+      "Free replacement parts for 1 year",
+    ],
+    ctaText: "Request a free estimate",
+  },
+
   blindsAdvantages: {
     heading: "WHAT MAKES OUR CALGARY BLINDS ",
     subHeading: "COMPANY DIFFERENT",
@@ -121,5 +147,11 @@ export const contactPage = {
           "Our knowledgeable Calgary window-covering experts are prepared to assist you in selecting the perfect blinds for your home. Whether you require style, colour, or functionality advice, we're here to help you make well-informed decisions.",
       },
     ],
+  },
+  contactSection: {
+    heading: "Contact Us",
+    subHeading:
+      "Have any questions? Feel free to contact us at help@metblindsx.com or fill out the form.",
+    image: "/images/contact-section-image-1.png",
   },
 };

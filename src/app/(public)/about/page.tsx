@@ -7,10 +7,10 @@ import { aboutPage } from "@/configs/pages-data/about";
 const page = () => {
   return (
     <div>
-      <AboutBanner />
-      <MissionSection />
+      <AboutBanner data={aboutPage.aboutBanner} />
+      <MissionSection data={aboutPage.aboutMission} />
       <WhyCooseUS data={aboutPage.whyChooseUs} />
-      <OurProcess />
+      <OurProcess data={aboutPage.aboutOurProcess} />
     </div>
   );
 };
