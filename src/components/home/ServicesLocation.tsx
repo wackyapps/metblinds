@@ -11,7 +11,7 @@ const ServicesLocation: React.FC<{
   return (
     <div className={`bg-[#F7F9FA] px-3 ${className}`}>
       <div className="global-container relative z-50 -translate-y-12 rounded-3xl bg-white shadow-lg">
-        <div className="flex flex-col items-start justify-between gap-8 p-4 lg:flex-row lg:items-center lg:p-10">
+        <div className="flex flex-col items-start justify-between gap-8 p-8 lg:flex-row lg:items-center lg:p-10">
           {/* Text container with heading, description and locations */}
           <div className="flex w-full flex-col items-stretch gap-4 lg:max-w-[500px]">
             <h2 className="text-2xl font-bold text-[#013F68] lg:text-4xl">

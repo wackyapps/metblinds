@@ -1,3 +1,4 @@
+import { rubik } from "@/fonts";
 import React from "react";
 import { HiArrowRight } from "react-icons/hi";
 
@@ -31,24 +32,28 @@ const SpecialOfferSection: React.FC<SpecialOfferSectionProps> = ({ data }) => {
   } = data;
 
   return (
-    <section className="bg-[#F7F9FA] py-16 lg:py-0">
-      <div className="global-container mx-auto px-4">
-        <div className="flex flex-col items-stretch justify-between gap-10 lg:flex-row lg:gap-40">
+    <section className="relative bg-[#F7F9FA] py-16 lg:py-0">
+      <div className="mx-auto flex max-w-[1460px] flex-col items-stretch justify-between gap-10 px-4 xl:flex-row">
+        <div className="flex w-full flex-col lg:gap-40 xl:w-[60%]">
           {/* Left Content */}
           <div className="flex max-w-[815px] flex-col space-y-12 lg:py-20">
             {/* Offer Text */}
             <div className="space-y-4">
-              <h3 className="text-3xl font-bold text-[#014168] lg:text-4xl">
+              <h3
+                className={`${rubik.className} text-3xl font-bold text-[#014168] lg:text-4xl`}
+              >
                 {title}
               </h3>
-              <h2 className="text-4xl font-bold leading-tight text-[#FFA600] lg:text-6xl">
+              <h2
+                className={`${rubik.className} text-4xl font-bold leading-tight text-[#FFA600] lg:text-6xl`}
+              >
                 {mainHeading}
               </h2>
             </div>
 
             {/* Features */}
             <div className="space-y-4">
-              <ul className="list-disc ps-3">
+              <ul className="list-disc ps-5">
                 {features.map((feature, index) => (
                   <li
                     key={index}
@@ -79,16 +84,15 @@ const SpecialOfferSection: React.FC<SpecialOfferSectionProps> = ({ data }) => {
               </button>
             </div>
           </div>
-
-          {/* Right Image */}
-          <div className="relative min-h-[400px] w-full lg:w-[747px]">
-            <img
-              src={imageSrc}
-              alt={imageAlt}
-              className="h-full object-cover"
-            />
-          </div>
         </div>
+        <div className="w-[40%]"></div>
+      </div>
+      <div className="absolute right-0 top-0 hidden h-full w-[40%] xl:block">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="h-full w-full object-cover"
+        />
       </div>
     </section>
   );

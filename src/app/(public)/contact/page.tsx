@@ -5,6 +5,7 @@ import SpecialOfferSection from "@/components/contact/SpecialOfferSection";
 import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import { contactPage } from "@/configs/pages-data/contact";
 import BannerAdvanced from "@/components/common/BannerAdvanced";
+import Testimonials from "@/components/common/Testimonials";
 
 const page = () => {
   return (
@@ -25,6 +26,9 @@ const page = () => {
        * warranty info section
        */}
       <WarrantyInfoSection data={contactPage.warrantyInfoSection} />
+      {/* testimonial section */}
+      <Testimonials data={contactPage.testimonials} />
+
       {/*
        *  Blind Advantages
        */}

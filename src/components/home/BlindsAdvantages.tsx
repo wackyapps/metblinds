@@ -1,20 +1,44 @@
 import { homePage } from "@/configs/pages-data/home";
 import React from "react";
+import { rubik } from "@/fonts";
+import { IconType } from "react-icons";
+
+type Props = {
+  heading: string;
+  subHeading: string;
+  background?: string;
+  features: {
+    icon: IconType;
+    title: string;
+    description: string;
+  }[];
+};
 
 const BlindsAdvantages: React.FC<{
-  data: typeof homePage.blindsAdvantages;
+  data: Props;
 }> = ({ data }) => {
   return (
-    <div className="py-24">
-      <div className="global-container">
+    <div
+      className="py-24"
+      style={{
+        background: data.background
+          ? `linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0)), url(${data.background})`
+          : undefined,
+      }}
+    >
+      <div className="mx-auto max-w-[1490px] px-3 md:px-5">
         {/*
          * heading and subheading
          */}
         <div className="mb-14 flex flex-col items-center justify-center gap-3">
-          <h2 className="text-center text-[40px] font-semibold text-[#013F68]">
+          <h2
+            className={`${rubik.className} text-center text-[40px] font-semibold text-[#013F68]`}
+          >
             {data.heading}
           </h2>
-          <h3 className="rounded-full bg-[#FFA600] px-4 py-2 text-center text-3xl font-semibold text-[#013F68]">
+          <h3
+            className={`${rubik.className} rounded-full bg-[#FFA600] px-4 py-2 text-center text-3xl font-semibold text-[#013F68]`}
+          >
             {data.subHeading}
           </h3>
         </div>

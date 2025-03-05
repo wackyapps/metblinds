@@ -21,9 +21,11 @@ const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({
           {data.points.map((point, index) => (
             <h4
               key={index}
-              className="max-w-[1000px] text-center text-xl font-medium text-white"
+              className={`max-w-[1000px] text-center text-xl text-white ${
+                point?.isBold ? "font-bold" : "font-medium"
+              }`}
             >
-              {point}
+              {point.text}
             </h4>
           ))}
           <button

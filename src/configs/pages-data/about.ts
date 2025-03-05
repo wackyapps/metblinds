@@ -66,7 +66,7 @@ export const aboutPage = {
     ],
   },
   aboutOurProcess: {
-    heading: "Our Process",
+    heading: "OUR PROCESS",
     features: [
       {
         id: 1,

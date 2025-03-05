@@ -1,6 +1,7 @@
 import React from "react";
 import ProcessStepCard from "./cards/ProcessStepCard";
 import { IconType } from "react-icons";
+import { rubik } from "@/fonts";
 
 type Props = {
   heading: string;
@@ -15,11 +16,13 @@ const ProductionSteps: React.FC<{
   data: Props;
 }> = ({ data }) => {
   return (
-    <section className="mx-auto max-w-[1400px] px-4 py-24">
+    <section className="mx-auto max-w-[1200px] px-4 py-24">
       {/* Header */}
 
       <div className="mb-14 flex flex-col items-center">
-        <h2 className="relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]">
+        <h2
+          className={`${rubik.className} relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+        >
           {data.heading}
         </h2>
         <p className="max-w-[1300px] text-center text-xl text-[#767676] sm:text-2xl">

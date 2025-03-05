@@ -61,7 +61,7 @@ export const contactPage = {
     imageAlt: "Special Offer Blinds",
   },
   blindsShowCase: {
-    heading: "Blinds Catalogue",
+    heading: "BLINDS CATALOGUE",
     blinds: [
       {
         title: "Zebra Blinds",
@@ -110,9 +110,10 @@ export const contactPage = {
   warrantyInfoSection: {
     heading: "Met Blinds Warranty Details",
     features: [
-      "10-Year Warranty on all products",
-      "2-Year Warranty on installation",
-      "Free replacement parts for 1 year",
+      "*10 Years* – All hardware & components for Zebra, Roller, Sunscreen, Tri-fold Blinds & Siderails (no questions asked).",
+      "*5 Years* – Fabric for Zebra, Roller, Sunscreen & Tri-fold Blinds (manufacturing faults only).",
+      "*2 Years* – Dream Curtains, Honeycomb & Honeycomb Day & Night Blinds.",
+      "*5 Years* – Motors (if added) & Smart HUB.",
     ],
     ctaText: "Request a free estimate",
   },
@@ -120,6 +121,7 @@ export const contactPage = {
   blindsAdvantages: {
     heading: "WHAT MAKES OUR CALGARY BLINDS ",
     subHeading: "COMPANY DIFFERENT",
+    background: "/banners/about-banner-img.png",
     features: [
       {
         icon: PiMedal,
@@ -145,6 +147,51 @@ export const contactPage = {
         title: "Professional Guidance:",
         description:
           "Our knowledgeable Calgary window-covering experts are prepared to assist you in selecting the perfect blinds for your home. Whether you require style, colour, or functionality advice, we're here to help you make well-informed decisions.",
+      },
+    ],
+  },
+
+  testimonials: {
+    heading: "THE TRUST WE HAVE EARNED",
+    reviews: [
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Maria arnold",
+        rating: 4,
+        date: "2023-10-12",
+        comment: "Great product, highly recommend!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "John Smith",
+        rating: 5,
+        date: "2023-11-15",
+        comment:
+          "Excellent service and quality blinds. The installation team was very professional.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Sarah Johnson",
+        rating: 5,
+        date: "2023-11-01",
+        comment:
+          "Love my new motorized blinds! They work perfectly and look amazing.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Michael Chen",
+        rating: 4,
+        date: "2023-10-25",
+        comment:
+          "Very happy with the zebra blinds. Great quality and reasonable prices.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Emma Wilson",
+        rating: 5,
+        date: "2023-10-18",
+        comment:
+          "The smart blinds are a game changer! Customer service was outstanding.",
       },
     ],
   },

@@ -4,6 +4,7 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
 import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
 import RatingCard from "./cards/RatingCard";
+import { rubik } from "@/fonts";
 
 import { IoStar } from "react-icons/io5";
 type Props = {
@@ -26,7 +27,7 @@ const Testimonials: React.FC<Props> = ({ data }) => {
       const glide = new Glide(sliderRef.current, {
         type: "carousel",
         startAt: 0,
-        perView: 1,
+        perView: 4,
         gap: 20,
         autoplay: 200000,
         hoverpause: true,
@@ -46,9 +47,11 @@ const Testimonials: React.FC<Props> = ({ data }) => {
 
   return (
     <div className="py-12 md:py-24">
-      <div className="global-container">
+      <div className="mx-auto max-w-[1560px] px-3 md:px-5">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="relative mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl">
+          <h2
+            className={`${rubik.className} relative mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
+          >
             {data.heading}
           </h2>
         </div>

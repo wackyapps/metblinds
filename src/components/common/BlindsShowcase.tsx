@@ -1,5 +1,6 @@
 import React from "react";
 import BlindCard from "./cards/BlindCard";
+import { rubik } from "@/fonts";
 
 type Props = {
   data: {
@@ -16,12 +17,13 @@ type Props = {
 const BlindsShowcase: React.FC<Props> = ({ data }) => {
   return (
     <div className="py-24">
-      <div className="global-container">
+      <div className="mx-auto max-w-[1490px] px-3 md:px-5">
         {data.heading && (
           <div className="mb-14 flex justify-center">
             <div className="relative mb-2">
-              <div className="absolute left-[20px] top-[6px] z-0 h-[61px] w-[218px] rounded-[42px] bg-[#FFA600]" />
-              <h2 className="relative z-10 text-center text-[32px] font-semibold text-[#014768]">
+              <h2
+                className={`${rubik.className} relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+              >
                 {data.heading}
               </h2>
             </div>

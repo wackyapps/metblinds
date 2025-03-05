@@ -51,7 +51,7 @@ const BannerAdvanced: React.FC<Props> = ({ banners }) => {
                 }}
               >
                 <div className="h-full px-4">
-                  <div className="global-container flex h-full items-center justify-between">
+                  <div className="mx-auto flex h-full max-w-[1450px] items-center justify-between">
                     {/*
                      * text container of heading subheading and button
                      */}
@@ -61,11 +61,17 @@ const BannerAdvanced: React.FC<Props> = ({ banners }) => {
                           {banner.heading}
                         </h2>
                       )}
+
                       {banner.subheading && (
                         <h4 className="text-3xl text-white">
                           {banner.subheading}
                         </h4>
                       )}
+                      <img
+                        src="/svgs/divider-icon.svg"
+                        className="h-2 w-20"
+                        alt=""
+                      />
                       {banner.description && (
                         <p className="text-lg text-white">
                           {banner.description}
@@ -87,7 +93,7 @@ const BannerAdvanced: React.FC<Props> = ({ banners }) => {
                       <div className="">
                         <img
                           alt="banner image"
-                          className="border-effect rounded-3xl"
+                          className="rounded-xl rounded-bl-[100px] rounded-tr-[100px] border-8 border-[#FFA600]"
                           src={banner.bannerImage}
                           width={500}
                           height={500}

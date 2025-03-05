@@ -4,9 +4,5 @@
 }
 .glide__slide.glide__slide--active .banner-text-container * {
   visibility: visible;
-  @apply translate-y-0;
-}
-.border-effect {
-  filter: drop-shadow(6px 6px 0px #ffa600) drop-shadow(-6px -6px 0px #ffa600)
-    drop-shadow(6px -6px 0px #ffa600) drop-shadow(-6px 6px 0px #ffa600);
+  @apply translate-y-0 duration-500;
 }

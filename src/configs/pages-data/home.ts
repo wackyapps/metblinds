@@ -74,7 +74,7 @@ export const homePage = {
    */
   blindsCustomization: {
     heading:
-      "Customize your window blinds, Calgary homeowners, and have them installed within 8 - 10 business days!",
+      "CUSTOMIZE YOUR WINDOW BLINDS, CALGARY HOMEOWNERS, AND HAVE THEM INSTALLED WITHIN 8 - 10 BUSINESS DAYS!",
     subHeading: "BYOB (Build Your Own Blinds)",
     buttonText: "Request a Free Quote",
     background: "/images/home/custom-blind-bg.png",
@@ -101,8 +101,8 @@ export const homePage = {
    * blind advantages data
    */
   blindsAdvantages: {
-    heading: "Premium Window Blinds in Calgary ",
-    subHeading: "That Enhance Your Home",
+    heading: "PREMIUM WINDOW BLINDS IN CALGARY",
+    subHeading: "THAT ENHANCE YOUR HOME",
     features: [
       {
         icon: BsCalendar2Check,
@@ -183,7 +183,7 @@ export const homePage = {
    * production steps data for homepage
    */
   productionSteps: {
-    heading: "Why met blinds?",
+    heading: "WHY MET BLINDS?",
     subHeading: "The Met Blinds Post-Sale Manufacturing Process",
     features: [
       {
@@ -312,10 +312,16 @@ export const homePage = {
     heading: "What We Have to Offer?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
-      "Discover a premium collection of blinds, including zebra, roller, solar, motorized, and smart blinds—crafted for style and function. Personalize every detail with expert design consultants and high-performance materials built to last",
-      "Exclusive luxury fabrics, patented and inspired by snakeskin, are available only at Met Blinds. Whether you seek elegance, energy efficiency, or UV protection, we have the perfect solution.",
-      ,
-      "Upgrade your home with the finest blinds in Calgary.",
+      {
+        text: "Discover a premium collection of blinds, including zebra, roller, solar, motorized, and smart blinds—crafted for style and function. Personalize every detail with expert design consultants and high-performance materials built to last",
+      },
+      {
+        text: "Exclusive luxury fabrics, patented and inspired by snakeskin, are available only at Met Blinds. Whether you seek elegance, energy efficiency, or UV protection, we have the perfect solution.",
+      },
+      {
+        text: "Upgrade your home with the finest blinds in Calgary.",
+        isBold: true,
+      },
     ],
   },
   contactSection: {

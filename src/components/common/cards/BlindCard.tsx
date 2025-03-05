@@ -8,7 +8,7 @@ const BlindCard: React.FC<{
 }> = ({ title, image, description, buttonText }) => {
   return (
     <div
-      className="flex min-h-[500px] flex-col items-stretch justify-end gap-3 rounded p-10"
+      className="flex min-h-[500px] flex-col items-stretch justify-end gap-3 rounded bg-cover p-10"
       style={{
         background: `linear-gradient(#f7f9fa00, #132D59CC,#132D59), 
               url(${image})`,

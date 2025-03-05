@@ -5,13 +5,21 @@ import { HiArrowRight, HiCheck } from "react-icons/hi";
 type Props = {
   data: typeof contactPage.warrantyInfoSection;
 };
+const formatTextWithBold = (text: string) => {
+  return text.split(/(\*[^*]+\*)/).map((part, index) => {
+    if (part.startsWith("*") && part.endsWith("*")) {
+      return <strong key={index}>{part.slice(1, -1)}</strong>;
+    }
+    return part;
+  });
+};
 
 const WarrantyInfoSection = ({ data }: Props) => {
   const { heading, features, ctaText } = data;
   return (
     <section className="bg-[#F7F9FA] py-16 lg:py-24">
-      <div className="global-container mx-auto px-4">
-        <div className="flex flex-col items-center justify-between gap-10 min-[1100px]:flex-row">
+      <div className="mx-auto max-w-[1470px] px-4">
+        <div className="flex flex-col items-center justify-center gap-10 min-[1100px]:flex-row min-[1100px]:gap-32">
           {/* 10 Year Warranty Image */}
           <div className="relative h-[530px] w-[530px] flex-shrink-0">
             <img
@@ -23,7 +31,7 @@ const WarrantyInfoSection = ({ data }: Props) => {
 
           <div className="flex max-w-[1000px] flex-col space-y-12">
             {/* Heading */}
-            <h2 className="text-3xl font-bold text-[#1E3C6F] lg:text-4xl">
+            <h2 className={`text-3xl font-bold text-[#1E3C6F] lg:text-4xl`}>
               {heading}
             </h2>
 
@@ -32,10 +40,12 @@ const WarrantyInfoSection = ({ data }: Props) => {
               <div className="flex flex-col space-y-6">
                 {features.map((feature, index) => (
                   <div className="flex items-start space-x-5" key={index}>
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#FFA600]">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FFA600]">
                       <HiCheck className="h-5 w-5 text-white" />
                     </div>
-                    <p className="text-lg">{feature}</p>
+                    <p className="text-lg md:text-xl">
+                      {formatTextWithBold(feature)}
+                    </p>
                   </div>
                 ))}
               </div>

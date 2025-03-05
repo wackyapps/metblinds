@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
+import { rubik } from "@/fonts";
 
 const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
   data,
@@ -43,7 +44,9 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
     <div className="py-32">
       <div className="global-container">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="relative mb-16 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600]">
+          <h2
+            className={`${rubik.className} relative mb-16 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600]`}
+          >
             {data.heading}
           </h2>
           <div ref={glideRef} className="glide w-full">

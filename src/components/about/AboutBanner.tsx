@@ -1,6 +1,7 @@
 "use client";
 import ContactForm from "@/components/common/forms/ContactForm";
 import { aboutPage } from "@/configs/pages-data/about";
+import { inter } from "@/fonts";
 // import {} from // Modal,
 // ModalContent,
 // ModalHeader,
@@ -27,14 +28,15 @@ const AboutBanner: React.FC<Props> = ({ data }) => {
         }}
       >
         {/* Content container */}
-        <div className="global-container relative z-10 mx-auto flex flex-col items-start justify-between gap-[50px] px-4 lg:flex-row">
+        <div className="relative z-10 mx-auto flex max-w-[1460px] flex-col items-start justify-between gap-[50px] px-4 lg:flex-row">
           {/* Left content */}
           <div className="mt-[152px] flex w-full flex-col gap-[41px] lg:w-[758px]">
-            <div className="flex flex-col -space-y-14">
-              <h1 className="relative z-10 text-4xl font-bold text-white lg:text-5xl">
+            <div className="flex justify-start -space-y-14">
+              <h2
+                className={`${inter.className} relative mb-10 text-5xl font-semibold text-white after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+              >
                 {data.heading}
-              </h1>
-              <div className="h-[61px] w-[134px] rounded-[42px] bg-[#FFA600]" />
+              </h2>
             </div>
             <p className="text-lg leading-relaxed text-white">
               {data.subHeading}

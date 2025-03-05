@@ -2,6 +2,7 @@ import BlindsBanner from "@/components/blinds/BlindsBanner";
 // import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 import KeyFeatures from "@/components/blinds/KeyFeatures";
 import WhyChooseBlindsSlider from "@/components/blinds/WhyChooseBlindsSlider";
+// import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 import FAQsSection from "@/components/common/FAQsSection";
 import InfoBanner from "@/components/common/InfoBanner";
 
@@ -32,13 +33,16 @@ const page = () => {
     heading: "What We Have to Offer?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
-      "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+      {
+        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+      },
     ],
   };
   return (
     <div>
       <BlindsBanner />
       <WhyChooseBlindsSlider />
+      {/* <BlindsFeatures /> */}
       <KeyFeatures data={data} />
       {/* <ChooseYourFabric /> */}
       <FAQsSection />
