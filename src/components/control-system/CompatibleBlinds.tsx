@@ -4,52 +4,21 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
 import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
 import BlindCard from "../common/cards/BlindCard";
+import { inter } from "@/fonts";
 
-const blinds = [
-  {
-    title: "Zebra Blinds",
-    description:
-      "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-    image: "/images/blinds/zebra-blind.png",
-    buttonText: "Learn More",
-  },
-  {
-    title: "Roller Shades",
-    description:
-      "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-    image: "/images/blinds/roller-shades-blind.png",
-    buttonText: "Learn More",
-  },
-  {
-    title: "Solar Shades",
-    description:
-      "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-    image: "/images/blinds/solar-shades-blind.png",
-    buttonText: "Learn More",
-  },
-  {
-    title: "Drapery",
-    description:
-      "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-    image: "/images/blinds/drapery-blind.png",
-    buttonText: "Learn More",
-  },
-  {
-    title: "Trifold",
-    description:
-      "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-    image: "/images/blinds/triflod-blind.png",
-    buttonText: "Learn More",
-  },
-  {
-    title: "Honeycomb Blinds",
-    description:
-      "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-    image: "/images/blinds/honey-comb-blind.png",
-    buttonText: "Learn More",
-  },
-];
-const CompatibleBlinds = () => {
+type Props = {
+  data: {
+    heading: string;
+    subHeading: string;
+    blinds: {
+      title: string;
+      description: string;
+      image: string;
+      buttonText: string;
+    }[];
+  };
+};
+const CompatibleBlinds = ({ data }: Props) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (sliderRef.current) {
@@ -77,18 +46,19 @@ const CompatibleBlinds = () => {
     <div className="py-24">
       <div className="global-container">
         <div className="mb-14 flex flex-col items-center">
-          <h2 className="relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]">
-            Compatible Blinds{" "}
+          <h2
+            className={`${inter.className} relative mb-10 text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+          >
+            {data.heading}
           </h2>
-          <p className="max-w-[1300px] text-center text-xl text-[#767676] sm:text-2xl">
-            Corded control is compatible with multiple blind types, offering a
-            traditional and effective solution.
+          <p className="max-w-[1300px] text-center text-xl font-medium text-[#767676] sm:text-2xl">
+            {data.subHeading}
           </p>
         </div>
         <div className="relative overflow-hidden" ref={sliderRef}>
           <div className="glide__track" data-glide-el="track">
             <ul className="glide__slides">
-              {blinds.map((blind, index) => (
+              {data.blinds.map((blind, index) => (
                 <li
                   key={index}
                   className="glide__slide py-2 [height:100%_!important]"

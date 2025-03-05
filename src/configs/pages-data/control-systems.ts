@@ -2,6 +2,7 @@ import cordedBlinds from "./control-systems/corded-blinds";
 import cordlessBlinds from "./control-systems/cordless-blinds";
 import electricWand from "./control-systems/electric-wand";
 import manualWand from "./control-systems/manual-wand";
+import motorizedBlinds from "./control-systems/motorized-blinds";
 import smartControl from "./control-systems/smart-control";
 
 export const controlSystemPage = {
@@ -222,6 +223,7 @@ const controlSystemPages = [
   electricWand,
   manualWand,
   smartControl,
+  motorizedBlinds,
 ];
 
 export default controlSystemPages;

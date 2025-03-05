@@ -1,15 +1,25 @@
 "use client";
 import { websiteInfo } from "@/configs/info";
 import { mainNavbarNavigation } from "@/configs/navigation";
-
+import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  Button,
+  useDisclosure,
+} from "@heroui/react";
 
 const MainNavbar = () => {
   const logo = websiteInfo.logo;
   const pathname = usePathname();
-
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const router = useRouter();
   useEffect(() => {
     // Move console.log inside useEffect for client-side only execution
     console.log("pathname:", pathname);
@@ -25,16 +35,13 @@ const MainNavbar = () => {
     image: string;
   }) => {
     return (
-      <Link
-        className="group/link flex flex-col items-center gap-2 p-4"
-        href={link}
-      >
+      <Link className="group/link items-center space-y-3.5" href={link}>
         <img
           src={image}
           alt={title}
-          className="aspect-square w-full max-w-24 duration-300 group-hover/link:brightness-125 group-hover/link:filter"
+          className="mx-auto aspect-square w-[79px] max-w-full duration-300 group-hover/link:[filter:sepia(1)_hue-rotate(40deg)_saturate(2)]"
         />
-        <span className="text-[#A6A3A3]">{title}</span>
+        <div className="text-center text-xs text-[#A6A3A3]">{title}</div>
       </Link>
     );
   };
@@ -48,8 +55,16 @@ const MainNavbar = () => {
               <img width={200} height={50} src={logo.src} alt={logo.alt} />
             </Link>
           </div>
-          {/* Right: Navigation */}
-          <div className="flex items-center gap-10">
+          <div className="py-10 xl:hidden">
+            <Hamburger
+              toggled={isOpen}
+              toggle={onOpenChange}
+              size={30}
+              color="#013F68"
+            />
+          </div>
+          {/* Navigation  for desktop */}
+          <div className="hidden items-center gap-10 xl:flex">
             {mainNavbarNavigation.map((navigation, index) => {
               if (navigation.isButton && navigation.link) {
                 return (
@@ -78,10 +93,25 @@ const MainNavbar = () => {
                   <button
                     key={index}
                     className="group relative flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]"
+                    onClick={() => {
+                      if (navigation.link) {
+                        router.push(navigation.link);
+                      }
+                    }}
                   >
                     <navigation.icon className="h-5 w-5" />
                     <span> {navigation.title}</span>
-                    <div className="absolute top-[calc(100%+20px)] z-50 grid h-[500px] min-w-[300px] max-w-[400px] -translate-x-1/2 cursor-default grid-cols-2 overflow-auto rounded-lg bg-white opacity-0 duration-300 [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100">
+                    <div
+                      className={`absolute top-[calc(100%+20px)] z-50 grid -translate-x-1/2 cursor-default overflow-auto rounded-lg bg-white px-10 py-9 opacity-0 duration-300 [column-gap:50px] [row-gap:19px] [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100`}
+                      style={{
+                        gridTemplateColumns: navigation?.itemsCount
+                          ? `repeat(${navigation?.itemsCount}, 1fr)`
+                          : "repeat(2, 1fr)",
+                        minWidth: navigation?.itemsContainerWidth
+                          ? `${navigation?.itemsContainerWidth}px`
+                          : "300px",
+                      }}
+                    >
                       {navigation.items.map((item, index) => (
                         <ImageInnerNavigation
                           key={index}

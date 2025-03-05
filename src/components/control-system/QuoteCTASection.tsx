@@ -1,4 +1,5 @@
 import { controlSystemPage } from "@/configs/pages-data/control-systems";
+import { inter } from "@/fonts";
 type Props = {
   data: typeof controlSystemPage.quoteCTASection;
 };
@@ -20,16 +21,18 @@ export default function QuoteCTASection({ data }: Props) {
         <div className="flex flex-col items-center gap-12">
           {/* Text Container */}
           <div className="flex flex-col items-center gap-[30px]">
-            <h2 className="max-w-[778px] text-center text-3xl font-bold text-white sm:text-4xl md:text-5xl">
+            <h2
+              className={`${inter.className} max-w-[778px] text-center text-3xl font-bold text-white sm:text-4xl md:text-5xl`}
+            >
               {data.heading}
             </h2>
-            <p className="w-full text-center text-lg text-white md:text-xl">
+            <p className="w-full text-center text-lg font-medium text-white md:text-xl">
               {data.subHeading}
             </p>
           </div>
 
           {/* Button */}
-          <button className="rounded-[31px] bg-white px-8 py-4 text-lg font-medium text-orange-500">
+          <button className="rounded-[31px] bg-white px-11 py-4 text-lg font-medium text-orange-500">
             {data.buttonText}
           </button>
         </div>

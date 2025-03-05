@@ -13,6 +13,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import controlSystemPages from "./pages-data/control-systems";
+import blinds from "./pages-data/blinds";
 // main navbar navigation type
 type NavigationType = {
   title: string;
@@ -20,6 +21,8 @@ type NavigationType = {
   icon: IconType;
   isButton?: boolean;
   items?: { title: string; link: string; image: string }[];
+  itemsCount?: number;
+  itemsContainerWidth?: number;
 };
 
 // main navbarLinks
@@ -37,11 +40,18 @@ export const mainNavbarNavigation: NavigationType[] = [
   {
     title: "Blinds",
     icon: LuBlinds,
-    items: [],
+    items: blinds.map((blind) => ({
+      title: blind.title,
+      link: `/blinds/${blind.slug}`,
+      image: blind.icon,
+    })),
+    itemsCount: 3,
+    itemsContainerWidth: 400,
   },
   {
     title: "Control System",
     icon: CiSettings,
+    link: "/control-system",
     items: controlSystemPages.map((controlSystem) => ({
       title: controlSystem.title,
       link: `/control-system/${controlSystem.slug}`,

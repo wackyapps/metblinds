@@ -1,15 +1,15 @@
-import zebraBlinds from "./blinds/zebra-blinds.ts";
-import rollerBlinds from "./blinds/roller-blinds.ts";
-import doubleRollerBlinds from "./blinds/double-roller-blinds.ts";
-import romanShades from "./blinds/roman-shades.ts";
-import luxuryRomanShades from "./blinds/luxury-roman-shades.ts";
-import draperyBlinds from "./blinds/drapery-blinds.ts";
-import sunscreenBlinds from "./blinds/sunscreen-blinds.ts";
-import trifoldBlinds from "./blinds/trifold-blinds.ts";
-import skylightBlinds from "./blinds/skylight-blinds.ts";
-import honeycombBlinds from "./blinds/honeycomb-blinds.ts";
-import honeycombDnnBlinds from "./blinds/honeycomb-dnn-blinds.ts";
-import dreamCurtains from "./blinds/dream-curtains.ts";
+import zebraBlinds from "./blinds/zebra-blinds";
+import rollerBlinds from "./blinds/roller-blinds";
+import doubleRollerBlinds from "./blinds/double-roller-blinds";
+import romanShades from "./blinds/roman-shades";
+import luxuryRomanShades from "./blinds/luxury-roman-shades";
+import draperyBlinds from "./blinds/drapery-blinds";
+import sunscreenBlinds from "./blinds/sunscreen-blinds";
+import trifoldBlinds from "./blinds/trifold-blinds";
+import skylightBlinds from "./blinds/skylight-blinds";
+import honeycombBlinds from "./blinds/honeycomb-blinds";
+import honeycombDnnBlinds from "./blinds/honeycomb-dnn-blinds";
+import dreamCurtains from "./blinds/dream-curtains";
 
 const blinds = [
   zebraBlinds,

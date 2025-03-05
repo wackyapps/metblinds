@@ -15,10 +15,9 @@ const MediaSpotlight: React.FC<{ data: typeof homePage.mediaSpotlight }> = ({
 }) => {
   return (
     <div
-      className="py-32"
+      className="bg-cover bg-center bg-no-repeat py-32"
       style={{
-        background: `linear-gradient(#F7F9FA, #f7f9fa75), 
-              url(${data.background})`,
+        backgroundImage: `linear-gradient(#F7F9FA, #f7f9fa75), url(${data.background})`,
       }}
     >
       <div className="global-container">
@@ -30,7 +29,7 @@ const MediaSpotlight: React.FC<{ data: typeof homePage.mediaSpotlight }> = ({
             {data.subHeading}
           </h4>
           <button
-            className={`rounded-full bg-[#FFA600] px-6 py-2 text-2xl text-white`}
+            className={`rounded-full bg-[#FFA600] px-8 py-2.5 text-2xl text-white`}
           >
             <span> {data.buttonText}</span>
           </button>

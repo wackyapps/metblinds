@@ -51,7 +51,7 @@ const BannerAdvanced: React.FC<Props> = ({ banners }) => {
                 }}
               >
                 <div className="h-full px-4">
-                  <div className="mx-auto flex h-full max-w-[1450px] items-center justify-between">
+                  <div className="mx-auto flex h-full max-w-[1450px] items-center justify-between px-3">
                     {/*
                      * text container of heading subheading and button
                      */}
