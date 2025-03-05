@@ -22,8 +22,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#FFA600",
+        "primary-foreground": "#ffffff",
       },
     },
   },
-  plugins: [],
+  plugins: [heroui()],
 } satisfies Config;
