@@ -3,8 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import { FiArrowRight } from "react-icons/fi";
-import { controlSystemPage } from "@/configs/pages-data/control-systems";
-
+import controlSystemPages, {
+  controlSystemPage,
+} from "@/configs/pages-data/control-systems";
+import { inter } from "@/fonts";
+import Link from "next/link";
 type Props = {
   data: typeof controlSystemPage.controlSystemDetails;
 };
@@ -44,16 +47,18 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
     <div className="py-24">
       <div className="global-container mx-auto px-4">
         <div className="mb-14 space-y-4 text-center">
-          <h1 className="text-4xl font-bold text-[#023D64] md:text-5xl">
+          <h1
+            className={`${inter.className} mx-auto max-w-[700px] text-center text-4xl font-bold text-[#023D64] md:text-5xl`}
+          >
             {data.heading}
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-xl text-[#767676] md:text-2xl">
+          <p className="mx-auto mt-4 max-w-5xl text-center text-xl text-[#767676] md:text-2xl">
             {data.subHeading}
           </p>
         </div>
 
         <div className="mb-14 flex flex-wrap justify-center gap-4">
-          {data.controlSystemOptions.map((option, index) => (
+          {controlSystemPages.map((option, index) => (
             <button
               key={index}
               onClick={() => handleNavClick(index)}
@@ -63,7 +68,7 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
                   : "border-2 border-[#FFA600] text-[#767676] hover:bg-orange-500/10 md:text-2xl"
               }`}
             >
-              {option.name}
+              {option.title}
             </button>
           ))}
         </div>
@@ -71,19 +76,22 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
         <div className="glide" ref={glideRef}>
           <div className="glide__track" data-glide-el="track">
             <ul className="glide__slides">
-              {data.controlSystemOptions.map((option, index) => (
+              {controlSystemPages.map((option, index) => (
                 <li key={index} className="glide__slide">
                   <div className="flex w-full flex-col items-center gap-8 md:flex-row md:gap-16">
                     <div className="w-full space-y-10 sm:max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%]">
                       <h2 className="text-3xl font-medium text-[#023D64] md:text-4xl">
-                        {option.name}
+                        {option.title}
                       </h2>
                       <p className="text-xl text-[#767676] md:text-2xl">
                         {option.description}
                       </p>
-                      <button className="flex items-center rounded-full border-2 border-[#FFA600] px-6 py-3 text-[#FFA600] hover:bg-orange-500/10">
+                      <Link
+                        href={`/control-system/${option.slug}`}
+                        className="inline-flex items-center rounded-full border-2 border-[#FFA600] px-6 py-3 text-[#FFA600] hover:bg-orange-500/10"
+                      >
                         Learn More <FiArrowRight className="ml-2" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </li>

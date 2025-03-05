@@ -2,6 +2,7 @@ import { controlSystemPage } from "@/configs/pages-data/control-systems";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiCloseCircleFill } from "react-icons/ri";
+import { inter } from "@/fonts";
 type Props = {
   data: typeof controlSystemPage.controlSystemTable;
 };
@@ -11,10 +12,12 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
     <div className="py-24">
       <div className="global-container">
         <div className="mb-12 flex flex-col justify-center">
-          <h2 className="mb-6 text-center text-3xl font-semibold text-[#023D64] sm:text-4xl md:text-5xl">
+          <h2
+            className={`${inter.className} mx-auto mb-6 max-w-[700px] text-center text-3xl text-[#023D64] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
+          >
             {data.heading}
           </h2>
-          <p className="text-center text-sm text-[#767676] sm:text-xl md:text-[22px]">
+          <p className="mx-auto max-w-[1100px] text-center text-sm text-[#767676] sm:text-xl md:text-[22px]">
             {data.subHeading}
           </p>
         </div>
@@ -32,7 +35,7 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
                   <th
                     key={option}
                     scope="col"
-                    className="px-8 py-3 text-center text-lg font-medium uppercase tracking-wider text-white"
+                    className="whitespace-nowrap px-8 py-3 text-center text-lg font-medium uppercase tracking-wider text-white"
                   >
                     {option}
                   </th>
