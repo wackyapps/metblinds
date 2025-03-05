@@ -22,7 +22,7 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
       <div className="mx-auto flex max-w-[1560px] flex-col items-center justify-start gap-20 px-4 min-[1100px]:flex-row">
         <div className="w-1/2"></div>
 
-        <div className="flex max-w-[1000px] flex-col space-y-12 min-[1100px]:w-1/2">
+        <div className="flex max-w-[1000px] flex-col space-y-12 py-10 min-[1100px]:w-1/2 min-[1100px]:py-16">
           {/* Heading */}
           <h2 className="text-3xl font-bold text-[#FFA600] lg:text-4xl">
             {data.heading}
