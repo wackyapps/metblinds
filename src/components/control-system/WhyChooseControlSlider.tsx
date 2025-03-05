@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
-import { IconType } from "react-icons";
 import { inter } from "@/fonts";
 import { FaRegClock, FaShieldAlt, FaRegCircle } from "react-icons/fa";
 import { FaRegCircleCheck } from "react-icons/fa6";

@@ -1,9 +1,6 @@
 // importing icons
 import { FaRegClock } from "react-icons/fa6";
-import { FaArrowUp, FaLock, FaSun } from "react-icons/fa";
-
 import { TbDeviceRemote } from "react-icons/tb";
-
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoAnalytics } from "react-icons/io5";
 import { PiVolleyballLight } from "react-icons/pi";

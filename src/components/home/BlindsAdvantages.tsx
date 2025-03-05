@@ -1,4 +1,3 @@
-import { homePage } from "@/configs/pages-data/home";
 import React from "react";
 import { rubik } from "@/fonts";
 import { IconType } from "react-icons";

@@ -4,21 +4,22 @@ import { mainNavbarNavigation } from "@/configs/navigation";
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerBody,
-  DrawerFooter,
-  Button,
+  // Drawer,
+  // DrawerContent,
+  // DrawerHeader,
+  // DrawerBody,
+  // DrawerFooter,
+  // Button,
   useDisclosure,
 } from "@heroui/react";
 
 const MainNavbar = () => {
   const logo = websiteInfo.logo;
   const pathname = usePathname();
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  // onOpen,
+  const { isOpen, onOpenChange } = useDisclosure();
   const router = useRouter();
   useEffect(() => {
     // Move console.log inside useEffect for client-side only execution

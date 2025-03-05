@@ -1,14 +1,9 @@
 // importing icons
 import { FaRegClock } from "react-icons/fa6";
-import { FiSun } from "react-icons/fi";
-import { FaShieldAlt } from "react-icons/fa";
-import { CiWallet } from "react-icons/ci";
-import { FaRegCircleCheck } from "react-icons/fa6";
 import { TbDeviceRemote } from "react-icons/tb";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoAnalytics } from "react-icons/io5";
 import { PiVolleyballLight } from "react-icons/pi";
-import { FaMobileAlt, FaCalendarAlt, FaMicrophone } from "react-icons/fa";
 
 const smartControl = {
   slug: "smart-control",
