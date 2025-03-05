@@ -78,7 +78,11 @@ const MainNavbar = () => {
                     <span> {navigation.title}</span>
                   </Link>
                 );
-              } else if (navigation.link && !navigation.isButton) {
+              } else if (
+                navigation.link &&
+                !navigation.isButton &&
+                !navigation.items
+              ) {
                 return (
                   <Link
                     key={index}
