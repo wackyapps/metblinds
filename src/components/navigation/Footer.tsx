@@ -20,7 +20,7 @@ import { websiteInfo } from "@/configs/info";
 const Footer = () => {
   return (
     <footer className="bg-[#01405F] text-white">
-      <div className="global-container mx-auto px-4 py-16">
+      <div className="mx-auto max-w-[1600px] px-4 py-16">
         {/* Main grid container - responsive layout */}
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4 lg:justify-items-center">
           {/* First Column: Logo, Description and Location */}
@@ -174,7 +174,9 @@ const Footer = () => {
         </div>
 
         {/* Divider Line */}
-        <div className="my-8 border-t border-[#35708F]" />
+        <div className="px-6">
+          <div className="my-8 border-t border-[#35708F]" />
+        </div>
 
         {/* Copyright Notice */}
         <div className="text-center text-sm">

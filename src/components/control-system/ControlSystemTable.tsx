@@ -13,7 +13,7 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
       <div className="global-container">
         <div className="mb-12 flex flex-col justify-center">
           <h2
-            className={`${inter.className} mx-auto mb-6 max-w-[700px] text-center text-3xl text-[#023D64] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
+            className={`${inter.className} relative mx-auto mb-6 max-w-[700px] text-center text-3xl text-[#023D64] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
           >
             {data.heading}
           </h2>

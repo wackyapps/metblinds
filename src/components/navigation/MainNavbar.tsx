@@ -6,13 +6,11 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import {
-  // Drawer,
-  // DrawerContent,
-  // DrawerHeader,
-  // DrawerBody,
-  // DrawerFooter,
-  // Button,
+  Drawer,
+  DrawerContent,
   useDisclosure,
+  Accordion,
+  AccordionItem,
 } from "@heroui/react";
 
 const MainNavbar = () => {
@@ -40,7 +38,7 @@ const MainNavbar = () => {
         <img
           src={image}
           alt={title}
-          className="mx-auto aspect-square w-[79px] max-w-full duration-300 group-hover/link:[filter:sepia(1)_hue-rotate(40deg)_saturate(2)]"
+          className={`mx-auto aspect-square w-[79px] max-w-full duration-300 group-hover/link:[filter:invert(13%)_sepia(99%)_saturate(2083%)_hue-rotate(1deg)_brightness(102%)_contrast(101%)] ${pathname == link ? "[filter:invert(13%)_sepia(99%)_saturate(2083%)_hue-rotate(1deg)_brightness(102%)_contrast(101%)]" : "group-hover/link:[filter:invert(13%)_sepia(99%)_saturate(2083%)_hue-rotate(1deg)_brightness(102%)_contrast(101%)]"}`}
         />
         <div className="text-center text-xs text-[#A6A3A3]">{title}</div>
       </Link>
@@ -95,17 +93,18 @@ const MainNavbar = () => {
                 );
               } else if (navigation.items) {
                 return (
-                  <button
-                    key={index}
-                    className="group relative flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]"
-                    onClick={() => {
-                      if (navigation.link) {
-                        router.push(navigation.link);
-                      }
-                    }}
-                  >
-                    <navigation.icon className="h-5 w-5" />
-                    <span> {navigation.title}</span>
+                  <div key={index} className="group relative inline-block">
+                    <button
+                      className="flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]"
+                      onClick={() => {
+                        if (navigation.link) {
+                          router.push(navigation.link);
+                        }
+                      }}
+                    >
+                      <navigation.icon className="h-5 w-5" />
+                      <span> {navigation.title}</span>
+                    </button>
                     <div
                       className={`absolute top-[calc(100%+20px)] z-50 grid -translate-x-1/2 cursor-default overflow-auto rounded-lg bg-white px-10 py-9 opacity-0 duration-300 [column-gap:50px] [row-gap:19px] [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100`}
                       style={{
@@ -126,13 +125,74 @@ const MainNavbar = () => {
                         />
                       ))}
                     </div>
-                  </button>
+                  </div>
                 );
               }
             })}
           </div>
         </div>
       </div>
+      <Drawer
+        isOpen={isOpen}
+        size="lg"
+        className="rounded-none xl:hidden"
+        onOpenChange={onOpenChange}
+      >
+        <DrawerContent className="rounded-none">
+          <nav className="flex-col items-start p-4 xl:flex">
+            {mainNavbarNavigation.map((navigation, index) => {
+              if (navigation.items) {
+                return (
+                  <div key={index}>
+                    <Accordion className="px-0">
+                      <AccordionItem
+                        className="px-0"
+                        HeadingComponent={(item) => (
+                          <div className="m-0 flex items-center justify-between p-0">
+                            <button
+                              className={`flex items-center gap-3 whitespace-nowrap rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
+                              onClick={() => {
+                                if (navigation.link) {
+                                  router.push(navigation.link);
+                                } else {
+                                  console.log("item", item);
+                                }
+                              }}
+                            >
+                              <navigation.icon className="h-5 w-5" />
+                              {navigation.title}
+                            </button>{" "}
+                            {item.children}
+                          </div>
+                        )}
+                      >
+                        <div className="grid w-full grid-cols-3 gap-5">
+                          {navigation.items.map((item, index) => (
+                            <ImageInnerNavigation key={index} {...item} />
+                          ))}
+                        </div>
+                      </AccordionItem>
+                    </Accordion>
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={index}>
+                    <Link
+                      key={index}
+                      href={navigation?.link || ""}
+                      className={`flex items-center gap-3 rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
+                    >
+                      <navigation.icon className="h-5 w-5" />
+                      <span> {navigation.title}</span>
+                    </Link>
+                  </div>
+                );
+              }
+            })}
+          </nav>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 };
