@@ -5,6 +5,7 @@ import {
   Poppins,
   ABeeZee,
   Bebas_Neue,
+  Roboto,
 } from "next/font/google";
 
 const inter = Inter({
@@ -42,6 +43,11 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   style: ["normal"],
 });
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
 
 // Note: The following fonts are not available through Google Fonts and need to be handled differently:
 // - Glober
@@ -49,4 +55,4 @@ const bebasNeue = Bebas_Neue({
 // - Altone Trial
 // These fonts should be added as local fonts in your project
 
-export { inter, rubik, montserrat, poppins, abeezee, bebasNeue };
+export { inter, rubik, montserrat, poppins, abeezee, bebasNeue, roboto };

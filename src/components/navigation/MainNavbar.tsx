@@ -28,13 +28,19 @@ const MainNavbar = () => {
     title,
     link,
     image,
+    onClose,
   }: {
     title: string;
     link: string;
     image: string;
+    onClose?: () => void;
   }) => {
     return (
-      <Link className="group/link items-center space-y-3.5" href={link}>
+      <Link
+        className="group/link items-center space-y-3.5"
+        href={link}
+        onClick={onClose}
+      >
         <img
           src={image}
           alt={title}
@@ -139,58 +145,70 @@ const MainNavbar = () => {
         onOpenChange={onOpenChange}
       >
         <DrawerContent className="rounded-none">
-          <nav className="flex-col items-start p-4 xl:flex">
-            {mainNavbarNavigation.map((navigation, index) => {
-              if (navigation.items) {
-                return (
-                  <div key={index}>
-                    <Accordion className="px-0">
-                      <AccordionItem
-                        className="px-0"
-                        HeadingComponent={(item) => (
-                          <div className="m-0 flex items-center justify-between p-0">
-                            <button
-                              className={`flex items-center gap-3 whitespace-nowrap rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
-                              onClick={() => {
-                                if (navigation.link) {
-                                  router.push(navigation.link);
-                                } else {
-                                  console.log("item", item);
-                                }
-                              }}
-                            >
-                              <navigation.icon className="h-5 w-5" />
-                              {navigation.title}
-                            </button>{" "}
-                            {item.children}
+          {(onClose) => (
+            <nav className="flex-col items-start p-4 xl:flex">
+              {mainNavbarNavigation.map((navigation, index) => {
+                if (navigation.items) {
+                  return (
+                    <div key={index}>
+                      <Accordion className="px-0">
+                        <AccordionItem
+                          className="px-0"
+                          HeadingComponent={(item) => (
+                            <div className="m-0 flex items-center justify-between p-0">
+                              <button
+                                className={`flex items-center gap-3 whitespace-nowrap rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
+                                onClick={() => {
+                                  if (navigation.link) {
+                                    router.push(navigation.link);
+                                    onClose();
+                                  } else {
+                                    console.log("item", item);
+                                  }
+                                }}
+                              >
+                                <navigation.icon className="h-5 w-5" />
+                                {navigation.title}
+                              </button>{" "}
+                              {item.children}
+                            </div>
+                          )}
+                        >
+                          <div className="grid w-full grid-cols-3 gap-5">
+                            {navigation.items.map((item, index) => (
+                              <ImageInnerNavigation
+                                key={index}
+                                onClose={() => {
+                                  onClose();
+                                }}
+                                {...item}
+                              />
+                            ))}
                           </div>
-                        )}
+                        </AccordionItem>
+                      </Accordion>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div key={index}>
+                      <Link
+                        key={index}
+                        href={navigation?.link || ""}
+                        onClick={() => {
+                          onClose();
+                        }}
+                        className={`flex items-center gap-3 rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
                       >
-                        <div className="grid w-full grid-cols-3 gap-5">
-                          {navigation.items.map((item, index) => (
-                            <ImageInnerNavigation key={index} {...item} />
-                          ))}
-                        </div>
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                );
-              } else {
-                return (
-                  <div key={index}>
-                    <Link
-                      key={index}
-                      href={navigation?.link || ""}
-                      className={`flex items-center gap-3 rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
-                    >
-                      <navigation.icon className="h-5 w-5" />
-                      <span> {navigation.title}</span>
-                    </Link>
-                  </div>
-                );
-              }
-            })}
-          </nav>
+                        <navigation.icon className="h-5 w-5" />
+                        <span> {navigation.title}</span>
+                      </Link>
+                    </div>
+                  );
+                }
+              })}
+            </nav>
+          )}
         </DrawerContent>
       </Drawer>
     </div>

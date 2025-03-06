@@ -106,7 +106,7 @@ const WhyChooseBlindsSlider = () => {
                     <div>
                       <h3
                         className={`text-xl font-semibold ${
-                          isActive ? "text-primary" : "text-gray-600"
+                          isActive ? "text-white" : "text-gray-600"
                         }`}
                       >
                         {feature.title}
