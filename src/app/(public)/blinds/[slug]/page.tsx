@@ -6,6 +6,7 @@ import WhyChooseBlindsSlider from "@/components/blinds/WhyChooseBlindsSlider";
 import FAQsSection from "@/components/common/FAQsSection";
 import InfoBanner from "@/components/common/InfoBanner";
 import ChooseHardware from "@/components/blinds/ChooseHardware";
+import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 const page = () => {
   const data = {
     heading: "KEY FEATURES",
@@ -44,7 +45,7 @@ const page = () => {
       <WhyChooseBlindsSlider />
       {/* <BlindsFeatures /> */}
       <KeyFeatures data={data} />
-      {/* <ChooseYourFabric /> */}
+      <ChooseYourFabric />
       <ChooseHardware />
       <FAQsSection />
       <InfoBanner data={infoBanner} />

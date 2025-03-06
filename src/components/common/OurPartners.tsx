@@ -2,8 +2,7 @@
 import { homePage } from "@/configs/pages-data/home";
 import React, { useEffect, useRef } from "react";
 import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+
 import { rubik } from "@/fonts";
 
 const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({

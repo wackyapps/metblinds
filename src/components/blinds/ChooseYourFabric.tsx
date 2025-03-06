@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+import { rubik } from "@/fonts";
 
 interface FabricOption {
   name: string;
@@ -51,14 +50,14 @@ const ChooseYourFabric = () => {
     if (blackoutFabricRef.current) {
       new Glide(blackoutFabricRef.current, {
         type: "carousel",
-        perView: 3,
+        perView: 4,
         gap: 0,
       }).mount();
     }
     if (lightFilteringFabricRef.current) {
       new Glide(lightFilteringFabricRef.current, {
         type: "carousel",
-        perView: 3,
+        perView: 4,
         gap: 0,
       }).mount();
     }
@@ -82,7 +81,7 @@ const ChooseYourFabric = () => {
       </div>
 
       <div
-        className="aspect-[1156/628] max-w-[1156px]"
+        className="mx-auto aspect-[1156/628] max-w-[1156px] rounded-[74px]"
         style={{ background: currentFabric.color }}
       ></div>
       <div className="grid max-w-full grid-cols-2 gap-4">
@@ -93,33 +92,18 @@ const ChooseYourFabric = () => {
                 <li key={index} className="glide__slide">
                   <div
                     onClick={() => setCurrentFabric(fabric)}
-                    className="mx-4 aspect-square cursor-pointer rounded-lg p-6"
+                    className="mx-4 flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-lg p-6"
                     style={{ background: fabric.color }}
                   >
                     <h3
-                      className={`text-2xl font-semibold ${fabric.textColor}`}
+                      className={`${rubik.className} text-lg font-semibold ${fabric.textColor}`}
                     >
                       {fabric.name}
                     </h3>
-                    <p className={`mt-2 ${fabric.textColor}`}>Blackout</p>
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="glide__arrows" data-glide-el="controls">
-            <button
-              className="glide__arrow glide__arrow--left absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg"
-              data-glide-dir="<"
-            >
-              previous
-            </button>
-            <button
-              className="glide__arrow glide__arrow--right absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg"
-              data-glide-dir=">"
-            >
-              next
-            </button>
           </div>
         </div>
         <div ref={lightFilteringFabricRef} className="glide">
@@ -129,17 +113,14 @@ const ChooseYourFabric = () => {
                 <li key={index} className="glide__slide">
                   <div
                     onClick={() => setCurrentFabric(fabric)}
-                    className="mx-4 aspect-square cursor-pointer rounded-lg p-6"
+                    className="mx-4 flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-lg p-6"
                     style={{ background: fabric.color }}
                   >
                     <h3
-                      className={`text-2xl font-semibold ${fabric.textColor}`}
+                      className={`${rubik.className} text-lg font-semibold ${fabric.textColor}`}
                     >
                       {fabric.name}
                     </h3>
-                    <p className={`mt-2 ${fabric.textColor}`}>
-                      Light Filtering
-                    </p>
                   </div>
                 </li>
               ))}

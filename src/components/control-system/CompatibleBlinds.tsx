@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css"; // Import core styles
-import "@glidejs/glide/dist/css/glide.theme.min.css"; // Import theme styles
+// Import core styles
+// Import theme styles
 import BlindCard from "../common/cards/BlindCard";
 import { inter } from "@/fonts";
 

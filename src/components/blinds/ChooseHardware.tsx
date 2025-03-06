@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+
 import { roboto } from "@/fonts";
 
 interface HardwareOption {
@@ -76,7 +75,7 @@ const ChooseHardware = () => {
     <div className="py-24">
       <div className="mx-auto flex max-w-[1560px] flex-col items-center gap-[90px] px-3 sm:px-6 xl:flex-row">
         {/* Main Image */}
-        <div className="order-2 h-[493px] overflow-hidden rounded-[49px] xl:order-1 xl:w-[828px] xl:flex-1">
+        <div className="order-2 h-[493px] w-full overflow-hidden rounded-[49px] xl:order-1 xl:w-[828px] xl:flex-1">
           <img
             src={selectedImage}
             alt="Selected Hardware"

@@ -5,6 +5,8 @@ import { StoreProvider } from "@/store/StoreProvider";
 import TopNav from "@/components/navigation/TopNav";
 import MainNavbar from "@/components/navigation/MainNavbar";
 import Footer from "@/components/navigation/Footer";
+import "@glidejs/glide/dist/css/glide.core.min.css";
+import "@glidejs/glide/dist/css/glide.theme.min.css";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

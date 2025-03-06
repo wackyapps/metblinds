@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
+
 import { FiArrowRight } from "react-icons/fi";
 import controlSystemPages, {
   controlSystemPage,
