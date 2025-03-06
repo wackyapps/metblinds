@@ -8,7 +8,7 @@ const BlindsCustomization: React.FC<{
     <div
       className="bg-[#F7F9FA] bg-cover bg-bottom py-10 md:py-20"
       style={{
-        background: `linear-gradient(#F7F9FA, #f7f9fa75), 
+        background: `linear-gradient(to bottom, #F7F9FA, #FFFFFF00), 
               url(${data.background})`,
       }}
     >

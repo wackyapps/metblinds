@@ -38,7 +38,7 @@ const ServicesLocation: React.FC<{
               width={600}
               height={500}
               alt={data.image.alt}
-              className="h-auto w-full object-contain"
+              className="h-full object-fill"
             />
           </div>
         </div>

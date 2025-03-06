@@ -21,7 +21,7 @@ const BlindsAdvantages: React.FC<{
       className="py-24"
       style={{
         background: data.background
-          ? `linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0)), url(${data.background})`
+          ? `linear-gradient(to bottom, #FFFFFF,#FFFFFF00), url(${data.background})`
           : undefined,
       }}
     >
@@ -48,7 +48,7 @@ const BlindsAdvantages: React.FC<{
           {data.features.map((feature, index) => (
             <div
               key={index}
-              className={`group flex flex-col items-start gap-5 rounded-3xl bg-[#F7F9FA] p-10 duration-500 hover:scale-105 hover:bg-[#FFA600]`}
+              className={`group flex flex-col items-start gap-5 rounded-3xl bg-[#F7F9FA] p-10 duration-500 hover:scale-110 hover:bg-[#FFA600]`}
             >
               <div>
                 <feature.icon

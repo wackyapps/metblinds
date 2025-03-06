@@ -9,7 +9,7 @@ type Props = {
 const OurProcess: React.FC<Props> = ({ data }) => {
   return (
     <section className="py-24">
-      <div className="global-container mx-auto px-4">
+      <div className="mx-auto max-w-[1224px] px-4">
         <div className="mb-16 text-center">
           <div className="relative inline-block">
             <h2
@@ -21,7 +21,7 @@ const OurProcess: React.FC<Props> = ({ data }) => {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
           {data.features.map((item) => (
             <div
               key={item.id}

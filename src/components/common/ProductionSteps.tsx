@@ -37,7 +37,7 @@ const ProductionSteps: React.FC<{
             key={index}
             data={{
               ...feature,
-              index,
+              index: index + 1,
             }}
           />
         ))}

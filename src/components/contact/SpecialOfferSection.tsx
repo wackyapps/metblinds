@@ -33,7 +33,7 @@ const SpecialOfferSection: React.FC<SpecialOfferSectionProps> = ({ data }) => {
 
   return (
     <section className="relative bg-[#F7F9FA] py-16 lg:py-0">
-      <div className="mx-auto flex max-w-[1460px] flex-col items-stretch justify-between gap-10 px-4 xl:flex-row">
+      <div className="mx-auto flex max-w-[1460px] flex-col items-stretch justify-between gap-10 px-4 xl:flex-row xl:gap-20">
         <div className="flex w-full flex-col lg:gap-40 xl:w-[60%]">
           {/* Left Content */}
           <div className="flex max-w-[815px] flex-col space-y-12 lg:py-20">

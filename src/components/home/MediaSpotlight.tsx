@@ -17,7 +17,7 @@ const MediaSpotlight: React.FC<{ data: typeof homePage.mediaSpotlight }> = ({
     <div
       className="bg-cover bg-center bg-no-repeat py-32"
       style={{
-        backgroundImage: `linear-gradient(#F7F9FA, #f7f9fa75), url(${data.background})`,
+        backgroundImage: `linear-gradient(to bottom, #FFFFFF, #FFFFFF00), url(${data.background})`,
       }}
     >
       <div className="global-container">

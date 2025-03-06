@@ -21,7 +21,7 @@ const page = () => {
       {/*
        * blids showcase
        */}
-      <BlindsShowcase data={contactPage.blindsShowCase} />
+      <BlindsShowcase isSlider={true} data={contactPage.blindsShowCase} />
       {/*
        * warranty info section
        */}

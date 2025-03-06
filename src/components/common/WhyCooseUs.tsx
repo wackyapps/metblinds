@@ -19,7 +19,7 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="mx-auto flex max-w-[1560px] flex-col items-center justify-start gap-20 px-4 min-[1100px]:flex-row">
+      <div className="mx-auto flex max-w-[1560px] flex-col items-center justify-start gap-20 px-4 min-[1100px]:flex-row min-[1100px]:gap-28 xl:gap-32">
         <div className="w-1/2"></div>
 
         <div className="flex max-w-[1000px] flex-col space-y-12 py-10 min-[1100px]:w-1/2 min-[1100px]:py-16">
