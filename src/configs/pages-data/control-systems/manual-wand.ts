@@ -209,6 +209,7 @@ const manualWand = {
     subHeading:
       "Contact us for expert recommendations and customized solutions",
     buttonText: "Request free Quote",
+    background: "/banners/about-banner-img.png",
   },
 };
 

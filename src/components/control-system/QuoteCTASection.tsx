@@ -10,8 +10,7 @@ export default function QuoteCTASection({ data }: Props) {
       <section
         className="relative mx-auto w-full max-w-[1484px] overflow-hidden rounded-[92px] bg-orange-500 px-5 py-16 shadow-[0_4px_39px_rgba(0,0,0,0.1)] md:py-20 xl:py-24"
         style={{
-          background:
-            " linear-gradient(rgba(255, 166, 0, 0.8),rgba(255, 166, 0, 0.8)), url('/banners/about-banner-img.png')",
+          background: `linear-gradient(rgba(255, 166, 0, 0.8),rgba(255, 166, 0, 0.8)), url(${data.background})`,
         }}
       >
         {/* Semi-transparent Overlay */}

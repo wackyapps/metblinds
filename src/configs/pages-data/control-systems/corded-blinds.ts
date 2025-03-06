@@ -106,6 +106,7 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
+        link: "/blinds/zebra-blinds",
       },
       {
         title: "Roller Shades",
@@ -113,13 +114,7 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
-      },
-      {
-        title: "Solar Shades",
-        description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/solar-shades-blind.png",
-        buttonText: "Learn More",
+        link: "/blinds/roller-shades",
       },
       {
         title: "Drapery",
@@ -127,6 +122,7 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
+        link: "/blinds/drapery",
       },
       {
         title: "Trifold",
@@ -134,6 +130,7 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
+        link: "/blinds/triflod",
       },
       {
         title: "Honeycomb Blinds",
@@ -141,6 +138,7 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/honey-comb-blind.png",
         buttonText: "Learn More",
+        link: "/blinds/honeycomb-blinds",
       },
     ],
   },
@@ -211,6 +209,7 @@ const cordedBlinds = {
     subHeading:
       "Contact us for expert recommendations and customized solutions",
     buttonText: "Request free Quote",
+    background: "/banners/about-banner-img.png",
   },
 };
 
