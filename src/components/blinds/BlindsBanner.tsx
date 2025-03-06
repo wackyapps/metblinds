@@ -31,7 +31,7 @@ const BlindsBanner = () => {
           </p>
         </div>
         {/* CTA Button */}
-        <button className="rounded-[19px] bg-[#FFA600] px-14 py-4 text-white transition-colors hover:bg-[#FFB033]">
+        <button className="rounded-full bg-[#FFA600] px-14 py-4 text-white transition-colors hover:bg-[#FFB033]">
           Request free Quote
         </button>
       </div>

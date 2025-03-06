@@ -28,7 +28,7 @@ function ControlSystemBanner({ data }: Props) {
             {data.subHeading}
           </p>
           {/* Button */}
-          <button className="flex items-center justify-center rounded-full bg-orange-500 px-10 py-5 text-lg text-white">
+          <button className="flex items-center justify-center rounded-full bg-[#FFA600] px-10 py-4 text-lg text-white">
             {data.buttonText}
           </button>
         </div>
