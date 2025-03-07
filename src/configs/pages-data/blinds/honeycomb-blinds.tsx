@@ -1,21 +1,22 @@
+import React from "react";
 import { WiDaySunny } from "react-icons/wi";
 import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-const zebraBlinds = {
-  slug: "zebra-blinds",
-  icon: "/icons/blinds/zebra-blinds.svg",
-  title: "Zebra Blinds",
+const honeycombBlinds = {
+  slug: "honeycomb-blinds",
+  icon: "/icons/blinds/honeycomb-blinds.svg",
+  title: "Honeycomb Blinds",
   description:
-    "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+    "Honeycomb blinds feature a unique cellular design that provides superior insulation and light control, making them perfect for energy-efficient homes.",
 
   /**
    * blinds banner
    */
   blindsBanner: {
-    heading: "Zebra Blinds",
+    heading: "Honeycomb Blinds",
     subHeading:
-      "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+      "Honeycomb blinds combine innovative cellular design with elegant aesthetics to provide superior insulation and light control for your home.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -23,30 +24,30 @@ const zebraBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Zebra Blinds",
+    heading: "Why Choose Honeycomb Blinds",
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Light Control",
-        description: "Adjust natural light to your preference",
+        title: "Superior Insulation",
+        description: "Keep your home comfortable year-round",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
         title: "Enhanced Privacy",
-        description: "Maintain your privacy with adjustable blinds",
+        description: "Perfect light filtering and privacy control",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Aesthetic",
-        description: "Enhance your interior with stylish designs",
+        title: "Modern Design",
+        description: "Clean, contemporary appearance",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Save energy with optimized light control",
+        description: "Reduce heating and cooling costs",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -82,7 +83,7 @@ const zebraBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Choose your fabric to give your new zebra blinds light filtering or blackout properties to suit your preferences for each space in your home. Enhance your privacy in coveted spaces like bedrooms and bathrooms. Bring more light into the heart of your home with light filtering fabrics to showcase your decor etc.",
+      "Select from our premium honeycomb fabrics to create the perfect window treatment for your space. Our cellular design provides superior insulation and light control.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -124,7 +125,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "We offer a variety of metal colours for hardware to ensure your new blinds will fit seamlessly into your existing home design.",
+      "Select from our range of hardware options to ensure your honeycomb blinds perfectly match your interior design.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -157,15 +158,15 @@ const zebraBlinds = {
       },
       {
         icon: "/svgs/easy-to-manage.svg",
-        title: "Easy to Manage",
+        title: "Low Maintenance",
       },
       {
         icon: "/svgs/customizability.svg",
-        title: "Customizability",
+        title: "Customizable",
       },
       {
         icon: "/svgs/versatility.svg",
-        title: "Versatility",
+        title: "Versatile Design",
       },
     ],
   },
@@ -177,42 +178,41 @@ const zebraBlinds = {
     reviews: [
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
-        rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "John Smith",
-        rating: 5,
-        date: "2023-11-15",
-        comment:
-          "Excellent service and quality blinds. The installation team was very professional.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Sarah Johnson",
-        rating: 5,
-        date: "2023-11-01",
-        comment:
-          "Love my new motorized blinds! They work perfectly and look amazing.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Michael Chen",
-        rating: 4,
-        date: "2023-10-25",
-        comment:
-          "Very happy with the zebra blinds. Great quality and reasonable prices.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Emma Wilson",
+        userName: "Emily Parker",
         rating: 5,
         date: "2023-10-18",
         comment:
-          "The smart blinds are a game changer! Customer service was outstanding.",
+          "The honeycomb design is amazing! My energy bills have decreased significantly.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Michael Chang",
+        rating: 4,
+        date: "2023-11-22",
+        comment:
+          "Perfect for my living room. The light filtering is excellent.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Sophie Anderson",
+        rating: 5,
+        date: "2023-11-08",
+        comment:
+          "The cellular design is so innovative. Love how it keeps my home comfortable.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Daniel White",
+        rating: 5,
+        date: "2023-10-30",
+        comment: "Great quality and the installation was professional.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Rachel Lee",
+        rating: 4,
+        date: "2023-10-25",
+        comment: "The honeycomb blinds look beautiful and work perfectly.",
       },
     ],
   },
@@ -223,24 +223,24 @@ const zebraBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What is Flash Loan",
+        question: "What makes honeycomb blinds special?",
         answer:
-          "A Flash Loan is a type of decentralized loan that allows users to borrow funds instantly without collateral, provided the borrowed amount is returned within the same transaction.",
+          "Honeycomb blinds feature a unique cellular design that creates air pockets, providing superior insulation and energy efficiency compared to traditional blinds.",
       },
       {
-        question: "How long does it take to process a Flash Loan transaction?",
+        question: "Are honeycomb blinds good for energy savings?",
         answer:
-          "Flash Loan transactions are processed instantly within a single blockchain block, typically taking only a few seconds to complete.",
+          "Yes, honeycomb blinds are excellent for energy savings. Their cellular design helps maintain indoor temperature, reducing heating and cooling costs.",
       },
       {
-        question: "Is Simplex regulated?",
+        question: "Can honeycomb blinds be used in any room?",
         answer:
-          "Yes, Simplex is a fully regulated financial institution that complies with all relevant financial regulations and security standards.",
+          "Yes, honeycomb blinds are versatile and suitable for any room. They're particularly effective in bedrooms, living rooms, and areas requiring temperature control.",
       },
       {
-        question: "How do I deposit funds into Simplex?",
+        question: "How do I clean honeycomb blinds?",
         answer:
-          "You can deposit funds into Simplex using various payment methods including credit/debit cards, bank transfers, and cryptocurrency transfers through our secure platform.",
+          "Honeycomb blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the cellular structure.",
       },
     ],
   },
@@ -252,10 +252,10 @@ const zebraBlinds = {
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+        text: "Experience the perfect blend of style and functionality with our honeycomb blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
       },
     ],
   },
 };
 
-export default zebraBlinds;
+export default honeycombBlinds;

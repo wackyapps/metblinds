@@ -14,68 +14,45 @@ import zebraBlinds from "@/configs/pages-data/blinds/zebra-blinds";
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const blind = blinds.find((blind) => blind.slug === slug);
-  const data = {
-    heading: "KEY FEATURES",
-    features: [
-      {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
-      },
-      {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
-      },
-      {
-        title: "Smart Integration",
-        description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
-      },
-    ],
-  };
 
-  const data2 = zebraBlinds;
   return (
     <div>
       {/*
        * blinds banner
        */}
-      <BlindsBanner data={data2.blindsBanner} />
+      <BlindsBanner data={blind.blindsBanner} />
       {/*
        * why choose blinds slider
        */}
-      <WhyChooseBlindsSlider data={data2.whyChooseBlindsSlider} />
+      <WhyChooseBlindsSlider data={blind.whyChooseBlindsSlider} />
       {/*
        * key features
        */}
-      <KeyFeatures data={data} />
+      <KeyFeatures data={blind.keyFeaures} />
       {/*
        * choose your fabric
        */}
-      <ChooseYourFabric data={data2.chooseYourFabric} />
+      <ChooseYourFabric data={blind.chooseYourFabric} />
       {/*
        * choose hardware
        */}
-      <ChooseHardware data={data2.chooseHardware} />
+      <ChooseHardware data={blind.chooseHardware} />
       {/*
        * blinds features
        */}
-      <BlindsFeatures data={data2.blindsFeatures} />
+      <BlindsFeatures data={blind.blindsFeatures} />
       {/*
        * blinds testimonials
        */}
-      <BlindsTestimonials data={data2.blindsTestimonials} />
+      <BlindsTestimonials data={blind.blindsTestimonials} />
       {/*
        * FAQs
        */}
-      <FAQsSection data={data2.faqs} />
+      <FAQsSection data={blind.faqs} />
       {/*
        * info banner
        */}
-      <InfoBanner data={data2.infoBanner} />
+      <InfoBanner data={blind.infoBanner} />
       <div className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"></div>
     </div>
   );

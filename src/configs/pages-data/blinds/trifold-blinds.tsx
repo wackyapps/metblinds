@@ -1,21 +1,22 @@
+import React from "react";
 import { WiDaySunny } from "react-icons/wi";
 import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-const zebraBlinds = {
-  slug: "zebra-blinds",
-  icon: "/icons/blinds/zebra-blinds.svg",
-  title: "Zebra Blinds",
+const trifoldBlinds = {
+  slug: "trifold-blinds",
+  icon: "/icons/blinds/trifold-blinds.svg",
+  title: "Trifold Blinds",
   description:
-    "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+    "Trifold blinds are versatile window coverings that fold into three sections, making them perfect for large windows and sliding glass doors.",
 
   /**
    * blinds banner
    */
   blindsBanner: {
-    heading: "Zebra Blinds",
+    heading: "Trifold Blinds",
     subHeading:
-      "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+      "Trifold blinds offer the perfect solution for large windows and sliding glass doors, providing excellent light control and easy access.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -23,30 +24,30 @@ const zebraBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Zebra Blinds",
+    heading: "Why Choose Trifold Blinds",
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Light Control",
-        description: "Adjust natural light to your preference",
+        title: "Perfect Light Control",
+        description: "Adjust light levels with precision",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
         title: "Enhanced Privacy",
-        description: "Maintain your privacy with adjustable blinds",
+        description: "Complete privacy when needed",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Aesthetic",
-        description: "Enhance your interior with stylish designs",
+        title: "Modern Design",
+        description: "Clean, contemporary appearance",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
-        title: "Energy Efficient",
-        description: "Save energy with optimized light control",
+        title: "Space Efficient",
+        description: "Compact when folded",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -82,7 +83,7 @@ const zebraBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Choose your fabric to give your new zebra blinds light filtering or blackout properties to suit your preferences for each space in your home. Enhance your privacy in coveted spaces like bedrooms and bathrooms. Bring more light into the heart of your home with light filtering fabrics to showcase your decor etc.",
+      "Select from our premium collection of fabrics to create the perfect trifold blinds for your space. Our fabrics are specially designed for large windows and sliding doors.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -124,7 +125,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "We offer a variety of metal colours for hardware to ensure your new blinds will fit seamlessly into your existing home design.",
+      "Select from our range of hardware options to ensure your trifold blinds perfectly match your interior design.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -157,15 +158,15 @@ const zebraBlinds = {
       },
       {
         icon: "/svgs/easy-to-manage.svg",
-        title: "Easy to Manage",
+        title: "Easy Maintenance",
       },
       {
         icon: "/svgs/customizability.svg",
-        title: "Customizability",
+        title: "Customizable",
       },
       {
         icon: "/svgs/versatility.svg",
-        title: "Versatility",
+        title: "Versatile Design",
       },
     ],
   },
@@ -177,42 +178,39 @@ const zebraBlinds = {
     reviews: [
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
+        userName: "Robert Wilson",
+        rating: 5,
+        date: "2023-10-15",
+        comment:
+          "Perfect for my sliding glass doors. The trifold design is so convenient!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Lisa Chen",
         rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
+        date: "2023-11-20",
+        comment: "Great quality and the installation was professional.",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "John Smith",
+        userName: "Michael Brown",
         rating: 5,
-        date: "2023-11-15",
-        comment:
-          "Excellent service and quality blinds. The installation team was very professional.",
+        date: "2023-11-05",
+        comment: "Love how they fold up neatly. Perfect for my large windows.",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "Sarah Johnson",
+        userName: "Sarah Martinez",
         rating: 5,
-        date: "2023-11-01",
-        comment:
-          "Love my new motorized blinds! They work perfectly and look amazing.",
+        date: "2023-10-28",
+        comment: "The motorized option is a game-changer. So convenient!",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "Michael Chen",
+        userName: "James Lee",
         rating: 4,
-        date: "2023-10-25",
-        comment:
-          "Very happy with the zebra blinds. Great quality and reasonable prices.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Emma Wilson",
-        rating: 5,
-        date: "2023-10-18",
-        comment:
-          "The smart blinds are a game changer! Customer service was outstanding.",
+        date: "2023-10-22",
+        comment: "Perfect for my patio doors. The privacy is great.",
       },
     ],
   },
@@ -223,24 +221,24 @@ const zebraBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What is Flash Loan",
+        question: "What makes trifold blinds special?",
         answer:
-          "A Flash Loan is a type of decentralized loan that allows users to borrow funds instantly without collateral, provided the borrowed amount is returned within the same transaction.",
+          "Trifold blinds are specially designed for large windows and sliding glass doors, featuring a unique three-panel design that folds compactly when opened.",
       },
       {
-        question: "How long does it take to process a Flash Loan transaction?",
+        question: "Can trifold blinds be motorized?",
         answer:
-          "Flash Loan transactions are processed instantly within a single blockchain block, typically taking only a few seconds to complete.",
+          "Yes, trifold blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
       },
       {
-        question: "Is Simplex regulated?",
+        question: "How do I clean trifold blinds?",
         answer:
-          "Yes, Simplex is a fully regulated financial institution that complies with all relevant financial regulations and security standards.",
+          "Trifold blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
       },
       {
-        question: "How do I deposit funds into Simplex?",
+        question: "What is the installation process?",
         answer:
-          "You can deposit funds into Simplex using various payment methods including credit/debit cards, bank transfers, and cryptocurrency transfers through our secure platform.",
+          "Our professional installation team will measure your windows, ensure perfect fit, and install your trifold blinds with precision and care.",
       },
     ],
   },
@@ -252,10 +250,10 @@ const zebraBlinds = {
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+        text: "Transform your large windows and sliding doors with our premium trifold blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
       },
     ],
   },
 };
 
-export default zebraBlinds;
+export default trifoldBlinds;

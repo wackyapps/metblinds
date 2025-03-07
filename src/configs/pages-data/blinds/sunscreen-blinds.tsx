@@ -1,21 +1,22 @@
+import React from "react";
 import { WiDaySunny } from "react-icons/wi";
 import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-const zebraBlinds = {
-  slug: "zebra-blinds",
-  icon: "/icons/blinds/zebra-blinds.svg",
-  title: "Zebra Blinds",
+const sunscreenBlinds = {
+  slug: "sunscreen-blinds",
+  icon: "/icons/blinds/sunscreen-blinds.svg",
+  title: "Sunscreen Blinds",
   description:
-    "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+    "Sunscreen blinds are designed to filter harsh sunlight while maintaining visibility, making them perfect for spaces where you want to reduce glare without losing the view.",
 
   /**
    * blinds banner
    */
   blindsBanner: {
-    heading: "Zebra Blinds",
+    heading: "Sunscreen Blinds",
     subHeading:
-      "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+      "Sunscreen blinds provide optimal protection against harsh sunlight while maintaining clear visibility, creating a comfortable and visually appealing environment.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -23,30 +24,30 @@ const zebraBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Zebra Blinds",
+    heading: "Why Choose Sunscreen Blinds",
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Light Control",
-        description: "Adjust natural light to your preference",
+        title: "Glare Control",
+        description: "Reduce harsh sunlight and glare",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Maintain your privacy with adjustable blinds",
+        title: "UV Protection",
+        description: "Protect against harmful UV rays",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Aesthetic",
-        description: "Enhance your interior with stylish designs",
+        title: "Clear View",
+        description: "Maintain visibility while filtering light",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Save energy with optimized light control",
+        description: "Reduce cooling costs",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -82,7 +83,7 @@ const zebraBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Choose your fabric to give your new zebra blinds light filtering or blackout properties to suit your preferences for each space in your home. Enhance your privacy in coveted spaces like bedrooms and bathrooms. Bring more light into the heart of your home with light filtering fabrics to showcase your decor etc.",
+      "Select from our premium collection of sunscreen fabrics to create the perfect window treatment for your space. Our fabrics are specially designed to filter sunlight while maintaining visibility.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -124,7 +125,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "We offer a variety of metal colours for hardware to ensure your new blinds will fit seamlessly into your existing home design.",
+      "Select from our range of hardware options to ensure your sunscreen blinds perfectly match your interior design.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -153,19 +154,19 @@ const zebraBlinds = {
     features: [
       {
         icon: "/svgs/easy-operation.svg",
-        title: "Easy Operation",
+        title: "Smooth Operation",
       },
       {
         icon: "/svgs/easy-to-manage.svg",
-        title: "Easy to Manage",
+        title: "Easy Maintenance",
       },
       {
         icon: "/svgs/customizability.svg",
-        title: "Customizability",
+        title: "Customizable",
       },
       {
         icon: "/svgs/versatility.svg",
-        title: "Versatility",
+        title: "Versatile Design",
       },
     ],
   },
@@ -177,42 +178,38 @@ const zebraBlinds = {
     reviews: [
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
-        rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "John Smith",
-        rating: 5,
-        date: "2023-11-15",
-        comment:
-          "Excellent service and quality blinds. The installation team was very professional.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Sarah Johnson",
-        rating: 5,
-        date: "2023-11-01",
-        comment:
-          "Love my new motorized blinds! They work perfectly and look amazing.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Michael Chen",
-        rating: 4,
-        date: "2023-10-25",
-        comment:
-          "Very happy with the zebra blinds. Great quality and reasonable prices.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Emma Wilson",
+        userName: "David Wilson",
         rating: 5,
         date: "2023-10-18",
-        comment:
-          "The smart blinds are a game changer! Customer service was outstanding.",
+        comment: "Perfect for my home office. The glare reduction is amazing!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Sarah Chen",
+        rating: 4,
+        date: "2023-11-22",
+        comment: "Great quality and the installation was professional.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Michael Anderson",
+        rating: 5,
+        date: "2023-11-08",
+        comment: "Love how I can still see outside while reducing glare.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Lisa Martinez",
+        rating: 5,
+        date: "2023-10-30",
+        comment: "The motorized option is a game-changer. So convenient!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "James Brown",
+        rating: 4,
+        date: "2023-10-25",
+        comment: "Perfect for my living room. The UV protection is great.",
       },
     ],
   },
@@ -223,24 +220,24 @@ const zebraBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What is Flash Loan",
+        question: "What makes sunscreen blinds special?",
         answer:
-          "A Flash Loan is a type of decentralized loan that allows users to borrow funds instantly without collateral, provided the borrowed amount is returned within the same transaction.",
+          "Sunscreen blinds are specially designed to filter harsh sunlight and reduce glare while maintaining visibility, making them perfect for spaces where you want to protect against UV rays without losing the view.",
       },
       {
-        question: "How long does it take to process a Flash Loan transaction?",
+        question: "Can sunscreen blinds be motorized?",
         answer:
-          "Flash Loan transactions are processed instantly within a single blockchain block, typically taking only a few seconds to complete.",
+          "Yes, sunscreen blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
       },
       {
-        question: "Is Simplex regulated?",
+        question: "How do I clean sunscreen blinds?",
         answer:
-          "Yes, Simplex is a fully regulated financial institution that complies with all relevant financial regulations and security standards.",
+          "Sunscreen blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
       },
       {
-        question: "How do I deposit funds into Simplex?",
+        question: "What is the installation process?",
         answer:
-          "You can deposit funds into Simplex using various payment methods including credit/debit cards, bank transfers, and cryptocurrency transfers through our secure platform.",
+          "Our professional installation team will measure your windows, ensure perfect fit, and install your sunscreen blinds with precision and care.",
       },
     ],
   },
@@ -252,10 +249,10 @@ const zebraBlinds = {
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+        text: "Protect your space from harsh sunlight with our premium sunscreen blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
       },
     ],
   },
 };
 
-export default zebraBlinds;
+export default sunscreenBlinds;

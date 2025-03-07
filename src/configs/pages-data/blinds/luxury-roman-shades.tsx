@@ -2,20 +2,20 @@ import { WiDaySunny } from "react-icons/wi";
 import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-const zebraBlinds = {
-  slug: "zebra-blinds",
-  icon: "/icons/blinds/zebra-blinds.svg",
-  title: "Zebra Blinds",
+const luxuryRomanShades = {
+  slug: "luxury-roman-shades",
+  icon: "/icons/blinds/luxury-roman-shades-blinds.svg",
+  title: "Luxury Roman Shades",
   description:
-    "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+    "Luxury roman shades combine classic elegance with premium materials and craftsmanship, offering sophisticated window treatments that enhance your home's aesthetic appeal.",
 
   /**
    * blinds banner
    */
   blindsBanner: {
-    heading: "Zebra Blinds",
+    heading: "Luxury Roman Shades",
     subHeading:
-      "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+      "Luxury roman shades bring timeless elegance and premium quality to your windows, offering perfect light control and privacy while creating a sophisticated atmosphere.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -23,30 +23,30 @@ const zebraBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Zebra Blinds",
+    heading: "Why Choose Luxury Roman Shades",
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Light Control",
-        description: "Adjust natural light to your preference",
+        title: "Premium Light Control",
+        description: "Perfect balance of light and privacy",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
         title: "Enhanced Privacy",
-        description: "Maintain your privacy with adjustable blinds",
+        description: "Complete coverage when needed",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Aesthetic",
-        description: "Enhance your interior with stylish designs",
+        title: "Luxurious Design",
+        description: "Premium materials and craftsmanship",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Save energy with optimized light control",
+        description: "Reduce heating and cooling costs",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -82,7 +82,7 @@ const zebraBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Choose your fabric to give your new zebra blinds light filtering or blackout properties to suit your preferences for each space in your home. Enhance your privacy in coveted spaces like bedrooms and bathrooms. Bring more light into the heart of your home with light filtering fabrics to showcase your decor etc.",
+      "Select from our premium collection of luxury fabrics to create the perfect roman shades for your space. Our fabrics are specially selected for their quality and elegance.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -124,7 +124,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "We offer a variety of metal colours for hardware to ensure your new blinds will fit seamlessly into your existing home design.",
+      "Select from our range of premium hardware options to ensure your luxury roman shades perfectly match your interior design.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -153,19 +153,19 @@ const zebraBlinds = {
     features: [
       {
         icon: "/svgs/easy-operation.svg",
-        title: "Easy Operation",
+        title: "Smooth Operation",
       },
       {
         icon: "/svgs/easy-to-manage.svg",
-        title: "Easy to Manage",
+        title: "Easy Maintenance",
       },
       {
         icon: "/svgs/customizability.svg",
-        title: "Customizability",
+        title: "Customizable",
       },
       {
         icon: "/svgs/versatility.svg",
-        title: "Versatility",
+        title: "Versatile Design",
       },
     ],
   },
@@ -177,42 +177,42 @@ const zebraBlinds = {
     reviews: [
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
-        rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
+        userName: "Jennifer Smith",
+        rating: 5,
+        date: "2023-10-20",
+        comment:
+          "The luxury roman shades look absolutely stunning in my dining room. The quality is exceptional!",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "John Smith",
-        rating: 5,
-        date: "2023-11-15",
+        userName: "Thomas Anderson",
+        rating: 4,
+        date: "2023-11-25",
         comment:
-          "Excellent service and quality blinds. The installation team was very professional.",
+          "Perfect for my home office. The blackout fabric works amazingly well.",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Maria Garcia",
+        rating: 5,
+        date: "2023-11-10",
+        comment:
+          "Love how they drape elegantly. The motorized option is so convenient!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "David Wilson",
+        rating: 5,
+        date: "2023-10-28",
+        comment:
+          "The installation was professional and the shades look stunning.",
       },
       {
         userImage: "/profile-image.jpg",
         userName: "Sarah Johnson",
-        rating: 5,
-        date: "2023-11-01",
-        comment:
-          "Love my new motorized blinds! They work perfectly and look amazing.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Michael Chen",
         rating: 4,
-        date: "2023-10-25",
-        comment:
-          "Very happy with the zebra blinds. Great quality and reasonable prices.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Emma Wilson",
-        rating: 5,
-        date: "2023-10-18",
-        comment:
-          "The smart blinds are a game changer! Customer service was outstanding.",
+        date: "2023-10-22",
+        comment: "Great quality and the fabric selection is extensive.",
       },
     ],
   },
@@ -223,24 +223,24 @@ const zebraBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What is Flash Loan",
+        question: "What makes luxury roman shades special?",
         answer:
-          "A Flash Loan is a type of decentralized loan that allows users to borrow funds instantly without collateral, provided the borrowed amount is returned within the same transaction.",
+          "Luxury roman shades combine premium materials, expert craftsmanship, and elegant design to create sophisticated window treatments that enhance your home's aesthetic appeal.",
       },
       {
-        question: "How long does it take to process a Flash Loan transaction?",
+        question: "Can luxury roman shades be motorized?",
         answer:
-          "Flash Loan transactions are processed instantly within a single blockchain block, typically taking only a few seconds to complete.",
+          "Yes, luxury roman shades can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
       },
       {
-        question: "Is Simplex regulated?",
+        question: "How do I clean luxury roman shades?",
         answer:
-          "Yes, Simplex is a fully regulated financial institution that complies with all relevant financial regulations and security standards.",
+          "Luxury roman shades can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
       },
       {
-        question: "How do I deposit funds into Simplex?",
+        question: "What is the installation process?",
         answer:
-          "You can deposit funds into Simplex using various payment methods including credit/debit cards, bank transfers, and cryptocurrency transfers through our secure platform.",
+          "Our professional installation team will measure your windows, ensure perfect fit, and install your luxury roman shades with precision and care.",
       },
     ],
   },
@@ -252,10 +252,10 @@ const zebraBlinds = {
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+        text: "Transform your space with our luxurious roman shades. Contact us today for a free consultation and let our experts help you choose the perfect shades for your home. Call MET BLINDS now!",
       },
     ],
   },
 };
 
-export default zebraBlinds;
+export default luxuryRomanShades;

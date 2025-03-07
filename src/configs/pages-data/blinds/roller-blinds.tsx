@@ -2,20 +2,20 @@ import { WiDaySunny } from "react-icons/wi";
 import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 
-const zebraBlinds = {
-  slug: "zebra-blinds",
-  icon: "/icons/blinds/zebra-blinds.svg",
-  title: "Zebra Blinds",
+const rollerBlinds = {
+  slug: "roller-blinds",
+  icon: "/icons/blinds/roller-blinds.svg",
+  title: "Roller Blinds",
   description:
-    "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+    "Roller blinds are a classic window covering solution that rolls up and down smoothly, offering excellent light control and privacy.",
 
   /**
    * blinds banner
    */
   blindsBanner: {
-    heading: "Zebra Blinds",
+    heading: "Roller Blinds",
     subHeading:
-      "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+      "Roller blinds are a versatile and practical window covering solution that provides perfect light control and privacy while maintaining a clean, modern look.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -23,30 +23,30 @@ const zebraBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Zebra Blinds",
+    heading: "Why Choose Roller Blinds",
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Light Control",
-        description: "Adjust natural light to your preference",
+        title: "Perfect Light Control",
+        description: "Adjust light levels with precision",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Maintain your privacy with adjustable blinds",
+        title: "Maximum Privacy",
+        description: "Complete privacy when needed",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Aesthetic",
-        description: "Enhance your interior with stylish designs",
+        title: "Clean Design",
+        description: "Sleek and modern appearance",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Save energy with optimized light control",
+        description: "Reduce energy costs with proper insulation",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -82,7 +82,7 @@ const zebraBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Choose your fabric to give your new zebra blinds light filtering or blackout properties to suit your preferences for each space in your home. Enhance your privacy in coveted spaces like bedrooms and bathrooms. Bring more light into the heart of your home with light filtering fabrics to showcase your decor etc.",
+      "Select from our wide range of fabrics to create the perfect roller blinds for your space. From light filtering to blackout options, find the ideal solution for your needs.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -124,7 +124,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "We offer a variety of metal colours for hardware to ensure your new blinds will fit seamlessly into your existing home design.",
+      "Select from our range of hardware options to ensure your roller blinds perfectly match your interior design.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -153,19 +153,19 @@ const zebraBlinds = {
     features: [
       {
         icon: "/svgs/easy-operation.svg",
-        title: "Easy Operation",
+        title: "Smooth Operation",
       },
       {
         icon: "/svgs/easy-to-manage.svg",
-        title: "Easy to Manage",
+        title: "Easy Maintenance",
       },
       {
         icon: "/svgs/customizability.svg",
-        title: "Customizability",
+        title: "Customizable",
       },
       {
         icon: "/svgs/versatility.svg",
-        title: "Versatility",
+        title: "Versatile Design",
       },
     ],
   },
@@ -177,42 +177,41 @@ const zebraBlinds = {
     reviews: [
       {
         userImage: "/profile-image.jpg",
-        userName: "Maria arnold",
+        userName: "David Thompson",
+        rating: 5,
+        date: "2023-10-15",
+        comment:
+          "The roller blinds are exactly what I needed. Great quality and easy to install!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "Lisa Chen",
         rating: 4,
-        date: "2023-10-12",
-        comment: "Great product, highly recommend!",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "John Smith",
-        rating: 5,
-        date: "2023-11-15",
+        date: "2023-11-20",
         comment:
-          "Excellent service and quality blinds. The installation team was very professional.",
+          "Perfect for my bedroom. The blackout fabric works amazingly well.",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "Sarah Johnson",
+        userName: "Robert Wilson",
         rating: 5,
-        date: "2023-11-01",
+        date: "2023-11-05",
         comment:
-          "Love my new motorized blinds! They work perfectly and look amazing.",
+          "Excellent customer service and the blinds look fantastic in my living room.",
       },
       {
         userImage: "/profile-image.jpg",
-        userName: "Michael Chen",
+        userName: "Sarah Martinez",
+        rating: 5,
+        date: "2023-10-28",
+        comment: "The motorized option is a game-changer. So convenient!",
+      },
+      {
+        userImage: "/profile-image.jpg",
+        userName: "James Brown",
         rating: 4,
-        date: "2023-10-25",
-        comment:
-          "Very happy with the zebra blinds. Great quality and reasonable prices.",
-      },
-      {
-        userImage: "/profile-image.jpg",
-        userName: "Emma Wilson",
-        rating: 5,
-        date: "2023-10-18",
-        comment:
-          "The smart blinds are a game changer! Customer service was outstanding.",
+        date: "2023-10-22",
+        comment: "Great value for money. The blinds are durable and stylish.",
       },
     ],
   },
@@ -223,24 +222,24 @@ const zebraBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What is Flash Loan",
+        question: "What are the benefits of roller blinds?",
         answer:
-          "A Flash Loan is a type of decentralized loan that allows users to borrow funds instantly without collateral, provided the borrowed amount is returned within the same transaction.",
+          "Roller blinds offer excellent light control, privacy, energy efficiency, and a clean, modern appearance. They're also easy to maintain and operate.",
       },
       {
-        question: "How long does it take to process a Flash Loan transaction?",
+        question: "Can roller blinds be motorized?",
         answer:
-          "Flash Loan transactions are processed instantly within a single blockchain block, typically taking only a few seconds to complete.",
+          "Yes, roller blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
       },
       {
-        question: "Is Simplex regulated?",
+        question: "How do I clean roller blinds?",
         answer:
-          "Yes, Simplex is a fully regulated financial institution that complies with all relevant financial regulations and security standards.",
+          "Roller blinds can be easily cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services.",
       },
       {
-        question: "How do I deposit funds into Simplex?",
+        question: "What is the installation process?",
         answer:
-          "You can deposit funds into Simplex using various payment methods including credit/debit cards, bank transfers, and cryptocurrency transfers through our secure platform.",
+          "Our professional installation team will measure your windows, ensure perfect fit, and install your roller blinds with precision and care.",
       },
     ],
   },
@@ -252,10 +251,10 @@ const zebraBlinds = {
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+        text: "Transform your space with our premium roller blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
       },
     ],
   },
 };
 
-export default zebraBlinds;
+export default rollerBlinds;
