@@ -4,13 +4,18 @@ import { TbDeviceRemote } from "react-icons/tb";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoAnalytics } from "react-icons/io5";
 import { PiVolleyballLight } from "react-icons/pi";
+import { FaShieldAlt } from "react-icons/fa";
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { FiSun } from "react-icons/fi";
+import { CiWallet } from "react-icons/ci";
+import { FaLock, FaSun, FaArrowUp } from "react-icons/fa";
 
-const electricWand = {
-  slug: "electric-wand",
-  title: "Electric Wand",
-  icon: "/icons/control-systems/electric-wand.svg",
+const motorizedBlinds = {
+  slug: "motorized-blinds",
+  title: "Motorized Blinds",
+  icon: "/icons/control-systems/motorized-blinds.svg",
   description:
-    "Electric wand control system uses an electric motor to operate the blinds with a wand controller.",
+    "Motorized blinds use electric motors to operate the blinds, offering convenient and effortless control.",
   /**
    * control system banner
    */
@@ -25,33 +30,33 @@ const electricWand = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Electric Wand Control?",
+    heading: "Why Choose Motorized Blinds?",
     subHeading:
-      "Electric wand control systems combine the convenience of motorized operation with the simplicity of a wand interface. Perfect for hard-to-reach windows or those who prefer effortless control, our electric wand systems offer precise positioning and reliable performance.",
+      "Motorized blinds provide the ultimate convenience in window covering control. With quiet, powerful motors and multiple control options, they're perfect for hard-to-reach windows or those seeking a modern, automated solution. Our motorized systems combine reliability with ease of use.",
     features: [
       {
-        iconName: "FaRegClock",
-        title: "Effortless motorized operation",
+        name: <FaRegClock />,
+        title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FiSun",
-        title: "Precise positioning control",
+        name: <FiSun />,
+        title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        iconName: "FaShieldAlt",
-        title: "Safe and reliable operation",
+        name: <FaShieldAlt />,
+        title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "CiWallet",
-        title: "Energy-efficient design",
+        name: <CiWallet />,
+        title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FaRegCircle",
-        title: "Compatible with various blind types",
+        name: <FaRegCircleCheck />,
+        title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -62,32 +67,36 @@ const electricWand = {
   productionSteps: {
     heading: "Features",
     subHeading:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Experience the future of window coverings with our motorized blind systems. Combining cutting-edge technology with user-friendly controls, these systems offer unparalleled convenience and sophistication.",
     features: [
       {
-        icon: FaRegClock,
-        title: "Durability & Longevity",
-        description: "Built to last with premium-quality cords.",
-      },
-      {
         icon: TbDeviceRemote,
-        title: "Smooth & Effortless Control",
-        description: "Adjust blinds with precision for better lighting.",
+        title: "Remote Control Operation",
+        description:
+          "Control your blinds from anywhere with a remote or smartphone.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Child & Pet Safety",
-        description: "Comes with a secure bottom lock for protection.",
+        title: "Advanced Safety Features",
+        description:
+          "Built-in obstacle detection and emergency stop functionality.",
       },
       {
         icon: IoAnalytics,
-        title: "Customization Options",
-        description: "Available in different cord materials and sizes.",
+        title: "Smart Integration",
+        description:
+          "Compatible with major smart home systems and voice assistants.",
+      },
+      {
+        icon: FaRegClock,
+        title: "Programmable Settings",
+        description: "Set automatic schedules for optimal light control.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Aesthetic Appeal",
-        description: "Minimalist design that blends with any decor.",
+        title: "Quiet Operation",
+        description:
+          "Smooth, silent motor operation for peaceful environments.",
       },
     ],
   },
@@ -97,7 +106,7 @@ const electricWand = {
   compatibleBlinds: {
     heading: "Compatible Blinds",
     subHeading:
-      "Electric wand control is compatible with multiple blind types, offering a modern and convenient solution.",
+      "Motorized control is compatible with multiple blind types, offering a modern and automated solution.",
     blinds: [
       {
         title: "Zebra Blinds",
@@ -148,28 +157,28 @@ const electricWand = {
    */
   howItWorks: {
     heading: "How It Works",
-    subHeading: "Operating Electric Wand Blinds in 3 Simple Steps",
+    subHeading: "Operating Motorized Blinds in 3 Simple Steps",
     steps: [
       {
-        icon: "FaBolt",
-        title: "Power Connection",
+        icon: <FaArrowUp />,
+        title: "Adjust the Cord",
         description:
-          "Connect the electric wand to power source and test operation.",
+          "Pull the cord up or down to position the blinds as needed.",
         isFilled: true,
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaHandPointer",
-        title: "Wand Control",
+        icon: <FaLock />,
+        title: "Lock in Place",
         description:
-          "Use the electric wand to raise and lower blinds smoothly.",
+          "Secure the blinds with the MET Sleeve & bottom safety lock.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaSun",
-        title: "Light Control",
-        description: "Adjust the wand to control light and privacy levels.",
+        icon: <FaSun />,
+        title: "Enjoy Precise Light Control",
+        description: "Adjust the tilt for privacy & lighting preferences.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -181,24 +190,24 @@ const electricWand = {
   safetyMaintenance: {
     heading: "Safety & Maintenance",
     subHeading:
-      "Electric wand control systems require proper maintenance to ensure safe and reliable operation. Follow these guidelines to keep your system in optimal condition.",
+      "Motorized blind systems combine advanced safety features with easy maintenance. Regular care ensures smooth operation and extends the life of your investment.",
     features: [
       {
-        title: "Power Safety",
+        title: "Motor Protection",
         description:
-          "Regular inspection of power connections and wiring for safe operation.",
+          "Built-in safety features prevent motor overload and ensure smooth operation.",
         image: "/svgs/child-safe.svg",
       },
       {
-        title: "Motor Care",
+        title: "Remote Maintenance",
         description:
-          "Keep the motor clean and free from debris for smooth operation.",
+          "Keep remote controls clean and replace batteries as needed for reliable control.",
         image: "/svgs/easy-cleaning.svg",
       },
       {
-        title: "Wand Maintenance",
+        title: "Track Inspection",
         description:
-          "Check wand connections and movement for proper functionality.",
+          "Regular cleaning of tracks ensures smooth blind movement.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -215,4 +224,4 @@ const electricWand = {
   },
 };
 
-export default electricWand;
+export default motorizedBlinds;

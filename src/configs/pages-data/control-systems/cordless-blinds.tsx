@@ -4,13 +4,18 @@ import { TbDeviceRemote } from "react-icons/tb";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoAnalytics } from "react-icons/io5";
 import { PiVolleyballLight } from "react-icons/pi";
+import { FaShieldAlt } from "react-icons/fa";
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { FiSun } from "react-icons/fi";
+import { CiWallet } from "react-icons/ci";
+import { FaLock, FaSun, FaArrowUp } from "react-icons/fa";
 
-const smartControl = {
-  slug: "smart-control",
-  title: "Smart Control",
-  icon: "/icons/control-systems/smart-control.svg",
+const cordlessBlinds = {
+  slug: "cordless-blinds",
+  title: "Cordless Blinds",
+  icon: "/icons/control-systems/cordless-blinds.svg",
   description:
-    "Smart control system allows you to operate your blinds using smartphone apps, voice commands, and home automation systems.",
+    "Cordless blinds are a type of blind that uses a cordless mechanism to operate the blind.",
   /**
    * control system banner
    */
@@ -25,33 +30,33 @@ const smartControl = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Smart Control?",
+    heading: "Why Choose Cordless Blinds?",
     subHeading:
-      "Smart control systems bring the future of home automation to your window coverings. With smartphone apps, voice commands, and integration with popular smart home platforms, you can control your blinds from anywhere. Perfect for modern homes seeking convenience and energy efficiency.",
+      "Cordless blinds offer a modern, clean look with enhanced safety features. Perfect for homes with children and pets, they eliminate cord hazards while providing smooth, effortless operation. Our cordless blinds combine style with functionality, making them an ideal choice for contemporary homes.",
     features: [
       {
-        iconName: "FaRegClock",
-        title: "Remote control from anywhere",
+        name: <FaRegClock />,
+        title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FiSun",
-        title: "Automated scheduling and scenes",
+        name: <FiSun />,
+        title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        iconName: "FaShieldAlt",
-        title: "Secure wireless connectivity",
+        name: <FaShieldAlt />,
+        title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "CiWallet",
-        title: "Energy-saving automation",
+        name: <CiWallet />,
+        title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FaRegCircleCheck",
-        title: "Compatible with major smart home platforms",
+        name: <FaRegCircleCheck />,
+        title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -62,34 +67,32 @@ const smartControl = {
   productionSteps: {
     heading: "Features",
     subHeading:
-      "Transform your home with our smart control systems. Seamlessly integrate your window coverings with modern technology for enhanced comfort and convenience.",
+      "Experience the perfect blend of safety and convenience with our cordless blind systems. Designed for modern homes, these systems offer a clean look while ensuring the safety of children and pets.",
     features: [
       {
         icon: TbDeviceRemote,
-        title: "Mobile App Control",
-        description:
-          "Manage your blinds from anywhere using our intuitive app.",
+        title: "Cord-Free Operation",
+        description: "Clean, modern look with no exposed cords.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Secure Connectivity",
-        description: "Advanced encryption and secure wireless protocols.",
+        title: "Child & Pet Safety",
+        description: "Eliminates cord hazards for peace of mind.",
       },
       {
         icon: IoAnalytics,
-        title: "Smart Home Integration",
-        description: "Works with Alexa, Google Home, and other platforms.",
+        title: "Smooth Control",
+        description: "Spring-loaded mechanism for effortless operation.",
       },
       {
         icon: FaRegClock,
-        title: "Automated Scheduling",
-        description: "Set up custom schedules for optimal light control.",
+        title: "Durable Design",
+        description: "Built to last with quality materials.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Scene Creation",
-        description:
-          "Create and save custom lighting scenes for different moods.",
+        title: "Style Options",
+        description: "Available in various materials and finishes.",
       },
     ],
   },
@@ -99,7 +102,7 @@ const smartControl = {
   compatibleBlinds: {
     heading: "Compatible Blinds",
     subHeading:
-      "Smart control is compatible with multiple blind types, offering a modern and connected solution.",
+      "Cordless control is compatible with multiple blind types, offering a modern and safe solution.",
     blinds: [
       {
         title: "Zebra Blinds",
@@ -150,29 +153,28 @@ const smartControl = {
    */
   howItWorks: {
     heading: "How It Works",
-    subHeading: "Operating Smart Blinds in 3 Simple Steps",
+    subHeading: "Operating Cordless Blinds in 3 Simple Steps",
     steps: [
       {
-        icon: "FaMobileAlt",
-        title: "Connect to App",
+        icon: <FaArrowUp />,
+        title: "Adjust the Cord",
         description:
-          "Download our app and connect your blinds to your home network.",
+          "Pull the cord up or down to position the blinds as needed.",
         isFilled: true,
-
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaCalendarAlt",
-        title: "Set Up Automation",
-        description: "Create schedules and scenes for automated control.",
+        icon: <FaLock />,
+        title: "Lock in Place",
+        description:
+          "Secure the blinds with the MET Sleeve & bottom safety lock.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaMicrophone",
-        title: "Control Anywhere",
-        description:
-          "Use voice commands or the app to control your blinds from anywhere.",
+        icon: <FaSun />,
+        title: "Enjoy Precise Light Control",
+        description: "Adjust the tilt for privacy & lighting preferences.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -184,24 +186,24 @@ const smartControl = {
   safetyMaintenance: {
     heading: "Safety & Maintenance",
     subHeading:
-      "Our smart control systems are designed with safety and ease of maintenance in mind. Regular updates and proper care ensure optimal performance and longevity.",
+      "Cordless blind systems prioritize safety and ease of maintenance. Regular care ensures smooth operation and extends the life of your investment.",
     features: [
       {
-        title: "Secure Connectivity",
+        title: "Spring Mechanism",
         description:
-          "Advanced encryption and secure wireless protocols protect your smart blinds.",
+          "Regular inspection of spring tension for safe and smooth operation.",
         image: "/svgs/child-safe.svg",
       },
       {
-        title: "System Updates",
+        title: "Bottom Rail Care",
         description:
-          "Regular firmware updates keep your smart blinds secure and up-to-date.",
+          "Keep the bottom rail clean and check for proper alignment.",
         image: "/svgs/easy-cleaning.svg",
       },
       {
-        title: "Battery Management",
+        title: "System Check",
         description:
-          "Monitor and maintain battery levels for uninterrupted operation.",
+          "Inspect the cordless mechanism for wear and proper function.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -218,4 +220,4 @@ const smartControl = {
   },
 };
 
-export default smartControl;
+export default cordlessBlinds;

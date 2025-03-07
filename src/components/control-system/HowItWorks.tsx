@@ -1,23 +1,12 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
 // Import core styles
 // Import theme styles
-import { IconType } from "react-icons";
-import {
-  FaMobileAlt,
-  FaCalendarAlt,
-  FaMicrophone,
-  FaHandPointer,
-  FaLock,
-  FaSun,
-  FaArrowUp,
-  FaPowerOff,
-  FaBolt,
-} from "react-icons/fa";
+
 import { inter } from "@/fonts";
 interface Step {
-  icon: string;
+  icon: JSX.Element;
   title: string;
   description: string;
   isFilled?: boolean;
@@ -34,27 +23,9 @@ type HowItWorksProps = {
   data: HowItWorksData;
 };
 
-const iconMap: Record<string, IconType> = {
-  FaMobileAlt,
-  FaCalendarAlt,
-  FaMicrophone,
-  FaHandPointer,
-  FaLock,
-  FaSun,
-  FaArrowUp,
-  FaPowerOff,
-  FaBolt,
-};
-
 const StepItem: React.FC<{
   data: Step & { isActive: boolean; onClick: () => void };
 }> = ({ data }) => {
-  const IconComponent = iconMap[data.icon];
-  if (!IconComponent) {
-    console.error(`Icon ${data.icon} not found in iconMap`);
-    return null;
-  }
-
   return (
     <div
       className={`flex cursor-pointer items-center gap-5 rounded-xl px-5 py-3 transition duration-300`}
@@ -65,9 +36,11 @@ const StepItem: React.FC<{
         <div
           className={`absolute inset-[10px] flex items-center justify-center rounded-full border-8 border-[#FFA600] ${data.isActive ? "bg-[#FFA600]" : "bg-white"} `}
         >
-          <IconComponent
+          <div
             className={`text-3xl ${data.isActive ? "text-white" : "text-[#FFA600]"}`}
-          />
+          >
+            {data.icon}
+          </div>
         </div>
       </div>
       <div

@@ -4,13 +4,18 @@ import { TbDeviceRemote } from "react-icons/tb";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoAnalytics } from "react-icons/io5";
 import { PiVolleyballLight } from "react-icons/pi";
+import { FaShieldAlt } from "react-icons/fa";
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { FiSun } from "react-icons/fi";
+import { CiWallet } from "react-icons/ci";
+import { FaLock, FaSun, FaArrowUp } from "react-icons/fa";
 
-const motorizedBlinds = {
-  slug: "motorized-blinds",
-  title: "Motorized Blinds",
-  icon: "/icons/control-systems/motorized-blinds.svg",
+const smartControl = {
+  slug: "smart-control",
+  title: "Smart Control",
+  icon: "/icons/control-systems/smart-control.svg",
   description:
-    "Motorized blinds use electric motors to operate the blinds, offering convenient and effortless control.",
+    "Smart control system allows you to operate your blinds using smartphone apps, voice commands, and home automation systems.",
   /**
    * control system banner
    */
@@ -25,33 +30,33 @@ const motorizedBlinds = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Motorized Blinds?",
+    heading: "Why Choose Smart Control?",
     subHeading:
-      "Motorized blinds provide the ultimate convenience in window covering control. With quiet, powerful motors and multiple control options, they're perfect for hard-to-reach windows or those seeking a modern, automated solution. Our motorized systems combine reliability with ease of use.",
+      "Smart control systems bring the future of home automation to your window coverings. With smartphone apps, voice commands, and integration with popular smart home platforms, you can control your blinds from anywhere. Perfect for modern homes seeking convenience and energy efficiency.",
     features: [
       {
-        iconName: "FaRegClock",
-        title: "Quiet and powerful motor operation",
+        name: <FaRegClock />,
+        title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FiSun",
-        title: "Multiple control options available",
+        name: <FiSun />,
+        title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        iconName: "FaShieldAlt",
-        title: "Built-in safety features",
+        name: <FaShieldAlt />,
+        title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "CiWallet",
-        title: "Long-lasting motor life",
+        name: <CiWallet />,
+        title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FaRegCircle",
-        title: "Suitable for large and heavy blinds",
+        name: <FaRegCircleCheck />,
+        title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -62,36 +67,34 @@ const motorizedBlinds = {
   productionSteps: {
     heading: "Features",
     subHeading:
-      "Experience the future of window coverings with our motorized blind systems. Combining cutting-edge technology with user-friendly controls, these systems offer unparalleled convenience and sophistication.",
+      "Transform your home with our smart control systems. Seamlessly integrate your window coverings with modern technology for enhanced comfort and convenience.",
     features: [
       {
         icon: TbDeviceRemote,
-        title: "Remote Control Operation",
+        title: "Mobile App Control",
         description:
-          "Control your blinds from anywhere with a remote or smartphone.",
+          "Manage your blinds from anywhere using our intuitive app.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Advanced Safety Features",
-        description:
-          "Built-in obstacle detection and emergency stop functionality.",
+        title: "Secure Connectivity",
+        description: "Advanced encryption and secure wireless protocols.",
       },
       {
         icon: IoAnalytics,
-        title: "Smart Integration",
-        description:
-          "Compatible with major smart home systems and voice assistants.",
+        title: "Smart Home Integration",
+        description: "Works with Alexa, Google Home, and other platforms.",
       },
       {
         icon: FaRegClock,
-        title: "Programmable Settings",
-        description: "Set automatic schedules for optimal light control.",
+        title: "Automated Scheduling",
+        description: "Set up custom schedules for optimal light control.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Quiet Operation",
+        title: "Scene Creation",
         description:
-          "Smooth, silent motor operation for peaceful environments.",
+          "Create and save custom lighting scenes for different moods.",
       },
     ],
   },
@@ -101,7 +104,7 @@ const motorizedBlinds = {
   compatibleBlinds: {
     heading: "Compatible Blinds",
     subHeading:
-      "Motorized control is compatible with multiple blind types, offering a modern and automated solution.",
+      "Smart control is compatible with multiple blind types, offering a modern and connected solution.",
     blinds: [
       {
         title: "Zebra Blinds",
@@ -152,28 +155,28 @@ const motorizedBlinds = {
    */
   howItWorks: {
     heading: "How It Works",
-    subHeading: "Operating Motorized Blinds in 3 Simple Steps",
+    subHeading: "Operating Smart Blinds in 3 Simple Steps",
     steps: [
       {
-        icon: "FaPowerOff",
-        title: "Power Up",
+        icon: <FaArrowUp />,
+        title: "Adjust the Cord",
         description:
-          "Connect the motor to power and pair with your remote control.",
+          "Pull the cord up or down to position the blinds as needed.",
         isFilled: true,
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaCalendarAlt",
-        title: "Set Schedule",
-        description: "Program automatic schedules for daily operation.",
+        icon: <FaLock />,
+        title: "Lock in Place",
+        description:
+          "Secure the blinds with the MET Sleeve & bottom safety lock.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaMicrophone",
-        title: "Control Options",
-        description:
-          "Use remote, app, or voice commands to control your blinds.",
+        icon: <FaSun />,
+        title: "Enjoy Precise Light Control",
+        description: "Adjust the tilt for privacy & lighting preferences.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -185,24 +188,24 @@ const motorizedBlinds = {
   safetyMaintenance: {
     heading: "Safety & Maintenance",
     subHeading:
-      "Motorized blind systems combine advanced safety features with easy maintenance. Regular care ensures smooth operation and extends the life of your investment.",
+      "Our smart control systems are designed with safety and ease of maintenance in mind. Regular updates and proper care ensure optimal performance and longevity.",
     features: [
       {
-        title: "Motor Protection",
+        title: "Secure Connectivity",
         description:
-          "Built-in safety features prevent motor overload and ensure smooth operation.",
+          "Advanced encryption and secure wireless protocols protect your smart blinds.",
         image: "/svgs/child-safe.svg",
       },
       {
-        title: "Remote Maintenance",
+        title: "System Updates",
         description:
-          "Keep remote controls clean and replace batteries as needed for reliable control.",
+          "Regular firmware updates keep your smart blinds secure and up-to-date.",
         image: "/svgs/easy-cleaning.svg",
       },
       {
-        title: "Track Inspection",
+        title: "Battery Management",
         description:
-          "Regular cleaning of tracks ensures smooth blind movement.",
+          "Monitor and maintain battery levels for uninterrupted operation.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -219,4 +222,4 @@ const motorizedBlinds = {
   },
 };
 
-export default motorizedBlinds;
+export default smartControl;

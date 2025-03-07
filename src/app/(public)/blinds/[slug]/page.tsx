@@ -10,10 +10,13 @@ import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 import BlindsTestimonials from "@/components/blinds/BlindsTestimonials";
 import blinds from "@/configs/pages-data/blinds";
-import zebraBlinds from "@/configs/pages-data/blinds/zebra-blinds";
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const blind = blinds.find((blind) => blind.slug === slug);
+
+  if (!blind) {
+    return <div>Blind not found</div>;
+  }
 
   return (
     <div>

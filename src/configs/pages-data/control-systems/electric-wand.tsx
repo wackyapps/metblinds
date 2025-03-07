@@ -4,14 +4,18 @@ import { TbDeviceRemote } from "react-icons/tb";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoAnalytics } from "react-icons/io5";
 import { PiVolleyballLight } from "react-icons/pi";
+import { FaShieldAlt } from "react-icons/fa";
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { FiSun } from "react-icons/fi";
+import { CiWallet } from "react-icons/ci";
+import { FaLock, FaSun, FaArrowUp } from "react-icons/fa";
 
-const cordedBlinds = {
-  slug: "corded-blinds",
-  icon: "/icons/control-systems/corded-blinds.svg",
-  title: "Corded Blinds",
+const electricWand = {
+  slug: "electric-wand",
+  title: "Electric Wand",
+  icon: "/icons/control-systems/electric-wand.svg",
   description:
-    "Corded blinds are a type of blind that uses a cord to operate the blind.",
-
+    "Electric wand control system uses an electric motor to operate the blinds with a wand controller.",
   /**
    * control system banner
    */
@@ -26,32 +30,32 @@ const cordedBlinds = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Corded Blinds?",
+    heading: "Why Choose Electric Wand Control?",
     subHeading:
-      "Corded blinds are a classic and reliable choice for window coverings. With smooth manual operation and durable cord options, they offer precise light control and long-lasting performance. Our corded blinds come with MET Sleeve protection and a child-lock safety system, making them a safe option for homes with children and pets.",
+      "Electric wand control systems combine the convenience of motorized operation with the simplicity of a wand interface. Perfect for hard-to-reach windows or those who prefer effortless control, our electric wand systems offer precise positioning and reliable performance.",
     features: [
       {
-        iconName: "FaRegClock",
+        name: <FaRegClock />,
         title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FiSun",
+        name: <FiSun />,
         title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        iconName: "FaShieldAlt",
+        name: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "CiWallet",
+        name: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        iconName: "FaRegCircle",
+        name: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },
@@ -98,7 +102,7 @@ const cordedBlinds = {
   compatibleBlinds: {
     heading: "Compatible Blinds",
     subHeading:
-      "Corded control is compatible with multiple blind types, offering a traditional and effective solution.",
+      "Electric wand control is compatible with multiple blind types, offering a modern and convenient solution.",
     blinds: [
       {
         title: "Zebra Blinds",
@@ -106,7 +110,6 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
-        link: "/blinds/zebra-blinds",
       },
       {
         title: "Roller Shades",
@@ -114,7 +117,13 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
-        link: "/blinds/roller-shades",
+      },
+      {
+        title: "Solar Shades",
+        description:
+          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+        image: "/images/blinds/solar-shades-blind.png",
+        buttonText: "Learn More",
       },
       {
         title: "Drapery",
@@ -122,7 +131,6 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
-        link: "/blinds/drapery",
       },
       {
         title: "Trifold",
@@ -130,7 +138,6 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
-        link: "/blinds/triflod",
       },
       {
         title: "Honeycomb Blinds",
@@ -138,7 +145,6 @@ const cordedBlinds = {
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
         image: "/images/blinds/honey-comb-blind.png",
         buttonText: "Learn More",
-        link: "/blinds/honeycomb-blinds",
       },
     ],
   },
@@ -147,10 +153,10 @@ const cordedBlinds = {
    */
   howItWorks: {
     heading: "How It Works",
-    subHeading: "Operating Corded Blinds in 3 Simple Steps",
+    subHeading: "Operating Electric Wand Blinds in 3 Simple Steps",
     steps: [
       {
-        icon: "FaArrowUp",
+        icon: <FaArrowUp />,
         title: "Adjust the Cord",
         description:
           "Pull the cord up or down to position the blinds as needed.",
@@ -158,7 +164,7 @@ const cordedBlinds = {
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaLock",
+        icon: <FaLock />,
         title: "Lock in Place",
         description:
           "Secure the blinds with the MET Sleeve & bottom safety lock.",
@@ -166,7 +172,7 @@ const cordedBlinds = {
         image: "/images/white-blind.png",
       },
       {
-        icon: "FaSun",
+        icon: <FaSun />,
         title: "Enjoy Precise Light Control",
         description: "Adjust the tilt for privacy & lighting preferences.",
         isFilled: false,
@@ -180,23 +186,24 @@ const cordedBlinds = {
   safetyMaintenance: {
     heading: "Safety & Maintenance",
     subHeading:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Electric wand control systems require proper maintenance to ensure safe and reliable operation. Follow these guidelines to keep your system in optimal condition.",
     features: [
       {
-        title: "Child-Safe Design",
+        title: "Power Safety",
         description:
-          "Corded blinds come with a built-in safety lock to prevent accidents.",
+          "Regular inspection of power connections and wiring for safe operation.",
         image: "/svgs/child-safe.svg",
       },
       {
-        title: "Easy Cleaning",
+        title: "Motor Care",
         description:
-          "Wipe with a dry cloth or light vacuuming for dust removal.",
+          "Keep the motor clean and free from debris for smooth operation.",
         image: "/svgs/easy-cleaning.svg",
       },
       {
-        title: "Durability Check",
-        description: "Inspect the cord tension regularly to avoid fraying.",
+        title: "Wand Maintenance",
+        description:
+          "Check wand connections and movement for proper functionality.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -213,4 +220,4 @@ const cordedBlinds = {
   },
 };
 
-export default cordedBlinds;
+export default electricWand;

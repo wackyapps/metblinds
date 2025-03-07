@@ -3,14 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
 
 import { inter } from "@/fonts";
-import { FaRegClock, FaShieldAlt, FaRegCircle } from "react-icons/fa";
-import { FaRegCircleCheck } from "react-icons/fa6";
-import { FiSun } from "react-icons/fi";
-import { CiWallet } from "react-icons/ci";
+
 import React from "react";
 
 interface Feature {
-  iconName: string;
+  name: React.ReactNode;
   title: string;
   description?: string;
   image: string;
@@ -22,15 +19,6 @@ type Props = {
     subHeading: string;
     features: Feature[];
   };
-};
-
-const iconMap = {
-  FaRegClock,
-  FaShieldAlt,
-  FaRegCircle,
-  FiSun,
-  CiWallet,
-  FaRegCircleCheck,
 };
 
 const WhyChooseControlSlider = ({ data }: Props) => {
@@ -93,17 +81,13 @@ const WhyChooseControlSlider = ({ data }: Props) => {
                     onClick={() => handleFeatureClick(index)}
                   >
                     <div className="">
-                      {iconMap[feature.iconName as keyof typeof iconMap] && (
-                        <div
-                          className={`h-full w-full text-6xl ${
-                            isActive ? "text-white" : "text-[#FFAD33]"
-                          }`}
-                        >
-                          {React.createElement(
-                            iconMap[feature.iconName as keyof typeof iconMap],
-                          )}
-                        </div>
-                      )}
+                      <div
+                        className={`h-full w-full text-6xl ${
+                          isActive ? "text-white" : "text-[#FFAD33]"
+                        }`}
+                      >
+                        {feature.name}
+                      </div>
                     </div>
                     <div>
                       <h3
