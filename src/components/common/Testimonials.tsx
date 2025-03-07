@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Glide from "@glidejs/glide";
 // Import core styles
 // Import theme styles
-import RatingCard from "./cards/RatingCard";
+import ReviewCard from "./cards/ReviewCard";
 import { rubik } from "@/fonts";
 
 import { IoStar } from "react-icons/io5";
@@ -106,13 +106,14 @@ const Testimonials: React.FC<Props> = ({ data }) => {
                   key={index}
                   className="glide__slide py-2 [height:100%_!important]"
                 >
-                  <RatingCard
+                  <ReviewCard
                     className="h-full"
                     userName={review.userName}
                     userImage={review.userImage}
                     rating={review.rating}
                     date={review.date}
                     comment={review.comment}
+                    fromGoogle={true}
                   />
                 </li>
               ))}

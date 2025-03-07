@@ -1,22 +1,24 @@
 import React from "react";
 import { IoStar } from "react-icons/io5";
 
-interface RatingCardProps {
+interface ReviewCardProps {
   userImage?: string;
   userName: string;
   rating?: number;
   date: string | Date;
   comment: string;
   className?: string;
+  fromGoogle?: boolean;
 }
 
-const RatingCard: React.FC<RatingCardProps> = ({
+const ReviewCard: React.FC<ReviewCardProps> = ({
   userImage,
   rating,
   date,
   comment,
   userName,
   className,
+  fromGoogle = false,
 }) => {
   // Default image if userImage is not provided
   const defaultImage = "/profile-image.jpg";
@@ -70,17 +72,19 @@ const RatingCard: React.FC<RatingCardProps> = ({
 
       {/* Comment (if provided) */}
       <p className="w-full text-center text-lg">{comment}</p>
-      <div>
-        <img
-          alt=""
-          src={"/G-icon.svg"}
-          width={28}
-          height={28}
-          className="h-7 w-7"
-        />
-      </div>
+      {fromGoogle && (
+        <div>
+          <img
+            alt=""
+            src={"/G-icon.svg"}
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
+        </div>
+      )}
     </div>
   );
 };
 
-export default RatingCard;
+export default ReviewCard;

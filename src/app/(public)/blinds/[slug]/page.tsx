@@ -8,6 +8,7 @@ import InfoBanner from "@/components/common/InfoBanner";
 import ChooseHardware from "@/components/blinds/ChooseHardware";
 import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 import BlindsFeatures from "@/components/blinds/BlindsFeatures";
+import BlindsTestimonials from "@/components/blinds/BlindsTestimonials";
 const page = () => {
   const data = {
     heading: "KEY FEATURES",
@@ -48,6 +49,7 @@ const page = () => {
       <ChooseYourFabric />
       <ChooseHardware />
       <BlindsFeatures />
+      <BlindsTestimonials />
       <FAQsSection />
       <InfoBanner data={infoBanner} />
       <div className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"></div>
