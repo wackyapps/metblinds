@@ -9,7 +9,10 @@ import ChooseHardware from "@/components/blinds/ChooseHardware";
 import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 import BlindsTestimonials from "@/components/blinds/BlindsTestimonials";
-const page = () => {
+import blinds from "@/configs/pages-data/blinds";
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const blind = blinds.find((blind) => blind.slug === slug);
   const data = {
     heading: "KEY FEATURES",
     features: [
@@ -43,7 +46,7 @@ const page = () => {
   };
   return (
     <div>
-      <BlindsBanner />
+      {/* <BlindsBanner /> */}
       <WhyChooseBlindsSlider />
       <KeyFeatures data={data} />
       <ChooseYourFabric />

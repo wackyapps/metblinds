@@ -45,7 +45,7 @@ const SpecialOfferSection: React.FC<SpecialOfferSectionProps> = ({ data }) => {
                 {title}
               </h3>
               <h2
-                className={`${rubik.className} text-4xl font-bold leading-tight text-[#FFA600] lg:text-6xl`}
+                className={`${rubik.className} text-5xl font-bold leading-tight text-[#FFA600] md:text-6xl lg:text-[80px]`}
               >
                 {mainHeading}
               </h2>

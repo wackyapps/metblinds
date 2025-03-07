@@ -22,7 +22,7 @@ const ContactSection = ({ data }: Props) => {
       <div className="mx-auto flex max-w-[1560px] flex-col gap-[122px] px-3 xl:flex-row">
         {/* Right Form Section */}
         <div className="w-1/2"></div>
-        <div className="flex flex-col items-stretch gap-[61px] py-[69px]">
+        <div className="flex flex-col items-stretch gap-[61px] py-[69px] xl:ps-10">
           <div className="flex flex-col gap-5">
             {/* Header */}
             <div className="flex flex-col gap-[18px]">
