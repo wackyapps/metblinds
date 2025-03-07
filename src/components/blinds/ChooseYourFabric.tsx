@@ -1,7 +1,11 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { rubik } from "@/fonts";
-import Glide from "@glidejs/glide";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 interface FabricOption {
   name: string;
@@ -43,58 +47,6 @@ const ChooseYourFabric = () => {
   const [currentFabric, setCurrentFabric] = useState<FabricOption>(
     blackoutFabrics[0],
   );
-  const blackoutGlideRef = useRef<HTMLDivElement>(null);
-  const lightFilteringGlideRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (blackoutGlideRef.current) {
-      const blackoutGlide = new Glide(blackoutGlideRef.current, {
-        type: "carousel",
-        perView: 4,
-        gap: 16,
-        breakpoints: {
-          1024: {
-            perView: 2,
-          },
-          768: {
-            perView: 1,
-          },
-        },
-        autoplay: false,
-        hoverpause: true,
-      });
-      blackoutGlide.mount();
-
-      return () => {
-        blackoutGlide.destroy();
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    if (lightFilteringGlideRef.current) {
-      const lightFilteringGlide = new Glide(lightFilteringGlideRef.current, {
-        type: "carousel",
-        perView: 4,
-        gap: 16,
-        breakpoints: {
-          1024: {
-            perView: 2,
-          },
-          768: {
-            perView: 1,
-          },
-        },
-        autoplay: false,
-        hoverpause: true,
-      });
-      lightFilteringGlide.mount();
-
-      return () => {
-        lightFilteringGlide.destroy();
-      };
-    }
-  }, []);
 
   return (
     <div className="global-container py-24">
@@ -119,18 +71,27 @@ const ChooseYourFabric = () => {
         className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[74px]"
         style={{ background: currentFabric.color }}
       ></div>
-      <div className="grid max-w-full grid-cols-1 [column-gap:10px] [row-gap:40px] xl:grid-cols-2">
+      <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-stretch">
         <div className="flex flex-col items-center gap-11">
           <div
             className={`${rubik.className} text-center text-2xl font-semibold text-[#023D64]`}
           >
             Blackout Fabrics
           </div>
-          <div className="glide w-full" ref={blackoutGlideRef}>
-            <div className="glide__track" data-glide-el="track">
-              <ul className="glide__slides">
-                {blackoutFabrics.map((fabric, index) => (
-                  <li key={index} className="glide__slide">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {blackoutFabrics.map((fabric, index) => (
+                <CarouselItem
+                  key={index}
+                  className="basis-full pl-2 sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
+                >
+                  <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
                       className="flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] p-6"
@@ -142,11 +103,11 @@ const ChooseYourFabric = () => {
                         {fabric.name}
                       </h3>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
         <div className="flex flex-col items-center gap-11">
           <div
@@ -154,11 +115,20 @@ const ChooseYourFabric = () => {
           >
             Light Filtering Fabrics
           </div>
-          <div className="glide w-full" ref={lightFilteringGlideRef}>
-            <div className="glide__track" data-glide-el="track">
-              <ul className="glide__slides">
-                {lightFilteringFabrics.map((fabric, index) => (
-                  <li key={index} className="glide__slide">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {lightFilteringFabrics.map((fabric, index) => (
+                <CarouselItem
+                  key={index}
+                  className="basis-full pl-2 sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
+                >
+                  <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
                       className="flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] p-6"
@@ -170,11 +140,11 @@ const ChooseYourFabric = () => {
                         {fabric.name}
                       </h3>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>
