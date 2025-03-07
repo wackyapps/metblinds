@@ -5,36 +5,22 @@ import Glide from "@glidejs/glide";
 import { roboto } from "@/fonts";
 
 interface HardwareOption {
-  id: string;
   image: string;
   name: string;
 }
 
-const hardwareOptions: HardwareOption[] = [
-  {
-    id: "1",
-    image: "/images/hardwares/hardware-1.png",
-    name: "Antique Brass",
-  },
-  {
-    id: "2",
-    image: "/images/hardwares/hardware-2.png",
-    name: "Satin Nickel",
-  },
-  {
-    id: "3",
-    image: "/images/hardwares/hardware-3.png",
-    name: "Oil Rubbed Bronze",
-  },
-  {
-    id: "4",
-    image: "/images/hardwares/hardware-4.png",
-    name: "Polished Chrome",
-  },
-];
+type Props = {
+  data: {
+    heading: string;
+    subHeading: string;
+    hardwareOptions: HardwareOption[];
+  };
+};
 
-const ChooseHardware = () => {
-  const [selectedImage, setSelectedImage] = useState(hardwareOptions[0].image);
+const ChooseHardware = ({ data }: Props) => {
+  const [selectedImage, setSelectedImage] = useState(
+    data.hardwareOptions[0].image,
+  );
   const glideRef = useRef<HTMLDivElement>(null);
   const glideInstance = useRef<Glide | null>(null);
 
@@ -91,21 +77,18 @@ const ChooseHardware = () => {
               <h2
                 className={` ${roboto.className} relative text-2xl font-semibold text-[#023D64] md:text-3xl`}
               >
-                Choose Your Hardware
+                {data.heading}
               </h2>
             </div>
-            <p className="text-lg text-[#767676]">
-              We offer a variety of metal colours for hardware to ensure your
-              new blinds will fit seamlessly into your existing home design.
-            </p>
+            <p className="text-lg text-[#767676]">{data.subHeading}</p>
           </div>
 
           {/* Glide Slider */}
           <div className="glide" ref={glideRef}>
             <div className="glide__track" data-glide-el="track">
               <ul className="glide__slides">
-                {hardwareOptions.map((option) => (
-                  <li key={option.id} className="glide__slide">
+                {data.hardwareOptions.map((option, index) => (
+                  <li key={index} className="glide__slide">
                     <div
                       className={`h-[184px] w-[154px] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         selectedImage === option.image

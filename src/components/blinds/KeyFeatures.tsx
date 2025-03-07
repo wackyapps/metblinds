@@ -1,3 +1,4 @@
+import { rubik } from "@/fonts";
 import React from "react";
 import { FaCheck } from "react-icons/fa6";
 
@@ -24,7 +25,9 @@ const KeyFeatures: React.FC<Props> = ({ data }) => {
 
           <div className="flex max-w-[1000px] flex-col items-start space-y-12">
             {/* Heading */}
-            <h2 className="relative mb-10 w-auto text-left text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]">
+            <h2
+              className={`${rubik.className} relative mb-10 w-auto text-left text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            >
               {data.heading}
             </h2>
             {/* Warranty Points */}

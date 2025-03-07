@@ -1,47 +1,23 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { JSX, useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
-
-import { WiDaySunny } from "react-icons/wi";
-import { MdSecurity, MdOutlineDesignServices } from "react-icons/md";
-import { BsLightningChargeFill } from "react-icons/bs";
-import { IconType } from "react-icons";
+import { inter, roboto, rubik } from "@/fonts";
 
 interface Feature {
-  icon: IconType;
+  icon: JSX.Element;
   title: string;
   description?: string;
   image: string;
 }
 
-const features: Feature[] = [
-  {
-    icon: WiDaySunny,
-    title: "Superior Light Control",
-    description: "Adjust natural light to your preference",
-    image: "/images/contact-section-image-1.png",
-  },
-  {
-    icon: MdSecurity,
-    title: "Enhanced Privacy",
-    description: "Maintain your privacy with adjustable blinds",
-    image: "/images/contact-section-image-1.png",
-  },
-  {
-    icon: MdOutlineDesignServices,
-    title: "Modern Aesthetic",
-    description: "Enhance your interior with stylish designs",
-    image: "/images/contact-section-image-1.png",
-  },
-  {
-    icon: BsLightningChargeFill,
-    title: "Energy Efficient",
-    description: "Save energy with optimized light control",
-    image: "/images/contact-section-image-1.png",
-  },
-];
+type Props = {
+  data: {
+    heading: string;
+    features: Feature[];
+  };
+};
 
-const WhyChooseBlindsSlider = () => {
+const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const glideInstance = useRef<Glide | null>(null);
@@ -79,14 +55,16 @@ const WhyChooseBlindsSlider = () => {
           {/* Left Content */}
           <div className="w-full lg:w-1/2">
             <div className="mb-4">
-              <h2 className="relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]">
-                Why Choose Zebra Blinds
+              <h2
+                className={`${roboto.className} relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+              >
+                {data.heading}
               </h2>
             </div>
 
             {/* Features Rendering Section */}
             <div className="flex flex-col items-stretch gap-2">
-              {features.map((feature, index) => {
+              {data.features.map((feature, index) => {
                 const isActive = activeIndex === index;
                 return (
                   <div
@@ -97,15 +75,17 @@ const WhyChooseBlindsSlider = () => {
                     onClick={() => handleFeatureClick(index)}
                   >
                     <div className="">
-                      <feature.icon
+                      <div
                         className={`h-full w-full text-6xl ${
                           isActive ? "text-white" : "text-gray-500"
                         }`}
-                      />
+                      >
+                        {feature.icon}
+                      </div>
                     </div>
                     <div>
                       <h3
-                        className={`text-xl font-semibold ${
+                        className={`text-xl font-semibold ${rubik.className} ${
                           isActive ? "text-white" : "text-gray-600"
                         }`}
                       >
@@ -113,7 +93,7 @@ const WhyChooseBlindsSlider = () => {
                       </h3>
                       {feature.description && (
                         <p
-                          className={`mt-1 ${isActive ? "text-white" : "text-gray-600"} `}
+                          className={`mt-1 ${isActive ? "text-white" : "text-gray-600"} ${inter.className}`}
                         >
                           {feature.description}
                         </p>
@@ -130,7 +110,7 @@ const WhyChooseBlindsSlider = () => {
             <div className="glide h-full" ref={sliderRef}>
               <div className="glide__track h-full" data-glide-el="track">
                 <ul className="glide__slides h-full">
-                  {features.map((feature, index) => (
+                  {data.features.map((feature, index) => (
                     <li key={index} className="glide__slide h-full">
                       <div className="relative h-full">
                         <img
@@ -142,7 +122,7 @@ const WhyChooseBlindsSlider = () => {
                         />
                         {/* Dots Indicator */}
                         <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                          {features.map((_, i) => (
+                          {data.features.map((_, i) => (
                             <button
                               key={i}
                               onClick={() => handleFeatureClick(i)}

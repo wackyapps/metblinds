@@ -10,6 +10,7 @@ import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 import BlindsTestimonials from "@/components/blinds/BlindsTestimonials";
 import blinds from "@/configs/pages-data/blinds";
+import zebraBlinds from "@/configs/pages-data/blinds/zebra-blinds";
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const blind = blinds.find((blind) => blind.slug === slug);
@@ -35,26 +36,46 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       },
     ],
   };
-  const infoBanner = {
-    heading: "What We Have to Offer?",
-    backgroundImage: "/images/home/info-banner-bg.png",
-    points: [
-      {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
-      },
-    ],
-  };
+
+  const data2 = zebraBlinds;
   return (
     <div>
-      {/* <BlindsBanner /> */}
-      <WhyChooseBlindsSlider />
+      {/*
+       * blinds banner
+       */}
+      <BlindsBanner data={data2.blindsBanner} />
+      {/*
+       * why choose blinds slider
+       */}
+      <WhyChooseBlindsSlider data={data2.whyChooseBlindsSlider} />
+      {/*
+       * key features
+       */}
       <KeyFeatures data={data} />
-      <ChooseYourFabric />
-      <ChooseHardware />
-      <BlindsFeatures />
-      <BlindsTestimonials />
-      <FAQsSection />
-      <InfoBanner data={infoBanner} />
+      {/*
+       * choose your fabric
+       */}
+      <ChooseYourFabric data={data2.chooseYourFabric} />
+      {/*
+       * choose hardware
+       */}
+      <ChooseHardware data={data2.chooseHardware} />
+      {/*
+       * blinds features
+       */}
+      <BlindsFeatures data={data2.blindsFeatures} />
+      {/*
+       * blinds testimonials
+       */}
+      <BlindsTestimonials data={data2.blindsTestimonials} />
+      {/*
+       * FAQs
+       */}
+      <FAQsSection data={data2.faqs} />
+      {/*
+       * info banner
+       */}
+      <InfoBanner data={data2.infoBanner} />
       <div className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"></div>
     </div>
   );

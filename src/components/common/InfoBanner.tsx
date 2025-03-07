@@ -1,4 +1,5 @@
 import { homePage } from "@/configs/pages-data/home";
+import { roboto } from "@/fonts";
 import React from "react";
 
 const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({
@@ -14,7 +15,9 @@ const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({
     >
       <div className="global-container">
         <div className="flex flex-col items-center justify-center gap-8">
-          <h2 className="mb-3 max-w-[1000px] text-center text-5xl text-[#FFA600]">
+          <h2
+            className={`${roboto.className} mb-3 max-w-[1000px] text-center text-5xl text-[#FFA600]`}
+          >
             {" "}
             {data.heading}{" "}
           </h2>
