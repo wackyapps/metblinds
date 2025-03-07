@@ -89,7 +89,7 @@ const ChooseYourFabric = () => {
               {blackoutFabrics.map((fabric, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full pl-2 sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
+                  className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
                 >
                   <div className="flex justify-center">
                     <div
@@ -126,7 +126,7 @@ const ChooseYourFabric = () => {
               {lightFilteringFabrics.map((fabric, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full pl-2 sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
+                  className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
                 >
                   <div className="flex justify-center">
                     <div

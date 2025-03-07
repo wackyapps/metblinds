@@ -7,6 +7,7 @@ import FAQsSection from "@/components/common/FAQsSection";
 import InfoBanner from "@/components/common/InfoBanner";
 import ChooseHardware from "@/components/blinds/ChooseHardware";
 import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
+import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 const page = () => {
   const data = {
     heading: "KEY FEATURES",
@@ -43,10 +44,10 @@ const page = () => {
     <div>
       <BlindsBanner />
       <WhyChooseBlindsSlider />
-      {/* <BlindsFeatures /> */}
       <KeyFeatures data={data} />
       <ChooseYourFabric />
       <ChooseHardware />
+      <BlindsFeatures />
       <FAQsSection />
       <InfoBanner data={infoBanner} />
       <div className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"></div>
