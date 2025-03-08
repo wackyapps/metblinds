@@ -1,6 +1,7 @@
 "use client";
 import { inter, rubik } from "@/fonts";
 import { Accordion, AccordionItem } from "@heroui/react";
+import FAQsCard from "./cards/FAQsCard";
 
 interface FAQItem {
   question: string;
@@ -25,32 +26,11 @@ const FAQsSection = ({ data }: Props) => {
           </h2>
         </div>
 
-        <Accordion>
-          {data.faqs.slice(1).map((faq, index) => (
-            <AccordionItem
-              HeadingComponent={(item) => {
-                return (
-                  <h3
-                    className={`mb-3 rounded-xl duration-300 ${item["data-open"] ? "bg-[#FFBB3D] text-white" : "bg-[#F7F9FA] text-[#454545]"} px-6 py-4 text-[22px] font-semibold`}
-                  >
-                    {item.children}
-                  </h3>
-                );
-              }}
-              key={index}
-              aria-label={faq.question}
-              title={faq.question}
-            >
-              <div className="px-6 py-4 ps-4">
-                <div
-                  className={`${inter.className} border-l-4 border-[#FFBB3D] ps-2`}
-                >
-                  {faq.answer}
-                </div>
-              </div>
-            </AccordionItem>
+        <div className="grid grid-cols-1 gap-5">
+          {data.faqs.map((faq, index) => (
+            <FAQsCard key={index} question={faq.question} answer={faq.answer} />
           ))}
-        </Accordion>
+        </div>
       </div>
     </div>
   );
