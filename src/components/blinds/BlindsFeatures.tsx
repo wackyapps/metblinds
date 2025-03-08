@@ -39,14 +39,16 @@ const BlindsFeatures = ({ data }: Props) => {
               ))}
             </div>
           </div>
-          <div className="hidden w-full lg:block lg:w-1/2">
-            <img
-              src={data.image}
-              alt="How It Works"
-              className="relative h-full min-h-[500px] w-full rounded-tl-[32px] object-cover"
-            />
-          </div>
         </div>
+      </div>
+      <div className="absolute right-0 top-0 hidden h-full lg:block lg:w-[45%] 2xl:w-1/2">
+        <img
+          src={data.image}
+          alt="Contact section image"
+          width={900}
+          height={1200}
+          className="relative h-full min-h-[500px] w-full rounded-tl-[32px] object-cover"
+        />
       </div>
     </div>
   );
