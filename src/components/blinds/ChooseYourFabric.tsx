@@ -5,7 +5,10 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
 interface FabricOption {
   name: string;
@@ -86,6 +89,12 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="absolute left-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
+              <FaCircleChevronLeft />
+            </CarouselPrevious>
+            <CarouselNext className="absolute right-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
+              <FaCircleChevronRight />
+            </CarouselNext>
           </Carousel>
         </div>
         <div className="flex flex-col items-center gap-11">
@@ -123,6 +132,12 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="absolute left-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
+              <FaCircleChevronLeft />
+            </CarouselPrevious>
+            <CarouselNext className="absolute right-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
+              <FaCircleChevronRight />
+            </CarouselNext>
           </Carousel>
         </div>
       </div>
