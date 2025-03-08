@@ -44,11 +44,11 @@ const BlindsAdvantages: React.FC<{
         {/*
          * features
          */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
           {data.features.map((feature, index) => (
             <div
               key={index}
-              className={`group flex flex-col items-start gap-5 rounded-3xl bg-[#F7F9FA] p-10 duration-500 hover:scale-110 hover:bg-[#FFA600]`}
+              className={`group flex flex-col items-start gap-5 rounded-3xl bg-[#F7F9FA] p-10 duration-500 hover:scale-[1.05] hover:bg-[#FFA600]`}
             >
               <div>
                 <feature.icon

@@ -1,12 +1,14 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import Glide from "@glidejs/glide";
-// Import core styles
-// Import theme styles
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import ReviewCard from "./cards/ReviewCard";
 import { rubik } from "@/fonts";
-
 import { IoStar } from "react-icons/io5";
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+
 type Props = {
   data: {
     heading: string;
@@ -21,36 +23,26 @@ type Props = {
 };
 
 const Testimonials: React.FC<Props> = ({ data }) => {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (sliderRef.current) {
-      const glide = new Glide(sliderRef.current, {
-        type: "carousel",
-        startAt: 0,
-        perView: 4,
-        gap: 20,
-        autoplay: 200000,
-        hoverpause: true,
-        breakpoints: {
-          4000: { perView: 4 },
-          1200: { perView: 3 },
-          1000: { perView: 2 },
-          700: { perView: 1 },
-        },
-      });
-      glide.mount();
-      return () => {
-        glide.destroy();
-      };
+  const swiperRef = React.useRef<any>(null);
+
+  const handlePrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
     }
-  }, []);
+  };
+
+  const handleNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
 
   return (
     <div className="py-12 md:py-24">
       <div className="mx-auto max-w-[1560px] px-3 md:px-5">
         <div className="flex flex-col items-center justify-center">
           <h2
-            className={`${rubik.className} relative mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
+            className={`${rubik.className} relative z-0 mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
           >
             {data.heading}
           </h2>
@@ -98,27 +90,56 @@ const Testimonials: React.FC<Props> = ({ data }) => {
           </div>
         </div>
         {/* showing the customer reviews */}
-        <div className="relative mb-8 overflow-hidden md:mb-16" ref={sliderRef}>
-          <div className="glide__track" data-glide-el="track">
-            <ul className="glide__slides">
-              {data.reviews.map((review, index) => (
-                <li
-                  key={index}
-                  className="glide__slide py-2 [height:100%_!important]"
-                >
-                  <ReviewCard
-                    className="h-full"
-                    userName={review.userName}
-                    userImage={review.userImage}
-                    rating={review.rating}
-                    date={review.date}
-                    comment={review.comment}
-                    fromGoogle={true}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="relative mb-8 flex h-[500px] items-center gap-3 sm:gap-6 md:mb-16 md:gap-9 lg:gap-12 xl:gap-16">
+          <button
+            className="text-3xl text-[#FFA600] sm:text-4xl md:text-5xl lg:text-6xl"
+            onClick={handlePrevSlide}
+          >
+            <CiCircleChevLeft />
+          </button>{" "}
+          <Swiper
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            modules={[Autoplay, Navigation]}
+            spaceBetween={20}
+            slidesPerView={4}
+            autoplay={{
+              delay: 200000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              1: {
+                slidesPerView: 1,
+              },
+              800: {
+                slidesPerView: 2,
+              },
+              1000: {
+                slidesPerView: 3,
+              },
+            }}
+            className="h-full"
+          >
+            {data.reviews.map((review, index) => (
+              <SwiperSlide className="h-full" key={index}>
+                <ReviewCard
+                  userName={review.userName}
+                  userImage={review.userImage}
+                  rating={review.rating}
+                  date={review.date}
+                  comment={review.comment}
+                  fromGoogle={true}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button
+            className="text-3xl text-[#FFA600] sm:text-4xl md:text-5xl lg:text-6xl"
+            onClick={handleNextSlide}
+          >
+            <CiCircleChevRight />
+          </button>
         </div>
         <div className="flex justify-center">
           <button

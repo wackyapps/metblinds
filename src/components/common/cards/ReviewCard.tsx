@@ -53,7 +53,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-4 rounded-lg border bg-white px-10 py-7 ${className}`}
+      className={`flex h-full flex-col items-center justify-center gap-4 rounded-lg border bg-white px-10 py-7 ${className}`}
     >
       {/* User Image */}
       <img
@@ -71,7 +71,9 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
       <div className="flex justify-center space-x-1">{stars}</div>
 
       {/* Comment (if provided) */}
-      <p className="w-full text-center text-lg">{comment}</p>
+      <p className="w-full flex-grow text-center text-lg">
+        {comment.length > 100 ? comment.slice(0, 100) + "..." : comment}
+      </p>
       {fromGoogle && (
         <div>
           <img

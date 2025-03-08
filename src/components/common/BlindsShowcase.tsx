@@ -1,8 +1,12 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import BlindCard from "./cards/BlindCard";
 import { rubik } from "@/fonts";
-import Glide from "@glidejs/glide";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+import "swiper/css";
+import "swiper/css/navigation";
 
 type Props = {
   data: {
@@ -18,33 +22,19 @@ type Props = {
 };
 
 const BlindsShowcase: React.FC<Props> = ({ data, isSlider = false }) => {
-  const glideRef = useRef<HTMLDivElement>(null);
+  const swiperRef = useRef<any>(null);
 
-  useEffect(() => {
-    if (isSlider && glideRef.current) {
-      const glide = new Glide(glideRef.current, {
-        type: "slider",
-        perView: 3,
-        breakpoints: {
-          600: {
-            perView: 1,
-          },
-          1024: {
-            perView: 2,
-          },
-        },
-        gap: 16,
-        autoplay: false,
-        hoverpause: true,
-      });
-
-      glide.mount();
-
-      return () => {
-        glide.destroy();
-      };
+  const handlePrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
     }
-  }, [isSlider]);
+  };
+
+  const handleNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
 
   return (
     <div className="py-24">
@@ -53,7 +43,7 @@ const BlindsShowcase: React.FC<Props> = ({ data, isSlider = false }) => {
           <div className="mb-14 flex justify-center">
             <div className="relative mb-2">
               <h2
-                className={`${rubik.className} relative mb-10 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+                className={`${rubik.className} relative z-0 mb-10 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
               >
                 {data.heading}
               </h2>
@@ -61,71 +51,45 @@ const BlindsShowcase: React.FC<Props> = ({ data, isSlider = false }) => {
           </div>
         )}
         {isSlider ? (
-          <div ref={glideRef} className="glide">
-            <div className="glide__track" data-glide-el="track">
-              <ul className="glide__slides">
-                {data.blinds.map((blind, index) => (
-                  <li key={index} className="glide__slide">
-                    <div className="flex flex-col items-center p-4">
-                      <img
-                        src={blind.image}
-                        alt={blind.title}
-                        className="mb-4 rounded-lg"
-                      />
-                      <h3
-                        className={`${rubik.className} text-lg font-semibold text-[#023D64]`}
-                      >
-                        {blind.title}
-                      </h3>
-                      <p className="text-center text-[#666666]">
-                        {blind.description}
-                      </p>
-                      <button className="mt-4 rounded-full bg-[#FFA600] px-6 py-2 text-white">
-                        {blind.buttonText}
-                      </button>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="glide__arrows" data-glide-el="controls">
-              <button
-                className="glide__arrow glide__arrow--left absolute left-0 top-1/2 -translate-y-1/2 !rounded-full !bg-[#FFA600] p-2 !text-white !opacity-20 shadow-md duration-300 hover:!opacity-100"
-                data-glide-dir="<"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m15 18-6-6 6-6" />
-                </svg>
-              </button>
-              <button
-                className="glide__arrow glide__arrow--right absolute right-0 top-1/2 -translate-y-1/2 !rounded-full !bg-[#FFA600] p-2 !text-white !opacity-20 shadow-md duration-300 hover:!opacity-100"
-                data-glide-dir=">"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
+          <div className="relative mb-8 flex items-center gap-3 sm:gap-6 md:mb-16 md:gap-9 lg:gap-12 xl:gap-16">
+            <button
+              className="text-3xl text-[#FFA600] sm:text-4xl md:text-5xl lg:text-6xl"
+              onClick={handlePrevSlide}
+            >
+              <CiCircleChevLeft />
+            </button>
+            <Swiper
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              modules={[Navigation]}
+              spaceBetween={16}
+              slidesPerView={3}
+              breakpoints={{
+                1: {
+                  slidesPerView: 1,
+                },
+                800: {
+                  slidesPerView: 2,
+                },
+                1000: {
+                  slidesPerView: 3,
+                },
+              }}
+              className="w-full"
+            >
+              {data.blinds.map((blind, index) => (
+                <SwiperSlide key={index}>
+                  <BlindCard {...blind} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button
+              className="text-3xl text-[#FFA600] sm:text-4xl md:text-5xl lg:text-6xl"
+              onClick={handleNextSlide}
+            >
+              <CiCircleChevRight />
+            </button>
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">

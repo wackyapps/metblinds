@@ -6,7 +6,7 @@ const BlindsCustomization: React.FC<{
 }> = ({ data }) => {
   return (
     <div
-      className="-mt-[140px] bg-cover bg-bottom pb-10 pt-[180px] md:pb-20 md:pt-[200px]"
+      className="-mt-[180px] bg-cover bg-bottom pb-20 pt-[220px] md:-mt-[140px] md:pb-[120px] md:pt-[240px]"
       style={{
         background: `linear-gradient(to bottom, #F7F9FA, #FFFFFF00), 
               url(${data.background})`,

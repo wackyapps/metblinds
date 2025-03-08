@@ -1,8 +1,12 @@
 "use client";
 import { rubik } from "@/fonts";
 import ReviewCard from "../common/cards/ReviewCard";
-import Glide from "@glidejs/glide";
-import { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { useRef } from "react";
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 
 type Review = {
   userImage: string;
@@ -19,37 +23,19 @@ type Props = {
 };
 
 const BlindsTestimonials = ({ data }: Props) => {
-  const glideRef = useRef<HTMLDivElement>(null);
-  const glideInstance = useRef<Glide | null>(null);
+  const swiperRef = useRef<any>(null);
 
-  useEffect(() => {
-    if (glideRef.current) {
-      glideInstance.current = new Glide(glideRef.current, {
-        type: "carousel",
-        perView: 3,
-        gap: 20,
-        breakpoints: {
-          768: {
-            perView: 2,
-          },
-          640: {
-            perView: 1,
-          },
-        },
-        autoplay: 3000,
-        hoverpause: true,
-      });
-
-      glideInstance.current.mount();
+  const handlePrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
     }
+  };
 
-    return () => {
-      if (glideInstance.current) {
-        glideInstance.current.destroy();
-        glideInstance.current = null;
-      }
-    };
-  }, []);
+  const handleNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
 
   return (
     <div className="py-24">
@@ -61,22 +47,46 @@ const BlindsTestimonials = ({ data }: Props) => {
             {data.heading}
           </h2>
         </div>
-        <div ref={glideRef} className="glide px-4">
-          <div className="glide__track" data-glide-el="track">
-            <ul className="glide__slides">
-              {data.reviews.map((review, index) => (
-                <li key={index} className="glide__slide">
-                  <ReviewCard
-                    userImage={review.userImage}
-                    userName={review.userName}
-                    rating={review.rating}
-                    date={review.date}
-                    comment={review.comment}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="relative flex items-center gap-3">
+          <button className="text-6xl text-[#FFA600]" onClick={handlePrevSlide}>
+            <CiCircleChevLeft />
+          </button>
+          <Swiper
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            modules={[Autoplay, Navigation]}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              640: {
+                slidesPerView: 1,
+              },
+            }}
+            className="h-full w-full"
+          >
+            {data.reviews.map((review, index) => (
+              <SwiperSlide className="h-full" key={index}>
+                <ReviewCard
+                  userImage={review.userImage}
+                  userName={review.userName}
+                  rating={review.rating}
+                  date={review.date}
+                  comment={review.comment}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button className="text-6xl text-[#FFA600]" onClick={handleNextSlide}>
+            <CiCircleChevRight />
+          </button>
         </div>
       </div>
     </div>

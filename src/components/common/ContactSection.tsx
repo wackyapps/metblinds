@@ -26,10 +26,9 @@ const ContactSection = ({ data }: Props) => {
           <div className="flex flex-col gap-5">
             {/* Header */}
             <div className="flex flex-col gap-[18px]">
-              <div className="relative mb-2 w-[249px]">
-                <div className="absolute left-[20px] top-[6px] z-0 h-[61px] w-[218px] rounded-[42px] bg-[#FFA600]" />
+              <div className="relative mb-2 flex justify-start">
                 <h2
-                  className={`${rubik.className} relative z-10 text-[32px] font-semibold text-[#014768]`}
+                  className={`${rubik.className} relative z-0 text-[32px] font-semibold text-[#014768] after:absolute after:left-[25%] after:top-0 after:-z-10 after:h-full after:w-[70%] after:rounded-full after:bg-[#FFA600]`}
                 >
                   {heading}
                 </h2>

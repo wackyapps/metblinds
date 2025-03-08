@@ -30,7 +30,6 @@ const ServicesLocation: React.FC<{
               ))}
             </div>
           </div>
-
           {/* Image section */}
           <div className="w-full lg:w-auto">
             <img
