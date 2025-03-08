@@ -146,6 +146,15 @@ const sunscreenBlinds = {
     ],
   },
   /**
+   * choose control system
+   */
+  chooseControlSystem: {
+    heading: "Choose Your Control System",
+    subHeading:
+      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+    buttonText: "Request  free Quote",
+  },
+  /**
    * blinds features
    */
   blindsFeatures: {

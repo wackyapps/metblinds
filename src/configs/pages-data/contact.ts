@@ -55,7 +55,7 @@ export const contactPage = {
     originalPrice: 250,
     discountedPrice: 200,
     quote:
-      "Mention this offer when you request an estimate (phone, form, or email) & save!",
+      "Mention this offer when you request an estimate \n (phone, form, or email) & save!",
     ctaText: "Request a free estimate",
     imageSrc: "/images/white-blind.png",
     imageAlt: "Special Offer Blinds",

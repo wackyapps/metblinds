@@ -74,7 +74,16 @@ const SpecialOfferSection: React.FC<SpecialOfferSectionProps> = ({ data }) => {
             </div>
 
             {/* Quote */}
-            <p className="text-2xl font-bold text-[#736D6D]">{quote}</p>
+            <p className="text-2xl font-bold text-[#736D6D]">
+              &ldquo;
+              {quote.split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < quote.split("\n").length - 1 && <br />}
+                </React.Fragment>
+              ))}
+              &#8221;
+            </p>
 
             {/* CTA Button */}
             <div>

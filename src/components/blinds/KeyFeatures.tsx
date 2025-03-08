@@ -23,16 +23,16 @@ const KeyFeatures: React.FC<Props> = ({ data }) => {
             />
           </div>
 
-          <div className="flex max-w-[1000px] flex-col items-start space-y-12">
+          <div className="flex max-w-[1000px] flex-col items-start space-y-12 md:space-y-[73px]">
             {/* Heading */}
             <h2
-              className={`${rubik.className} relative mb-10 w-auto text-left text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+              className={`${rubik.className} relative z-0 w-auto text-left text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
             >
               {data.heading}
             </h2>
             {/* Warranty Points */}
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-6 lg:space-y-0">
-              <div className="flex flex-col space-y-12">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col space-y-12 md:space-y-[73px]">
                 {data.features.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-5">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FFA600]">

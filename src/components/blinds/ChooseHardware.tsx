@@ -73,9 +73,9 @@ const ChooseHardware = ({ data }: Props) => {
         <div className="order-1 w-full space-y-[26px] xl:order-2 xl:w-[673px] xl:flex-shrink">
           {/* Title Section */}
           <div className="space-y-[18px]">
-            <div className="relative">
+            <div className="relative flex items-center justify-start">
               <h2
-                className={` ${roboto.className} relative text-2xl font-semibold text-[#023D64] md:text-3xl`}
+                className={` ${roboto.className} relative z-0 text-2xl font-semibold text-[#023D64] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] md:text-3xl`}
               >
                 {data.heading}
               </h2>

@@ -9,6 +9,7 @@ import ChooseHardware from "@/components/blinds/ChooseHardware";
 import ChooseYourFabric from "@/components/blinds/ChooseYourFabric";
 import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 import BlindsTestimonials from "@/components/blinds/BlindsTestimonials";
+import ChooseControlSystem from "@/components/blinds/ChooseControlSystem";
 import blinds from "@/configs/pages-data/blinds";
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
@@ -41,6 +42,10 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
        */}
       <ChooseHardware data={blind.chooseHardware} />
       {/*
+       * choose control system
+       */}
+      <ChooseControlSystem data={blind.chooseControlSystem} />
+      {/*
        * blinds features
        */}
       <BlindsFeatures data={blind.blindsFeatures} />
@@ -56,7 +61,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
        * info banner
        */}
       <InfoBanner data={blind.infoBanner} />
-      <div className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"></div>
+      <div className="h-10 sm:h-12 md:h-14 lg:h-20 xl:h-28"></div>
     </div>
   );
 };
