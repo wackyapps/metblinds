@@ -91,45 +91,15 @@ export const footer = {
     },
   ],
   constrolSystemsHeading: "Control system",
-  controlSystem: [
-    {
-      title: "Corded Blinds",
-      link: "/",
-    },
-    {
-      title: "Cordless Blinds",
-      link: "/",
-    },
-    {
-      title: "Electric Blinds",
-      link: "/",
-    },
-    {
-      title: "Manual wand Blinds",
-      link: "/",
-    },
-    {
-      title: "Motorized Blinds",
-      link: "/",
-    },
-    {
-      title: "Smart Control",
-      link: "/",
-    },
-  ],
+  controlSystem: controlSystemPages.map((controlSystem) => ({
+    title: controlSystem.title,
+    link: `/control-system/${controlSystem.slug}`,
+  })),
   blindsNavigationHeading: "Blinds",
-  blindsNavigation: [
-    { title: "Zebra Blinds", link: "/" },
-    { title: "Roller Blinds", link: "/" },
-    { title: "Solar Shades", link: "/" },
-    { title: "Motorized Blinds", link: "/" },
-    { title: "Smart Blinds", link: "/" },
-    { title: "Warranty", link: "/" },
-    { title: "Testimonials", link: "/" },
-    { title: "Request a Consultation", link: "/" },
-    { title: "Blinds Calgary", link: "/" },
-    { title: "Blinds Red Deer", link: "/" },
-  ],
+  blindsNavigation: blinds.map((blind) => ({
+    title: blind.title,
+    link: `/blinds/${blind.slug}`,
+  })),
   socialLinks: [
     {
       icon: FaFacebookF,

@@ -1,3 +1,4 @@
+import { abeezee, inter, rubik } from "@/fonts";
 import React from "react";
 
 interface BlogCardAdvancedProps {
@@ -46,16 +47,22 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
 
             {/* Title and Description */}
             <div className="flex-grow">
-              <h2 className="mb-8 text-2xl font-semibold lg:text-3xl">
+              <h2
+                className={`${inter.className} mb-8 text-2xl font-semibold lg:text-3xl`}
+              >
                 {title}
               </h2>
-              <p className="mb-8 text-base text-[#999999] lg:text-lg">
+              <p
+                className={`${rubik.className} mb-8 text-base text-[#999999] lg:text-lg`}
+              >
                 {description}
               </p>
               {/* Footer */}
               <div className="flex items-center justify-between text-sm text-[#6E6E73]">
                 <span className="font-bold">{formattedDate}</span>
-                <span className="cursor-pointer transition-colors hover:text-black">
+                <span
+                  className={`${abeezee.className} cursor-pointer transition-colors hover:text-black`}
+                >
                   Read More
                 </span>
               </div>
