@@ -1,6 +1,5 @@
 "use client";
-import { inter, rubik } from "@/fonts";
-import { Accordion, AccordionItem } from "@heroui/react";
+import { rubik } from "@/fonts";
 import FAQsCard from "./cards/FAQsCard";
 
 interface FAQItem {
