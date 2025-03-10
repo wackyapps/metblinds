@@ -114,50 +114,7 @@ const AddBlogForm = () => {
           <label className="mb-2 block text-sm font-medium text-gray-700">
             Add Text
           </label>
-          <div className="mb-2 flex gap-2 rounded-t-lg border border-b-0 border-gray-300 bg-gray-50 p-2">
-            <button
-              type="button"
-              className="rounded p-1 hover:bg-gray-200"
-              title="Bold"
-            >
-              B
-            </button>
-            <button
-              type="button"
-              className="rounded p-1 italic hover:bg-gray-200"
-              title="Italic"
-            >
-              I
-            </button>
-            <button
-              type="button"
-              className="rounded p-1 underline hover:bg-gray-200"
-              title="Underline"
-            >
-              U
-            </button>
-            <button
-              type="button"
-              className="rounded p-1 hover:bg-gray-200"
-              title="Heading 1"
-            >
-              H1
-            </button>
-            <button
-              type="button"
-              className="rounded p-1 hover:bg-gray-200"
-              title="Heading 2"
-            >
-              H2
-            </button>
-            <button
-              type="button"
-              className="rounded p-1 hover:bg-gray-200"
-              title="Link"
-            >
-              🔗
-            </button>
-          </div>
+
           <textarea
             {...register("content")}
             placeholder="Enter Blog"
