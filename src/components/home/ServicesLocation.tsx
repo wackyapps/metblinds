@@ -95,7 +95,10 @@ const ServicesLocation: React.FC<{
           </div>
 
           {/* Image section with map */}
-          <div ref={imageContainerRef} className="relative w-full lg:w-auto">
+          <div
+            ref={imageContainerRef}
+            className="relative flex w-full flex-grow justify-center lg:w-auto"
+          >
             <img
               src={"/images/home/services-location-map.png"}
               alt={"metblinds services map"}
@@ -130,7 +133,7 @@ const ServicesLocation: React.FC<{
               >
                 <div className="flex items-center gap-3">
                   <FaLocationDot className="text-5xl" color="#FFA600" />
-                  <h5 className="text-4xl font-bold text-[#013F68]">
+                  <h5 className="text-4xl font-bold text-[#676767]">
                     {hoveredLocation}
                   </h5>
                 </div>
