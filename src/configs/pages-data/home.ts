@@ -64,10 +64,6 @@ export const homePage = {
       { name: "Canmore", link: "" },
       { name: "Strathmore", link: "" },
     ],
-    image: {
-      src: "/images/home/services-location-image.PNG",
-      alt: "Services Location",
-    },
   },
   /**
    * blinds customizaton data
