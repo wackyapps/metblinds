@@ -5,11 +5,6 @@ import Link from "next/link";
 import { footer } from "@/configs/navigation";
 import { websiteInfo } from "@/configs/info";
 
-/**
- * Converts newline characters in a string to JSX line breaks
- * @param text The text to process
- * @returns JSX with line breaks
- */
 const addLineBreaks = (text: string) => {
   return text.split("\n").map((str, index, array) => (
     <React.Fragment key={index}>
@@ -42,7 +37,7 @@ const Footer = () => {
             {/* Logo and company description */}
             <div>
               <img
-                src={footer.logo}
+                src="/metblinds-logo.png"
                 alt="Met Blinds Logo"
                 width={200}
                 height={60}
@@ -50,41 +45,28 @@ const Footer = () => {
               />
               <p className="text-sm">{footer.footerDescription}</p>
             </div>
-          </div>
-
-          {/* Second Column: Contact Information */}
-          <div>
-            {/* contact info */}
-            <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
-              {footer.contactInfoHeading}
-            </h3>
-            <div className="space-y-4 text-sm">
-              {/* Business hours */}
-              <p>{addLineBreaks(footer.hoursDescription)}</p>
-              {/* Phone numbers with clickable links */}
-              <p>
-                Phone:{" "}
-                <a href={`tel:${websiteInfo.tollFreeNumber.link}`}>
-                  {websiteInfo.tollFreeNumber.display}
-                </a>
-              </p>
-              <p>
-                Toll-free:{" "}
-                <a href={`tel:${websiteInfo.phoneNumber.link}`}>
-                  {websiteInfo.phoneNumber.display}
-                </a>
-              </p>
-              {/* Email link */}
-              <p>
-                <a href={`mailto:${websiteInfo.email.link}`}>
-                  {websiteInfo.email.display}
-                </a>
+            {/* Location section with Google Maps embed */}
+            <div className="hidden md:block">
+              <h3 className="mb-2 text-xl font-bold text-[rgb(255,166,0)]">
+                {footer.googleMap.heading}
+              </h3>
+              <h4 className="mb-2 rounded text-2xl font-bold text-white">
+                {footer.googleMap.title}
+              </h4>
+              <iframe
+                src={footer.googleMap.src}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="mb-2 h-[150px] w-full"
+              ></iframe>
+              <p className="max-w-80 text-white">
+                {footer.googleMap.description}
               </p>
             </div>
           </div>
 
-          {/* Third Column: Navigation Links */}
-          <div className="lg:row-span-2">
+          {/* Second Column: Contact Information */}
+          <div>
             {/* quick links  */}
             <div>
               <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
@@ -103,10 +85,48 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+            {/* control systems */}
+            <div className="mt-4">
+              <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+                {footer.constrolSystemsHeading}
+              </h3>
+              <ul className="space-y-3 text-sm">
+                {footer.controlSystem?.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.link}
+                      className="transition-colors hover:text-[#FFA600]"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Third Column: Navigation Links */}
+          <div>
+            <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+              {footer.blindsNavigationHeading}
+            </h3>
+            {/* Navigation links with hover effect */}
+            <ul className="space-y-3 text-sm">
+              {footer.blindsNavigation?.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.link}
+                    className="transition-colors hover:text-[#FFA600]"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Fourth Column: Social Media and Additional Location Info */}
-          <div className="lg:row-span-2">
+          <div>
             {/* Social Media Links */}
             <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
               Follow us
@@ -122,32 +142,53 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-          </div>
 
-          <div className="justify-self-start md:col-span-2">
-            {/* Location section with Google Maps embed */}
-            <div>
-              <h3 className="mb-2 text-xl font-bold text-[rgb(255,166,0)]">
-                {footer.locationsHeading}
+            <div className="mt-12">
+              {/* contact info */}
+              <h3 className="mb-3 text-xl font-semibold text-[#FFA600]">
+                {footer.contactInfoHeading}
               </h3>
-              <div className="flex flex-col justify-start gap-8 md:flex-row md:gap-16">
-                {footer.locations.slice(0, 2).map((location, index) => (
-                  <div key={index}>
-                    <h4 className="mb-2 rounded text-2xl font-bold text-white">
-                      {location.title}
-                    </h4>
-                    <iframe
-                      src={location.src}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="mb-2 h-[150px] w-full"
-                    ></iframe>
-                    <p className="max-w-80 text-white">
-                      {location.description}
-                    </p>
-                  </div>
-                ))}
+              <div className="space-y-4 text-sm">
+                {/* Business hours */}
+                <p>{addLineBreaks(footer.hoursDescription)}</p>
+                {/* Phone numbers with clickable links */}
+                <p>
+                  Phone:{" "}
+                  <a href={`tel:${websiteInfo.tollFreeNumber.link}`}>
+                    {websiteInfo.tollFreeNumber.display}
+                  </a>
+                </p>
+                <p>
+                  Toll-free:{" "}
+                  <a href={`tel:${websiteInfo.phoneNumber.link}`}>
+                    {websiteInfo.phoneNumber.display}
+                  </a>
+                </p>
+                {/* Email link */}
+                <p>
+                  <a href={`mailto:${websiteInfo.email.link}`}>
+                    {websiteInfo.email.display}
+                  </a>
+                </p>
               </div>
+            </div>
+            {/* Location section with Google Maps embed */}
+            <div className="mt-12 block md:hidden">
+              <h3 className="mb-2 text-xl font-bold text-[rgb(255,166,0)]">
+                {footer.googleMap.heading}
+              </h3>
+              <h4 className="mb-2 rounded text-2xl font-bold text-white">
+                {footer.googleMap.title}
+              </h4>
+              <iframe
+                src={footer.googleMap.src}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="mb-2 h-[150px] w-full"
+              ></iframe>
+              <p className="max-w-80 text-white">
+                {footer.googleMap.description}
+              </p>
             </div>
           </div>
         </div>
