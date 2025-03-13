@@ -1,9 +1,16 @@
 "use client";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState, useRef } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+// import "jodit/build/jodit.min.css";
+
+// Dynamically import Jodit to avoid SSR issues
+const JoditEditor = dynamic(() => import("jodit-react"), {
+  ssr: false,
+});
 
 // Define the schema with Zod
 const blogSchema = z.object({
@@ -19,11 +26,13 @@ type BlogFormData = z.infer<typeof blogSchema>;
 
 const AddBlogForm = () => {
   const [previewImage, setPreviewImage] = useState<string>("");
+  const editorRef = useRef(null);
 
   const {
     register,
     handleSubmit,
     setValue,
+    control,
     formState: { errors },
   } = useForm<BlogFormData>({
     resolver: zodResolver(blogSchema),
@@ -115,11 +124,56 @@ const AddBlogForm = () => {
             Add Text
           </label>
 
-          <textarea
-            {...register("content")}
-            placeholder="Enter Blog"
-            className="h-64 w-full rounded-b-lg border border-gray-300 p-3 focus:border-[#FFAD33] focus:outline-none"
+          <Controller
+            name="content"
+            control={control}
+            render={({ field: { onChange, value } }) => (
+              <JoditEditor
+                ref={editorRef}
+                value={value}
+                config={{
+                  readonly: false,
+                  placeholder: "Enter Blog Content...",
+                  minHeight: 100,
+                  toolbarAdaptive: false,
+                  buttons: [
+                    "source",
+                    "|",
+                    "bold",
+                    "italic",
+                    "underline",
+                    "strikethrough",
+                    "|",
+                    "ul",
+                    "ol",
+                    "|",
+                    "font",
+                    "fontsize",
+                    "brush",
+                    "paragraph",
+                    "|",
+                    "image",
+                    "table",
+                    "link",
+                    "|",
+                    "align",
+                    "|",
+                    "undo",
+                    "redo",
+                    "|",
+                    "hr",
+                    "eraser",
+                    "copyformat",
+                    "|",
+                    "fullsize",
+                  ],
+                }}
+                onBlur={(newContent) => onChange(newContent)}
+                onChange={(newContent) => {}}
+              />
+            )}
           />
+
           {errors.content && (
             <p className="text-sm text-red-500">{errors.content.message}</p>
           )}
