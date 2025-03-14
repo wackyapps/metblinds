@@ -6,8 +6,8 @@ const AdminTabs = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   const tabs = [
     {
-      label: "Add A Blog",
-      link: "/admin/add-blog",
+      label: "Blogs",
+      link: "/admin/blogs",
     },
     {
       label: "Add A Banner",

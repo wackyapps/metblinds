@@ -4,7 +4,11 @@ import { z } from "zod";
 import { Button } from "@heroui/react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { LuMoveRight } from "react-icons/lu";
-
+import { useLoginMutation } from "@/store/services/authApi";
+import { useDispatch } from "react-redux";
+import jwt from "jsonwebtoken";
+import { setUser, setToken } from "@/store/slices/authSlice";
+import { useRouter } from "next/navigation";
 /**
  * login form schema
  */
@@ -15,11 +19,7 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-interface LoginFormProps {
-  onSubmit: (data: LoginFormValues) => void;
-}
-
-export function LoginForm({ onSubmit }: LoginFormProps) {
+export function LoginForm() {
   const {
     register,
     handleSubmit,
@@ -27,6 +27,28 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
   });
+  const router = useRouter();
+  const [login, { isLoading, isError, error }] = useLoginMutation();
+  const dispatch = useDispatch();
+
+  const onSubmit = async (data: LoginFormValues) => {
+    const response = await login({
+      email: data.username,
+      password: data.password,
+    });
+    if (response?.data?.data) {
+      const { token } = response.data.data;
+      const decodedToken = jwt.decode(token);
+      dispatch(setUser(decodedToken));
+      dispatch(setToken(token));
+      router.push("/admin/blogs");
+    } else if (!response?.data.status) {
+      console.log(response.error);
+      alert(response?.data?.msg);
+    } else if (error) {
+      alert(error?.message || "Something went wrong");
+    }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -62,11 +84,18 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
       <Button
         type="submit"
         className="flex items-center gap-2 bg-[#FFA600] px-12 py-3 text-lg text-white hover:bg-[#FFA600]/90"
+        disabled={isLoading}
       >
-        <span>Login</span>
-        <span>
-          <LuMoveRight />
-        </span>
+        {isLoading ? (
+          "loading..."
+        ) : (
+          <>
+            <span>Login</span>
+            <span>
+              <LuMoveRight />
+            </span>
+          </>
+        )}
       </Button>
     </form>
   );

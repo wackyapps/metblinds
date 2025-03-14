@@ -5,7 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Image from "next/image";
 import RichTextEditor from "@/components/common/forms/RichTextEditor";
-import { useCreateBlogMutation } from "@/store/services/blogApi";
+import {
+  useCreateBlogMutation,
+  useGetBlogByIdQuery,
+} from "@/store/services/blogApi";
+import { useSearchParams } from "next/navigation";
 // import "jodit/build/jodit.min.css";
 
 // Dynamically import Jodit to avoid SSR issues
@@ -22,9 +26,21 @@ const blogSchema = z.object({
 
 type BlogFormData = z.infer<typeof blogSchema>;
 
-const AddBlogForm = () => {
+const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
+  const searchParams = useSearchParams();
+  // getting id from query params
+  const id = searchParams.get("id");
+
+  const {
+    data,
+    isLoading: isLoadingGetBlog,
+    error,
+  } = useGetBlogByIdQuery({
+    id: id as string,
+  });
   const [previewImage, setPreviewImage] = useState<string>("");
   const editorRef = useRef(null);
+
   const [createBlog, { isLoading }] = useCreateBlogMutation();
   const {
     register,
@@ -154,4 +170,4 @@ const AddBlogForm = () => {
   );
 };
 
-export default AddBlogForm;
+export default BlogForm;
