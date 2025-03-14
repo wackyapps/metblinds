@@ -4,13 +4,11 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+import RichTextEditor from "@/components/common/forms/RichTextEditor";
+import { useCreateBlogMutation } from "@/store/services/blogApi";
 // import "jodit/build/jodit.min.css";
 
 // Dynamically import Jodit to avoid SSR issues
-const JoditEditor = dynamic(() => import("jodit-react"), {
-  ssr: false,
-});
 
 // Define the schema with Zod
 const blogSchema = z.object({
@@ -27,7 +25,7 @@ type BlogFormData = z.infer<typeof blogSchema>;
 const AddBlogForm = () => {
   const [previewImage, setPreviewImage] = useState<string>("");
   const editorRef = useRef(null);
-
+  const [createBlog, { isLoading }] = useCreateBlogMutation();
   const {
     register,
     handleSubmit,
@@ -56,8 +54,12 @@ const AddBlogForm = () => {
   };
 
   const onSubmit = async (data: BlogFormData) => {
-    // Implement blog post submission logic here
-    console.log("Form data:", data);
+    createBlog({
+      title: data.title,
+      content: data.content,
+      author_id: 1,
+      post_status: "publish",
+    });
   };
 
   return (
@@ -128,49 +130,7 @@ const AddBlogForm = () => {
             name="content"
             control={control}
             render={({ field: { onChange, value } }) => (
-              <JoditEditor
-                ref={editorRef}
-                value={value}
-                config={{
-                  readonly: false,
-                  placeholder: "Enter Blog Content...",
-                  minHeight: 100,
-                  toolbarAdaptive: false,
-                  buttons: [
-                    "source",
-                    "|",
-                    "bold",
-                    "italic",
-                    "underline",
-                    "strikethrough",
-                    "|",
-                    "ul",
-                    "ol",
-                    "|",
-                    "font",
-                    "fontsize",
-                    "brush",
-                    "paragraph",
-                    "|",
-                    "image",
-                    "table",
-                    "link",
-                    "|",
-                    "align",
-                    "|",
-                    "undo",
-                    "redo",
-                    "|",
-                    "hr",
-                    "eraser",
-                    "copyformat",
-                    "|",
-                    "fullsize",
-                  ],
-                }}
-                onBlur={(newContent) => onChange(newContent)}
-                onChange={(newContent) => {}}
-              />
+              <RichTextEditor onChange={onChange} value={value} />
             )}
           />
 
@@ -184,8 +144,9 @@ const AddBlogForm = () => {
           <button
             type="submit"
             className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
+            disabled={isLoading}
           >
-            Post
+            {isLoading ? "Posting..." : "Post"}
           </button>
         </div>
       </form>
