@@ -40,15 +40,15 @@ export const blogApi = createApi({
     /**
      * get all blogs query
      */
-    getBlogs: builder.query<GetBlogReq, any>({
+    getBlogs: builder.query<any, GetBlogReq>({
       query: (blog: GetBlogReq) =>
         `/index.php/posts?page=${blog.page}&limit=${blog.limit}`,
     }),
     /**
      * get blog by id query
      */
-    getBlogById: builder.query<{ id: string | number }, any>({
-      query: (id: string) => `/index.php/posts/${id}`,
+    getBlogById: builder.query<any, { id: string | number }>({
+      query: ({ id }: { id: string | number }) => `/index.php/posts/${id}`,
     }),
   }),
 });

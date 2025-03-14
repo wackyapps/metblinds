@@ -1,14 +1,19 @@
 import { abeezee, inter, rubik } from "@/fonts";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface BlogCardAdvancedProps {
   textDirection?: "left" | "right";
   data: {
+    id: string;
     category: string;
     title: string;
     description: string;
     date: string | Date;
-    image: string;
+    featured_image: {
+      url: string;
+      alt_text: string;
+    };
   };
 }
 
@@ -16,7 +21,8 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
   textDirection = "left",
   data,
 }) => {
-  const { category, title, description, date, image } = data;
+  const { id, category, title, description, date, featured_image } = data;
+  const router = useRouter();
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
@@ -30,8 +36,8 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
           className={`relative h-full max-h-[600px] min-h-96 w-full lg:flex-1 ${textDirection == "left" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}
         >
           <img
-            src={image}
-            alt={title}
+            src={featured_image.url}
+            alt={featured_image.alt_text}
             className="absolute left-0 top-0 h-full w-full object-cover"
           />
         </div>
@@ -60,11 +66,12 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
               {/* Footer */}
               <div className="flex items-center justify-between text-sm text-[#6E6E73]">
                 <span className="font-bold">{formattedDate}</span>
-                <span
+                <button
+                  onClick={() => router.push(`/blogs/blog-details?id=${id}`)}
                   className={`${abeezee.className} cursor-pointer transition-colors hover:text-black`}
                 >
                   Read More
-                </span>
+                </button>
               </div>
             </div>
           </div>
