@@ -60,6 +60,8 @@ const BlogsContainerSection = () => {
          */}
         <div>
           <PaginationComponent
+            totalItems={data?.data?.pagination?.total}
+            limit={limit}
             total={data?.data?.pagination?.pages}
             page={page}
             setPage={setPage}

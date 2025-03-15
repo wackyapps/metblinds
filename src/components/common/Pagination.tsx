@@ -6,10 +6,14 @@ const PaginationComponent = ({
   total,
   page,
   setPage,
+  totalItems,
+  limit,
 }: {
   total: number;
   page: number;
   setPage: (page: number) => void;
+  totalItems: number;
+  limit: number;
 }) => {
   const renderItem = ({
     ref,
@@ -70,7 +74,7 @@ const PaginationComponent = ({
     );
   };
   return (
-    <div>
+    <div className="flex items-center justify-start gap-4">
       <Pagination
         showControls
         initialPage={page}
@@ -79,6 +83,10 @@ const PaginationComponent = ({
         renderItem={renderItem}
         color="default"
       />
+      <div className="text-sm text-gray-500">
+        {limit * (page - 1) + 1} - {Math.min(limit * page, totalItems)} of{" "}
+        {totalItems}
+      </div>
     </div>
   );
 };

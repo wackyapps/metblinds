@@ -16,7 +16,7 @@ const RichTextEditor = ({ value, onChange }: Props) => {
       config={{
         readonly: false,
         placeholder: "Enter Blog Content...",
-        minHeight: 800,
+        minHeight: 700,
         toolbarAdaptive: false,
         buttons: [
           "source",
@@ -51,6 +51,7 @@ const RichTextEditor = ({ value, onChange }: Props) => {
           "|",
         ],
       }}
+      className="bg-transparent"
       onBlur={(newContent) => onChange(newContent)}
       onChange={(newContent) => {}}
     />

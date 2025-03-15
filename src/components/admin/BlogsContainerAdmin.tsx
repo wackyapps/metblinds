@@ -6,7 +6,7 @@ import PaginationComponent from "../common/Pagination";
 
 const BlogsContainerAdmin = () => {
   const [page, setPage] = useState(1);
-  const limit = 10;
+  const limit = 12;
   const { data, isLoading, isError } = useGetBlogsQuery({ limit, page });
 
   if (isLoading) {
@@ -22,14 +22,30 @@ const BlogsContainerAdmin = () => {
 
   return (
     <div className="global-container pb-24">
-      <div className="mb-4 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="mb-8">
+        <PaginationComponent
+          total={data?.data?.pagination?.pages}
+          totalItems={data?.data?.pagination?.total}
+          limit={limit}
+          page={page}
+          setPage={setPage}
+        />
+      </div>
+      <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data?.data?.data?.map((blog: any, index: number) => (
-          <BlogCard key={index} data={blog} isAdminEdit={true} />
+          <BlogCard
+            key={index}
+            data={blog}
+            isAdminEdit={true}
+            isAdminDelete={true}
+          />
         ))}
       </div>
       <div>
         <PaginationComponent
           total={data?.data?.pagination?.pages}
+          totalItems={data?.data?.pagination?.total}
+          limit={limit}
           page={page}
           setPage={setPage}
         />

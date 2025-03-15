@@ -30,11 +30,30 @@ export const blogApi = createApi({
     /**
      * blog creation mutation
      */
-    createBlog: builder.mutation<Blog, any>({
+    createBlog: builder.mutation<any, Blog>({
       query: (blog: Blog) => ({
         url: "/create-posts",
         method: "POST",
         body: blog,
+      }),
+    }),
+    /**
+     * update blog mutation
+     */
+    updateBlog: builder.mutation<any, { id: string | number; blog: Blog }>({
+      query: ({ id, blog }: { id: string | number; blog: Blog }) => ({
+        url: `/update-posts/${id}`,
+        method: "POST",
+        body: blog,
+      }),
+    }),
+    /**
+     * delete blog mutation
+     */
+    deleteBlog: builder.mutation<any, { id: string | number }>({
+      query: ({ id }: { id: string | number }) => ({
+        url: `/delete-posts/${id}`,
+        method: "POST",
       }),
     }),
     /**
@@ -53,5 +72,10 @@ export const blogApi = createApi({
   }),
 });
 
-export const { useCreateBlogMutation, useGetBlogsQuery, useGetBlogByIdQuery } =
-  blogApi;
+export const {
+  useCreateBlogMutation,
+  useUpdateBlogMutation,
+  useDeleteBlogMutation,
+  useGetBlogsQuery,
+  useGetBlogByIdQuery,
+} = blogApi;
