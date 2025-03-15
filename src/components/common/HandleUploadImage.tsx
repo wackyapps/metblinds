@@ -13,7 +13,7 @@ import axios from "axios";
 import { twMerge } from "tailwind-merge";
 interface HandleUploadImageProps {
   image: string;
-  setImage: (url: string) => void;
+  setImage: ({ url, id }: { url: string; id: string }) => void;
   className?: string;
 }
 
@@ -37,7 +37,7 @@ const HandleUploadImage: React.FC<HandleUploadImageProps> = ({
         formData,
       );
       if (response.data.success) {
-        setImage(response.data.file.url);
+        setImage({ url: response.data.file.url, id: response.data.id });
         // onOpenChange(false);
       } else {
         alert("Failed to upload file");

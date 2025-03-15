@@ -5,6 +5,7 @@ type Blog = {
   content: string;
   author_id: number;
   post_status: string;
+  featured_image_id: number;
 };
 
 type GetBlogReq = {
@@ -61,13 +62,13 @@ export const blogApi = createApi({
      */
     getBlogs: builder.query<any, GetBlogReq>({
       query: (blog: GetBlogReq) =>
-        `/index.php/posts?page=${blog.page}&limit=${blog.limit}`,
+        `/posts?page=${blog.page}&limit=${blog.limit}`,
     }),
     /**
      * get blog by id query
      */
     getBlogById: builder.query<any, { id: string | number }>({
-      query: ({ id }: { id: string | number }) => `/index.php/posts/${id}`,
+      query: ({ id }: { id: string | number }) => `/posts/${id}`,
     }),
   }),
 });

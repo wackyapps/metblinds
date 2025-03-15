@@ -1,11 +1,13 @@
+"use client";
+
 import BannerForm from "@/components/admin/forms/BannerForm";
 
-const AddBanner = () => {
+const page = () => {
   return (
     <div>
-      <BannerForm />
+      <BannerForm isEdit={true} />
     </div>
   );
 };
 
-export default AddBanner;
+export default page;

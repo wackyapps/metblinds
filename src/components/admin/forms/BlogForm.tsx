@@ -12,7 +12,6 @@ import {
 } from "@/store/services/blogApi";
 import { useSearchParams } from "next/navigation";
 import HandleUploadImage from "@/components/common/HandleUploadImage";
-import { ArrowPathIcon } from "@heroicons/react/24/solid";
 import { toast } from "react-toastify";
 
 const postStatuses = [
@@ -25,7 +24,10 @@ const postStatuses = [
 const blogSchema = z.object({
   title: z.string().min(1, "Title is required"),
   content: z.string().min(1, "Content is required"),
-  featuredImage: z.string().min(1, "Cover image is required"),
+  featuredImage: z.object({
+    url: z.string().min(1, "Featured image is required"),
+    id: z.number().nullish(),
+  }),
   post_status: z.enum(["published", "archived", "draft"]).default("draft"),
 });
 type BlogFormData = z.infer<typeof blogSchema>;
@@ -37,7 +39,13 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   /**
    * featured image state
    */
-  const [featuredImage, setFeaturedImage] = useState("");
+  const [featuredImage, setFeaturedImage] = useState<{
+    url: string;
+    id: number | undefined;
+  }>({
+    url: "",
+    id: undefined,
+  });
 
   /**
    * redux mutation and queries
@@ -65,7 +73,10 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
     defaultValues: {
       title: "",
       content: "",
-      featuredImage: undefined,
+      featuredImage: {
+        url: "",
+        id: undefined,
+      },
       post_status: "draft",
     },
   });
@@ -77,6 +88,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
         content: data.content,
         author_id: 1,
         post_status: data.post_status,
+        featured_image_id: featuredImage.id as number,
       });
       if (response?.data?.data) {
         toast.success("Blog created successfully");
@@ -103,6 +115,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
           content: data.content,
           author_id: 1,
           post_status: data.post_status,
+          featured_image_id: featuredImage.id as number,
         },
       });
       if (response?.data?.data) {
@@ -136,9 +149,9 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
     if (blogData) {
       setValue("title", blogData.title);
       setValue("content", blogData.content);
-      setValue("featuredImage", blogData?.featured_image?.url);
+      setValue("featuredImage", blogData?.featured_image);
       setValue("post_status", blogData?.post_status || "draft");
-      setFeaturedImage(blogData?.featured_image?.url);
+      setFeaturedImage(blogData?.featured_image);
     }
   }, [blog]);
 
@@ -183,36 +196,47 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
               </label>
               <div className="flex flex-col gap-2">
                 <HandleUploadImage
-                  setImage={(url) => {
-                    setValue("featuredImage", url);
-                    setFeaturedImage(url);
+                  setImage={(data) => {
+                    setValue("featuredImage", {
+                      url: data.url,
+                      id: Number(data.id),
+                    });
+                    setFeaturedImage({ url: data.url, id: Number(data.id) });
                   }}
-                  image={featuredImage}
+                  image={featuredImage.url}
                 />
-                {featuredImage && (
-                  <div className="relative">
+                {featuredImage.url && (
+                  <div className="relative inline-block max-w-[400px]">
                     <button
                       type="button"
                       className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
                       onClick={() => {
-                        setValue("featuredImage", "");
-                        setFeaturedImage("");
+                        setValue("featuredImage", {
+                          url: "",
+                          id: 0,
+                        });
+                        setFeaturedImage({ url: "", id: undefined });
                       }}
                     >
                       <IoMdClose />
                     </button>
                     <img
-                      src={featuredImage}
-                      className="aspect-video h-48 w-full rounded-lg object-cover"
+                      src={featuredImage.url}
+                      className="aspect-video w-full rounded-lg object-cover"
                       alt="Cover Image"
                     />
                   </div>
                 )}
               </div>
 
-              {errors.featuredImage && (
+              {errors.featuredImage?.url && (
                 <p className="text-sm text-red-500">
-                  {errors.featuredImage.message}
+                  {errors.featuredImage.url.message}
+                </p>
+              )}
+              {errors.featuredImage?.id && (
+                <p className="text-sm text-red-500">
+                  {errors.featuredImage.id.message}
                 </p>
               )}
             </div>

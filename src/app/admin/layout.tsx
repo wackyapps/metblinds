@@ -1,6 +1,5 @@
 import AdminTabs from "@/components/admin/AdminTabs";
 import AdminNavbar from "@/components/navigation/AdminNavbar";
-
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>

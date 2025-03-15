@@ -1,41 +1,67 @@
+"use client";
+import { useGetBannersQuery } from "@/store/services/bannersApi";
 import BannerItem from "../common/BannerItem";
-
+import { useEffect, useState } from "react";
+import PaginationComponent from "../common/Pagination";
 const BannersContainerAdmin = () => {
-  const banners = [
-    {
-      coverImage: "/banners/home-banner-1.png",
-      heading: "Leading Calgary Blinds Company!",
-      description:
-        "Met Blinds, your trusted Canadian blinds company in Calgary, Alberta, takes pride in transforming your living spaces with high-quality window coverings that seamlessly marry style and functionality.",
-      buttonText: "Shop Sales",
-      link: "/",
-    },
-    {
-      coverImage: "/banners/home-banner-2.png",
-      heading: "30% OFF SHADES",
-      subheading: "Don’t Miss The Window to Saves!",
-      description:
-        "WE MANUFACTURE BLINDS IN CALGARY FOR ALBERTA HOMES & BUSINESSES. a variety of window shades and treatments that give you 100% privacy and add a modern elegant touch to your home.",
-      buttonText: "Shop Sales",
-      link: "/blinds",
-      bannerImage: "/images/banner-side-image-2.png",
-      textPosition: "left",
-    },
-    {
-      coverImage: "/banners/home-banner-3.png",
-      heading: "Buy 8 motors & get a smart hub free",
-      subheading: "Ends in 3 days",
-      buttonText: "Shop Sales",
-      link: "/blinds",
-      bannerImage: "/images/banner-side-image-3.png",
-      textPosition: "right",
-    },
-  ];
+  const [page, setPage] = useState(1);
+  const [banners, setBanners] = useState([]);
+  const [pagination, setPagination] = useState({
+    total: 7,
+    page: 0,
+    limit: 6,
+    pages: 0,
+  });
+
+  const limit = 5;
+  const { data, isLoading, error } = useGetBannersQuery({
+    page: page,
+    limit: limit,
+  });
+
+  useEffect(() => {
+    if (data?.data?.data?.length > 0 && Array.isArray(data?.data?.data)) {
+      setBanners(data?.data?.data);
+    }
+    if (data?.data?.pagination) {
+      setPagination(data?.data?.pagination);
+    }
+  }, [data]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {JSON.stringify(error)}</div>;
+  }
+
   return (
     <div className="space-y-4">
-      {banners.map((banner, index) => (
-        <BannerItem key={index} banner={banner} />
+      {banners.map((banner: any, index) => (
+        <BannerItem
+          key={index}
+          banner={{
+            id: banner?.id,
+            backgroundImage: banner?.background_image.url,
+            coverImage: banner?.cover_image.url,
+            heading: banner?.product_offering_headline,
+            description: banner?.offer_description,
+            buttonText: banner?.button_text,
+            link: banner?.redirect_url || "/",
+            postStatus: banner?.post_status,
+          }}
+          isAdminDelete={true}
+          isAdminEdit={true}
+        />
       ))}
+      <PaginationComponent
+        total={pagination?.pages}
+        totalItems={pagination?.total}
+        limit={limit}
+        page={page}
+        setPage={setPage}
+      />
     </div>
   );
 };
