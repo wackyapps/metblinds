@@ -17,5 +17,5 @@ export function LoginFormWrapper() {
       }
     };
 
-  return <LoginForm onSubmit={handleSubmit} />;
+  return <LoginForm />;
 }

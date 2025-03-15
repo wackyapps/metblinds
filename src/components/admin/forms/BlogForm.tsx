@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, Suspense } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -23,7 +23,6 @@ const blogSchema = z.object({
     .nullable()
     .refine((file) => file !== null, "Cover image is required"), // Ensure a file is uploaded
 });
-
 type BlogFormData = z.infer<typeof blogSchema>;
 
 const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
@@ -170,4 +169,12 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   );
 };
 
-export default BlogForm;
+const BlogFormComponent = ({ isEdit }: { isEdit?: boolean }) => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogForm />
+    </Suspense>
+  );
+};
+
+export default BlogFormComponent;

@@ -16,7 +16,7 @@ const RichTextEditor = ({ value, onChange }: Props) => {
       config={{
         readonly: false,
         placeholder: "Enter Blog Content...",
-        minHeight: 100,
+        minHeight: 800,
         toolbarAdaptive: false,
         buttons: [
           "source",

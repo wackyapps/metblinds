@@ -1,6 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useGetBlogByIdQuery } from "@/store/services/blogApi";
+import { Suspense } from "react";
 
 const formatDate = (dateString: string) => {
   const options: Intl.DateTimeFormatOptions = {
@@ -87,4 +88,11 @@ const BlogDetails = () => {
   );
 };
 
-export default BlogDetails;
+const BlogDetailsPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogDetails />
+    </Suspense>
+  );
+};
+export default BlogDetailsPage;

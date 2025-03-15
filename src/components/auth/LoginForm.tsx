@@ -38,7 +38,7 @@ export function LoginForm() {
     });
     if (response?.data?.data) {
       const { token } = response.data.data;
-      const decodedToken = jwt.decode(token);
+      const decodedToken: any = jwt.decode(token);
       dispatch(setUser(decodedToken));
       dispatch(setToken(token));
       router.push("/admin/blogs");
@@ -46,7 +46,7 @@ export function LoginForm() {
       console.log(response.error);
       alert(response?.data?.msg);
     } else if (error) {
-      alert(error?.message || "Something went wrong");
+      alert((error as any)?.message || "Something went wrong");
     }
   };
 

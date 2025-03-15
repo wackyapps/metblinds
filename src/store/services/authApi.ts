@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { RootState } from "../index";
 
 interface User {
   id: string;
@@ -17,7 +18,7 @@ export const authApi = createApi({
     baseUrl: "http://itelc.org/metblind_api",
     prepareHeaders: (headers, { getState }) => {
       // Get the token from localStorage if needed
-      const token = localStorage.getItem("token");
+      const token = (getState() as RootState).auth.token;
       if (token) {
         headers.set("authorization", `Bearer ${token}`);
       }
