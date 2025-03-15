@@ -22,7 +22,7 @@ const BlogsContainerAdmin = () => {
 
   return (
     <div className="global-container pb-24">
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <PaginationComponent
           total={data?.data?.pagination?.pages}
           totalItems={data?.data?.pagination?.total}
@@ -30,7 +30,7 @@ const BlogsContainerAdmin = () => {
           page={page}
           setPage={setPage}
         />
-      </div>
+      </div> */}
       <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data?.data?.data?.map((blog: any, index: number) => (
           <BlogCard

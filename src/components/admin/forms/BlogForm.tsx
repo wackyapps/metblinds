@@ -148,7 +148,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   if (blogGettingError) {
     return <div>Error</div>;
   }
-  if (!id) {
+  if (!id && isEdit) {
     return <div>Something went wrong</div>;
   }
 

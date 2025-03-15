@@ -10,8 +10,8 @@ const AdminTabs = ({ children }: { children: React.ReactNode }) => {
       link: "/admin/blogs",
     },
     {
-      label: "Add A Banner",
-      link: "/admin/add-banner",
+      label: "Banners",
+      link: "/admin/banners",
     },
   ];
   return (

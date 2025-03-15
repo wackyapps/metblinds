@@ -1,13 +1,13 @@
-import BlogsContainerAdmin from "@/components/admin/BlogsContainerAdmin";
+import BannersContainerAdmin from "@/components/admin/BannersContainerAdmin";
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 
-const Blogs = () => {
+const page = () => {
   return (
     <div>
-      <BlogsContainerAdmin />
+      <BannersContainerAdmin />
       <Link
-        href="/admin/blogs/add"
+        href="/admin/banners/add"
         className="fixed bottom-10 right-10 z-40 rounded-full bg-red-400 p-4 text-2xl text-white"
       >
         <FaPlus />
@@ -16,4 +16,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default page;

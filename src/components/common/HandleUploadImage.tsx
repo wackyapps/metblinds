@@ -89,7 +89,10 @@ const HandleUploadImage: React.FC<HandleUploadImageProps> = ({
                       alt="Uploaded Image"
                     />
                   ) : (
-                    <p>Drag 'n' drop an image here, or click to select one</p>
+                    <p>
+                      Drag &#39;n&#39; drop an image here, or click to select
+                      one
+                    </p>
                   )}
                 </div>
                 {loading && <p>Loading...</p>}
