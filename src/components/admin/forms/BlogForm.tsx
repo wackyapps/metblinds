@@ -15,6 +15,7 @@ import HandleUploadImage from "@/components/common/HandleUploadImage";
 import { toast } from "react-toastify";
 import BlogFormSkeleton from "./BlogFormSkeleton";
 import { postStatuses } from "@/lib/consts";
+import { useRouter } from "next/navigation";
 
 // Define the schema with Zod
 const blogSchema = z.object({
@@ -30,6 +31,7 @@ type BlogFormData = z.infer<typeof blogSchema>;
 
 const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   const searchParams = useSearchParams();
+  const router = useRouter();
   // getting id from query params
   const id = searchParams.get("id");
   /**
@@ -88,6 +90,8 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
       });
       if (response?.data?.data) {
         toast.success("Blog created successfully");
+        console.log(response?.data?.data);
+        router.push(`/admin/blogs?id=${response?.data?.data?.id}`);
       }
       if (response?.error?.error as any) {
         toast.error(

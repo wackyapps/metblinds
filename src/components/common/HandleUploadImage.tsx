@@ -7,6 +7,7 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
+  Spinner,
 } from "@heroui/react";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
@@ -69,33 +70,47 @@ const HandleUploadImage: React.FC<HandleUploadImageProps> = ({
         onOpenChange={onOpenChange}
       >
         <ModalContent>
-          {(onClose) => (
+          {(onClose: () => void): React.ReactElement => (
             <>
               <ModalHeader>Upload Image</ModalHeader>
               <ModalBody>
-                <div
-                  {...getRootProps()}
-                  style={{
-                    border: "2px dashed #ccc",
-                    padding: "20px",
-                    textAlign: "center",
-                  }}
-                >
-                  <input {...getInputProps()} />
-                  {image ? (
-                    <img
-                      src={image}
-                      className="aspect-video w-full"
-                      alt="Uploaded Image"
-                    />
-                  ) : (
-                    <p>
-                      Drag &#39;n&#39; drop an image here, or click to select
-                      one
-                    </p>
-                  )}
-                </div>
-                {loading && <p>Loading...</p>}
+                {loading ? (
+                  <div
+                    className="flex aspect-video flex-col items-center justify-center bg-gray-50"
+                    style={{ border: "2px dashed #ccc" }}
+                  >
+                    <div className="flex flex-col items-center gap-4">
+                      <Spinner size="lg" color="primary" />
+                      <p className="text-sm text-gray-500">
+                        Uploading image...
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <label
+                    style={{
+                      border: "2px dashed #ccc",
+                      padding: "20px",
+                      textAlign: "center",
+                      cursor: "pointer",
+                    }}
+                    className="flex aspect-video flex-col items-center justify-center"
+                  >
+                    <input {...getInputProps()} />
+                    {image ? (
+                      <img
+                        src={image}
+                        className="aspect-video w-full"
+                        alt="Uploaded Image"
+                      />
+                    ) : (
+                      <p>
+                        Drag &#39;n&#39; drop an image here, or click to select
+                        one
+                      </p>
+                    )}
+                  </label>
+                )}
               </ModalBody>
               <ModalFooter>
                 <Button
