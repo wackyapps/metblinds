@@ -50,12 +50,14 @@ export const bannersApi = createApi({
     getBanners: builder.query<any, { page: number; limit: number }>({
       query: (params: { page: number; limit: number }) =>
         `/banners?page=${params.page}&limit=${params.limit}`,
+      forceRefetch: () => true,
     }),
     /**
      * get banner by id query
      */
     getBannerById: builder.query<any, { id: string | number }>({
       query: ({ id }: { id: string | number }) => `/banners/${id}`,
+      forceRefetch: () => true,
     }),
   }),
 });

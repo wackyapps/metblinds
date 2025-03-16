@@ -7,7 +7,11 @@ import { LuMoveRight } from "react-icons/lu";
 import { useLoginMutation } from "@/store/services/authApi";
 import { useDispatch } from "react-redux";
 import jwt from "jsonwebtoken";
-import { setUser, setToken } from "@/store/slices/authSlice";
+import {
+  setUser,
+  setToken,
+  setIsAuthenticated,
+} from "@/store/slices/authSlice";
 import { useRouter } from "next/navigation";
 /**
  * login form schema
@@ -41,6 +45,7 @@ export function LoginForm() {
       const decodedToken: any = jwt.decode(token);
       dispatch(setUser(decodedToken));
       dispatch(setToken(token));
+      dispatch(setIsAuthenticated(true));
       router.push("/admin/blogs");
     } else if (!response?.data.status) {
       console.log(response.error);

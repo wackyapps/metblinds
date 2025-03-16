@@ -48,6 +48,17 @@ const BannerItem: React.FC<BannerItemProps> = ({
 
       <div className="h-full px-4">
         <div className="mx-auto flex h-full max-w-[1450px] flex-col items-center justify-between gap-8 px-3 md:flex-row md:gap-4">
+          {banner.coverImage && (
+            <div className="w-full max-md:hidden max-md:max-w-[450px] md:w-auto">
+              <img
+                alt="banner image"
+                className="w-full rounded-xl rounded-tr-[100px] border-4 border-[#FFA600] md:w-[300px] md:border-8 lg:w-[500px]"
+                src={banner.coverImage}
+                width={500}
+                height={500}
+              />
+            </div>
+          )}
           {/* text container of heading subheading and button */}
           <div className="banner-text-container flex max-w-[700px] flex-1 flex-col items-center gap-5 text-center md:items-start md:text-left">
             {banner.heading && (
@@ -78,17 +89,6 @@ const BannerItem: React.FC<BannerItemProps> = ({
               </div>
             )}
           </div>
-          {banner.coverImage && (
-            <div className="w-full max-md:hidden max-md:max-w-[450px] md:w-auto">
-              <img
-                alt="banner image"
-                className="w-full rounded-xl rounded-tr-[100px] border-4 border-[#FFA600] md:w-[300px] md:border-8 lg:w-[500px]"
-                src={banner.coverImage}
-                width={500}
-                height={500}
-              />
-            </div>
-          )}
         </div>
       </div>
     </div>

@@ -63,12 +63,14 @@ export const blogApi = createApi({
     getBlogs: builder.query<any, GetBlogReq>({
       query: (blog: GetBlogReq) =>
         `/posts?page=${blog.page}&limit=${blog.limit}`,
+      forceRefetch: () => true,
     }),
     /**
      * get blog by id query
      */
     getBlogById: builder.query<any, { id: string | number }>({
       query: ({ id }: { id: string | number }) => `/posts/${id}`,
+      forceRefetch: () => true,
     }),
   }),
 });

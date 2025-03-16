@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { authApi } from "../services/authApi";
-
+import Cookies from "js-cookie";
 interface User {
   id: string;
   name: string;
@@ -15,7 +14,7 @@ interface AuthState {
 
 const initialState: AuthState = {
   user: null,
-  token: typeof window !== "undefined" ? localStorage.getItem("token") : null,
+  token: typeof window !== "undefined" ? Cookies.get("token") || null : null,
   isAuthenticated: false,
 };
 
@@ -25,25 +24,32 @@ const authSlice = createSlice({
   reducers: {
     setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload;
-      localStorage.setItem("user", JSON.stringify(action.payload));
+      Cookies.set("user", JSON.stringify(action.payload), {
+        secure: true,
+        sameSite: "strict",
+      });
     },
     setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
-      localStorage.setItem("token", action.payload);
+      Cookies.set("token", action.payload, {
+        secure: true,
+        sameSite: "strict",
+      });
     },
     setIsAuthenticated: (state, action: PayloadAction<boolean>) => {
       state.isAuthenticated = action.payload;
-      localStorage.setItem("isAuthenticated", action.payload.toString());
+      Cookies.set("isAuthenticated", action.payload.toString(), {
+        secure: true,
+        sameSite: "strict",
+      });
     },
     logout: (state) => {
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
-      if (typeof window !== "undefined") {
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
-        localStorage.removeItem("isAuthenticated");
-      }
+      Cookies.remove("token");
+      Cookies.remove("user");
+      Cookies.remove("isAuthenticated");
     },
   },
 });
