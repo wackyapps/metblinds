@@ -2,8 +2,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import Image from "next/image";
-import { useState, ChangeEvent, Suspense, useEffect } from "react";
+import { useState, Suspense, useEffect } from "react";
 import HandleUploadImage from "@/components/common/HandleUploadImage";
 import { IoMdClose } from "react-icons/io";
 import {
@@ -12,6 +11,9 @@ import {
   useUpdateBannerMutation,
 } from "@/store/services/bannersApi";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import BannerFormSkeleton from "./BannerFormSkeleton";
 // Define the Zod schema for form validation
 const bannerSchema = z.object({
   offerHeading: z.string().min(1, "Offer heading is required"),
@@ -75,6 +77,8 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
     isLoading,
     isError: bannerGettingError,
   } = useGetBannerByIdQuery({ id: id as string }, { skip: !id });
+
+  const router = useRouter();
   // create mutation
   const [createBanner, { isLoading: isBannerLoading }] =
     useCreateBannerMutation();
@@ -126,23 +130,8 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
   }, [bannerData]);
 
   const bannerCreateHandler = async (data: BannerFormData) => {
-    const response = await createBanner({
-      product_offering_headline: data.offerHeading,
-      discount_percentage: data.discountPercentage,
-      offer_description: data.offerDescription,
-      offer_ends: data.offerEndsIn,
-      cover_image_id: data.coverImage?.id,
-      background_image_id: data.backgroundImage?.id,
-      button_text: data.buttonText,
-      author_id: 1,
-      post_status: data.post_status,
-      redirect_url: data.buttonLink,
-    });
-  };
-  const bannerUpdateHandler = async (data: BannerFormData) => {
-    const response = await updateBanner({
-      id: id as string,
-      banner: {
+    try {
+      const response = await createBanner({
         product_offering_headline: data.offerHeading,
         discount_percentage: data.discountPercentage,
         offer_description: data.offerDescription,
@@ -153,8 +142,44 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
         author_id: 1,
         post_status: data.post_status,
         redirect_url: data.buttonLink,
-      },
-    });
+      });
+      const bannerData = response?.data?.data;
+      if (bannerData?.data) {
+        toast.success("Banner created successfully");
+        router.push(`/admin/banners/edit?id=${bannerData.data.id}`);
+      } else if (bannerData?.error) {
+        toast.error(bannerData?.error);
+      }
+    } catch (error: any) {
+      toast.error(error?.message || "Something went wrong");
+    }
+  };
+  const bannerUpdateHandler = async (data: BannerFormData) => {
+    try {
+      const response = await updateBanner({
+        id: id as string,
+        banner: {
+          product_offering_headline: data.offerHeading,
+          discount_percentage: data.discountPercentage,
+          offer_description: data.offerDescription,
+          offer_ends: data.offerEndsIn,
+          cover_image_id: data.coverImage?.id,
+          background_image_id: data.backgroundImage?.id,
+          button_text: data.buttonText,
+          author_id: 1,
+          post_status: data.post_status,
+          redirect_url: data.buttonLink,
+        },
+      });
+      const bannerData = response?.data?.data;
+      if (bannerData?.data) {
+        toast.success("Banner updated successfully");
+      } else if (bannerData?.error) {
+        toast.error(bannerData?.error);
+      }
+    } catch (error: any) {
+      toast.error(error?.message || "Something went wrong");
+    }
   };
 
   // Form submission handler
@@ -166,7 +191,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
     }
   };
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <BannerFormSkeleton />;
   }
   if (bannerGettingError) {
     return <div>Error</div>;

@@ -13,6 +13,7 @@ import {
 import { useSearchParams } from "next/navigation";
 import HandleUploadImage from "@/components/common/HandleUploadImage";
 import { toast } from "react-toastify";
+import BlogFormSkeleton from "./BlogFormSkeleton";
 
 const postStatuses = [
   { label: "Published", value: "published" },
@@ -156,7 +157,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   }, [blog]);
 
   if (isBlogLoading) {
-    return <div>Loading...</div>;
+    return <BlogFormSkeleton />;
   }
   if (blogGettingError) {
     return <div>Error</div>;
