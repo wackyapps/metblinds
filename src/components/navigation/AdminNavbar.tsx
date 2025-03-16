@@ -3,6 +3,7 @@ import { websiteInfo } from "@/configs/info";
 import { useDispatch } from "react-redux";
 import { setToken, setIsAuthenticated, logout } from "@/store/slices/authSlice";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 const AdminNavbar = () => {
   const logo = websiteInfo.logo;
   const dispatch = useDispatch();
@@ -18,7 +19,9 @@ const AdminNavbar = () => {
       <div className="flex items-center justify-between px-3">
         {/* Left: Logo */}
         <div className="flex items-center">
-          <img width={200} height={50} src={logo.src} alt={logo.alt} />
+          <Link href="/">
+            <img width={200} height={50} src={logo.src} alt={logo.alt} />
+          </Link>
         </div>
         <div className="flex items-center">
           <button
