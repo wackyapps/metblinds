@@ -14,12 +14,7 @@ import { useSearchParams } from "next/navigation";
 import HandleUploadImage from "@/components/common/HandleUploadImage";
 import { toast } from "react-toastify";
 import BlogFormSkeleton from "./BlogFormSkeleton";
-
-const postStatuses = [
-  { label: "Published", value: "published" },
-  { label: "Archived", value: "archived" },
-  { label: "Draft", value: "draft" },
-];
+import { postStatuses } from "@/lib/consts";
 
 // Define the schema with Zod
 const blogSchema = z.object({

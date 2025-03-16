@@ -14,6 +14,7 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import BannerFormSkeleton from "./BannerFormSkeleton";
+import { postStatuses } from "@/lib/consts";
 // Define the Zod schema for form validation
 const bannerSchema = z.object({
   offerHeading: z.string().min(1, "Offer heading is required"),
@@ -44,11 +45,6 @@ const bannerSchema = z.object({
 type BannerFormData = z.infer<typeof bannerSchema>;
 
 // Define post status options
-const postStatuses = [
-  { label: "Published", value: "published" },
-  { label: "Archived", value: "archived" },
-  { label: "Draft", value: "draft" },
-];
 
 const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
   const searchParams = useSearchParams();

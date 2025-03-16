@@ -3,6 +3,7 @@ import { useGetBlogsQuery } from "@/store/services/blogApi";
 import { useEffect, useState } from "react";
 import BlogCard from "../blogs/BlogCard";
 import PaginationComponent from "../common/Pagination";
+import BlogCardSkeleton from "../common/BlogCardSkeleton";
 
 const BlogsContainerAdmin = () => {
   const [page, setPage] = useState(1);
@@ -28,7 +29,11 @@ const BlogsContainerAdmin = () => {
   if (isLoading) {
     return (
       <div className="global-container pb-24">
-        <div className="flex flex-col gap-8">Loading</div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {[...Array(limit)].map((_, index) => (
+            <BlogCardSkeleton key={index} />
+          ))}
+        </div>
       </div>
     );
   }

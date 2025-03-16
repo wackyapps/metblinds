@@ -3,6 +3,7 @@ import { useGetBannersQuery } from "@/store/services/bannersApi";
 import BannerItem from "../common/BannerItem";
 import { useEffect, useState } from "react";
 import PaginationComponent from "../common/Pagination";
+import BannerItemSkeleton from "../common/BannerItemSkeleton";
 const BannersContainerAdmin = () => {
   const [page, setPage] = useState(1);
   const [banners, setBanners] = useState([]);
@@ -29,7 +30,13 @@ const BannersContainerAdmin = () => {
   }, [data]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="space-y-4">
+        {[1, 2, 3, 4, 5].map((index) => (
+          <BannerItemSkeleton key={index} />
+        ))}
+      </div>
+    );
   }
 
   if (error) {
