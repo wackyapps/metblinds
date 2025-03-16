@@ -25,7 +25,7 @@ const blogSchema = z.object({
     url: z.string().min(1, "Featured image is required"),
     id: z.number().nullish(),
   }),
-  post_status: z.enum(["published", "archived", "draft"]).default("draft"),
+  post_status: z.enum(["published", "draft"]).default("draft"),
 });
 type BlogFormData = z.infer<typeof blogSchema>;
 
@@ -100,6 +100,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
         );
       }
     } catch (error) {
+      console.log(error);
       toast.error(
         (error as any)?.message || "An error occurred while creating the blog",
       );
@@ -170,27 +171,33 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 rounded-lg">
         <div className="flex flex-col [column-gap:10px] [row-gap:30px] lg:flex-row">
           <div className="flex flex-col gap-4 lg:order-2 lg:basis-[30%] xl:basis-1/4">
-            {/* Title Input */}
-            <div className="">
+            {/* Post Status Dropdown */}
+            <div className="mb-4">
               <label
-                htmlFor="title"
+                htmlFor="post_status"
                 className="mb-2 block text-sm font-medium text-gray-700"
               >
-                Blog Title
+                Post Status
               </label>
-              <input
-                type="text"
-                id="title"
-                {...register("title")}
-                placeholder="Enter The Title Of The Blog"
+              <select
+                id="post_status"
+                {...register("post_status")}
                 className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-              />
-              {errors.title && (
-                <p className="text-sm text-red-500">{errors.title.message}</p>
+              >
+                {postStatuses.map((status, index) => (
+                  <option key={status.value} value={status.value}>
+                    {status.label}
+                  </option>
+                ))}
+              </select>
+              {errors.post_status && (
+                <p className="text-sm text-red-500">
+                  {errors.post_status.message}
+                </p>
               )}
             </div>
             {/* Cover Image Upload */}
-            <div className="">
+            <div className="mb-4">
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Featured Image
               </label>
@@ -240,66 +247,57 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
                 </p>
               )}
             </div>
-            {/* Post Status Dropdown */}
-            <div className="">
-              <label
-                htmlFor="post_status"
-                className="mb-2 block text-sm font-medium text-gray-700"
+            {/* Post Button */}
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
+                disabled={isLoading}
               >
-                Post Status
-              </label>
-              <select
-                id="post_status"
-                {...register("post_status")}
-                className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-              >
-                {postStatuses.map((status, index) => (
-                  <option key={status.value} value={status.value}>
-                    {status.label}
-                  </option>
-                ))}
-              </select>
-              {errors.post_status && (
-                <p className="text-sm text-red-500">
-                  {errors.post_status.message}
-                </p>
-              )}
+                {isLoading || isUpdating ? "Posting..." : "Save"}
+              </button>
             </div>
           </div>
 
           {/* Rich Text Editor */}
           <div className="row-span-2 lg:order-1 lg:basis-[70%] xl:basis-3/4">
-            <label className="mb-2 block text-sm font-medium text-gray-700">
-              Blog Content
-            </label>
-
-            <Controller
-              name="content"
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <RichTextEditor onChange={onChange} value={value} />
+            {/* Title Input */}
+            <div className="mb-4">
+              <label
+                htmlFor="title"
+                className="mb-2 block text-sm font-medium text-gray-700"
+              >
+                Blog Title
+              </label>
+              <input
+                type="text"
+                id="title"
+                {...register("title")}
+                placeholder="Enter The Title Of The Blog"
+                className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+              />
+              {errors.title && (
+                <p className="text-sm text-red-500">{errors.title.message}</p>
               )}
-            />
+            </div>
+            {/* blog content */}
+            <div>
+              <label className="mb-2 block text-sm font-medium text-gray-700">
+                Blog Content
+              </label>
 
-            {errors.content && (
-              <p className="text-sm text-red-500">{errors.content.message}</p>
-            )}
+              <Controller
+                name="content"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <RichTextEditor onChange={onChange} value={value} />
+                )}
+              />
+              {errors.content && (
+                <p className="text-sm text-red-500">{errors.content.message}</p>
+              )}
+            </div>
           </div>
-        </div>
-
-        {/* Post Button */}
-        <div>
-          <button
-            type="submit"
-            className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
-            disabled={isLoading}
-          >
-            {isLoading || isUpdating
-              ? "Posting..."
-              : isEdit
-                ? "Update"
-                : "Post"}
-          </button>
         </div>
       </form>
     </div>

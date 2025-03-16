@@ -20,13 +20,7 @@ const bannerSchema = z.object({
   offerHeading: z.string().min(1, "Offer heading is required"),
   discountPercentage: z.string().min(1, "Discount percentage is Required"),
   offerDescription: z.string().min(1, "Offer description is required"),
-  offerEndsIn: z
-    .date()
-    .refine(
-      (date) => date instanceof Date && !isNaN(date.getTime()),
-      "Invalid date",
-    )
-    .optional(),
+  offerEndsIn: z.string().min(1, "Offer ends in is required").optional(),
   buttonText: z.string().min(1, "Button text is required"),
   buttonLink: z.string().min(1, "Button link is required"),
   coverImage: z
@@ -39,7 +33,7 @@ const bannerSchema = z.object({
     url: z.string().min(1, "Background image is required"),
     id: z.number().nullish(),
   }),
-  post_status: z.enum(["published", "archived", "draft"]).default("draft"),
+  post_status: z.enum(["published", "draft"]).default("draft"),
 });
 
 type BannerFormData = z.infer<typeof bannerSchema>;
@@ -114,7 +108,10 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
       setValue("offerHeading", BannerData2.product_offering_headline);
       setValue("discountPercentage", BannerData2.discount_percentage);
       setValue("offerDescription", BannerData2.offer_description);
-      setValue("offerEndsIn", BannerData2.offer_ends);
+      setValue(
+        "offerEndsIn",
+        new Date(BannerData2.offer_ends).toISOString().split("T")[0],
+      );
       setValue("buttonText", BannerData2.button_text);
       setValue("buttonLink", BannerData2.redirect_url);
       setValue("post_status", BannerData2.post_status);
@@ -198,254 +195,267 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
 
   return (
     <div className="mx-auto p-6">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 rounded-lg">
-        {/* Offer Heading */}
-        <div>
-          <label
-            htmlFor="offerHeading"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            OFFER HEADING
-          </label>
-          <input
-            type="text"
-            id="offerHeading"
-            {...register("offerHeading")}
-            placeholder="Enter offer heading"
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          />
-          {errors.offerHeading && (
-            <p className="text-sm text-red-500">
-              {errors.offerHeading.message}
-            </p>
-          )}
-        </div>
-
-        {/* Discount Percentage */}
-        <div>
-          <label
-            htmlFor="discountPercentage"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            DISCOUNT PERCENTAGE
-          </label>
-          <input
-            id="discountPercentage"
-            {...register("discountPercentage")}
-            placeholder="Enter discount percentage"
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          />
-          {errors.discountPercentage && (
-            <p className="text-sm text-red-500">
-              {errors.discountPercentage.message}
-            </p>
-          )}
-        </div>
-
-        {/* Offer Description */}
-        <div>
-          <label
-            htmlFor="offerDescription"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            OFFER DESCRIPTION
-          </label>
-          <textarea
-            id="offerDescription"
-            {...register("offerDescription")}
-            placeholder="Enter offer description"
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          />
-          {errors.offerDescription && (
-            <p className="text-sm text-red-500">
-              {errors.offerDescription.message}
-            </p>
-          )}
-        </div>
-
-        {/* Offer Ends In */}
-        <div>
-          <label
-            htmlFor="offerEndsIn"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            OFFER ENDS IN (OPTIONAL)
-          </label>
-          <input
-            type="date"
-            id="offerEndsIn"
-            {...register("offerEndsIn", { valueAsDate: true })}
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          />
-          {errors.offerEndsIn && (
-            <p className="text-sm text-red-500">{errors.offerEndsIn.message}</p>
-          )}
-        </div>
-
-        {/* Cover Image */}
-        <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
-            COVER IMAGE
-          </label>
-          <div className="flex flex-col gap-2">
-            <HandleUploadImage
-              setImage={(data) => {
-                setValue("coverImage", {
-                  url: data.url,
-                  id: Number(data.id),
-                });
-                setCoverImage({ url: data.url, id: Number(data.id) });
-              }}
-              image={coverImage.url}
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="grid grid-cols-2 gap-3 rounded-lg"
+      >
+        <div className="space-y-3">
+          {/* Offer Heading */}
+          <div>
+            <label
+              htmlFor="offerHeading"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              OFFER HEADING
+            </label>
+            <input
+              type="text"
+              id="offerHeading"
+              {...register("offerHeading")}
+              placeholder="Enter offer heading"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
             />
-            {coverImage.url && (
-              <div className="relative inline-block max-w-[400px]">
-                <button
-                  type="button"
-                  className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
-                  onClick={() => {
-                    setValue("coverImage", {
-                      url: "",
-                      id: undefined,
-                    });
-                    setCoverImage({ url: "", id: undefined });
-                  }}
-                >
-                  <IoMdClose />
-                </button>
-                <img
-                  src={coverImage.url}
-                  className="aspect-video w-full rounded-lg object-cover"
-                  alt="Cover Image"
-                />
-              </div>
+            {errors.offerHeading && (
+              <p className="text-sm text-red-500">
+                {errors.offerHeading.message}
+              </p>
             )}
           </div>
 
-          {errors.coverImage?.url && (
-            <p className="text-sm text-red-500">
-              {errors.coverImage.url.message}
-            </p>
-          )}
-        </div>
-
-        {/* Background Image */}
-        <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
-            BACKGROUND IMAGE
-          </label>
-          <div className="flex flex-col gap-2">
-            <HandleUploadImage
-              setImage={(data) => {
-                setValue("backgroundImage", {
-                  url: data.url,
-                  id: Number(data.id),
-                });
-                setBackgroundImage({ url: data.url, id: Number(data.id) });
-              }}
-              image={backgroundImage.url}
+          {/* Discount Percentage */}
+          <div>
+            <label
+              htmlFor="discountPercentage"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              DISCOUNT PERCENTAGE
+            </label>
+            <input
+              id="discountPercentage"
+              {...register("discountPercentage")}
+              placeholder="Enter discount percentage"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
             />
-            {backgroundImage.url && (
-              <div className="relative inline-block max-w-[400px]">
-                <button
-                  type="button"
-                  className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
-                  onClick={() => {
-                    setValue("backgroundImage", {
-                      url: "",
-                      id: undefined,
-                    });
-                    setBackgroundImage({ url: "", id: undefined });
-                  }}
-                >
-                  <IoMdClose />
-                </button>
-                <img
-                  src={backgroundImage.url}
-                  className="aspect-video w-full rounded-lg object-cover"
-                  alt="Background Image"
-                />
-              </div>
+            {errors.discountPercentage && (
+              <p className="text-sm text-red-500">
+                {errors.discountPercentage.message}
+              </p>
             )}
           </div>
-          {errors.backgroundImage?.url && (
-            <p className="text-sm text-red-500">
-              {errors.backgroundImage.url.message}
-            </p>
-          )}
-        </div>
 
-        {/* Post Status Dropdown */}
-        <div>
-          <label
-            htmlFor="post_status"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            POST STATUS
-          </label>
-          <select
-            id="post_status"
-            {...register("post_status")}
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          >
-            {postStatuses.map((status) => (
-              <option key={status.value} value={status.value}>
-                {status.label}
-              </option>
-            ))}
-          </select>
-          {errors.post_status && (
-            <p className="text-sm text-red-500">{errors.post_status.message}</p>
-          )}
-        </div>
+          {/* Offer Description */}
+          <div>
+            <label
+              htmlFor="offerDescription"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              OFFER DESCRIPTION
+            </label>
+            <textarea
+              id="offerDescription"
+              {...register("offerDescription")}
+              placeholder="Enter offer description"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            />
+            {errors.offerDescription && (
+              <p className="text-sm text-red-500">
+                {errors.offerDescription.message}
+              </p>
+            )}
+          </div>
 
-        {/* Button Text */}
-        <div>
-          <label
-            htmlFor="buttonText"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            BUTTON TEXT
-          </label>
-          <input
-            type="text"
-            id="buttonText"
-            {...register("buttonText")}
-            placeholder="Enter button text"
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          />
-          {errors.buttonText && (
-            <p className="text-sm text-red-500">{errors.buttonText.message}</p>
-          )}
-        </div>
-        {/* Button Text */}
-        <div>
-          <label
-            htmlFor="buttonText"
-            className="mb-2 block text-sm font-medium text-gray-700"
-          >
-            BUTTON LINK
-          </label>
-          <input
-            type="text"
-            id="buttonLink"
-            {...register("buttonLink")}
-            placeholder="Enter button link"
-            className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-          />
-          {errors.buttonLink && (
-            <p className="text-sm text-red-500">{errors.buttonLink.message}</p>
-          )}
-        </div>
+          {/* Offer Ends In */}
+          <div>
+            <label
+              htmlFor="offerEndsIn"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              OFFER ENDS IN (OPTIONAL)
+            </label>
+            <input
+              type="date"
+              id="offerEndsIn"
+              {...register("offerEndsIn")}
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            />
+            {errors.offerEndsIn && (
+              <p className="text-sm text-red-500">
+                {errors.offerEndsIn.message}
+              </p>
+            )}
+          </div>
 
-        {/* Update Button */}
-        <div>
-          <button
-            type="submit"
-            className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
-          >
-            {isBannerLoading ? "Loading..." : isEdit ? "Update" : "Post"}
-          </button>
+          {/* Button Text */}
+          <div>
+            <label
+              htmlFor="buttonText"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              BUTTON TEXT
+            </label>
+            <input
+              type="text"
+              id="buttonText"
+              {...register("buttonText")}
+              placeholder="Enter button text"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            />
+            {errors.buttonText && (
+              <p className="text-sm text-red-500">
+                {errors.buttonText.message}
+              </p>
+            )}
+          </div>
+          {/* Button Link */}
+          <div>
+            <label
+              htmlFor="buttonText"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              BUTTON LINK
+            </label>
+            <input
+              type="text"
+              id="buttonLink"
+              {...register("buttonLink")}
+              placeholder="Enter button link"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            />
+            {errors.buttonLink && (
+              <p className="text-sm text-red-500">
+                {errors.buttonLink.message}
+              </p>
+            )}
+          </div>
+        </div>
+        <div className="space-y-3">
+          {/* Post Status Dropdown */}
+          <div>
+            <label
+              htmlFor="post_status"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              POST STATUS
+            </label>
+            <select
+              id="post_status"
+              {...register("post_status")}
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            >
+              {postStatuses.map((status) => (
+                <option key={status.value} value={status.value}>
+                  {status.label}
+                </option>
+              ))}
+            </select>
+            {errors.post_status && (
+              <p className="text-sm text-red-500">
+                {errors.post_status.message}
+              </p>
+            )}
+          </div>
+          {/* Cover Image */}
+          <div>
+            <label className="mb-2 block text-sm font-medium text-gray-700">
+              COVER IMAGE
+            </label>
+            <div className="flex flex-col gap-2">
+              <HandleUploadImage
+                setImage={(data) => {
+                  setValue("coverImage", {
+                    url: data.url,
+                    id: Number(data.id),
+                  });
+                  setCoverImage({ url: data.url, id: Number(data.id) });
+                }}
+                image={coverImage.url}
+              />
+              {coverImage.url && (
+                <div className="relative inline-block max-w-[400px]">
+                  <button
+                    type="button"
+                    className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
+                    onClick={() => {
+                      setValue("coverImage", {
+                        url: "",
+                        id: undefined,
+                      });
+                      setCoverImage({ url: "", id: undefined });
+                    }}
+                  >
+                    <IoMdClose />
+                  </button>
+                  <img
+                    src={coverImage.url}
+                    className="aspect-video w-full rounded-lg object-cover"
+                    alt="Cover Image"
+                  />
+                </div>
+              )}
+            </div>
+
+            {errors.coverImage?.url && (
+              <p className="text-sm text-red-500">
+                {errors.coverImage.url.message}
+              </p>
+            )}
+          </div>
+
+          {/* Background Image */}
+          <div>
+            <label className="mb-2 block text-sm font-medium text-gray-700">
+              BACKGROUND IMAGE
+            </label>
+            <div className="flex flex-col gap-2">
+              <HandleUploadImage
+                setImage={(data) => {
+                  setValue("backgroundImage", {
+                    url: data.url,
+                    id: Number(data.id),
+                  });
+                  setBackgroundImage({ url: data.url, id: Number(data.id) });
+                }}
+                image={backgroundImage.url}
+              />
+              {backgroundImage.url && (
+                <div className="relative inline-block max-w-[400px]">
+                  <button
+                    type="button"
+                    className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
+                    onClick={() => {
+                      setValue("backgroundImage", {
+                        url: "",
+                        id: undefined,
+                      });
+                      setBackgroundImage({ url: "", id: undefined });
+                    }}
+                  >
+                    <IoMdClose />
+                  </button>
+                  <img
+                    src={backgroundImage.url}
+                    className="aspect-video w-full rounded-lg object-cover"
+                    alt="Background Image"
+                  />
+                </div>
+              )}
+            </div>
+            {errors.backgroundImage?.url && (
+              <p className="text-sm text-red-500">
+                {errors.backgroundImage.url.message}
+              </p>
+            )}
+          </div>
+
+          {/* Update Button */}
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
+            >
+              {isBannerLoading ? "Saving..." : "Save"}
+            </button>
+          </div>
         </div>
       </form>
     </div>

@@ -1,9 +1,19 @@
 "use client";
 import React from "react";
-import { FaEdit, FaTrash } from "react-icons/fa";
+import { FaEdit, FaSpinner, FaTrash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { useDeleteBlogMutation } from "@/store/services/blogApi";
 import { toast } from "react-toastify";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+  Spinner,
+} from "@heroui/react";
 
 interface BlogCardProps {
   data: {
@@ -16,6 +26,8 @@ interface BlogCardProps {
     };
     author: string;
   };
+  blogs?: any[];
+  setBlogs?: (blogs: any[]) => void;
   isAdminEdit?: boolean;
   isAdminDelete?: boolean;
 }
@@ -24,10 +36,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
   data,
   isAdminEdit,
   isAdminDelete,
+  blogs,
+  setBlogs,
 }) => {
   const { title, date, featured_image, author } = data;
   const router = useRouter();
-  const [deleteBlog] = useDeleteBlogMutation();
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+  const [deleteBlog, { isLoading: isDeleteLoading }] = useDeleteBlogMutation();
 
   const handleEditClick = () => {
     router.push(`/admin/blogs/edit?id=${data.id}`);
@@ -35,16 +50,17 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
   const handleDeleteClick = async () => {
     // Add confirmation dialog
-    if (!window.confirm("Are you sure you want to delete this blog?")) {
-      return;
-    }
-
     try {
-      const response: any = await deleteBlog({ id: data.id });
+      const response: any = await deleteBlog({ id: data.id }).unwrap();
+      console.log(response);
       if (response.data?.data?.status === "deleted") {
         toast.success(
           response.data.data.message || "Blog deleted successfully",
         );
+        onClose();
+        if (setBlogs) {
+          setBlogs(blogs?.filter((blog) => blog.id !== data.id) as any[]);
+        }
       } else if (response.error) {
         toast.error(response.error?.data?.message || "Failed to delete blog");
       }
@@ -98,7 +114,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             <FaTrash
               onClick={(e) => {
                 e.stopPropagation(); // Prevent card click event
-                handleDeleteClick();
+                onOpen();
               }}
               style={{
                 cursor: "pointer",
@@ -111,6 +127,49 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <p style={{ color: "#777", marginBottom: "4px" }}>{author}</p>
         <p style={{ color: "#777", margin: "0" }}>{date}</p>
       </div>
+      {/*
+       * delete dialog
+       */}
+      <Modal
+        isDismissable={false}
+        isOpen={isOpen}
+        classNames={{
+          closeButton: "hidden",
+        }}
+        onOpenChange={onOpenChange}
+      >
+        <ModalContent>
+          {(onClose: () => void): React.ReactElement => (
+            <>
+              <ModalHeader>
+                Are you sure you want to delete this blog?
+              </ModalHeader>
+              <ModalFooter>
+                <Button
+                  color="danger"
+                  variant="light"
+                  disabled={isDeleteLoading}
+                  onPress={onClose}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  color="danger"
+                  variant="light"
+                  disabled={isDeleteLoading}
+                  onPress={handleDeleteClick}
+                >
+                  {isDeleteLoading ? (
+                    <FaSpinner className="animate-spin" />
+                  ) : (
+                    "Delete"
+                  )}
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 };

@@ -41,7 +41,7 @@ const BlogsContainerAdmin = () => {
   if (blogs.length === 0) return <div>No blogs found</div>;
 
   return (
-    <div className="global-container pb-24">
+    <div className="mb-2">
       {/* <div className="mb-8">
         <PaginationComponent
           total={data?.data?.pagination?.pages}
@@ -51,9 +51,11 @@ const BlogsContainerAdmin = () => {
           setPage={setPage}
         />
       </div> */}
-      <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {blogs.map((blog: any, index: number) => (
           <BlogCard
+            blogs={blogs}
+            setBlogs={setBlogs as (blogs: any[]) => void}
             key={index}
             data={blog}
             isAdminEdit={true}
