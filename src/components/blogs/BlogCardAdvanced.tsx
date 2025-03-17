@@ -29,7 +29,10 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
     year: "numeric",
   });
   return (
-    <div className="w-full overflow-hidden rounded-[42px] bg-[#FAFAFA]">
+    <div
+      className="w-full cursor-pointer overflow-hidden rounded-[42px] bg-[#FAFAFA]"
+      onClick={() => router.push(`/blogs/blog-details?id=${id}`)}
+    >
       <div className="relative flex flex-col items-center lg:flex-row">
         {/* Image Section */}
         <div

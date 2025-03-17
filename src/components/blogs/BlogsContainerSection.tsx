@@ -15,7 +15,7 @@ const BlogsContainerSection = () => {
   });
   if (isLoading) {
     return (
-      <div className="global-container pb-24">
+      <div className="mx-auto max-w-[1500px] px-3 py-24">
         <div className="flex flex-col gap-8">
           {Array.from({ length: 4 }).map((_, index) => (
             <BlogCardAdvancedSkeleton
@@ -32,7 +32,7 @@ const BlogsContainerSection = () => {
   if (data?.data?.data?.length === 0) return <div>No blogs found</div>;
 
   return (
-    <div className="global-container pb-24">
+    <div className="mx-auto max-w-[1500px] px-3 pb-24">
       {/*
        * Blog Radio Buttons
        */}

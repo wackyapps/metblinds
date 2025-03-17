@@ -47,18 +47,7 @@ const BannerItem: React.FC<BannerItemProps> = ({
       )}
 
       <div className="h-full px-4">
-        <div className="mx-auto flex h-full max-w-[1450px] flex-col items-center justify-between gap-8 px-3 md:flex-row md:gap-4">
-          {banner.coverImage && (
-            <div className="w-full max-md:hidden max-md:max-w-[450px] md:w-auto">
-              <img
-                alt="banner image"
-                className="w-full rounded-xl rounded-tr-[100px] border-4 border-[#FFA600] md:w-[300px] md:border-8 lg:w-[500px]"
-                src={banner.coverImage}
-                width={500}
-                height={500}
-              />
-            </div>
-          )}
+        <div className="mx-auto flex h-full max-w-[1450px] flex-col items-center justify-between gap-8 px-3 sm:px-5 md:flex-row md:gap-4 md:px-6 lg:px-7">
           {/* text container of heading subheading and button */}
           <div className="banner-text-container flex max-w-[700px] flex-1 flex-col items-center gap-5 text-center md:items-start md:text-left">
             {banner.heading && (
@@ -67,9 +56,9 @@ const BannerItem: React.FC<BannerItemProps> = ({
               </h2>
             )}
 
-            {banner.subheading && (
+            {banner.subtitle && (
               <h4 className="text-2xl text-white md:text-3xl">
-                {banner.subheading}
+                {banner.subtitle}
               </h4>
             )}
             <img src="/svgs/divider-icon.svg" className="h-2 w-20" alt="" />
@@ -89,6 +78,25 @@ const BannerItem: React.FC<BannerItemProps> = ({
               </div>
             )}
           </div>
+          {/*
+           * cover image
+           */}
+          {banner.coverImage && (
+            <div className="relative mr-6 w-full max-md:hidden max-md:max-w-[450px] md:w-auto">
+              {banner.discount_percentage && (
+                <h5 className="absolute right-0 top-0 z-50 flex aspect-square -translate-y-1/3 translate-x-1/3 items-center justify-center rounded-[50%] bg-white p-5 text-[42px] font-bold text-[#013F68]">
+                  <span>{banner.discount_percentage}</span>
+                </h5>
+              )}
+              <img
+                alt="banner image"
+                className="max-h-[500px] w-full rounded-xl rounded-tr-[100px] border-4 border-[#FFA600] md:w-[300px] md:border-8 lg:w-[500px]"
+                src={banner.coverImage}
+                width={500}
+                height={500}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

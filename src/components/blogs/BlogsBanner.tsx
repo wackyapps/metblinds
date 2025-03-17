@@ -10,7 +10,7 @@ const BlogsBanner = () => {
       }}
     >
       {/* Content */}
-      <div className="global-container relative mx-auto flex h-full items-center px-6">
+      <div className="relative mx-auto flex h-full max-w-[1500px] items-center px-3 sm:px-6">
         <div className="max-w-[758px] space-y-6">
           <h1 className="text-2xl font-semibold text-white md:text-3xl">
             Discover

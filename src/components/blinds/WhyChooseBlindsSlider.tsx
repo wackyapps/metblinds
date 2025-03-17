@@ -56,7 +56,7 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
           <div className="w-full lg:w-1/2">
             <div className="mb-4">
               <h2
-                className={`${roboto.className} relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+                className={`${roboto.className} relative z-0 mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
               >
                 {data.heading}
               </h2>

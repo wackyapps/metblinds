@@ -18,8 +18,9 @@ import { postStatuses } from "@/lib/consts";
 // Define the Zod schema for form validation
 const bannerSchema = z.object({
   offerHeading: z.string().min(1, "Offer heading is required"),
-  discountPercentage: z.string().min(1, "Discount percentage is Required"),
+  subTitle: z.string().min(1, "Sub title is required"),
   offerDescription: z.string().min(1, "Offer description is required"),
+  discountPercentage: z.string().min(1, "Discount percentage is Required"),
   offerEndsIn: z.string().min(1, "Offer ends in is required").optional(),
   buttonText: z.string().min(1, "Button text is required"),
   buttonLink: z.string().min(1, "Button link is required"),
@@ -119,6 +120,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
       setCoverImage(BannerData2.cover_image);
       setValue("backgroundImage", BannerData2.background_image);
       setBackgroundImage(BannerData2.background_image);
+      setValue("subTitle", BannerData2.subtitle);
     }
   }, [bannerData]);
 
@@ -135,6 +137,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
         author_id: 1,
         post_status: data.post_status,
         redirect_url: data.buttonLink,
+        subtitle: data.subTitle,
       });
       const bannerData = response?.data?.data;
       if (bannerData?.data) {
@@ -162,6 +165,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
           author_id: 1,
           post_status: data.post_status,
           redirect_url: data.buttonLink,
+          subtitle: data.subTitle,
         },
       });
       const bannerData = response?.data?.data;
@@ -221,6 +225,44 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
               </p>
             )}
           </div>
+          {/* Sub Title */}
+          <div>
+            <label
+              htmlFor="subTitle"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              SUB TITLE
+            </label>
+            <textarea
+              id="subTitle"
+              {...register("subTitle")}
+              placeholder="Enter sub title"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            />
+            {errors.subTitle && (
+              <p className="text-sm text-red-500">{errors.subTitle.message}</p>
+            )}
+          </div>
+          {/* Offer Description */}
+          <div>
+            <label
+              htmlFor="offerDescription"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              OFFER DESCRIPTION
+            </label>
+            <textarea
+              id="offerDescription"
+              {...register("offerDescription")}
+              placeholder="Enter offer description"
+              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
+            />
+            {errors.offerDescription && (
+              <p className="text-sm text-red-500">
+                {errors.offerDescription.message}
+              </p>
+            )}
+          </div>
 
           {/* Discount Percentage */}
           <div>
@@ -239,27 +281,6 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
             {errors.discountPercentage && (
               <p className="text-sm text-red-500">
                 {errors.discountPercentage.message}
-              </p>
-            )}
-          </div>
-
-          {/* Offer Description */}
-          <div>
-            <label
-              htmlFor="offerDescription"
-              className="mb-2 block text-sm font-medium text-gray-700"
-            >
-              OFFER DESCRIPTION
-            </label>
-            <textarea
-              id="offerDescription"
-              {...register("offerDescription")}
-              placeholder="Enter offer description"
-              className="w-full rounded-lg border border-gray-300 bg-transparent p-3 focus:border-[#FFAD33] focus:outline-none"
-            />
-            {errors.offerDescription && (
-              <p className="text-sm text-red-500">
-                {errors.offerDescription.message}
               </p>
             )}
           </div>

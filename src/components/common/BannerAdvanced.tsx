@@ -8,6 +8,7 @@ import Link from "next/link";
 import BannerItem from "./BannerItem";
 import BannerItemSkeleton from "./BannerItemSkeleton";
 import { useGetBannersQuery } from "@/store/services/bannersApi";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type Props = {
   banners: {
@@ -81,21 +82,27 @@ const BannerAdvanced: React.FC<Props> = ({ banners }) => {
                   buttonText: banner?.button_text,
                   link: banner?.redirect_url || "/",
                   postStatus: banner?.post_status,
+                  discount_percentage: banner?.discount_percentage,
+                  subtitle: banner?.subtitle,
                 }}
               />
             </li>
           ))}
         </ul>
       </div>
-
-      <div className="glide__bullets" data-glide-el="controls[nav]">
-        {bannerData?.map((_: any, index: number) => (
-          <button
-            key={index}
-            className="glide__bullet"
-            data-glide-dir={`=${index}`}
-          ></button>
-        ))}
+      <div className="glide__arrows" data-glide-el="controls">
+        <button
+          className="absolute left-4 top-1/2 z-10 flex aspect-square w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#FFA600] text-white"
+          data-glide-dir="<"
+        >
+          <FaChevronLeft />
+        </button>
+        <button
+          className="absolute right-4 top-1/2 z-10 flex aspect-square w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#FFA600] text-white"
+          data-glide-dir=">"
+        >
+          <FaChevronRight />
+        </button>
       </div>
     </div>
   );

@@ -57,6 +57,8 @@ const BannersContainerAdmin = () => {
             buttonText: banner?.button_text,
             link: banner?.redirect_url || "/",
             postStatus: banner?.post_status,
+            subtitle: banner?.subtitle,
+            discount_percentage: banner?.discount_percentage,
           }}
           isAdminDelete={true}
           isAdminEdit={true}
