@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import "./ContactForm.css";
 
 // Define the schema for all fields
 const formSchema = z.object({
@@ -98,7 +99,7 @@ export default function ContactForm({ isSmall }: { isSmall?: boolean }) {
           <option value="">Location</option>
           <option value="location1">Location 1</option>
           <option value="location2">Location 2</option>
-          {/* Add more location options as needed */}
+          {/* Add  more location options as needed */}
         </select>
         {errors.location && (
           <p className="mt-1 text-sm text-red-500">{errors.location.message}</p>
