@@ -33,7 +33,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   // getting id from query params
-  const id = searchParams.get("id");
+  const id = searchParams?.get("id");
   /**
    * featured image state
    */

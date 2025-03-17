@@ -43,7 +43,7 @@ type BannerFormData = z.infer<typeof bannerSchema>;
 
 const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
   const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const id = searchParams?.get("id");
   // State for image previews
   const [coverImage, setCoverImage] = useState<{
     url: string;

@@ -22,7 +22,7 @@ const AdminTabs = ({ children }: { children: React.ReactNode }) => {
             {tabs.map((button, index) => (
               <Link
                 key={index}
-                className={`px-9 py-5 ${pathname.includes(button.link) ? "bg-[#FFA600] text-white" : "text-[#FFA600]"}`}
+                className={`px-9 py-5 ${pathname?.includes(button.link) ? "bg-[#FFA600] text-white" : "text-[#FFA600]"}`}
                 href={button.link}
               >
                 {button.label}

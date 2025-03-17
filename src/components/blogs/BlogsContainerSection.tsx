@@ -12,7 +12,7 @@ const BlogsContainerSection = () => {
   const limit = 10;
 
   // Get page from URL query params or default to 1
-  const page = Number(searchParams.get("page")) || 1;
+  const page = Number(searchParams?.get("page")) || 1;
 
   const { data, isLoading, error } = useGetBlogsQuery({
     page: page,
@@ -20,7 +20,7 @@ const BlogsContainerSection = () => {
   });
 
   const handlePageChange = (newPage: number) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString());
     params.set("page", newPage.toString());
     router.push(`?${params.toString()}`, { scroll: false });
   };

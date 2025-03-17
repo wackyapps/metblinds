@@ -16,7 +16,7 @@ const formatDate = (dateString: string) => {
 const BlogDetails = () => {
   const searchParams = useSearchParams();
   // getting id from query params
-  const id = searchParams.get("id");
+  const id = searchParams?.get("id");
 
   // getting blog details from api
   const { data, isLoading, error } = useGetBlogByIdQuery({ id: id as string });

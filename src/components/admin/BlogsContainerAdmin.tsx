@@ -17,7 +17,7 @@ const BlogsContainerAdmin = () => {
     pages: 0,
   });
   const limit = 12;
-  const page = Number(searchParams.get("page")) || 1;
+  const page = Number(searchParams?.get("page")) || 1;
   const { data, isLoading, isError } = useGetBlogsQuery({ limit, page });
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const BlogsContainerAdmin = () => {
   }, [data]);
 
   const handlePageChange = (newPage: number) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString());
     params.set("page", newPage.toString());
     router.push(`?${params.toString()}`, { scroll: false });
   };

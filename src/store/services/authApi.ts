@@ -12,6 +12,13 @@ interface LoginRequest {
   password: string;
 }
 
+interface ResetPasswordRequest {
+  email: string;
+  password: string;
+  confirmpassword: string;
+  resetcode: string;
+}
+
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
@@ -27,6 +34,9 @@ export const authApi = createApi({
   }),
   tagTypes: ["User"],
   endpoints: (builder) => ({
+    /**
+     * Login
+     */
     login: builder.mutation<any, LoginRequest>({
       query: (credentials) => ({
         url: "/users/login",
@@ -34,6 +44,9 @@ export const authApi = createApi({
         body: credentials,
       }),
     }),
+    /**
+     * Forgot Password
+     */
     forgotPassword: builder.mutation<any, { email: string }>({
       query: ({ email }) => ({
         url: "/usersforgotpassword",
@@ -41,7 +54,31 @@ export const authApi = createApi({
         body: { email },
       }),
     }),
+    /**
+     * Reset Password
+     */
+    resetPassword: builder.mutation<any, ResetPasswordRequest>({
+      query: ({ email, password, confirmpassword, resetcode }) => ({
+        url: "/users/resetpassword",
+        method: "POST",
+        body: { email, password, confirmpassword, resetcode },
+      }),
+    }),
+    /**
+     * get user by reset code
+     */
+    getUserByResetCode: builder.query<any, { resetCode: string }>({
+      query: ({ resetCode }) => ({
+        url: `/userspasswordresetcode/${resetCode}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation, useForgotPasswordMutation } = authApi;
+export const {
+  useLoginMutation,
+  useForgotPasswordMutation,
+  useResetPasswordMutation,
+  useGetUserByResetCodeQuery,
+} = authApi;
