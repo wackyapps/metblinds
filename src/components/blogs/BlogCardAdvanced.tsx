@@ -8,7 +8,7 @@ interface BlogCardAdvancedProps {
     id: string;
     category: string;
     title: string;
-    description: string;
+    post_short_content: string;
     date: string | Date;
     featured_image: {
       url: string;
@@ -21,7 +21,8 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
   textDirection = "left",
   data,
 }) => {
-  const { id, category, title, description, date, featured_image } = data;
+  const { id, category, title, post_short_content, date, featured_image } =
+    data;
   const router = useRouter();
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
@@ -54,7 +55,7 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
               {category}
             </p>
 
-            {/* Title and Description */}
+            {/* Title and post_short_content */}
             <div className="flex-grow">
               <h2
                 className={`${inter.className} mb-8 text-2xl font-semibold lg:text-3xl`}
@@ -64,7 +65,7 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
               <p
                 className={`${rubik.className} mb-8 text-base text-[#999999] lg:text-lg`}
               >
-                {description}
+                {post_short_content}
               </p>
               {/* Footer */}
               <div className="flex items-center justify-between text-sm text-[#6E6E73]">
