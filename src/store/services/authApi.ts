@@ -15,7 +15,7 @@ interface LoginRequest {
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://itelc.org/metblind_api",
+    baseUrl: "https://itelc.org/metblind_api",
     prepareHeaders: (headers, { getState }) => {
       // Get the token from localStorage if needed
       const token = (getState() as RootState).auth.token;

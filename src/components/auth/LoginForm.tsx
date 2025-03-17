@@ -13,6 +13,7 @@ import {
   setIsAuthenticated,
 } from "@/store/slices/authSlice";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 /**
  * login form schema
  */
@@ -40,7 +41,7 @@ export function LoginForm() {
       email: data.username,
       password: data.password,
     });
-    if (response?.data?.data) {
+    if (response?.data?.data.token) {
       const { token } = response.data.data;
       const decodedToken: any = jwt.decode(token);
       dispatch(setUser(decodedToken));
@@ -48,9 +49,11 @@ export function LoginForm() {
       dispatch(setIsAuthenticated(true));
       router.push("/admin/blogs");
     } else if (!response?.data.status) {
+      toast.error(response?.data?.msg);
       console.log(response.error);
       alert(response?.data?.msg);
     } else if (error) {
+      toast.error((error as any)?.message || "Something went wrong");
       alert((error as any)?.message || "Something went wrong");
     }
   };
