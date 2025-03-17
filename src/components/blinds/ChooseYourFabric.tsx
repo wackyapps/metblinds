@@ -65,8 +65,11 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
           >
+            <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+              <FaCircleChevronLeft />
+            </CarouselPrevious>
             <CarouselContent className="-ml-2 md:-ml-4">
               {data.blackoutFabrics.map((fabric, index) => (
                 <CarouselItem
@@ -89,10 +92,7 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
-              <FaCircleChevronLeft />
-            </CarouselPrevious>
-            <CarouselNext className="absolute right-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
+            <CarouselNext className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
               <FaCircleChevronRight />
             </CarouselNext>
           </Carousel>
@@ -108,8 +108,11 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
           >
+            <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+              <FaCircleChevronLeft />
+            </CarouselPrevious>
             <CarouselContent className="-ml-2 md:-ml-4">
               {data.lightoutFabrics.map((fabric, index) => (
                 <CarouselItem
@@ -132,10 +135,7 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
-              <FaCircleChevronLeft />
-            </CarouselPrevious>
-            <CarouselNext className="absolute right-[5px] top-1/2 rounded-full bg-white text-3xl text-[#FFBB3D] opacity-25 duration-300 hover:opacity-100">
+            <CarouselNext className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
               <FaCircleChevronRight />
             </CarouselNext>
           </Carousel>
