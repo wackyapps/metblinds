@@ -13,6 +13,7 @@ import {
   Button,
   useDisclosure,
   Spinner,
+  Badge,
 } from "@heroui/react";
 
 interface BlogCardProps {
@@ -25,6 +26,7 @@ interface BlogCardProps {
       alt_text: string;
     };
     author: string;
+    post_status?: string;
   };
   blogs?: any[];
   setBlogs?: (blogs: any[]) => void;
@@ -97,7 +99,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
       <div style={{ padding: "16px" }}>
         {/* admin edit and delete */}
-        <div className="mb-1 flex justify-end gap-2">
+        <div className="mb-1 flex items-center justify-end gap-2">
+          {isAdminEdit && data?.post_status && (
+            <div className="text-sm text-gray-500">{data.post_status}</div>
+          )}
           {isAdminEdit && (
             <FaEdit
               onClick={(e) => {

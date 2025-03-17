@@ -4,8 +4,11 @@ import BannerItem from "../common/BannerItem";
 import { useEffect, useState } from "react";
 import PaginationComponent from "../common/Pagination";
 import BannerItemSkeleton from "../common/BannerItemSkeleton";
+import { useSearchParams, useRouter } from "next/navigation";
+
 const BannersContainerAdmin = () => {
-  const [page, setPage] = useState(1);
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [banners, setBanners] = useState([]);
   const [pagination, setPagination] = useState({
     total: 7,
@@ -15,6 +18,9 @@ const BannersContainerAdmin = () => {
   });
 
   const limit = 5;
+  // Get page from URL query params or default to 1
+  const page = Number(searchParams.get("page")) || 1;
+
   const { data, isLoading, error } = useGetBannersQuery({
     page: page,
     limit: limit,
@@ -28,6 +34,12 @@ const BannersContainerAdmin = () => {
       setPagination(data?.data?.pagination);
     }
   }, [data]);
+
+  const handlePageChange = (newPage: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", newPage.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
 
   if (isLoading) {
     return (
@@ -69,7 +81,7 @@ const BannersContainerAdmin = () => {
         totalItems={pagination?.total}
         limit={limit}
         page={page}
-        setPage={setPage}
+        setPage={handlePageChange}
       />
     </div>
   );

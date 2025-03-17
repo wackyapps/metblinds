@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import BlogCard from "../blogs/BlogCard";
 import PaginationComponent from "../common/Pagination";
 import BlogCardSkeleton from "../common/BlogCardSkeleton";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const BlogsContainerAdmin = () => {
-  const [page, setPage] = useState(1);
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [blogs, setBlogs] = useState([]);
   const [pagination, setPagination] = useState({
     page: 1,
@@ -15,6 +17,7 @@ const BlogsContainerAdmin = () => {
     pages: 0,
   });
   const limit = 12;
+  const page = Number(searchParams.get("page")) || 1;
   const { data, isLoading, isError } = useGetBlogsQuery({ limit, page });
 
   useEffect(() => {
@@ -25,6 +28,12 @@ const BlogsContainerAdmin = () => {
       setPagination(data?.data?.pagination);
     }
   }, [data]);
+
+  const handlePageChange = (newPage: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", newPage.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
 
   if (isLoading) {
     return (
@@ -42,15 +51,6 @@ const BlogsContainerAdmin = () => {
 
   return (
     <div className="mb-2">
-      {/* <div className="mb-8">
-        <PaginationComponent
-          total={data?.data?.pagination?.pages}
-          totalItems={data?.data?.pagination?.total}
-          limit={limit}
-          page={page}
-          setPage={setPage}
-        />
-      </div> */}
       <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {blogs.map((blog: any, index: number) => (
           <BlogCard
@@ -69,7 +69,7 @@ const BlogsContainerAdmin = () => {
           totalItems={pagination?.total}
           limit={limit}
           page={page}
-          setPage={setPage}
+          setPage={handlePageChange}
         />
       </div>
     </div>

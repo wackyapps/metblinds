@@ -170,7 +170,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
     <div className="mx-auto p-6">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 rounded-lg">
         <div className="flex flex-col [column-gap:10px] [row-gap:30px] lg:flex-row">
-          <div className="flex flex-col gap-4 lg:order-2 lg:basis-[30%] xl:basis-1/4">
+          <div className="order-2 flex flex-col gap-4 lg:basis-[30%] xl:basis-1/4">
             {/* Post Status Dropdown */}
             <div className="mb-4">
               <label
@@ -258,9 +258,8 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
               </button>
             </div>
           </div>
-
           {/* Rich Text Editor */}
-          <div className="row-span-2 lg:order-1 lg:basis-[70%] xl:basis-3/4">
+          <div className="order-1 row-span-2 lg:basis-[70%] xl:basis-3/4">
             {/* Title Input */}
             <div className="mb-4">
               <label

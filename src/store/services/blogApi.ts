@@ -33,7 +33,7 @@ export const blogApi = createApi({
      */
     createBlog: builder.mutation<any, Blog>({
       query: (blog: Blog) => ({
-        url: "/create-posts",
+        url: "/posts-create",
         method: "POST",
         body: blog,
       }),
@@ -43,7 +43,7 @@ export const blogApi = createApi({
      */
     updateBlog: builder.mutation<any, { id: string | number; blog: Blog }>({
       query: ({ id, blog }: { id: string | number; blog: Blog }) => ({
-        url: `/update-posts/${id}`,
+        url: `/posts-update/${id}`,
         method: "POST",
         body: blog,
       }),
@@ -53,7 +53,7 @@ export const blogApi = createApi({
      */
     deleteBlog: builder.mutation<any, { id: string | number }>({
       query: ({ id }: { id: string | number }) => ({
-        url: `/delete-posts/${id}`,
+        url: `/posts-delete/${id}`,
         method: "POST",
       }),
     }),
@@ -62,7 +62,7 @@ export const blogApi = createApi({
      */
     getBlogs: builder.query<any, GetBlogReq>({
       query: (blog: GetBlogReq) =>
-        `/posts?page=${blog.page}&limit=${blog.limit}`,
+        `/posts/list?page=${blog.page}&limit=${blog.limit}`,
       forceRefetch: () => true,
     }),
     /**
@@ -70,6 +70,13 @@ export const blogApi = createApi({
      */
     getBlogById: builder.query<any, { id: string | number }>({
       query: ({ id }: { id: string | number }) => `/posts/${id}`,
+      forceRefetch: () => true,
+    }),
+    /**
+     * get blog by slug
+     */
+    getBlogBySlug: builder.query<any, { slug: string }>({
+      query: ({ slug }: { slug: string }) => `/posts/slug/${slug}`,
       forceRefetch: () => true,
     }),
   }),

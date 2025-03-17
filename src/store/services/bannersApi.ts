@@ -20,7 +20,7 @@ export const bannersApi = createApi({
      */
     createBanner: builder.mutation<any, any>({
       query: (banner: any) => ({
-        url: "/banners",
+        url: "/banners-create",
         method: "POST",
         body: banner,
       }),
@@ -49,7 +49,7 @@ export const bannersApi = createApi({
      */
     getBanners: builder.query<any, { page: number; limit: number }>({
       query: (params: { page: number; limit: number }) =>
-        `/banners?page=${params.page}&limit=${params.limit}`,
+        `/banners/list?page=${params.page}&limit=${params.limit}`,
       forceRefetch: () => true,
     }),
     /**

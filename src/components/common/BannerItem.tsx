@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { FaTrash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 interface BannerItemProps {
   banner: any;
   isAdminDelete?: boolean;
@@ -16,7 +17,10 @@ const BannerItem: React.FC<BannerItemProps> = ({
   const router = useRouter();
   return (
     <div
-      className="relative bg-cover bg-center max-md:flex max-md:min-h-[550px] max-md:flex-col max-md:items-center max-md:justify-center max-md:py-12 md:h-[600px] lg:h-[700px]"
+      className={cn(
+        "relative bg-cover bg-center max-md:flex max-md:min-h-[550px] max-md:flex-col max-md:items-center max-md:justify-center max-md:py-12 md:h-[600px] lg:h-[700px]",
+        isAdminEdit && "cursor-pointer",
+      )}
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url(${banner.backgroundImage})`,

@@ -16,14 +16,14 @@ export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://itelc.org/metblind_api",
-    prepareHeaders: (headers, { getState }) => {
-      // Get the token from localStorage if needed
-      const token = (getState() as RootState).auth.token;
-      if (token) {
-        headers.set("authorization", `Bearer ${token}`);
-      }
-      return headers;
-    },
+    // prepareHeaders: (headers, { getState }) => {
+    //   // Get the token from localStorage if needed
+    //   const token = (getState() as RootState).auth.token;
+    //   if (token) {
+    //     headers.set("authorization", `Bearer ${token}`);
+    //   }
+    //   return headers;
+    // },
   }),
   tagTypes: ["User"],
   endpoints: (builder) => ({
@@ -34,7 +34,14 @@ export const authApi = createApi({
         body: credentials,
       }),
     }),
+    forgotPassword: builder.mutation<any, { email: string }>({
+      query: ({ email }) => ({
+        url: "/usersforgotpassword",
+        method: "POST",
+        body: { email },
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation } = authApi;
+export const { useLoginMutation, useForgotPasswordMutation } = authApi;

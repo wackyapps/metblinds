@@ -1,18 +1,30 @@
 "use client";
 
+import { useSearchParams, useRouter } from "next/navigation";
 import BlogCardAdvanced from "./BlogCardAdvanced";
 import BlogCardAdvancedSkeleton from "./BlogCardAdvancedSkeleton";
 import { useGetBlogsQuery } from "@/store/services/blogApi";
-import { useState } from "react";
 import PaginationComponent from "../common/Pagination";
+
 const BlogsContainerSection = () => {
-  const [page, setPage] = useState(1);
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const limit = 10;
+
+  // Get page from URL query params or default to 1
+  const page = Number(searchParams.get("page")) || 1;
 
   const { data, isLoading, error } = useGetBlogsQuery({
     page: page,
     limit: limit,
   });
+
+  const handlePageChange = (newPage: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", newPage.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
+
   if (isLoading) {
     return (
       <div className="mx-auto max-w-[1500px] px-3 py-24">
@@ -29,7 +41,6 @@ const BlogsContainerSection = () => {
   }
   if (error) return <div>Error: {JSON.stringify(error)}</div>;
   if (!Array.isArray(data?.data?.data)) return <div>An error occurred</div>;
-  if (data?.data?.data?.length === 0) return <div>No blogs found</div>;
 
   return (
     <div className="mx-auto max-w-[1500px] px-3 pb-24">
@@ -55,6 +66,13 @@ const BlogsContainerSection = () => {
             data={blog}
           />
         ))}
+        {data?.data?.data?.length === 0 && (
+          <div className="min-h-[60vh]">
+            <div className="flex flex-col items-center justify-center gap-4">
+              <p className="text-center text-lg font-medium">No blogs found</p>
+            </div>
+          </div>
+        )}
         {/*
          * using pagination component of hero ui
          */}
@@ -64,7 +82,7 @@ const BlogsContainerSection = () => {
             limit={limit}
             total={data?.data?.pagination?.pages}
             page={page}
-            setPage={setPage}
+            setPage={handlePageChange}
           />
         </div>
       </div>

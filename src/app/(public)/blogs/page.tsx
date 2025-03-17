@@ -1,11 +1,13 @@
 import BlogsBanner from "@/components/blogs/BlogsBanner";
 import BlogsContainerSection from "@/components/blogs/BlogsContainerSection";
-
+import { Suspense } from "react";
 const page = () => {
   return (
     <div>
       <BlogsBanner />
-      <BlogsContainerSection />
+      <Suspense fallback={<div>Loading...</div>}>
+        <BlogsContainerSection />
+      </Suspense>
     </div>
   );
 };
