@@ -18,7 +18,7 @@ interface BannerItemProps {
   isAdminDelete?: boolean;
   isAdminEdit?: boolean;
   banners?: any[];
-  setBanners?: Function;
+  setBanners?: (blogs: any[]) => void;
 }
 
 const BannerItem: React.FC<BannerItemProps> = ({
@@ -43,7 +43,8 @@ const BannerItem: React.FC<BannerItemProps> = ({
         toast.success(resp.message);
         console.log(banners, setBanners);
 
-        setBanners && setBanners(banners?.filter((b) => b.id !== banner.id));
+        setBanners &&
+          setBanners(banners?.filter((b) => b.id !== banner.id) as any[]);
         onClose();
       } else {
         toast.error(resp.message);
