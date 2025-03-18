@@ -16,6 +16,7 @@ import { toast } from "react-toastify";
 import BlogFormSkeleton from "./BlogFormSkeleton";
 import { postStatuses } from "@/lib/consts";
 import { useRouter } from "next/navigation";
+import { FaSpinner } from "react-icons/fa";
 
 // Define the schema with Zod
 const blogSchema = z.object({
@@ -91,7 +92,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
       if (response?.data?.data) {
         toast.success("Blog created successfully");
         console.log(response?.data?.data);
-        router.push(`/admin/blogs?id=${response?.data?.data?.id}`);
+        router.replace(`/admin/blogs/edit?id=${response?.data?.data?.id}`);
       }
       if (response?.error?.error as any) {
         toast.error(
@@ -254,7 +255,13 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
                 className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
                 disabled={isLoading}
               >
-                {isLoading || isUpdating ? "Posting..." : "Save"}
+                {isLoading || isUpdating ? (
+                  <FaSpinner />
+                ) : isEdit ? (
+                  "Update"
+                ) : (
+                  "Save"
+                )}
               </button>
             </div>
           </div>

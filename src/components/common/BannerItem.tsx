@@ -56,15 +56,23 @@ const BannerItem: React.FC<BannerItemProps> = ({
     }
   };
 
+  // Check if background image exists
+  const hasBackgroundImage = !!banner.backgroundImage;
+  // Text color class based on background image
+  const textColorClass = hasBackgroundImage ? "text-white" : "text-black";
+
   return (
     <div
       className={cn(
         "relative bg-cover bg-center max-md:flex max-md:min-h-[550px] max-md:flex-col max-md:items-center max-md:justify-center max-md:py-12 md:h-[600px] lg:h-[700px]",
         isAdminEdit && "cursor-pointer",
+        !hasBackgroundImage && "bg-white",
       )}
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url(${banner.backgroundImage})`,
+        backgroundImage: hasBackgroundImage
+          ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(${banner.backgroundImage})`
+          : "none",
       }}
       onClick={() => {
         if (isAdminEdit) {
@@ -102,19 +110,21 @@ const BannerItem: React.FC<BannerItemProps> = ({
           {/* text container of heading subheading and button */}
           <div className="banner-text-container flex max-w-[700px] flex-1 flex-col items-center gap-5 text-center md:items-start md:text-left">
             {banner.heading && (
-              <h2 className="text-4xl font-semibold text-white md:text-5xl lg:text-6xl">
+              <h2
+                className={`text-4xl font-semibold md:text-5xl lg:text-6xl ${textColorClass}`}
+              >
                 {banner.heading}
               </h2>
             )}
 
             {banner.subtitle && (
-              <h4 className="text-2xl text-white md:text-3xl">
+              <h4 className={`text-2xl md:text-3xl ${textColorClass}`}>
                 {banner.subtitle}
               </h4>
             )}
             <img src="/svgs/divider-icon.svg" className="h-2 w-20" alt="" />
             {banner.description && (
-              <p className="text-base text-white md:text-lg">
+              <p className={`text-base md:text-lg ${textColorClass}`}>
                 {banner.description}
               </p>
             )}

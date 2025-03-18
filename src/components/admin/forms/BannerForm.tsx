@@ -15,23 +15,24 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import BannerFormSkeleton from "./BannerFormSkeleton";
 import { postStatuses } from "@/lib/consts";
+import { FaSpinner } from "react-icons/fa";
 // Define the Zod schema for form validation
 const bannerSchema = z.object({
-  offerHeading: z.string().min(1, "Offer heading is required"),
-  subTitle: z.string().min(1, "Sub title is required"),
-  offerDescription: z.string().min(1, "Offer description is required"),
-  discountPercentage: z.string().min(1, "Discount percentage is Required"),
-  offerEndsIn: z.string().min(1, "Offer ends in is required").optional(),
-  buttonText: z.string().min(1, "Button text is required"),
-  buttonLink: z.string().min(1, "Button link is required"),
+  offerHeading: z.string(),
+  subTitle: z.string(),
+  offerDescription: z.string(),
+  discountPercentage: z.string(),
+  offerEndsIn: z.string(),
+  buttonText: z.string(),
+  buttonLink: z.string(),
   coverImage: z
     .object({
-      url: z.string().min(1, "Cover image is required"),
+      url: z.string(),
       id: z.number().nullish(),
     })
     .optional(),
   backgroundImage: z.object({
-    url: z.string().min(1, "Background image is required"),
+    url: z.string(),
     id: z.number().nullish(),
   }),
   post_status: z.enum(["published", "draft"]).default("draft"),
@@ -139,10 +140,17 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
         redirect_url: data.buttonLink,
         subtitle: data.subTitle,
       });
+      if (response?.data?.data?.error) {
+        toast.error(response?.data?.data?.error);
+      }
+      if ((response?.error as any)?.data?.error) {
+        toast.error((response?.error as any)?.data?.error);
+      }
+
       const bannerData = response?.data?.data;
       if (bannerData?.data) {
         toast.success("Banner created successfully");
-        router.push(`/admin/banners/edit?id=${bannerData.data.id}`);
+        router.replace(`/admin/banners/edit?id=${bannerData.data.id}`);
       } else if (bannerData?.error) {
         toast.error(bannerData?.error);
       }
@@ -474,7 +482,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
               type="submit"
               className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
             >
-              {isBannerLoading ? "Saving..." : "Save"}
+              {isBannerLoading ? <FaSpinner /> : isEdit ? "Update" : "Save"}
             </button>
           </div>
         </div>
