@@ -73,7 +73,7 @@ const BannersContainerAdmin = () => {
             discount_percentage: banner?.discount_percentage,
           }}
           banners={banners}
-          setBanners={setBanners}
+          setBanners={setBanners as (banners: any[]) => void}
           isAdminDelete={true}
           isAdminEdit={true}
         />
