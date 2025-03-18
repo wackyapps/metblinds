@@ -72,6 +72,8 @@ const BannersContainerAdmin = () => {
             subtitle: banner?.subtitle,
             discount_percentage: banner?.discount_percentage,
           }}
+          banners={banners}
+          setBanners={setBanners}
           isAdminDelete={true}
           isAdminEdit={true}
         />

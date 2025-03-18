@@ -40,7 +40,7 @@ export const bannersApi = createApi({
      */
     deleteBanner: builder.mutation<any, { id: string | number }>({
       query: ({ id }: { id: string | number }) => ({
-        url: `/delete-banner/${id}`,
+        url: `/banners-delete/${id}`,
         method: "POST",
       }),
     }),

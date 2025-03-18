@@ -1,20 +1,61 @@
 "use client";
 import Link from "next/link";
-import { FaTrash } from "react-icons/fa";
+import { FaSpinner, FaTrash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@heroui/react";
+import { useDeleteBannerMutation } from "@/store/services/bannersApi";
+import { toast } from "react-toastify";
 interface BannerItemProps {
   banner: any;
   isAdminDelete?: boolean;
   isAdminEdit?: boolean;
+  banners?: any[];
+  setBanners?: Function;
 }
 
 const BannerItem: React.FC<BannerItemProps> = ({
   banner,
   isAdminDelete,
   isAdminEdit,
+  banners,
+  setBanners,
 }) => {
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const router = useRouter();
+  const [deleteBanner, { isLoading: isDeleteLoading }] =
+    useDeleteBannerMutation();
+
+  /**
+   * handle delete click
+   */
+  const handleDeleteClick = async () => {
+    try {
+      const resp = await deleteBanner({ id: banner.id }).unwrap();
+      if (resp.message.includes("deleted successfully")) {
+        toast.success(resp.message);
+        console.log(banners, setBanners);
+
+        setBanners && setBanners(banners?.filter((b) => b.id !== banner.id));
+        onClose();
+      } else {
+        toast.error(resp.message);
+      }
+      if (resp?.data?.error) {
+        toast.error(resp?.data?.error);
+      }
+    } catch (error: any) {
+      toast.error(error?.message || "Something went wrong");
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -42,7 +83,13 @@ const BannerItem: React.FC<BannerItemProps> = ({
           )}
           {isAdminDelete && (
             <div className="">
-              <button className="rounded bg-red-400 px-3 py-1.5 text-white">
+              <button
+                className="rounded bg-red-400 px-3 py-1.5 text-white"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevent card click event
+                  onOpen();
+                }}
+              >
                 <FaTrash />
               </button>
             </div>
@@ -103,6 +150,49 @@ const BannerItem: React.FC<BannerItemProps> = ({
           )}
         </div>
       </div>
+      {/*
+       * delete dialog
+       */}
+      <Modal
+        isDismissable={false}
+        isOpen={isOpen}
+        classNames={{
+          closeButton: "hidden",
+        }}
+        onOpenChange={onOpenChange}
+      >
+        <ModalContent>
+          {(onClose: () => void): React.ReactElement => (
+            <>
+              <ModalHeader>
+                Are you sure you want to delete this blog?
+              </ModalHeader>
+              <ModalFooter>
+                <Button
+                  color="danger"
+                  variant="light"
+                  disabled={isDeleteLoading}
+                  onPress={onClose}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  color="danger"
+                  variant="light"
+                  disabled={isDeleteLoading}
+                  onPress={handleDeleteClick}
+                >
+                  {isDeleteLoading ? (
+                    <FaSpinner className="animate-spin" />
+                  ) : (
+                    "Delete"
+                  )}
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 };
