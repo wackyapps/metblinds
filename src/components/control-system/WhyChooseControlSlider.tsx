@@ -57,7 +57,7 @@ const WhyChooseControlSlider = ({ data }: Props) => {
       <div className="mx-auto max-w-[1560px] px-4">
         <div className="mx-auto mb-14 flex max-w-[1200px] flex-col items-center px-3 md:mb-20">
           <h2
-            className={` ${inter.className} relative mb-10 text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            className={` ${inter.className} relative mb-10 text-center text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
           >
             {data.heading}
           </h2>

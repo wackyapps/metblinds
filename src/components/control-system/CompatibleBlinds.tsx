@@ -1,10 +1,15 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import Glide from "@glidejs/glide";
-// Import core styles
-// Import theme styles
+import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import BlindCard from "../common/cards/BlindCard";
 import { inter } from "@/fonts";
+import { CiCircleChevRight, CiCircleChevLeft } from "react-icons/ci";
 
 type Props = {
   data: {
@@ -18,36 +23,14 @@ type Props = {
     }[];
   };
 };
+
 const CompatibleBlinds = ({ data }: Props) => {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (sliderRef.current) {
-      const glide = new Glide(sliderRef.current, {
-        type: "carousel",
-        startAt: 0,
-        perView: 4,
-        gap: 20,
-        autoplay: 200000,
-        hoverpause: true,
-        breakpoints: {
-          4000: { perView: 4 },
-          1200: { perView: 3 },
-          1000: { perView: 2 },
-          700: { perView: 1 },
-        },
-      });
-      glide.mount();
-      return () => {
-        glide.destroy();
-      };
-    }
-  }, []);
   return (
     <div className="py-24">
       <div className="global-container">
         <div className="mb-14 flex flex-col items-center">
           <h2
-            className={`${inter.className} relative mb-10 text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            className={`${inter.className} relative mb-10 text-center text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
           >
             {data.heading}
           </h2>
@@ -55,19 +38,31 @@ const CompatibleBlinds = ({ data }: Props) => {
             {data.subHeading}
           </p>
         </div>
-        <div className="relative overflow-hidden" ref={sliderRef}>
-          <div className="glide__track" data-glide-el="track">
-            <ul className="glide__slides">
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
+          >
+            <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+              <CiCircleChevLeft className="text-3xl text-[#FFA600] sm:text-4xl md:text-5xl lg:text-6xl" />
+            </CarouselPrevious>
+            <CarouselContent className="-ml-2 md:-ml-4">
               {data.blinds.map((blind, index) => (
-                <li
+                <CarouselItem
                   key={index}
-                  className="glide__slide py-2 [height:100%_!important]"
+                  className="pl-2 md:basis-1/2 md:pl-4 lg:basis-1/3"
                 >
                   <BlindCard {...blind} />
-                </li>
+                </CarouselItem>
               ))}
-            </ul>
-          </div>
+            </CarouselContent>
+            <CarouselNext className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+              <CiCircleChevRight className="text-3xl text-[#FFA600] sm:text-4xl md:text-5xl lg:text-6xl" />
+            </CarouselNext>
+          </Carousel>
         </div>
       </div>
     </div>

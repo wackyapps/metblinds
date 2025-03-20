@@ -21,7 +21,7 @@ const ProductionSteps: React.FC<{
 
       <div className="mb-14 flex flex-col items-center">
         <h2
-          className={`${rubik.className} relative mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+          className={`${rubik.className} relative mb-10 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
         >
           {data.heading}
         </h2>
@@ -31,15 +31,17 @@ const ProductionSteps: React.FC<{
       </div>
 
       {/* Process Steps Grid */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap justify-center">
         {data.features.map((feature, index) => (
-          <ProcessStepCard
-            key={index}
-            data={{
-              ...feature,
-              index: index + 1,
-            }}
-          />
+          <div className="basis-full p-4 md:basis-1/2 lg:basis-1/3" key={index}>
+            <ProcessStepCard
+              className="h-full basis-full md:basis-1/2 lg:basis-1/3"
+              data={{
+                ...feature,
+                index: index + 1,
+              }}
+            />
+          </div>
         ))}
       </div>
     </section>

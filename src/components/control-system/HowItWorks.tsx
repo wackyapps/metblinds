@@ -102,7 +102,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ data }) => {
         {/* Header Section */}
         <div className="mb-14 flex flex-col items-center">
           <h2
-            className={`${inter.className} relative z-10 mb-10 text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            className={`${inter.className} relative z-10 mb-10 text-center text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
           >
             {data.heading}
           </h2>
@@ -131,12 +131,12 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ data }) => {
 
           {/* Right Column - Image Slider */}
           <div className="aspect-[749/753] h-full max-h-[650px] w-full lg:w-1/2">
-            <div className="glide h-full" ref={sliderRef}>
-              <div className="glide__track h-full" data-glide-el="track">
-                <ul className="glide__slides h-full">
+            <div className="glide h-full w-auto" ref={sliderRef}>
+              <div className="glide__track h-full w-auto" data-glide-el="track">
+                <ul className="glide__slides h-full w-auto">
                   {data.steps.map((step, index) => (
-                    <li key={index} className="glide__slide h-full">
-                      <div className="relative h-full">
+                    <li key={index} className="glide__slide h-full w-auto">
+                      <div className="relative h-full w-auto">
                         <img
                           width={1000}
                           height={1000}
