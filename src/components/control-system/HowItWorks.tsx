@@ -25,14 +25,27 @@ type HowItWorksProps = {
 
 const StepItem: React.FC<{
   data: Step & { isActive: boolean; onClick: () => void };
-}> = ({ data }) => {
+  isFirst: boolean;
+  isLast: boolean;
+}> = ({ data, isFirst, isLast }) => {
   return (
     <div
       className={`flex cursor-pointer items-center gap-5 rounded-xl px-5 py-3 transition duration-300`}
       onClick={data.onClick}
     >
       <div className="relative">
+        {/* Vertical line before the icon (except for first item) */}
+        {isFirst && (
+          <div className="absolute -top-[25px] left-1/2 h-[25px] w-[8px] -translate-x-1/2 rounded-t-full bg-[#FFA600]"></div>
+        )}
+        {!isFirst && (
+          <div className="absolute -top-[52px] left-1/2 h-[52px] w-[8px] -translate-x-1/2 bg-[#FFA600]"></div>
+        )}
+
+        {/* Circle background */}
         <div className="h-[98px] w-[98px] rounded-full bg-[#F7F9FA]"></div>
+
+        {/* Icon container */}
         <div
           className={`absolute inset-[10px] flex items-center justify-center rounded-full border-8 border-[#FFA600] ${data.isActive ? "bg-[#FFA600]" : "bg-white"} `}
         >
@@ -42,6 +55,14 @@ const StepItem: React.FC<{
             {data.icon}
           </div>
         </div>
+
+        {/* Vertical line after the icon (except for last item) */}
+        {!isLast && (
+          <div className="absolute -bottom-[52px] left-1/2 h-[52px] w-[8px] -translate-x-1/2 bg-[#FFA600]"></div>
+        )}
+        {isLast && (
+          <div className="absolute -bottom-[25px] left-1/2 h-[25px] w-[8px] -translate-x-1/2 rounded-b-full bg-[#FFA600]"></div>
+        )}
       </div>
       <div
         className={`text-2xl leading-7 ${
@@ -124,13 +145,15 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ data }) => {
                     isActive: activeIndex === index,
                     onClick: () => handleStepClick(index),
                   }}
+                  isFirst={index === 0}
+                  isLast={index === data.steps.length - 1}
                 />
               ))}
             </div>
           </div>
 
           {/* Right Column - Image Slider */}
-          <div className="aspect-[749/753] h-full max-h-[650px] w-full lg:w-1/2">
+          <div className="aspect-[749/753] h-full max-h-[600px] w-full lg:w-1/2">
             <div className="glide h-full w-auto" ref={sliderRef}>
               <div className="glide__track h-full w-auto" data-glide-el="track">
                 <ul className="glide__slides h-full w-auto">

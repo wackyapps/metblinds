@@ -21,13 +21,13 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
             {data.subHeading}
           </p>
         </div>
-        <div className="overflow-x-auto rounded-lg bg-white shadow-md">
+        <div className="overflow-x-auto rounded-[32px] bg-white shadow-md">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-[#FDBA3C]">
               <tr>
                 <th
                   scope="col"
-                  className="px-8 py-6 text-left text-lg font-medium uppercase tracking-wider text-white"
+                  className="px-10 py-6 text-left text-lg font-medium uppercase tracking-wider text-white"
                 >
                   Blinds
                 </th>
@@ -35,7 +35,7 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
                   <th
                     key={option}
                     scope="col"
-                    className="whitespace-nowrap px-8 py-3 text-center text-lg font-medium uppercase tracking-wider text-white"
+                    className="whitespace-nowrap px-10 py-3 text-center text-lg font-medium uppercase tracking-wider text-white"
                   >
                     {option}
                   </th>
@@ -44,14 +44,14 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white">
               {data.blindsDetails.map((system) => (
-                <tr key={system.blindType}>
-                  <td className="whitespace-nowrap px-6 py-4 text-xl font-medium text-[#504D4D]">
+                <tr key={system.blindType} className="px-4">
+                  <td className="whitespace-nowrap px-10 py-4 text-xl font-medium text-[#504D4D]">
                     {system.blindType}
                   </td>
                   {data.controlOptions.map((option) => (
                     <td
                       key={option}
-                      className="whitespace-nowrap px-6 py-4 text-center"
+                      className="whitespace-nowrap px-10 py-4 text-center"
                     >
                       {system.controls[
                         option as keyof typeof system.controls
