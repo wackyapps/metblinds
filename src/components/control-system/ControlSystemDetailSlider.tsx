@@ -45,7 +45,7 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
 
   return (
     <div className="py-24">
-      <div className="global-container mx-auto px-4">
+      <div className="mx-auto max-w-[1530px] px-4">
         <div className="mb-14 space-y-4 text-center">
           <h1
             className={`${inter.className} mx-auto max-w-[700px] text-center text-4xl font-bold text-[#023D64] md:text-5xl`}
@@ -77,8 +77,8 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
             <ul className="glide__slides">
               {controlSystemPages.map((option, index) => (
                 <li key={index} className="glide__slide">
-                  <div className="flex w-full flex-col items-center gap-8 md:flex-row md:gap-16">
-                    <div className="w-full space-y-10 sm:max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%]">
+                  <div className="flex w-full flex-col items-center gap-[140px] md:justify-center md:gap-16 lg:flex-row">
+                    <div className="order-2 w-full space-y-10 lg:order-1">
                       <h2 className="text-3xl font-medium text-[#023D64] md:text-4xl">
                         {option.title}
                       </h2>
@@ -91,6 +91,13 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
                       >
                         Learn More <FiArrowRight className="ml-2" />
                       </Link>
+                    </div>
+                    <div className="order-1 lg:order-2">
+                      <img
+                        className="mx-auto block aspect-video rounded-[55px] max-lg:max-w-[500px]"
+                        src={option.image}
+                        alt={option.title || ""}
+                      />
                     </div>
                   </div>
                 </li>

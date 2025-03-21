@@ -2,10 +2,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AppState {
   value: number;
+  warrantyDialogOpen: boolean;
 }
 
 const initialState: AppState = {
   value: 0,
+  warrantyDialogOpen: false,
 };
 
 const appSlice = createSlice({
@@ -21,9 +23,17 @@ const appSlice = createSlice({
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
     },
+    setWarrantyDialogOpen: (state, action: PayloadAction<boolean>) => {
+      state.warrantyDialogOpen = action.payload;
+    },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = appSlice.actions;
+export const {
+  increment,
+  decrement,
+  incrementByAmount,
+  setWarrantyDialogOpen,
+} = appSlice.actions;
 
 export const appReducer = appSlice.reducer;

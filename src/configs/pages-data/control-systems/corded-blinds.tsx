@@ -16,6 +16,7 @@ const cordedBlinds = {
   title: "Corded Blinds",
   description:
     "Corded blinds are a type of blind that uses a cord to operate the blind.",
+  image: "/images/corded-system.png",
 
   /**
    * control system banner

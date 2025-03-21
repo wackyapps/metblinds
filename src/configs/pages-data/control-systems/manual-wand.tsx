@@ -15,7 +15,8 @@ const manualWand = {
   title: "Manual Wand",
   icon: "/icons/control-systems/manual-wand.svg",
   description:
-    "Manual wand control system uses a simple wand mechanism to operate the blinds.",
+    "Manual wand control is a cordless option that uses a rotating wand to open and close your blinds.",
+  image: "/images/corded-system.png",
   /**
    * control system banner
    */

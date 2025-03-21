@@ -15,7 +15,8 @@ const electricWand = {
   title: "Electric Wand",
   icon: "/icons/control-systems/electric-wand.svg",
   description:
-    "Electric wand control system uses an electric motor to operate the blinds with a wand controller.",
+    "Electric wand control makes operating your blinds effortless with motorized technology built into a convenient handheld wand.",
+  image: "/images/corded-system.png",
   /**
    * control system banner
    */

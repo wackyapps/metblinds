@@ -15,7 +15,8 @@ const motorizedBlinds = {
   title: "Motorized Blinds",
   icon: "/icons/control-systems/motorized-blinds.svg",
   description:
-    "Motorized blinds use electric motors to operate the blinds, offering convenient and effortless control.",
+    "Motorized blinds allow for convenient operation at the touch of a button, eliminating the need for cords or wands.",
+  image: "/images/corded-system.png",
   /**
    * control system banner
    */

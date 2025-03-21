@@ -16,6 +16,7 @@ const smartControl = {
   icon: "/icons/control-systems/smart-control.svg",
   description:
     "Smart control system allows you to operate your blinds using smartphone apps, voice commands, and home automation systems.",
+  image: "/images/corded-system.png",
   /**
    * control system banner
    */

@@ -15,7 +15,8 @@ const cordlessBlinds = {
   title: "Cordless Blinds",
   icon: "/icons/control-systems/cordless-blinds.svg",
   description:
-    "Cordless blinds are a type of blind that uses a cordless mechanism to operate the blind.",
+    "Cordless blinds are a modern and safe alternative to traditional corded blinds, offering a clean look with simple manual operation.",
+  image: "/images/corded-system.png",
   /**
    * control system banner
    */

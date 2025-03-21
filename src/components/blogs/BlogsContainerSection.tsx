@@ -47,17 +47,7 @@ const BlogsContainerSection = () => {
       {/*
        * Blog Radio Buttons
        */}
-      <div className="flex justify-center gap-4 py-8">
-        <button className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white">
-          Recommended
-        </button>
-        <button className="flex items-center justify-center rounded border border-[#C3C4C5] bg-white px-6 py-2.5 text-base text-[#A7A7A7]">
-          First posts
-        </button>
-        <button className="flex items-center justify-center rounded border border-[#C3C4C5] bg-white px-6 py-2.5 text-base text-[#A7A7A7]">
-          Latest
-        </button>
-      </div>
+
       <div className="flex flex-col gap-8">
         {data?.data?.data?.map((blog: any, index: number) => (
           <BlogCardAdvanced
@@ -76,7 +66,7 @@ const BlogsContainerSection = () => {
         {/*
          * using pagination component of hero ui
          */}
-        <div>
+        {/* <div>
           <PaginationComponent
             totalItems={data?.data?.pagination?.total}
             limit={limit}
@@ -84,6 +74,41 @@ const BlogsContainerSection = () => {
             page={page}
             setPage={handlePageChange}
           />
+        </div> */}
+
+        <div className="flex items-center justify-between gap-4">
+          {/* prev button */}
+          {page <= 1 ? (
+            <div></div>
+          ) : (
+            <button
+              onClick={() => page > 1 && handlePageChange(page - 1)}
+              className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white"
+              disabled={page <= 1}
+            >
+              Prev
+            </button>
+          )}
+          <span className="text-sm">
+            {limit * (page - 1) + 1} -{" "}
+            {Math.min(limit * page, data?.data?.pagination?.total)} of{" "}
+            {data?.data?.pagination?.total}{" "}
+          </span>
+          {/* next button */}
+          {page >= data?.data?.pagination?.pages ? (
+            <div></div>
+          ) : (
+            <button
+              onClick={() =>
+                page < data?.data?.pagination?.pages &&
+                handlePageChange(page + 1)
+              }
+              className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white"
+              disabled={page >= data?.data?.pagination?.pages}
+            >
+              Next
+            </button>
+          )}
         </div>
       </div>
     </div>

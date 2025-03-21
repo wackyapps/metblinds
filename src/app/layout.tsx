@@ -6,7 +6,7 @@ import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Bounce } from "react-toastify";
-
+import WarrantyDialog from "@/components/common/dialogs/WarrantyDialog";
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
@@ -26,7 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>
+          {children}
+
+          <WarrantyDialog />
+        </StoreProvider>
         <ToastContainer
           position="top-right"
           autoClose={4000}
