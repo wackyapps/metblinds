@@ -16,7 +16,7 @@ const AdminTabs = ({ children }: { children: React.ReactNode }) => {
   ];
   return (
     <div className="global-container mt-5">
-      <div className="px-3">
+      <div>
         <div className="overflow-hidden rounded-[31px] bg-[#F7F9FA]">
           <div className="flex items-center justify-start">
             {tabs.map((button, index) => (

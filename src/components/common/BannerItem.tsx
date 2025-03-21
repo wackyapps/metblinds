@@ -145,7 +145,7 @@ const BannerItem: React.FC<BannerItemProps> = ({
           {banner.coverImage && (
             <div className="relative mr-6 w-full max-md:hidden max-md:max-w-[450px] md:w-auto">
               {banner.discount_percentage && (
-                <h5 className="absolute right-0 top-0 z-50 flex aspect-square -translate-y-1/3 translate-x-1/3 items-center justify-center rounded-[50%] bg-white p-5 text-[42px] font-bold text-[#013F68]">
+                <h5 className="absolute right-0 top-0 z-50 flex aspect-square -translate-y-1/3 translate-x-1/3 items-center justify-center rounded-[50%] bg-white p-5 text-[32px] font-bold text-[#013F68] md:text-[35px] lg:text-[42px]">
                   <span>{banner.discount_percentage}</span>
                 </h5>
               )}

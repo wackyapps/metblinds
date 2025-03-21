@@ -69,6 +69,40 @@ const RichTextEditor = ({ value, onChange }: Props) => {
           showCharsCounter: true,
           showWordsCounter: true,
           showXPathInStatusbar: false,
+          // Image upload configuration
+          uploader: {
+            url: "https://itelc.org/metblind_api/editor/upload",
+            format: "json",
+            method: "POST",
+            prepareData: function (formData: FormData) {
+              return formData;
+            },
+            isSuccess: function (resp: any) {
+              return resp && resp.success;
+            },
+            getMessage: function (resp: any) {
+              return resp && resp.message;
+            },
+            process: function (resp: any) {
+              return {
+                files: resp.file ? [resp.file.url] : [],
+                path: resp.file ? resp.file.url : "",
+                baseurl: "",
+                error: resp.success ? 0 : 1,
+                message: resp.message || "",
+              };
+            },
+            defaultHandlerSuccess: function (this: any, data: any) {
+              if (data.files && data.files.length) {
+                data.files.forEach((file: string) => {
+                  this.selection.insertImage(file);
+                });
+              }
+            },
+            error: function (e: Error) {
+              console.log(e.message);
+            },
+          },
         }}
         className="jodit-tailwind bg-transparent"
         onBlur={(newContent) => onChange(newContent)}

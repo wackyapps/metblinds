@@ -193,7 +193,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
   }
 
   return (
-    <div className="mx-auto p-6">
+    <div className="mx-auto">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 rounded-lg">
         <div className="flex flex-col [column-gap:10px] [row-gap:30px] lg:flex-row">
           <div className="order-2 flex flex-col gap-4 lg:basis-[30%] xl:basis-1/4">

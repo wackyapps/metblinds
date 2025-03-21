@@ -206,10 +206,10 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
   }
 
   return (
-    <div className="mx-auto p-6">
+    <div className="mx-auto">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-2 gap-3 rounded-lg"
+        className="min-w-[600px]:grid-cols-2 grid grid-cols-1 gap-3 rounded-lg"
       >
         <div className="space-y-3">
           {/* Offer Heading */}
