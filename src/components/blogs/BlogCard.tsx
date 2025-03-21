@@ -90,12 +90,16 @@ const BlogCard: React.FC<BlogCardProps> = ({
         }
       }}
     >
-      <img
-        src={featured_image.url}
-        alt={featured_image.alt_text}
-        className="aspect-video w-full object-cover"
-        style={{ width: "100%", height: "auto" }}
-      />
+      {featured_image?.url ? (
+        <img
+          src={featured_image.url}
+          alt={featured_image.alt_text}
+          className="aspect-video w-full object-cover"
+          style={{ width: "100%", height: "auto" }}
+        />
+      ) : (
+        <div className="aspect-video w-full bg-gray-200"></div>
+      )}
 
       <div style={{ padding: "16px" }}>
         {/* admin edit and delete */}

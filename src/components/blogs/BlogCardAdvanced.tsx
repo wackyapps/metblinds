@@ -39,11 +39,15 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
         <div
           className={`relative h-full max-h-[600px] min-h-96 w-full lg:flex-1 ${textDirection == "left" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}
         >
-          <img
-            src={featured_image.url}
-            alt={featured_image.alt_text}
-            className="absolute left-0 top-0 h-full w-full object-cover"
-          />
+          {featured_image?.url ? (
+            <img
+              src={featured_image.url}
+              alt={featured_image.alt_text}
+              className="absolute left-0 top-0 h-full w-full object-cover"
+            />
+          ) : (
+            <div className="absolute left-0 top-0 h-full w-full bg-gray-200"></div>
+          )}
         </div>
         {/* Content Section */}
         <div

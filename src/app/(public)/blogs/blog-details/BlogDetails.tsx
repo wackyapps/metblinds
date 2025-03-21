@@ -70,13 +70,15 @@ const BlogDetails = () => {
           {/*
            * featured image
            */}
-          <div className="mb-8">
-            <img
-              src={blogDetails.featured_image.url}
-              alt={blogDetails.featured_image.alt_text}
-              className="aspect-[1194/670] h-auto w-full rounded-[25px]"
-            />
-          </div>
+          {blogDetails.featured_image?.url && (
+            <div className="mb-8">
+              <img
+                src={blogDetails.featured_image.url}
+                alt={blogDetails.featured_image.alt_text}
+                className="aspect-[1194/670] h-auto w-full rounded-[25px]"
+              />
+            </div>
+          )}
           {/*
            * content
            */}

@@ -12,7 +12,7 @@ const AdminNavbar = () => {
     dispatch(setToken(""));
     dispatch(setIsAuthenticated(false));
     dispatch(logout());
-    router.push("/auth/login");
+    router.push("/login");
   };
   return (
     <div className="global-container">

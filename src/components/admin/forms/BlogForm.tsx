@@ -23,7 +23,7 @@ const blogSchema = z.object({
   title: z.string().min(1, "Title is required"),
   content: z.string().min(1, "Content is required"),
   featuredImage: z.object({
-    url: z.string().min(1, "Featured image is required"),
+    url: z.string(),
     id: z.number().nullish(),
   }),
   post_status: z.enum(["published", "draft"]).default("draft"),

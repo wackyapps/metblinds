@@ -1,19 +1,23 @@
 "use client";
-import { useGetBannersQuery } from "@/store/services/bannersApi";
 import BannerItem from "../common/BannerItem";
 import { useEffect, useState } from "react";
 import PaginationComponent from "../common/Pagination";
 import BannerItemSkeleton from "../common/BannerItemSkeleton";
 import { useSearchParams, useRouter } from "next/navigation";
+import axios from "axios";
+import { BASE_URL } from "@/configs/consts";
 
 const BannersContainerAdmin = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [banners, setBanners] = useState([]);
   const [pagination, setPagination] = useState({
-    total: 7,
-    page: 0,
-    limit: 6,
+    total: 0,
+    page: 1,
+    limit: 5,
     pages: 0,
   });
 
@@ -21,19 +25,30 @@ const BannersContainerAdmin = () => {
   // Get page from URL query params or default to 1
   const page = Number(searchParams?.get("page")) || 1;
 
-  const { data, isLoading, error } = useGetBannersQuery({
-    page: page,
-    limit: limit,
-  });
-
   useEffect(() => {
-    if (data?.data?.data?.length > 0 && Array.isArray(data?.data?.data)) {
-      setBanners(data?.data?.data);
+    async function fetchBanners() {
+      setIsLoading(true);
+      try {
+        const res = await axios(
+          `${BASE_URL}/banners/list?page=${page}&limit=${limit}`,
+        );
+        const data = res.data;
+        if (data?.data?.data?.length > 0 && Array.isArray(data?.data?.data)) {
+          setBanners(data?.data?.data);
+        }
+        if (data?.data?.pagination) {
+          setPagination(data?.data?.pagination);
+        }
+        setIsLoading(false);
+      } catch (error: any) {
+        setError(error);
+        setIsLoading(false);
+      } finally {
+        setIsLoading(false);
+      }
     }
-    if (data?.data?.pagination) {
-      setPagination(data?.data?.pagination);
-    }
-  }, [data]);
+    fetchBanners();
+  }, [page]);
 
   const handlePageChange = (newPage: number) => {
     const params = new URLSearchParams(searchParams?.toString());
@@ -52,8 +67,35 @@ const BannersContainerAdmin = () => {
   }
 
   if (error) {
-    return <div>Error: {JSON.stringify(error)}</div>;
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <div
+          className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+          role="alert"
+        >
+          <strong className="font-bold">Error!</strong>
+          <span className="block sm:inline">
+            {JSON.stringify(
+              (error as any).data?.message || "An error occurred",
+            )}
+          </span>
+        </div>
+      </div>
+    );
   }
+
+  if (Array.isArray(banners) && banners.length === 0)
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <div
+          className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+          role="alert"
+        >
+          <strong className="font-bold">Error!</strong>
+          <span className="block sm:inline">No banners found</span>
+        </div>
+      </div>
+    );
 
   return (
     <div className="space-y-4">
