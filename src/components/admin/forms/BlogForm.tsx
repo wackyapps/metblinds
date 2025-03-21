@@ -57,7 +57,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
     isLoading: isBlogLoading,
     error: blogGettingError,
   } = useGetBlogByIdQuery({ id: id as string }, { skip: !id });
-  const blogData = blog?.data?.data;
+  const blogData = blog?.data;
   /**
    * useForm for zod resolver
    */
@@ -89,10 +89,11 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
         post_status: data.post_status,
         featured_image_id: featuredImage.id as number,
       });
-      if (response?.data?.data) {
+      if (response?.data?.data?.data) {
         toast.success("Blog created successfully");
-        console.log(response?.data?.data);
-        router.replace(`/admin/blogs/edit?id=${response?.data?.data?.id}`);
+        router.replace(
+          `/admin/blogs/edit?id=${response?.data?.data?.data?.id}`,
+        );
       }
       if (response?.error?.error as any) {
         toast.error(
@@ -161,10 +162,34 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
     return <BlogFormSkeleton />;
   }
   if (blogGettingError) {
-    return <div>Error</div>;
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <div
+          className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+          role="alert"
+        >
+          <strong className="font-bold">Error!</strong>
+          <span className="block sm:inline">
+            {JSON.stringify((blogGettingError as any).data.message)}
+          </span>
+        </div>
+      </div>
+    );
   }
   if (!id && isEdit) {
-    return <div>Something went wrong</div>;
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <div
+          className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+          role="alert"
+        >
+          <strong className="font-bold">Error!</strong>
+          <span className="block sm:inline">
+            Something went wrong while editing the blog
+          </span>
+        </div>
+      </div>
+    );
   }
 
   return (

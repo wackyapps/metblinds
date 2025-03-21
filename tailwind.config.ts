@@ -9,6 +9,15 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    // Safelist important Jodit classes to prevent Tailwind from purging them
+    "jodit-wysiwyg",
+    "jodit-container",
+    "jodit-toolbar",
+    "jodit-toolbar__box",
+    "jodit-toolbar-button",
+    "jodit-toolbar-popup",
+  ],
 
   theme: {
     screens: {

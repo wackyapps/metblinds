@@ -18,7 +18,12 @@ const BlogsContainerAdmin = () => {
   });
   const limit = 12;
   const page = Number(searchParams?.get("page")) || 1;
-  const { data, isLoading, isError } = useGetBlogsQuery({ limit, page });
+  const {
+    data,
+    isLoading,
+    isError,
+    error: blogGettingError,
+  } = useGetBlogsQuery({ limit, page });
 
   useEffect(() => {
     if (data?.data?.data?.length > 0 && Array.isArray(data?.data?.data)) {
@@ -46,8 +51,32 @@ const BlogsContainerAdmin = () => {
       </div>
     );
   }
-  if (isError) return <div>Error: {JSON.stringify(isError)}</div>;
-  if (blogs.length === 0) return <div>No blogs found</div>;
+  if (isError)
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <div
+          className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+          role="alert"
+        >
+          <strong className="font-bold">Error!</strong>
+          <span className="block sm:inline">
+            {JSON.stringify((blogGettingError as any).data.message)}
+          </span>
+        </div>
+      </div>
+    );
+  if (Array.isArray(data?.data?.data) && data?.data?.data?.length == 0)
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <div
+          className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
+          role="alert"
+        >
+          <strong className="font-bold">Error!</strong>
+          <span className="block sm:inline">No blogs found</span>
+        </div>
+      </div>
+    );
 
   return (
     <div className="mb-2">

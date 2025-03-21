@@ -69,6 +69,9 @@ const BlindsTestimonials = ({ data }: Props) => {
               640: {
                 slidesPerView: 1,
               },
+              1000: {
+                slidesPerView: 3,
+              },
             }}
             className="h-full w-full"
           >

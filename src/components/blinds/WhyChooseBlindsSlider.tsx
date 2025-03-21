@@ -29,7 +29,7 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
       type: "carousel",
       perView: 1,
       gap: 0,
-      autoplay: 1000000,
+      autoplay: 2000,
     });
 
     glideInstance.current.on("run.after", () => {
@@ -106,15 +106,12 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
           </div>
 
           {/* Right Content - Slider */}
-          <div className="flex w-full flex-col items-center lg:w-1/2">
-            <div className="glide lg:max-w-[700px]" ref={sliderRef}>
-              <div className="glide__track" data-glide-el="track">
-                <ul className="glide__slides">
+          <div className="aspect-[749/753] h-full max-h-[650px] w-full lg:w-1/2">
+            <div className="glide h-full" ref={sliderRef}>
+              <div className="glide__track h-full" data-glide-el="track">
+                <ul className="glide__slides h-full">
                   {data.features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="glide__slide aspect-[749/753] h-full"
-                    >
+                    <li key={index} className="glide__slide h-full">
                       <div className="relative h-full">
                         <img
                           width={1000}
@@ -123,24 +120,24 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
                           alt={feature.title}
                           className="h-full w-full rounded-[42px] object-cover"
                         />
+                        {/* Dots Indicator */}
+                        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+                          {data.features.map((_, i) => (
+                            <button
+                              key={i}
+                              onClick={() => handleFeatureClick(i)}
+                              className={`h-3 w-3 rounded-full transition-all ${
+                                activeIndex === i
+                                  ? "w-6 bg-gray-500"
+                                  : "bg-gray-300"
+                              }`}
+                            ></button>
+                          ))}
+                        </div>
                       </div>
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-            <div className="mt-8 flex justify-center">
-              {/* Dots Indicator */}
-              <div className="flex gap-2">
-                {data.features.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleFeatureClick(i)}
-                    className={`h-3 w-3 rounded-full transition-all ${
-                      activeIndex === i ? "w-6 bg-[#FFAD33]" : "bg-[#D8D8D8]"
-                    }`}
-                  ></button>
-                ))}
               </div>
             </div>
           </div>

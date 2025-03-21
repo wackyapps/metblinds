@@ -33,7 +33,7 @@ const WhyChooseControlSlider = ({ data }: Props) => {
       type: "carousel",
       perView: 1,
       gap: 0,
-      autoplay: 5000,
+      autoplay: 2000,
     });
 
     glideInstance.current.on("run.after", () => {

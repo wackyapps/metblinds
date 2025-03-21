@@ -43,7 +43,8 @@ const BlogDetails = () => {
   if (error) return <div>Error: {JSON.stringify(error)}</div>;
   if (!data) return <div>No data</div>;
 
-  const blogDetails = data?.data?.data;
+  const blogDetails = data?.data;
+
   return (
     <div>
       <div className="mx-auto max-w-[1400px] px-3 py-10">
@@ -80,7 +81,10 @@ const BlogDetails = () => {
            * content
            */}
           <div className="py-10 text-[#3b3b3b]">
-            <div dangerouslySetInnerHTML={{ __html: blogDetails.content }} />
+            <div
+              className="jodit-tailwind jodit-wysiwyg bg-transparent"
+              dangerouslySetInnerHTML={{ __html: blogDetails.content }}
+            />
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const FAQsCard = ({ question, answer }: FAQsCardProps) => {
   }, [isOpen]);
   return (
     <div
-      className={`box-border w-full overflow-hidden rounded-xl border duration-400 ${isOpen ? "border-[#FFB83D]" : "border-[#F7F9FA]"}`}
+      className={`box-border w-full overflow-hidden rounded-xl border duration-400 ${isOpen ? "mb-4 border-[#FFB83D]" : "border-[#F7F9FA]"}`}
     >
       {/* Question header - always visible */}
       <div

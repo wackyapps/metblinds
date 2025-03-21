@@ -20,9 +20,9 @@ const BlindsFeatures = ({ data }: Props) => {
             <h2 className="mb-12 text-left text-4xl font-bold text-[#FFA600]">
               {data.heading}
             </h2>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 [column-gap:80px] [row-gap:36px] lg:pr-10">
               {data.features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center gap-4">
+                <div key={index} className="flex flex-col items-start gap-4">
                   <div className="flex-shrink-0">
                     <img
                       src={feature.icon}
