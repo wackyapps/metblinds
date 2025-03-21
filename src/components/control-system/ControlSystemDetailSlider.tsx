@@ -72,7 +72,6 @@ const ControlSystemDetailSlider: React.FC<Props> = ({ data }) => {
             </button>
           ))}
         </div>
-
         <div className="glide" ref={glideRef}>
           <div className="glide__track" data-glide-el="track">
             <ul className="glide__slides">
