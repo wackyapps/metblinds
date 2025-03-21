@@ -1,9 +1,11 @@
 import { contactPage } from "@/configs/pages-data/contact";
 import React from "react";
 import { HiArrowRight, HiCheck } from "react-icons/hi";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
   data: typeof contactPage.warrantyInfoSection;
+  className?: string;
 };
 const formatTextWithBold = (text: string) => {
   return text.split(/(\*[^*]+\*)/).map((part, index) => {
@@ -14,10 +16,10 @@ const formatTextWithBold = (text: string) => {
   });
 };
 
-const WarrantyInfoSection = ({ data }: Props) => {
+const WarrantyInfoSection = ({ data, className }: Props) => {
   const { heading, features, ctaText } = data;
   return (
-    <section className="bg-[#F7F9FA] py-16 lg:py-24">
+    <section className={twMerge("bg-[#F7F9FA] py-16 lg:py-24", className)}>
       <div className="mx-auto max-w-[1470px] px-4">
         <div className="flex flex-col items-center justify-center gap-10 min-[1100px]:flex-row min-[1100px]:gap-32">
           {/* 10 Year Warranty Image */}

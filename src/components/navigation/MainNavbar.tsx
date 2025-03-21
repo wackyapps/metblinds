@@ -12,6 +12,8 @@ import {
   Accordion,
   AccordionItem,
 } from "@heroui/react";
+import { PiMedal } from "react-icons/pi";
+import useWarrantyDialog from "@/hooks/useWarrantyDialog";
 
 const MainNavbar = () => {
   const logo = websiteInfo.logo;
@@ -19,6 +21,8 @@ const MainNavbar = () => {
   // onOpen,
   const { isOpen, onOpenChange } = useDisclosure();
   const router = useRouter();
+  const { openDialog } = useWarrantyDialog();
+
   useEffect(() => {
     // Move console.log inside useEffect for client-side only execution
     console.log("pathname:", pathname);
@@ -71,16 +75,28 @@ const MainNavbar = () => {
           {/* Navigation  for desktop */}
           <div className="hidden items-center gap-10 xl:flex">
             {mainNavbarNavigation.map((navigation, index) => {
+              /**
+               * warranty will appear if the link is button
+               */
               if (navigation.isButton && navigation.link) {
                 return (
-                  <Link
-                    key={index}
-                    href={navigation.link}
-                    className={`my-8 flex items-center gap-1 rounded-full bg-[#FFA600] px-5 py-2 text-white`}
-                  >
-                    <navigation.icon className="h-5 w-5" />
-                    <span> {navigation.title}</span>
-                  </Link>
+                  <div key={index} className="flex items-center gap-10">
+                    <button
+                      className={`flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]`}
+                      onClick={openDialog}
+                    >
+                      <PiMedal className="h-5 w-5" />
+                      <span>Warranty</span>
+                    </button>
+
+                    <Link
+                      href={navigation.link}
+                      className={`my-8 flex items-center gap-1 rounded-full bg-[#FFA600] px-5 py-2 text-white`}
+                    >
+                      <navigation.icon className="h-5 w-5" />
+                      <span> {navigation.title}</span>
+                    </Link>
+                  </div>
                 );
               } else if (
                 navigation.link &&
@@ -193,7 +209,6 @@ const MainNavbar = () => {
                   return (
                     <div key={index}>
                       <Link
-                        key={index}
                         href={navigation?.link || ""}
                         onClick={() => {
                           onClose();
@@ -207,6 +222,18 @@ const MainNavbar = () => {
                   );
                 }
               })}
+              <div>
+                <button
+                  onClick={() => {
+                    openDialog();
+                    onClose();
+                  }}
+                  className={`flex items-center gap-3 rounded-full px-5 py-6 text-lg text-[#013F68] hover:text-[#FFA600]`}
+                >
+                  <PiMedal className="h-5 w-5" />
+                  <span> Warranty</span>
+                </button>
+              </div>
             </nav>
           )}
         </DrawerContent>
