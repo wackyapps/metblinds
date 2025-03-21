@@ -13,7 +13,7 @@ import {
   setToken,
   setIsAuthenticated,
 } from "@/store/slices/authSlice";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 /**
  * login form schema
@@ -33,6 +33,8 @@ export function LoginForm() {
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
   });
+  const searchParams = useSearchParams();
+  const redirect = searchParams?.get("redirect");
   const router = useRouter();
   const [login, { isLoading, isError, error }] = useLoginMutation();
   const dispatch = useDispatch();
@@ -48,7 +50,7 @@ export function LoginForm() {
       dispatch(setUser(decodedToken));
       dispatch(setToken(token));
       dispatch(setIsAuthenticated(true));
-      router.push("/admin/blogs");
+      router.push(redirect || "/admin/blogs");
     } else if (!response?.data.status) {
       toast.error(response?.data?.msg);
       console.log(response.error);

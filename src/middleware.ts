@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
   if (!token || isAuthenticated?.value !== "true") {
     // Redirect to login page with the original URL as return_to parameter
     const loginUrl = new URL("/login", request.url);
-    loginUrl.searchParams.set("return_to", request.nextUrl.pathname);
+    loginUrl.searchParams.set("redirect", request.nextUrl.pathname);
     return NextResponse.redirect(loginUrl);
   }
   if (request.nextUrl.pathname === "/admin") {
