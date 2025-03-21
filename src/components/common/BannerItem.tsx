@@ -10,9 +10,11 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
+  Tooltip,
 } from "@heroui/react";
 import { useDeleteBannerMutation } from "@/store/services/bannersApi";
 import { toast } from "react-toastify";
+import { twMerge } from "tailwind-merge";
 interface BannerItemProps {
   banner: any;
   isAdminDelete?: boolean;
@@ -91,15 +93,29 @@ const BannerItem: React.FC<BannerItemProps> = ({
           )}
           {isAdminDelete && (
             <div className="">
-              <button
-                className="rounded bg-red-400 px-3 py-1.5 text-white"
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent card click event
-                  onOpen();
-                }}
+              <Tooltip
+                content={
+                  banner.postStatus == "published"
+                    ? "Published banner cannot be deleted, Set to draft and delete"
+                    : "Delete"
+                }
               >
-                <FaTrash />
-              </button>
+                <button
+                  className={twMerge(
+                    "rounded bg-red-400 px-3 py-1.5 text-white",
+                    banner.postStatus == "published" && "bg-gray-500",
+                  )}
+                  onClick={() => {
+                    if (banner.postStatus == "published") {
+                      return;
+                    }
+                    onOpen();
+                  }}
+                  disabled={isAdminDelete && banner.postStatus == "published"}
+                >
+                  <FaTrash />
+                </button>
+              </Tooltip>
             </div>
           )}
         </div>
@@ -145,13 +161,13 @@ const BannerItem: React.FC<BannerItemProps> = ({
           {banner.coverImage && (
             <div className="relative mr-6 w-full max-md:hidden max-md:max-w-[450px] md:w-auto">
               {banner.discount_percentage && (
-                <h5 className="absolute right-0 top-0 z-50 flex aspect-square -translate-y-1/3 translate-x-1/3 items-center justify-center rounded-[50%] bg-white p-5 text-[32px] font-bold text-[#013F68] md:text-[35px] lg:text-[42px]">
+                <h5 className="absolute right-0 top-0 z-50 flex aspect-square -translate-y-1/3 translate-x-1/3 items-center justify-center rounded-[50%] bg-white p-5 text-[28px] font-bold text-[#013F68] md:text-[30px] lg:text-[34px]">
                   <span>{banner.discount_percentage}</span>
                 </h5>
               )}
               <img
                 alt="banner image"
-                className="max-h-[500px] w-full rounded-xl rounded-tr-[100px] border-4 border-[#FFA600] md:w-[300px] md:border-8 lg:w-[500px]"
+                className={`max-h-[500px] w-full rounded-xl border-4 border-[#FFA600] md:w-[300px] md:border-8 lg:w-[500px] ${banner.discount_percentage ? "rounded-bl-[120px] rounded-tr-[120px]" : "rounded-tr-[100px]"}`}
                 src={banner.coverImage}
                 width={500}
                 height={500}

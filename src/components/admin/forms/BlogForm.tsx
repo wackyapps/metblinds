@@ -244,11 +244,15 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
                       type="button"
                       className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
                       onClick={() => {
-                        setValue("featuredImage", {
-                          url: "",
-                          id: 0,
-                        });
-                        setFeaturedImage({ url: "", id: undefined });
+                        if (
+                          confirm("Are you sure you want to remove this image?")
+                        ) {
+                          setValue("featuredImage", {
+                            url: "",
+                            id: 0,
+                          });
+                          setFeaturedImage({ url: "", id: undefined });
+                        }
                       }}
                     >
                       <IoMdClose />

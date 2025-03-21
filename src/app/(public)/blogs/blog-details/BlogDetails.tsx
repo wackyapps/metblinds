@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { useGetBlogByIdQuery } from "@/store/services/blogApi";
+import { useGetBlogBySlugQuery } from "@/store/services/blogApi";
 import { Suspense } from "react";
 
 const formatDate = (dateString: string) => {
@@ -15,15 +15,17 @@ const formatDate = (dateString: string) => {
 
 const BlogDetails = () => {
   const searchParams = useSearchParams();
-  // getting id from query params
-  const id = searchParams?.get("id");
+  // getting slug from query params
+  const slug = searchParams?.get("slug");
 
   // getting blog details from api
-  const { data, isLoading, error } = useGetBlogByIdQuery({ id: id as string });
+  const { data, isLoading, error } = useGetBlogBySlugQuery({
+    slug: slug as string,
+  });
   if (isLoading)
     return (
       <div className="mx-auto max-w-[1400px] animate-pulse px-3 py-10">
-        <div className="mr-auto max-w-[1100px]">
+        <div className="mx-auto max-w-[1100px]">
           <div className="mb-4 flex flex-wrap items-center justify-start gap-1.5 text-sm text-[#6E6E73]">
             <span className="h-6 w-20 rounded-md bg-[#F5F5F5] px-2 py-1"></span>
             <span className="h-6 w-20 rounded-md bg-[#F5F5F5] px-2 py-1"></span>
@@ -43,12 +45,12 @@ const BlogDetails = () => {
   if (error) return <div>Error: {JSON.stringify(error)}</div>;
   if (!data) return <div>No data</div>;
 
-  const blogDetails = data?.data;
+  const blogDetails = data?.data?.data;
 
   return (
     <div>
-      <div className="mx-auto max-w-[1400px] px-3 py-10">
-        <div className="mr-auto max-w-[1100px]">
+      <div className="mx-auto max-w-[1400px] px-3 py-10 sm:px-5 md:px-7 lg:px-9 xl:px-12">
+        <div className="mx-auto max-w-[1100px]">
           {/*
            * author and date
            */}
@@ -63,7 +65,7 @@ const BlogDetails = () => {
           {/*
            * heading
            */}
-          <div className="mb-4">
+          <div className="mb-6">
             <h1 className="text-4xl font-bold">{blogDetails.title}</h1>
           </div>
 
@@ -75,7 +77,7 @@ const BlogDetails = () => {
               <img
                 src={blogDetails.featured_image.url}
                 alt={blogDetails.featured_image.alt_text}
-                className="aspect-[1194/670] h-auto w-full rounded-[25px]"
+                className="aspect-[1194/670] h-auto w-full rounded-[25px] sm:max-w-[95%] md:max-w-[90%] lg:max-w-[85%] xl:max-w-[80%] 2xl:max-w-[75%]"
               />
             </div>
           )}

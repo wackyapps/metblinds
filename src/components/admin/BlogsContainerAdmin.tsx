@@ -15,6 +15,7 @@ const BlogsContainerAdmin = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, seterror] = useState(null);
   const [blogs, setBlogs] = useState([]);
+  const [counter, setCounter] = useState(0);
 
   const [pagination, setPagination] = useState({
     page: 1,
@@ -48,7 +49,7 @@ const BlogsContainerAdmin = () => {
       }
     }
     fetchBlogs();
-  }, [page]);
+  }, [page, counter]);
 
   const handlePageChange = (newPage: number) => {
     const params = new URLSearchParams(searchParams?.toString());
@@ -101,7 +102,10 @@ const BlogsContainerAdmin = () => {
         {blogs.map((blog: any, index: number) => (
           <BlogCard
             blogs={blogs}
-            setBlogs={setBlogs as (blogs: any[]) => void}
+            setBlogs={(newBlogs: any) => {
+              setBlogs(newBlogs);
+              setCounter(counter + 1);
+            }}
             key={index}
             data={blog}
             isAdminEdit={true}

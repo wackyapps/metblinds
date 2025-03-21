@@ -9,6 +9,7 @@ interface BlogCardAdvancedProps {
     category: string;
     title: string;
     post_short_content: string;
+    slug: string;
     date: string | Date;
     featured_image: {
       url: string;
@@ -21,8 +22,15 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
   textDirection = "left",
   data,
 }) => {
-  const { id, category, title, post_short_content, date, featured_image } =
-    data;
+  const {
+    id,
+    category,
+    title,
+    post_short_content,
+    date,
+    featured_image,
+    slug,
+  } = data;
   const router = useRouter();
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
@@ -32,7 +40,7 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
   return (
     <div
       className="w-full cursor-pointer overflow-hidden rounded-[42px] bg-[#FAFAFA]"
-      onClick={() => router.push(`/blogs/blog-details?id=${id}`)}
+      onClick={() => router.push(`/blogs/blog-details?slug=${slug}`)}
     >
       <div className="relative flex flex-col items-center lg:flex-row">
         {/* Image Section */}

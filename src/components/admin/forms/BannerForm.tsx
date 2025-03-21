@@ -18,21 +18,23 @@ import { postStatuses } from "@/lib/consts";
 import { FaSpinner } from "react-icons/fa";
 // Define the Zod schema for form validation
 const bannerSchema = z.object({
-  offerHeading: z.string(),
-  subTitle: z.string(),
-  offerDescription: z.string(),
+  offerHeading: z.string().min(1, { message: "Offer heading is required" }),
+  subTitle: z.string().min(1, { message: "Sub title is required" }),
+  offerDescription: z
+    .string()
+    .min(1, { message: "Offer description is required" }),
   discountPercentage: z.string(),
   offerEndsIn: z.string(),
-  buttonText: z.string(),
-  buttonLink: z.string(),
+  buttonText: z.string().min(1, { message: "Button text is required" }),
+  buttonLink: z.string().min(1, { message: "Button link is required" }),
   coverImage: z
     .object({
-      url: z.string(),
+      url: z.string().min(1, { message: "Cover image is required" }),
       id: z.number().nullish(),
     })
     .optional(),
   backgroundImage: z.object({
-    url: z.string(),
+    url: z.string().min(1, { message: "Background image is required" }),
     id: z.number().nullish(),
   }),
   post_status: z.enum(["published", "draft"]).default("draft"),
@@ -209,7 +211,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
     <div className="mx-auto">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="min-w-[600px]:grid-cols-2 grid grid-cols-1 gap-3 rounded-lg"
+        className="grid grid-cols-1 gap-3 rounded-lg min-[600px]:grid-cols-2"
       >
         <div className="space-y-3">
           {/* Offer Heading */}
@@ -405,11 +407,15 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
                     type="button"
                     className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
                     onClick={() => {
-                      setValue("coverImage", {
-                        url: "",
-                        id: undefined,
-                      });
-                      setCoverImage({ url: "", id: undefined });
+                      if (
+                        confirm("Are you sure you want to remove this image?")
+                      ) {
+                        setValue("coverImage", {
+                          url: "",
+                          id: undefined,
+                        });
+                        setCoverImage({ url: "", id: undefined });
+                      }
                     }}
                   >
                     <IoMdClose />
@@ -452,11 +458,15 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
                     type="button"
                     className="absolute right-1 top-1 rounded-full bg-red-400 bg-opacity-80 p-2 text-white transition-colors"
                     onClick={() => {
-                      setValue("backgroundImage", {
-                        url: "",
-                        id: undefined,
-                      });
-                      setBackgroundImage({ url: "", id: undefined });
+                      if (
+                        confirm("Are you sure you want to remove this image?")
+                      ) {
+                        setValue("backgroundImage", {
+                          url: "",
+                          id: undefined,
+                        });
+                        setBackgroundImage({ url: "", id: undefined });
+                      }
                     }}
                   >
                     <IoMdClose />

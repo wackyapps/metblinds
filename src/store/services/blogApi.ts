@@ -72,6 +72,7 @@ export const blogApi = createApi({
       query: ({ id }: { id: string | number }) => `/posts/${id}`,
       forceRefetch: () => true,
     }),
+
     /**
      * get blog by slug
      */
@@ -88,4 +89,5 @@ export const {
   useDeleteBlogMutation,
   useGetBlogsQuery,
   useGetBlogByIdQuery,
+  useGetBlogBySlugQuery,
 } = blogApi;
