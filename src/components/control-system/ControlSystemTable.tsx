@@ -3,6 +3,7 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiCloseCircleFill } from "react-icons/ri";
 import { inter } from "@/fonts";
+
 type Props = {
   data: typeof controlSystemPage.controlSystemTable;
 };
@@ -21,51 +22,53 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
             {data.subHeading}
           </p>
         </div>
-        <div className="overflow-x-auto rounded-[32px] bg-white shadow-md">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-[#FDBA3C]">
-              <tr>
-                <th
-                  scope="col"
-                  className="px-10 py-6 text-left text-lg font-medium uppercase tracking-wider text-white"
+
+        {/* Table replacement with divs */}
+        <div className="overflow-x-auto rounded-[32px] shadow-md">
+          <div className="min-w-[1500px] bg-white">
+            {/* Header */}
+            <div className="grid grid-cols-7 overflow-hidden rounded-[32px] bg-[#FDBA3C] px-14">
+              <div className="p-6 text-left text-lg font-medium uppercase tracking-wider text-white">
+                Blinds
+              </div>
+              {data.controlOptions.map((option) => (
+                <div
+                  key={option}
+                  className="whitespace-nowrap p-6 text-center text-lg font-medium uppercase tracking-wider text-white"
                 >
-                  Blinds
-                </th>
-                {data.controlOptions.map((option) => (
-                  <th
-                    key={option}
-                    scope="col"
-                    className="whitespace-nowrap px-10 py-3 text-center text-lg font-medium uppercase tracking-wider text-white"
-                  >
-                    {option}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200 bg-white">
-              {data.blindsDetails.map((system) => (
-                <tr key={system.blindType} className="px-4">
-                  <td className="whitespace-nowrap px-10 py-4 text-xl font-medium text-[#504D4D]">
+                  {option}
+                </div>
+              ))}
+            </div>
+
+            {/* Body */}
+            <div className="divide-y divide-gray-200 rounded-b-[32px] bg-white px-14 py-8">
+              {data.blindsDetails.map((system, index) => (
+                <div
+                  key={system.blindType}
+                  className={`grid grid-cols-7 ${index === data.blindsDetails.length - 1 ? "rounded-b-[32px]" : ""}`}
+                >
+                  <div className="p-4 text-xl font-medium text-[#504D4D]">
                     {system.blindType}
-                  </td>
+                  </div>
                   {data.controlOptions.map((option) => (
-                    <td
+                    <div
                       key={option}
-                      className="whitespace-nowrap px-10 py-4 text-center"
+                      className="flex items-center justify-center p-4"
                     >
                       {system.controls[
                         option as keyof typeof system.controls
                       ] ? (
-                        <FaCheckCircle className="mx-auto text-3xl text-amber-400" />
+                        <FaCheckCircle className="text-3xl text-amber-400" />
                       ) : (
-                        <RiCloseCircleFill className="mx-auto text-3xl text-gray-500" />
+                        <RiCloseCircleFill className="text-3xl text-gray-500" />
                       )}
-                    </td>
+                    </div>
                   ))}
-                </tr>
+                </div>
               ))}
-            </tbody>
-          </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
