@@ -1,8 +1,17 @@
 "use client";
 import { bebasNeue } from "@/fonts";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const ProudCanadianFlag = () => {
+type Props = {
+  data: {
+    heading: string;
+    buttonText: string;
+    buttonLink: string;
+  };
+};
+
+const ProudCanadianFlag = ({ data }: Props) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -46,17 +55,18 @@ const ProudCanadianFlag = () => {
               className={`${bebasNeue.className} text-center text-[#013F68]`}
               style={{ fontSize }}
             >
-              PROUD CANADIAN BLINDS
+              {data.heading}
             </h3>
-            <button
+            <Link
+              href={data.buttonLink}
               className="rounded-full bg-[#EC1A23] text-white"
               style={{
                 padding: `${windowWidth >= 1400 ? "16px" : "1.2vw"} ${windowWidth >= 1400 ? "48px" : "3.5vw"}`,
                 fontSize: windowWidth >= 1400 ? "24px" : "1.8vw",
               }}
             >
-              GIVE US A CALL
-            </button>
+              {data.buttonText}
+            </Link>
           </div>
         </div>
       </div>

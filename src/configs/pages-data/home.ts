@@ -258,6 +258,7 @@ export const homePage = {
       },
     ],
   },
+
   /**
    * infobanner banner data for home
    */
@@ -277,6 +278,17 @@ export const homePage = {
       },
     ],
   },
+  /**
+   * proud canadian flag
+   */
+  proudCanadianFlag: {
+    heading: "PROUD CANADIAN BLINDS",
+    buttonText: "GIVE US A CALL",
+    buttonLink: "/contact",
+  },
+  /**
+   * contact section data for home
+   */
   contactSection: {
     heading: "Contact Us",
     subHeading:

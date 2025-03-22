@@ -11,6 +11,29 @@ import BlindsFeatures from "@/components/blinds/BlindsFeatures";
 import BlindsTestimonials from "@/components/blinds/BlindsTestimonials";
 import ChooseControlSystem from "@/components/blinds/ChooseControlSystem";
 import blinds from "@/configs/pages-data/blinds";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const blind = blinds.find((blind) => blind.slug === resolvedParams.slug);
+
+  if (!blind) {
+    return {
+      title: "Blind Not Found",
+      description: "The requested blind could not be found",
+    };
+  }
+
+  return {
+    title: blind.title,
+    description: blind.description,
+  };
+}
+
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const blind = blinds.find((blind) => blind.slug === slug);

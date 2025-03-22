@@ -59,7 +59,7 @@ const page = () => {
       {/*
        * end of homepage content 1*
        */}
-      <ProudCanadianFlag />
+      <ProudCanadianFlag data={homePage.proudCanadianFlag} />
       {/*
        * contact section
        */}
