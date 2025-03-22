@@ -17,6 +17,8 @@ import BlogFormSkeleton from "./BlogFormSkeleton";
 import { postStatuses } from "@/lib/consts";
 import { useRouter } from "next/navigation";
 import { FaSpinner } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 
 // Define the schema with Zod
 const blogSchema = z.object({
@@ -31,6 +33,7 @@ const blogSchema = z.object({
 type BlogFormData = z.infer<typeof blogSchema>;
 
 const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
+  const authUser = useSelector((state: RootState) => state.auth.user);
   const searchParams = useSearchParams();
   const router = useRouter();
   // getting id from query params
@@ -85,7 +88,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
       const response: any = await createBlog({
         title: data.title,
         content: data.content,
-        author_id: 1,
+        author_id: Number(authUser?.id),
         post_status: data.post_status,
         featured_image_id: featuredImage.id as number,
       });
@@ -111,12 +114,13 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
 
   const updateBlogHandler = async (data: BlogFormData) => {
     try {
+      console.log(authUser);
       const response: any = await updateBlog({
         id: id as string,
         blog: {
           title: data.title,
           content: data.content,
-          author_id: 1,
+          author_id: Number(authUser?.id),
           post_status: data.post_status,
           featured_image_id: featuredImage.id as number,
         },

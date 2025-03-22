@@ -42,8 +42,74 @@ const BlogDetails = () => {
         </div>
       </div>
     );
-  if (error) return <div>Error: {JSON.stringify(error)}</div>;
-  if (!data) return <div>No data</div>;
+  if (error)
+    return (
+      <div className="mx-auto max-w-[1400px] px-3 py-16 text-center">
+        <div className="mx-auto max-w-[600px]">
+          <div className="mb-6 text-red-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="mx-auto h-16 w-16"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              />
+            </svg>
+          </div>
+          <h2 className="mb-3 text-2xl font-bold">Unable to Load Blog</h2>
+          <p className="mb-6 text-[#6E6E73]">
+            We're having trouble loading this blog post. Please try again later
+            or check our other posts.
+          </p>
+          <a
+            href="/blogs"
+            className="inline-block rounded-md bg-[#F5F5F5] px-6 py-2 font-medium transition-colors hover:bg-[#e5e5e5]"
+          >
+            Browse All Blogs
+          </a>
+        </div>
+      </div>
+    );
+  if (!data)
+    return (
+      <div className="mx-auto max-w-[1400px] px-3 py-16 text-center">
+        <div className="mx-auto max-w-[600px]">
+          <div className="mb-6 text-[#6E6E73]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="mx-auto h-16 w-16"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+              />
+            </svg>
+          </div>
+          <h2 className="mb-3 text-2xl font-bold">Blog Not Found</h2>
+          <p className="mb-6 text-[#6E6E73]">
+            This blog post may have been moved or deleted. Check out our other
+            articles instead.
+          </p>
+          <a
+            href="/blogs"
+            className="inline-block rounded-md bg-[#F5F5F5] px-6 py-2 font-medium transition-colors hover:bg-[#e5e5e5]"
+          >
+            Browse All Blogs
+          </a>
+        </div>
+      </div>
+    );
 
   const blogDetails = data?.data?.data;
 

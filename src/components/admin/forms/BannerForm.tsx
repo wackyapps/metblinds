@@ -16,6 +16,8 @@ import { toast } from "react-toastify";
 import BannerFormSkeleton from "./BannerFormSkeleton";
 import { postStatuses } from "@/lib/consts";
 import { FaSpinner } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 // Define the Zod schema for form validation
 const bannerSchema = z.object({
   offerHeading: z.string().min(1, { message: "Offer heading is required" }),
@@ -45,6 +47,7 @@ type BannerFormData = z.infer<typeof bannerSchema>;
 // Define post status options
 
 const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
+  const authUser = useSelector((state: RootState) => state.auth.user);
   const searchParams = useSearchParams();
   const id = searchParams?.get("id");
   // State for image previews
@@ -137,7 +140,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
         cover_image_id: data.coverImage?.id,
         background_image_id: data.backgroundImage?.id,
         button_text: data.buttonText,
-        author_id: 1,
+        author_id: Number(authUser?.id),
         post_status: data.post_status,
         redirect_url: data.buttonLink,
         subtitle: data.subTitle,
@@ -172,7 +175,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
           cover_image_id: data.coverImage?.id,
           background_image_id: data.backgroundImage?.id,
           button_text: data.buttonText,
-          author_id: 1,
+          author_id: Number(authUser?.id),
           post_status: data.post_status,
           redirect_url: data.buttonLink,
           subtitle: data.subTitle,

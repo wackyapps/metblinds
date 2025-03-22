@@ -39,8 +39,72 @@ const BlogsContainerSection = () => {
       </div>
     );
   }
-  if (error) return <div>Error: {JSON.stringify(error)}</div>;
-  if (!Array.isArray(data?.data?.data)) return <div>An error occurred</div>;
+  if (error)
+    return (
+      <div className="mx-auto max-w-[1500px] px-3 py-24">
+        <div className="flex flex-col items-center justify-center gap-6 rounded-lg border border-red-200 bg-red-50 p-8 text-center">
+          <svg
+            className="h-16 w-16 text-red-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
+          </svg>
+          <h3 className="text-xl font-semibold text-gray-900">
+            Failed to load blogs
+          </h3>
+          <p className="text-gray-600">
+            We encountered a problem while fetching the blog posts. Please try
+            again later.
+          </p>
+          <button
+            onClick={() => router.refresh()}
+            className="mt-2 rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white transition-colors hover:bg-[#E69D23]"
+          >
+            Refresh Page
+          </button>
+        </div>
+      </div>
+    );
+  if (!Array.isArray(data?.data?.data))
+    return (
+      <div className="mx-auto max-w-[1500px] px-3 py-24">
+        <div className="flex flex-col items-center justify-center gap-6 rounded-lg border border-gray-200 bg-gray-50 p-8 text-center">
+          <svg
+            className="h-16 w-16 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+            />
+          </svg>
+          <h3 className="text-xl font-semibold text-gray-900">
+            No blog data available
+          </h3>
+          <p className="text-gray-600">
+            The blog content could not be loaded correctly. Please try again
+            later.
+          </p>
+          <button
+            onClick={() => router.refresh()}
+            className="mt-2 rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white transition-colors hover:bg-[#E69D23]"
+          >
+            Refresh Page
+          </button>
+        </div>
+      </div>
+    );
 
   return (
     <div className="mx-auto max-w-[1500px] px-3 py-24">

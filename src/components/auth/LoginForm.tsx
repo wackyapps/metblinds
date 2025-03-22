@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "@heroui/react";
+import { Button, Spinner } from "@heroui/react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { LuMoveRight } from "react-icons/lu";
 import { useLoginMutation } from "@/store/services/authApi";
@@ -47,6 +47,7 @@ export function LoginForm() {
     if (response?.data?.data.token) {
       const { token } = response.data.data;
       const decodedToken: any = jwt.decode(token);
+      console.log("decoded token", decodedToken);
       dispatch(setUser(decodedToken));
       dispatch(setToken(token));
       dispatch(setIsAuthenticated(true));
@@ -96,7 +97,7 @@ export function LoginForm() {
         disabled={isLoading}
       >
         {isLoading ? (
-          "loading..."
+          <Spinner />
         ) : (
           <>
             <span>Login</span>

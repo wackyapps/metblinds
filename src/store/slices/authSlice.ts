@@ -13,9 +13,17 @@ interface AuthState {
 }
 
 const initialState: AuthState = {
-  user: null,
+  user:
+    typeof window !== "undefined"
+      ? Cookies.get("user")
+        ? JSON.parse(Cookies.get("user")!)
+        : null
+      : null,
   token: typeof window !== "undefined" ? Cookies.get("token") || null : null,
-  isAuthenticated: false,
+  isAuthenticated:
+    typeof window !== "undefined"
+      ? Cookies.get("isAuthenticated") === "true"
+      : false,
 };
 
 const authSlice = createSlice({
