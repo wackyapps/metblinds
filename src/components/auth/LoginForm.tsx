@@ -51,10 +51,8 @@ export function LoginForm() {
       dispatch(setToken(token));
       dispatch(setIsAuthenticated(true));
       router.push(redirect || "/admin/blogs");
-    } else if (!response?.data.status) {
-      toast.error(response?.data?.msg);
-      console.log(response.error);
-      alert(response?.data?.msg);
+    } else if (!response?.data?.data.status) {
+      toast.error(response?.data?.data?.msg);
     } else if (error) {
       toast.error((error as any)?.message || "Something went wrong");
       alert((error as any)?.message || "Something went wrong");

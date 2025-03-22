@@ -43,12 +43,12 @@ const BlogsContainerSection = () => {
   if (!Array.isArray(data?.data?.data)) return <div>An error occurred</div>;
 
   return (
-    <div className="mx-auto max-w-[1500px] px-3 pb-24">
+    <div className="mx-auto max-w-[1500px] px-3 py-24">
       {/*
        * Blog Radio Buttons
        */}
 
-      <div className="flex flex-col gap-8">
+      <div className="mb-8 flex flex-col gap-8">
         {data?.data?.data?.map((blog: any, index: number) => (
           <BlogCardAdvanced
             key={index}
@@ -75,41 +75,39 @@ const BlogsContainerSection = () => {
             setPage={handlePageChange}
           />
         </div> */}
-
-        <div className="flex items-center justify-between gap-4">
-          {/* prev button */}
-          {page <= 1 ? (
-            <div></div>
-          ) : (
-            <button
-              onClick={() => page > 1 && handlePageChange(page - 1)}
-              className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white"
-              disabled={page <= 1}
-            >
-              Prev
-            </button>
-          )}
-          <span className="text-sm">
-            {limit * (page - 1) + 1} -{" "}
-            {Math.min(limit * page, data?.data?.pagination?.total)} of{" "}
-            {data?.data?.pagination?.total}{" "}
-          </span>
-          {/* next button */}
-          {page >= data?.data?.pagination?.pages ? (
-            <div></div>
-          ) : (
-            <button
-              onClick={() =>
-                page < data?.data?.pagination?.pages &&
-                handlePageChange(page + 1)
-              }
-              className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white"
-              disabled={page >= data?.data?.pagination?.pages}
-            >
-              Next
-            </button>
-          )}
-        </div>
+      </div>
+      <div className="flex items-center justify-between gap-4">
+        {/* prev button */}
+        {page <= 1 ? (
+          <div></div>
+        ) : (
+          <button
+            onClick={() => page > 1 && handlePageChange(page - 1)}
+            className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white"
+            disabled={page <= 1}
+          >
+            Prev
+          </button>
+        )}
+        <span className="text-sm">
+          {limit * (page - 1) + 1} -{" "}
+          {Math.min(limit * page, data?.data?.pagination?.total)} of{" "}
+          {data?.data?.pagination?.total}{" "}
+        </span>
+        {/* next button */}
+        {page >= data?.data?.pagination?.pages ? (
+          <div></div>
+        ) : (
+          <button
+            onClick={() =>
+              page < data?.data?.pagination?.pages && handlePageChange(page + 1)
+            }
+            className="flex items-center justify-center rounded bg-[#FFAD33] px-6 py-2.5 text-base text-white"
+            disabled={page >= data?.data?.pagination?.pages}
+          >
+            Next
+          </button>
+        )}
       </div>
     </div>
   );

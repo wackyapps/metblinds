@@ -31,7 +31,7 @@ const BlogsContainerAdmin = () => {
       setIsLoading(true);
       try {
         const res = await axios(
-          `${BASE_URL}/posts/list?page=${page}&limit=${limit}`,
+          `${BASE_URL}/posts/list?page=${page}&limit=${limit}&post_status='draft','published'`,
         );
         const data = res.data;
         if (data?.data?.data?.length > 0 && Array.isArray(data?.data?.data)) {
@@ -77,7 +77,7 @@ const BlogsContainerAdmin = () => {
         >
           <strong className="font-bold">Error!</strong>
           <span className="block sm:inline">
-            {JSON.stringify((error as any).data.message)}
+            {JSON.stringify((error as any)?.data?.message)}
           </span>
         </div>
       </div>

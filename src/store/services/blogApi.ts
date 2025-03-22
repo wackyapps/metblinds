@@ -62,7 +62,7 @@ export const blogApi = createApi({
      */
     getBlogs: builder.query<any, GetBlogReq>({
       query: (blog: GetBlogReq) =>
-        `/posts/list?page=${blog.page}&limit=${blog.limit}`,
+        `/posts/list?page=${blog.page}&limit=${blog.limit}&post_status='published'`,
       forceRefetch: () => true,
     }),
     /**

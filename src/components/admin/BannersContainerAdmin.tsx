@@ -30,7 +30,7 @@ const BannersContainerAdmin = () => {
       setIsLoading(true);
       try {
         const res = await axios(
-          `${BASE_URL}/banners/list?page=${page}&limit=${limit}`,
+          `${BASE_URL}/banners/list?page=${page}&limit=${limit}&post_status='draft','published'`,
         );
         const data = res.data;
         if (data?.data?.data?.length > 0 && Array.isArray(data?.data?.data)) {
@@ -76,7 +76,7 @@ const BannersContainerAdmin = () => {
           <strong className="font-bold">Error!</strong>
           <span className="block sm:inline">
             {JSON.stringify(
-              (error as any).data?.message || "An error occurred",
+              (error as any)?.data?.message || "An error occurred",
             )}
           </span>
         </div>
