@@ -65,8 +65,8 @@ const AboutBanner: React.FC<Props> = ({ data }) => {
       >
         <ModalContent className="w-full bg-transparent">
           {(onClose) => (
-            <div className="flex h-full w-full items-center justify-center">
-              <div className="relative w-full rounded-3xl bg-white">
+            <div className="flex h-full w-full items-center justify-center py-10">
+              <div className="relative my-10 max-h-[90vh] w-full overflow-y-auto rounded-3xl bg-white">
                 <button
                   onClick={onClose}
                   className="absolute right-1 top-1 rounded-full p-2 text-3xl duration-200 hover:bg-gray-100"
