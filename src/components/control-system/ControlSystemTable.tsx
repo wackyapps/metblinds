@@ -28,13 +28,13 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
           <div className="min-w-[1500px] bg-white">
             {/* Header */}
             <div className="grid grid-cols-7 overflow-hidden rounded-[32px] bg-[#FDBA3C] px-14">
-              <div className="p-6 text-left text-lg font-medium uppercase tracking-wider text-white">
+              <div className="p-6 text-left text-base font-medium uppercase tracking-wider text-white sm:text-lg">
                 Blinds
               </div>
               {data.controlOptions.map((option) => (
                 <div
                   key={option}
-                  className="whitespace-nowrap p-6 text-center text-lg font-medium uppercase tracking-wider text-white"
+                  className="whitespace-nowrap p-6 text-center text-base font-medium uppercase tracking-wider text-white sm:text-lg"
                 >
                   {option}
                 </div>
@@ -48,7 +48,7 @@ const ControlSystemTable: React.FC<Props> = ({ data }) => {
                   key={system.blindType}
                   className={`grid grid-cols-7 ${index === data.blindsDetails.length - 1 ? "rounded-b-[32px]" : ""}`}
                 >
-                  <div className="p-4 text-xl font-medium text-[#504D4D]">
+                  <div className="p-4 text-base font-medium text-[#504D4D] sm:text-lg md:text-xl">
                     {system.blindType}
                   </div>
                   {data.controlOptions.map((option) => (

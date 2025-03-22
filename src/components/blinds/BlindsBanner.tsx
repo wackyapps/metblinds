@@ -19,7 +19,7 @@ const BlindsBanner: React.FC<Props> = ({ data }) => {
       }}
     >
       {/* Content Container */}
-      <div className="mx-auto flex max-w-[1550px] flex-col items-start gap-10 px-4">
+      <div className="mx-auto flex max-w-[1550px] flex-col items-start gap-6 px-4 sm:gap-8 md:gap-10">
         <div className="flex w-full flex-col gap-9">
           {/* Main Heading */}
           <h1
@@ -28,20 +28,20 @@ const BlindsBanner: React.FC<Props> = ({ data }) => {
             {heading}
           </h1>
           {/* Orange Border Frame */}
-          <div className="inline-flex w-fit rounded-[21px] border border-[#FFB033] px-6 py-2 text-lg sm:px-8 md:px-10 md:text-[22px] lg:px-12">
+          <div className="inline-flex w-fit rounded-[21px] border border-[#FFB033] px-6 py-2 text-sm sm:px-8 sm:text-base md:px-10 md:text-[22px] md:text-lg lg:px-12">
             <span className={`${inter.className} font-medium text-[#FFB033]`}>
               {cta}
             </span>
           </div>
           {/* subHeading Text */}
           <p
-            className={`${inter.className} max-w-[629px] text-lg leading-relaxed text-white md:text-[22px]`}
+            className={`${inter.className} max-w-[629px] text-base leading-relaxed text-white sm:text-lg md:text-[22px]`}
           >
             {subHeading}
           </p>
         </div>
         {/* CTA Button */}
-        <button className="rounded-[19.46px] bg-[#FFA600] px-14 py-4 text-white transition-colors hover:bg-[#FFB033] md:text-lg">
+        <button className="rounded-[19.46px] bg-[#FFA600] px-6 py-2 text-white transition-colors hover:bg-[#FFB033] sm:px-9 sm:py-3 md:px-14 md:py-4 md:text-lg">
           {cta}
         </button>
       </div>

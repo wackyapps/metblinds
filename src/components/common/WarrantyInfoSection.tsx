@@ -54,7 +54,7 @@ const WarrantyInfoSection = ({ data, className }: Props) => {
             </div>
 
             {/* CTA Button */}
-            <button className="flex w-fit items-center gap-2 rounded-full bg-[#FFA600] px-8 py-4 text-lg text-white transition-colors hover:bg-[#FF9500]">
+            <button className="flex w-fit items-center gap-2 rounded-full bg-[#FFA600] px-5 py-2 text-lg text-white transition-colors hover:bg-[#FF9500] sm:px-8 sm:py-4">
               {ctaText}
               <HiArrowRight className="h-5 w-5" />
             </button>

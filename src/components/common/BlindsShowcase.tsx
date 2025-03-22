@@ -43,7 +43,7 @@ const BlindsShowcase: React.FC<Props> = ({ data, isSlider = false }) => {
           <div className="mb-14 flex justify-center">
             <div className="relative mb-2">
               <h2
-                className={`${rubik.className} relative z-0 mb-10 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+                className={`${rubik.className} relative z-0 mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
               >
                 {data.heading}
               </h2>

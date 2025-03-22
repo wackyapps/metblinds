@@ -10,8 +10,8 @@ type BannerData = {
   backgroundImage: string;
   heading: string;
   description: string;
-  buttonText: string;
-  buttonLink: string;
+  buttonText?: string;
+  buttonLink?: string;
 };
 
 type Props = { data: BannerData[] };
@@ -76,12 +76,14 @@ const ContactBanner = ({ data }: Props) => {
                       </p>
 
                       {/* Button */}
-                      <Link
-                        href={banner.buttonLink}
-                        className="rounded-full bg-[#FFA600] px-8 py-4 text-white transition-colors duration-300 hover:bg-[#FFB733]"
-                      >
-                        {banner.buttonText}
-                      </Link>
+                      {banner.buttonText && banner.buttonLink && (
+                        <Link
+                          href={banner.buttonLink}
+                          className="rounded-full bg-[#FFA600] px-5 py-2.5 text-white transition-colors duration-300 hover:bg-[#FFB733] sm:px-8 sm:py-4"
+                        >
+                          {banner.buttonText}
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

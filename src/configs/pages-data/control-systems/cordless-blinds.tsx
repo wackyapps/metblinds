@@ -36,27 +36,27 @@ const cordlessBlinds = {
       "Cordless blinds offer a modern, clean look with enhanced safety features. Perfect for homes with children and pets, they eliminate cord hazards while providing smooth, effortless operation. Our cordless blinds combine style with functionality, making them an ideal choice for contemporary homes.",
     features: [
       {
-        name: <FaRegClock />,
+        icon: <FaRegClock />,
         title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FiSun />,
+        icon: <FiSun />,
         title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        name: <FaShieldAlt />,
+        icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <CiWallet />,
+        icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FaRegCircleCheck />,
+        icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },

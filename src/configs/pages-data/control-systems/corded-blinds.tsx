@@ -37,27 +37,27 @@ const cordedBlinds = {
       "Corded blinds are a classic and reliable choice for window coverings. With smooth manual operation and durable cord options, they offer precise light control and long-lasting performance. Our corded blinds come with MET Sleeve protection and a child-lock safety system, making them a safe option for homes with children and pets.",
     features: [
       {
-        name: <FaRegClock />,
+        icon: <FaRegClock />,
         title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FiSun />,
+        icon: <FiSun />,
         title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        name: <FaShieldAlt />,
+        icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <CiWallet />,
+        icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FaRegCircleCheck />,
+        icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },

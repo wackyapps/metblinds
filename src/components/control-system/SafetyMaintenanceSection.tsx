@@ -17,7 +17,7 @@ export default function SafetyMaintenanceSection({ data }: Props) {
       {/* Title Section */}
       <div className="mb-14 flex flex-col items-center">
         <h2
-          className={`${inter.className} relative mb-10 text-center text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+          className={`${inter.className} relative mb-10 text-center text-3xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
         >
           {data.heading}
         </h2>

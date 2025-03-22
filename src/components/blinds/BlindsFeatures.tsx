@@ -16,7 +16,7 @@ const BlindsFeatures = ({ data }: Props) => {
     <div className="relative w-full bg-white">
       <div className="mx-auto max-w-[1240px] px-4 py-16">
         <div className="flex flex-col items-stretch gap-16 lg:flex-row">
-          <div className="w-full py-10 lg:w-1/2">
+          <div className="w-full py-10 ps-4 sm:ps-6 lg:w-1/2">
             <h2 className="mb-12 text-left text-4xl font-bold text-[#FFA600]">
               {data.heading}
             </h2>

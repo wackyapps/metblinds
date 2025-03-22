@@ -36,27 +36,27 @@ const motorizedBlinds = {
       "Motorized blinds provide the ultimate convenience in window covering control. With quiet, powerful motors and multiple control options, they're perfect for hard-to-reach windows or those seeking a modern, automated solution. Our motorized systems combine reliability with ease of use.",
     features: [
       {
-        name: <FaRegClock />,
+        icon: <FaRegClock />,
         title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FiSun />,
+        icon: <FiSun />,
         title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        name: <FaShieldAlt />,
+        icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <CiWallet />,
+        icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FaRegCircleCheck />,
+        icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },

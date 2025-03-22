@@ -7,7 +7,7 @@ import { inter } from "@/fonts";
 import React from "react";
 
 interface Feature {
-  name: React.ReactNode;
+  icon: React.ReactNode;
   title: string;
   description?: string;
   image: string;
@@ -57,11 +57,11 @@ const WhyChooseControlSlider = ({ data }: Props) => {
       <div className="mx-auto max-w-[1560px] px-4">
         <div className="mx-auto mb-14 flex max-w-[1200px] flex-col items-center px-3 md:mb-20">
           <h2
-            className={` ${inter.className} relative mb-10 text-center text-5xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            className={` ${inter.className} relative mb-10 text-center text-3xl font-bold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
           >
             {data.heading}
           </h2>
-          <p className="max-w-[1300px] text-center text-xl font-medium text-[#767676] sm:text-2xl">
+          <p className="max-w-[1300px] text-center text-base font-medium text-[#767676] sm:text-xl md:text-2xl">
             {data.subHeading}
           </p>
         </div>
@@ -82,16 +82,16 @@ const WhyChooseControlSlider = ({ data }: Props) => {
                   >
                     <div className="">
                       <div
-                        className={`h-full w-full text-6xl ${
+                        className={`h-full w-full text-4xl sm:text-5xl md:text-6xl ${
                           isActive ? "text-white" : "text-[#FFAD33]"
                         }`}
                       >
-                        {feature.name}
+                        {feature.icon}
                       </div>
                     </div>
                     <div>
                       <h3
-                        className={`text-xl ${
+                        className={`text-base sm:text-lg md:text-xl ${
                           isActive
                             ? "font-semibold text-white"
                             : "text-gray-600"

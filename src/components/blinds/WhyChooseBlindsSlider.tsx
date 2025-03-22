@@ -56,7 +56,7 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
           <div className="w-full lg:w-1/2">
             <div className="mb-4">
               <h2
-                className={`${roboto.className} relative z-0 mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+                className={`${roboto.className} relative z-0 mb-10 text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
               >
                 {data.heading}
               </h2>
@@ -76,7 +76,7 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
                   >
                     <div className="">
                       <div
-                        className={`h-full w-full text-6xl ${
+                        className={`h-full w-full text-4xl sm:text-5xl md:text-6xl ${
                           isActive ? "text-white" : "text-gray-500"
                         }`}
                       >
@@ -85,7 +85,7 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
                     </div>
                     <div>
                       <h3
-                        className={`text-xl font-semibold ${rubik.className} ${
+                        className={`text-base font-semibold sm:text-lg md:text-xl ${rubik.className} ${
                           isActive ? "text-white" : "text-gray-600"
                         }`}
                       >

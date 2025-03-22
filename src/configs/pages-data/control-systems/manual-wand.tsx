@@ -36,27 +36,27 @@ const manualWand = {
       "Manual wand control systems offer a simple, reliable solution for operating blinds. With no cords or complex mechanisms, they provide easy-to-use functionality while maintaining a clean, modern appearance. Perfect for standard height windows and everyday use.",
     features: [
       {
-        name: <FaRegClock />,
+        icon: <FaRegClock />,
         title: "Strong and durable manual control",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FiSun />,
+        icon: <FiSun />,
         title: "Precise light and privacy control",
         image: "/images/banner-side-image-3.png",
       },
       {
-        name: <FaShieldAlt />,
+        icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <CiWallet />,
+        icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
         image: "/images/contact-section-image-1.png",
       },
       {
-        name: <FaRegCircleCheck />,
+        icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
         image: "/images/contact-section-image-1.png",
       },

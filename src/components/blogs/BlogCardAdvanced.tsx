@@ -45,7 +45,7 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
       <div className="relative flex flex-col items-center lg:flex-row">
         {/* Image Section */}
         <div
-          className={`relative h-full max-h-[600px] min-h-96 w-full lg:flex-1 ${textDirection == "left" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}
+          className={`relative h-full max-h-[600px] min-h-48 w-full sm:min-h-56 md:min-h-96 lg:flex-1 ${textDirection == "left" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}
         >
           {featured_image?.url ? (
             <img

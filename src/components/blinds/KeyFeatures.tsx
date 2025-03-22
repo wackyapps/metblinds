@@ -26,7 +26,7 @@ const KeyFeatures: React.FC<Props> = ({ data }) => {
           <div className="flex max-w-[1000px] flex-col items-start space-y-12 md:space-y-[73px]">
             {/* Heading */}
             <h2
-              className={`${rubik.className} relative z-0 w-auto text-left text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+              className={`${rubik.className} relative z-0 w-auto text-left text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
             >
               {data.heading}
             </h2>
@@ -38,7 +38,7 @@ const KeyFeatures: React.FC<Props> = ({ data }) => {
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FFA600]">
                       <FaCheck className="h-5 w-5 text-white" />
                     </div>
-                    <div className="text-2xl text-[#717171]">
+                    <div className="w-full break-words text-2xl text-[#717171]">
                       <h3 className="inline-block font-semibold text-black">
                         {feature.title}
                       </h3>

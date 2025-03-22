@@ -7,6 +7,7 @@ import CompatibleBlinds from "@/components/control-system/CompatibleBlinds";
 import SafetyMaintenanceSection from "@/components/control-system/SafetyMaintenanceSection";
 import HowItWorks from "@/components/control-system/HowItWorks";
 import controlSystemPages from "@/configs/pages-data/control-systems";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   // Replace this with your actual logic to fetch slugs
@@ -15,8 +16,31 @@ export async function generateStaticParams() {
   }));
 }
 
-const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = params;
+  const controlSystem = controlSystemPages.find(
+    (controlSystem) => controlSystem.slug === slug,
+  );
+
+  if (!controlSystem) {
+    return {
+      title: "Control System Not Found",
+      description: "The requested control system could not be found.",
+    };
+  }
+
+  return {
+    title: controlSystem.title,
+    description: controlSystem.description,
+  };
+}
+
+const page = async ({ params }: Props) => {
+  const { slug } = params;
   const controlSystem = controlSystemPages.find(
     (controlSystem) => controlSystem.slug === slug,
   );

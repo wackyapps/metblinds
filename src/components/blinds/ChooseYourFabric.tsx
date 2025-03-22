@@ -37,11 +37,11 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
       <div>
         <div className="mb-14 flex flex-col items-center">
           <h2
-            className={`${rubik.className} relative z-[1] mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            className={`${rubik.className} relative z-[1] mb-6 text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:mb-8 sm:text-4xl md:mb-10 md:text-5xl`}
           >
             {data.heading}
           </h2>
-          <p className="max-w-[1300px] text-center text-xl text-[#767676] sm:text-2xl">
+          <p className="max-w-[1300px] text-center text-lg text-[#767676] sm:text-xl md:text-2xl">
             {data.subHeading}
           </p>
         </div>
@@ -50,7 +50,7 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
        * fabric color shower
        */}
       <div
-        className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[74px]"
+        className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] sm:rounded-[55px] md:rounded-[74px]"
         style={{ background: currentFabric.color }}
       ></div>
       <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-end">

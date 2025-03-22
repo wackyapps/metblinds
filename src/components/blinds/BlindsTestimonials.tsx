@@ -42,7 +42,7 @@ const BlindsTestimonials = ({ data }: Props) => {
       <div className="mx-auto max-w-[1440px] px-4">
         <div className="flex flex-col items-center">
           <h2
-            className={`${rubik.className} relative z-[1] mb-10 text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+            className={`${rubik.className} relative z-[1] mb-10 text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
           >
             {data.heading}
           </h2>
@@ -57,7 +57,7 @@ const BlindsTestimonials = ({ data }: Props) => {
             }}
             modules={[Autoplay, Navigation]}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={1}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -66,7 +66,7 @@ const BlindsTestimonials = ({ data }: Props) => {
               768: {
                 slidesPerView: 2,
               },
-              640: {
+              1: {
                 slidesPerView: 1,
               },
               1000: {
