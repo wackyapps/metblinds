@@ -17,16 +17,14 @@ const TopNav = () => {
         <div className=" ">
           <a
             href={`tel:${phoneNumber.link}`}
-            className="flex items-center justify-center gap-1 text-lg font-semibold"
+            className="flex items-center justify-center gap-1 text-sm font-semibold sm:text-base md:text-lg"
           >
             <PhoneIcon className="h-5 w-5 text-white" />
-            <span className="text-sm text-white sm:text-base">
-              {phoneNumber.display}
-            </span>
+            <span className="text-sm text-white">{phoneNumber.display}</span>
           </a>
         </div>
         {/* Center: Promotional Text */}
-        <div className="hidden text-center text-lg font-semibold text-white md:block">
+        <div className="hidden text-center text-sm font-semibold text-white sm:text-base md:block md:text-lg">
           <span className="text-orange-500">40%</span> OFF CUSTOM BLINDS AND
           FREE INSTALLATION
         </div>
@@ -34,7 +32,7 @@ const TopNav = () => {
         <div className="text-center sm:text-right">
           <Link
             href="/catalogue"
-            className="flex items-center justify-center gap-1 text-lg font-semibold text-white sm:text-base"
+            className="flex items-center justify-center gap-1 text-sm font-semibold text-white sm:text-base md:text-lg"
           >
             <ClipboardDocumentListIcon className="h-5 w-5" />
             <span>Catalogue</span>

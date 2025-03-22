@@ -122,7 +122,7 @@ const BannerItem: React.FC<BannerItemProps> = ({
       )}
 
       <div className="h-full px-4">
-        <div className="mx-auto flex h-full max-w-[1450px] flex-col items-center justify-between gap-8 px-3 sm:px-5 md:flex-row md:gap-4 md:px-6 lg:px-7">
+        <div className="mx-auto flex h-full max-w-[1450px] flex-col items-center justify-between gap-8 px-10 md:flex-row md:gap-4">
           {/* text container of heading subheading and button */}
           <div className="banner-text-container flex max-w-[700px] flex-1 flex-col items-center gap-5 text-center md:items-start md:text-left">
             {banner.heading && (

@@ -285,7 +285,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
                 disabled={isLoading}
               >
                 {isLoading || isUpdating ? (
-                  <FaSpinner />
+                  <FaSpinner className="animate-spin" />
                 ) : isEdit ? (
                   "Update"
                 ) : (

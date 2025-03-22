@@ -16,7 +16,7 @@ const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({
       <div className="global-container">
         <div className="flex flex-col items-center justify-center gap-8">
           <h2
-            className={`${roboto.className} mb-3 max-w-[1000px] text-center text-5xl text-[#FFA600]`}
+            className={`${roboto.className} mb-3 max-w-[1000px] text-center text-3xl text-[#FFA600] sm:text-4xl md:text-5xl`}
           >
             {" "}
             {data.heading}{" "}
@@ -24,7 +24,7 @@ const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({
           {data.points.map((point, index) => (
             <h4
               key={index}
-              className={`max-w-[1000px] text-center text-xl text-white ${
+              className={`max-w-[1000px] text-center text-base text-white sm:text-lg md:text-xl ${
                 point?.isBold ? "font-bold" : "font-medium"
               }`}
             >
@@ -32,7 +32,7 @@ const InfoBanner: React.FC<{ data: typeof homePage.infoBanner }> = ({
             </h4>
           ))}
           <button
-            className={`rounded-full bg-[#FFA600] px-8 py-3 text-xl text-white`}
+            className={`rounded-full bg-[#FFA600] px-4 py-1.5 text-base text-white sm:px-6 sm:py-2 sm:text-xl md:px-8 md:py-3`}
           >
             <span> Request a Free Quote </span>
           </button>

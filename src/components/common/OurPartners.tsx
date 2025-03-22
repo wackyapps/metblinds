@@ -44,7 +44,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
       <div className="global-container">
         <div className="flex flex-col items-center justify-center">
           <h2
-            className={`${rubik.className} relative mb-16 text-center text-5xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600]`}
+            className={`${rubik.className} relative mb-16 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] md:text-4xl lg:text-5xl`}
           >
             {data.heading}
           </h2>

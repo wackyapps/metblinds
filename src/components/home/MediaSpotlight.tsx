@@ -17,19 +17,19 @@ const MediaSpotlight: React.FC<{ data: typeof homePage.mediaSpotlight }> = ({
     <div
       className="bg-cover bg-center bg-no-repeat py-32"
       style={{
-        backgroundImage: `linear-gradient(to bottom, #FFFFFF, #FFFFFF00), url(${data.background})`,
+        backgroundImage: `linear-gradient(to bottom, #FFFFFF 30%, #FFFFFF00), url(${data.background})`,
       }}
     >
       <div className="global-container">
-        <div className="flex flex-col items-center justify-center gap-10">
-          <h2 className="max-w-[850px] text-center text-5xl text-[#013F68]">
+        <div className="flex flex-col items-center justify-center gap-4 sm:gap-7 md:gap-10">
+          <h2 className="max-w-[850px] text-center text-2xl text-[#013F68] sm:text-3xl md:text-5xl">
             {formatTextWithBold(data.heading)}
           </h2>
-          <h4 className="max-w-[670px] text-center text-xl text-[#474747]">
+          <h4 className="max-w-[670px] text-center text-lg text-[#474747] sm:text-xl">
             {data.subHeading}
           </h4>
           <button
-            className={`rounded-full bg-[#FFA600] px-8 py-2.5 text-2xl text-white`}
+            className={`rounded-full bg-[#FFA600] px-4 py-2.5 text-lg text-white sm:px-8 sm:text-xl md:text-2xl`}
           >
             <span> {data.buttonText}</span>
           </button>

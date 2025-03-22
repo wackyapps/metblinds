@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import "./ContactForm.css";
+import { twMerge } from "tailwind-merge";
 
 // Define the schema for all fields
 const formSchema = z.object({
@@ -19,7 +20,13 @@ const formSchema = z.object({
 // Infer TypeScript type from schema
 type FormData = z.infer<typeof formSchema>;
 
-export default function ContactForm({ isSmall }: { isSmall?: boolean }) {
+export default function ContactForm({
+  isSmall,
+  className,
+}: {
+  isSmall?: boolean;
+  className?: string;
+}) {
   const {
     register,
     handleSubmit,
@@ -35,9 +42,12 @@ export default function ContactForm({ isSmall }: { isSmall?: boolean }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={`grid w-full grid-cols-1 gap-${isSmall ? "3" : "5"} rounded-lg ${
-        isSmall ? "p-3" : "p-4"
-      } md:grid-cols-2`}
+      className={twMerge(
+        `grid w-full grid-cols-1 gap-${isSmall ? "3" : "5"} rounded-lg ${
+          isSmall ? "p-3" : "p-4"
+        } md:grid-cols-2`,
+        className,
+      )}
     >
       {/* Your Name Field */}
       <div>
@@ -207,7 +217,9 @@ export default function ContactForm({ isSmall }: { isSmall?: boolean }) {
         <button
           type="submit"
           className={`rounded-full bg-[#FFA600] text-white ${
-            isSmall ? "w-full px-8 py-3 text-base" : "px-11 py-4 text-lg"
+            isSmall
+              ? "w-full px-5 py-2 text-sm sm:px-8 sm:py-3 sm:text-base"
+              : "px-7 py-2.5 text-base sm:px-11 sm:py-4 sm:text-lg"
           }`}
         >
           Send Message

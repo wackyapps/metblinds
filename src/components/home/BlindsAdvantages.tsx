@@ -31,12 +31,12 @@ const BlindsAdvantages: React.FC<{
          */}
         <div className="mb-14 flex flex-col items-center justify-center gap-3">
           <h2
-            className={`${rubik.className} text-center text-[40px] font-semibold text-[#013F68]`}
+            className={`${rubik.className} text-center text-[28px] font-semibold text-[#013F68] sm:text-3xl md:text-[40px]`}
           >
             {data.heading}
           </h2>
           <h3
-            className={`${rubik.className} rounded-full bg-[#FFA600] px-4 py-2 text-center text-3xl font-semibold text-[#013F68]`}
+            className={`${rubik.className} rounded-full bg-[#FFA600] px-4 py-2 text-center text-[22px] font-semibold text-[#013F68] sm:text-[28px] md:text-3xl`}
           >
             {data.subHeading}
           </h3>

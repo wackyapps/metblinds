@@ -3,44 +3,27 @@ import { HiOutlineArrowsExpand } from "react-icons/hi";
 import { FaGears } from "react-icons/fa6";
 import { MdCallSplit } from "react-icons/md";
 
-type BannerType = {
-  coverImage: string;
-  heading: string;
-  subheading?: string;
-  description: string;
-  buttonText: string;
-  link: string;
-  backgroundImage?: string;
-}[];
 export const contactPage = {
   banners: [
     {
-      backgroundImage: "/banners/home-banner-1.png",
+      id: "1",
+      backgroundImage: "/banners/home-banner-1.png", // Update with actual image path
       heading: "Leading Calgary Blinds Company!",
       description:
         "Met Blinds, your trusted Canadian blinds company in Calgary, Alberta, takes pride in transforming your living spaces with high-quality window coverings that seamlessly marry style and functionality.",
       buttonText: "Shop Sales",
-      link: "/",
+      buttonLink: "/control-system",
     },
     {
-      backgroundImage: "/banners/home-banner-2.png",
-      heading: "30% OFF SHADES",
-      subheading: "Don’t Miss The Window to Saves!",
+      id: "2",
+      backgroundImage: "/banners/home-banner-1.png", // Update with actual image path
+      heading: "Leading Calgary Blinds Company!",
       description:
-        "WE MANUFACTURE BLINDS IN CALGARY FOR ALBERTA HOMES & BUSINESSES. a variety of window shades and treatments that give you 100% privacy and add a modern elegant touch to your home.",
+        "Met Blinds, your trusted Canadian blinds company in Calgary, Alberta, takes pride in transforming your living spaces with high-quality window coverings that seamlessly marry style and functionality.",
       buttonText: "Shop Sales",
-      link: "/blinds",
-      coverImage: "/images/banner-side-image-2.png",
+      buttonLink: "/control-system",
     },
-    {
-      backgroundImage: "/banners/home-banner-3.png",
-      heading: "Buy 8 motors & get a smart hub free",
-      subheading: "Ends in 3 days",
-      buttonText: "Shop Sales",
-      link: "/blinds",
-      coverImage: "/images/banner-side-image-3.png",
-    },
-  ] as BannerType,
+  ],
 
   specialOffer: {
     title: "SPECIAL OFFER",

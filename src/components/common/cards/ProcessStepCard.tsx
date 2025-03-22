@@ -30,7 +30,7 @@ const ProcessStepCard: React.FC<{ data: Props; className?: string }> = ({
         )}
       </div>
       <h4
-        className={`text-center text-3xl font-bold text-[#706F6F] duration-500 group-hover:text-white`}
+        className={`text-center text-[22px] font-bold text-[#706F6F] duration-500 group-hover:text-white sm:text-2xl md:text-3xl`}
       >
         {data.title}
       </h4>

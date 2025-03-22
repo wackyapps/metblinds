@@ -19,7 +19,7 @@ const page = () => {
       {/*
        * advanced banner component for homepage
        */}
-      <BannerAdvanced banners={homePage.banners} />
+      <BannerAdvanced />
       {/*
        * services location component for homepage
        */}

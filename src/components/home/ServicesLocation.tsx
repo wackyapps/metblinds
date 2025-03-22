@@ -73,7 +73,7 @@ const ServicesLocation: React.FC<{
 
   return (
     <div className={`bg-[#F7F9FA] px-3 ${className}`}>
-      <div className="relative z-50 mx-auto max-w-[1500px] -translate-y-12 rounded-3xl bg-white px-4 shadow-lg">
+      <div className="relative z-40 mx-auto max-w-[1500px] -translate-y-12 rounded-3xl bg-white px-4 shadow-lg">
         <div className="flex flex-col items-start justify-between gap-8 p-8 lg:flex-row lg:p-10">
           {/* Text container with heading, description and locations */}
           <div className="flex w-full flex-col items-stretch gap-4 lg:max-w-[670px]">
@@ -97,12 +97,12 @@ const ServicesLocation: React.FC<{
           {/* Image section with map */}
           <div
             ref={imageContainerRef}
-            className="relative flex w-full flex-grow justify-center lg:w-auto"
+            className="relative flex w-full flex-grow justify-end lg:w-auto"
           >
             <img
               src={"/images/home/services-location-map.png"}
               alt={"metblinds services map"}
-              className="h-full object-fill"
+              className="h-full object-fill object-right"
               useMap="#locationMap"
             />
             <map name="locationMap">

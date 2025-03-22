@@ -53,7 +53,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 
   return (
     <div
-      className={`flex h-full flex-col items-center justify-center gap-4 rounded-lg border bg-white px-10 py-7 ${className}`}
+      className={`flex h-full flex-col items-center justify-center gap-4 rounded-lg border bg-white px-5 py-3.5 sm:px-10 sm:py-7 ${className}`}
     >
       {/* User Image */}
       <img

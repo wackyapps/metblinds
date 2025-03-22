@@ -492,7 +492,13 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
               type="submit"
               className="rounded-lg bg-[#FFAD33] px-12 py-2.5 text-white transition-colors hover:bg-[#FF9900]"
             >
-              {isBannerLoading ? <FaSpinner /> : isEdit ? "Update" : "Save"}
+              {isBannerLoading || isBannerUpdating ? (
+                <FaSpinner className="animate-spin" />
+              ) : isEdit ? (
+                "Update"
+              ) : (
+                "Save"
+              )}
             </button>
           </div>
         </div>

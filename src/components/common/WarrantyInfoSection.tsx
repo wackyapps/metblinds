@@ -23,7 +23,7 @@ const WarrantyInfoSection = ({ data, className }: Props) => {
       <div className="mx-auto max-w-[1470px] px-4">
         <div className="flex flex-col items-center justify-center gap-10 min-[1100px]:flex-row min-[1100px]:gap-32">
           {/* 10 Year Warranty Image */}
-          <div className="relative h-[530px] w-[530px] flex-shrink-0">
+          <div className="relative h-[530px] w-full flex-shrink-0 sm:w-[530px]">
             <img
               src="/images/ten-year-warranty.svg"
               alt="10 Year Warranty"
