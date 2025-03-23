@@ -40,7 +40,7 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
   return (
     <div
       className="w-full cursor-pointer overflow-hidden rounded-[42px] bg-[#FAFAFA]"
-      onClick={() => router.push(`/blogs/blog-details?slug=${slug}`)}
+      onClick={() => router.push(`/blog/${slug}`)}
     >
       <div className="relative flex flex-col items-center lg:flex-row">
         {/* Image Section */}
@@ -83,7 +83,7 @@ const BlogCardAdvanced: React.FC<BlogCardAdvancedProps> = ({
               <div className="flex items-center justify-between text-sm text-[#6E6E73]">
                 <span className="font-bold">{formattedDate}</span>
                 <button
-                  onClick={() => router.push(`/blogs/blog-details?id=${id}`)}
+                  onClick={() => router.push(`/blog/${id}`)}
                   className={`${abeezee.className} cursor-pointer transition-colors hover:text-black`}
                 >
                   Read More

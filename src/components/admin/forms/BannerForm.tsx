@@ -128,7 +128,7 @@ const BannerForm = ({ isEdit }: { isEdit?: boolean }) => {
       setBackgroundImage(BannerData2.background_image);
       setValue("subTitle", BannerData2.subtitle);
     }
-  }, [bannerData]);
+  }, [bannerData, setValue]);
 
   const bannerCreateHandler = async (data: BannerFormData) => {
     try {

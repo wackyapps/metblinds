@@ -68,7 +68,7 @@ const BlogsContainerAdmin = () => {
     if (newStatus.value !== postStatus.value) {
       setPostStatus(newStatus);
     }
-  }, [searchParams]);
+  }, [searchParams, postStatus.value]);
 
   /**
    * Effect hook to fetch blogs from the API

@@ -6,6 +6,12 @@ import BlindsAdvantages from "@/components/home/BlindsAdvantages";
 import { contactPage } from "@/configs/pages-data/contact";
 import Testimonials from "@/components/common/Testimonials";
 import ContactBanner from "@/components/contact/ContactBanner";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: contactPage.metaData.title,
+  description: contactPage.metaData.description,
+};
 
 const page = () => {
   return (

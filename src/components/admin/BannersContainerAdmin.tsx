@@ -66,7 +66,7 @@ const BannersContainerAdmin = () => {
     if (newStatus.value !== postStatus.value) {
       setPostStatus(newStatus);
     }
-  }, [searchParams]);
+  }, [searchParams, postStatus.value]);
 
   /**
    * Effect hook to fetch banners from the API

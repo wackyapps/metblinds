@@ -5,6 +5,12 @@ import { BsTools } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
 
 export const aboutPage = {
+  metaData: {
+    title: "About Us - Met Blinds",
+    description:
+      "Discover who we are and our commitment to providing premium window blinds that enhance your living and working spaces.",
+  },
+
   aboutBanner: {
     heading: "Who We Are",
     subHeading:

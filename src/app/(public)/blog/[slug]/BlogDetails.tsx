@@ -1,5 +1,5 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useGetBlogBySlugQuery } from "@/store/services/blogApi";
 import { Suspense } from "react";
 
@@ -14,13 +14,13 @@ const formatDate = (dateString: string) => {
 };
 
 const BlogDetails = () => {
-  const searchParams = useSearchParams();
-  // getting slug from query params
-  const slug = searchParams?.get("slug");
+  const params = useParams();
+  // getting slug from route params
+  const slug = params?.slug as string;
 
   // getting blog details from api
   const { data, isLoading, error } = useGetBlogBySlugQuery({
-    slug: slug as string,
+    slug,
   });
   if (isLoading)
     return (
@@ -64,8 +64,8 @@ const BlogDetails = () => {
           </div>
           <h2 className="mb-3 text-2xl font-bold">Unable to Load Blog</h2>
           <p className="mb-6 text-[#6E6E73]">
-            We're having trouble loading this blog post. Please try again later
-            or check our other posts.
+            {` We're having trouble loading this blog post. Please try again later
+            or check our other posts.`}
           </p>
           <a
             href="/blogs"

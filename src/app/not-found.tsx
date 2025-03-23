@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { Metadata } from "next";
 
 export default function NotFound() {
   const [mounted, setMounted] = useState(false);
@@ -28,7 +28,8 @@ export default function NotFound() {
         <h1 className="text-4xl font-bold text-gray-900">Page Not Found</h1>
 
         <p className="text-lg text-gray-600">
-          It seems the page you're looking for doesn't exist or has been moved.
+          {`          It seems the page you're looking for doesn't exist or has been moved.
+`}
         </p>
 
         <div className="flex flex-col justify-center gap-4 pt-6 sm:flex-row">

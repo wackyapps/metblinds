@@ -1,6 +1,10 @@
 import React from "react";
 
-const BlogsBanner = () => {
+type BlogsBannerProps = {
+  heading: string;
+  description: string;
+};
+const BlogsBanner = ({ heading, description }: BlogsBannerProps) => {
   return (
     <div
       className="relative w-full py-32"
@@ -13,10 +17,10 @@ const BlogsBanner = () => {
       <div className="relative mx-auto flex h-full max-w-[1500px] items-center px-3 sm:px-6">
         <div className="max-w-[758px] space-y-6">
           <h1 className="text-2xl font-semibold text-white md:text-3xl">
-            Discover
+            {heading}
           </h1>
           <p className="max-w-[541px] text-lg leading-relaxed text-[#E6E6E6]">
-            Explore popular blogs that inspire, educate, and entertain.
+            {description}
           </p>
         </div>
       </div>

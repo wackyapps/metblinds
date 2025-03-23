@@ -6,6 +6,11 @@ import motorizedBlinds from "./control-systems/motorized-blinds";
 import smartControl from "./control-systems/smart-control";
 
 export const controlSystemPage = {
+  metaData: {
+    title: "Control Systems - Met Blinds",
+    description:
+      "Explore the range of control systems available for your blinds, from classic corded options to smart home integrations. Choose the best fit for convenience, safety, and style.",
+  },
   /**
    * control system banner
    */

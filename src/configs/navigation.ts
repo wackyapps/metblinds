@@ -60,7 +60,7 @@ export const mainNavbarNavigation: NavigationType[] = [
   },
   {
     title: "Blogs",
-    link: "/blogs",
+    link: "/blog",
     icon: TiDocumentText,
   },
   {

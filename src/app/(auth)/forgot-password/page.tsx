@@ -1,4 +1,11 @@
 import { ForgotPasswordForm } from "@/components/auth/ForgotPasswordForm";
+import authPages from "@/configs/pages-data/authPages";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: authPages.forgotPasswordMetaData.title,
+  description: authPages.forgotPasswordMetaData.description,
+};
 
 const ForgotPasswordPage = () => {
   return (

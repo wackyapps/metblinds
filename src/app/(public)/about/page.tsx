@@ -3,6 +3,12 @@ import MissionSection from "@/components/about/MissionSection";
 import OurProcess from "@/components/about/OurProcess";
 import WhyCooseUS from "@/components/common/WhyCooseUs";
 import { aboutPage } from "@/configs/pages-data/about";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: aboutPage.metaData.title,
+  description: aboutPage.metaData.description,
+};
 
 const page = () => {
   return (

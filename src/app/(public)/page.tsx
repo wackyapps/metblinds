@@ -12,6 +12,12 @@ import MediaSpotlight from "@/components/home/MediaSpotlight";
 import ServicesLocation from "@/components/home/ServicesLocation";
 // importing home page data to show
 import { homePage } from "@/configs/pages-data/home";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: homePage.metaData.title,
+  description: homePage.metaData.description,
+};
 
 const page = () => {
   return (

@@ -1,5 +1,3 @@
-import { LoginFormWrapper } from "@/components/auth/LoginFormWrapper";
-
 export default function AuthLayout({
   children,
 }: {

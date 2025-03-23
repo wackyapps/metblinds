@@ -1,5 +1,12 @@
 import { LoginForm } from "@/components/auth/LoginForm";
 import { Suspense } from "react";
+import { Metadata } from "next";
+import authPages from "@/configs/pages-data/authPages";
+
+export const metadata: Metadata = {
+  title: authPages.loginMetaData.title,
+  description: authPages.loginMetaData.description,
+};
 
 export default function LoginPage() {
   return (

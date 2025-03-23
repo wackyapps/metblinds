@@ -4,6 +4,11 @@ import { GiSandsOfTime } from "react-icons/gi";
 import { GiUpgrade } from "react-icons/gi";
 
 export const homePage = {
+  metaData: {
+    title: "Home - Met Blinds",
+    description:
+      "Discover the best window blinds in Calgary. We offer a wide range of blinds, including zebra, roller, solar, motorized, and smart blinds. Personalize every detail with expert design consultants and high-performance materials built to last.",
+  },
   /**
    * services locatoin section data
    */

@@ -160,7 +160,7 @@ const BlogForm = ({ isEdit }: { isEdit?: boolean }) => {
       setValue("post_status", blogData?.post_status || "draft");
       setFeaturedImage(blogData?.featured_image);
     }
-  }, [blog]);
+  }, [blog, blogData, setValue]);
 
   if (isBlogLoading) {
     return <BlogFormSkeleton />;

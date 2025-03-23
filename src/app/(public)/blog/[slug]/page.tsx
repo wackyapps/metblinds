@@ -1,5 +1,6 @@
 "use client";
 import BlogDetails from "./BlogDetails";
+
 const BlogDetailsPage = () => {
   return (
     <div>

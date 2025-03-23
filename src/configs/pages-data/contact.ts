@@ -4,6 +4,11 @@ import { FaGears } from "react-icons/fa6";
 import { MdCallSplit } from "react-icons/md";
 
 export const contactPage = {
+  metaData: {
+    title: "Contact Us - Met Blinds",
+    description:
+      "Contact us for any inquiries or to schedule a free consultation. We're here to help you find the perfect window blinds for your home or business.",
+  },
   banners: [
     {
       id: "1",

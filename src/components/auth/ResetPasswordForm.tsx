@@ -118,7 +118,7 @@ export function ResetPasswordForm() {
     if (isError) {
       setUnexpError(true);
     }
-  }, [userData]);
+  }, [userData, isError, setValue]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

@@ -1,5 +1,12 @@
 import { ResetPasswordForm } from "@/components/auth/ResetPasswordForm";
 import { Suspense } from "react";
+import { Metadata } from "next";
+import authPages from "@/configs/pages-data/authPages";
+
+export const metadata: Metadata = {
+  title: authPages.resetPasswordMetaData.title,
+  description: authPages.resetPasswordMetaData.description,
+};
 
 const ResetPasswordPage = () => {
   return (
