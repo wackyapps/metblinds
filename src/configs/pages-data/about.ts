@@ -14,7 +14,7 @@ export const aboutPage = {
   aboutBanner: {
     heading: "Who We Are",
     subHeading:
-      "Welcome to our Canada blinds store! We offer top-quality, stylish, and easy-to-use blinds for both residential and commercial spaces. From blinds and shades to shutters and drapes, everything is handcrafted using locally and sustainably sourced materials. As a proud Canadian company, your support helps reinvest in our nation.\n\nShop online or visit our showroom to see samples in person!",
+      "Welcome to our Canada blinds store! We offer top-quality, stylish, and easy-to-use blinds for both residential and commercial spaces. From blinds and shades to shutters and drapes, everything is handcrafted using locally and sustainably sourced materials. As a proud Canadian company, your support helps reinvest in our nation. Shop online or visit our showroom to see samples in person!",
     coverImage: "/banners/about-banner-img.png",
   },
   aboutMission: {
