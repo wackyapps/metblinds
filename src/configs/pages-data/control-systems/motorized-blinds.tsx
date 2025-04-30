@@ -21,9 +21,9 @@ const motorizedBlinds = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Introducing Smart Control Systems",
+    heading: "Discover Smart Control Systems",
     subHeading:
-      "Discover the perfect control system for your blinds, from classic corded options to smart home integrations. Choose the best fit for convenience, safety, and style.",
+      "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
     coverImage: "/banners/about-banner-img.png",
   },
@@ -31,9 +31,9 @@ const motorizedBlinds = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Motorized Blinds?",
+    heading: "Why Motorized Blind Control Might Be Perfect for You?",
     subHeading:
-      "Motorized blinds provide the ultimate convenience in window covering control. With quiet, powerful motors and multiple control options, they're perfect for hard-to-reach windows or those seeking a modern, automated solution. Our motorized systems combine reliability with ease of use.",
+      "Discover the next generation of window coverings with our latest Motorized blind system. Combining state-of-the-art technology with seamless controls, it offers convenience and control like no other treatment. Whether using a remote control or your smartphone, the one-touch operation makes the experience second to none.",
     features: [
       {
         icon: <FaRegClock />,
@@ -66,38 +66,38 @@ const motorizedBlinds = {
    * production steps data
    */
   productionSteps: {
-    heading: "Features",
+    heading: "Key Features of Motorized Blinds",
     subHeading:
-      "Experience the future of window coverings with our motorized blind systems. Combining cutting-edge technology with user-friendly controls, these systems offer unparalleled convenience and sophistication.",
+      "The motorized electric blinds system is ideal for tranquil spaces like meditation and yoga centers, libraries, hospitals, and meeting rooms. With its high-end quiet motors and advanced smart controls, it stands out as the top pick for luxury homes and offices.",
     features: [
       {
         icon: TbDeviceRemote,
-        title: "Remote Control Operation",
+        title: "Remote Control Support",
         description:
-          "Control your blinds from anywhere with a remote or smartphone.",
+          "Use remote control to adjust lighting from anywhere in the house.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Advanced Safety Features",
+        title: "Smart Home Integration",
         description:
-          "Built-in obstacle detection and emergency stop functionality.",
+          "Control your blind with Smart Home programs and voice assistants.",
       },
       {
         icon: IoAnalytics,
-        title: "Smart Integration",
+        title: "Silent Operation",
         description:
-          "Compatible with major smart home systems and voice assistants.",
+          "A quiet and smooth motor operation, ideal for peaceful settings.",
       },
       {
         icon: FaRegClock,
-        title: "Programmable Settings",
-        description: "Set automatic schedules for optimal light control.",
+        title: "Programmable Scheduling",
+        description: "Create scheduled blind adjustments for light control.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Quiet Operation",
+        title: "Safety Features",
         description:
-          "Smooth, silent motor operation for peaceful environments.",
+          "Packed with emergency stop and obstacle detection feature.",
       },
     ],
   },
@@ -107,40 +107,40 @@ const motorizedBlinds = {
   compatibleBlinds: {
     heading: "Compatible Blinds",
     subHeading:
-      "Motorized control is compatible with multiple blind types, offering a modern and automated solution.",
+      "Cordless control is compatible with multiple blind types, offering a modern and safe solution.",
     blinds: [
       {
         title: "Zebra Blinds",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/zebra-blind.png",
+          "This style of blinds lets you control the light with blackout or light-filtering fabric—perfect for full darkness or natural brightness. A great custom option for any home in Canada.",
+         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Roller Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/roller-shades-blind.png",
+          "These clean, minimalist roller shades offer privacy and style without clutter. Easy to use and clean, they roll up or down to control light in any space.",
+         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Solar Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Solar blinds reduce glare, block harmful UV rays, and help keep your space cool and comfortable. They're a top choice for energy-efficient window shades.",
         image: "/images/blinds/solar-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Drapery",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Add color and personality to your home with custom drapery. Choose from rich fabrics like velvet, silk, and linen—perfect for both modern and traditional styles. Durable and stylish, our drapes resist dust, sun, and drafts.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Trifold",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Save space with trifold shutters, featuring three panels that fold in half. Ideal for large windows, they offer a unique design and come in materials like wood or composite to match your style.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
       },
@@ -148,7 +148,7 @@ const motorizedBlinds = {
         title: "Honeycomb Blinds",
         description:
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/honey-comb-blind.png",
+      image: "/images/blinds/honey-comb-blind.png",
         buttonText: "Learn More",
       },
     ],
@@ -157,29 +157,29 @@ const motorizedBlinds = {
    * how it works data
    */
   howItWorks: {
-    heading: "How It Works",
-    subHeading: "Operating Motorized Blinds in 3 Simple Steps",
+    heading: "Operating Mechanism",
+    subHeading: "3-Step Guide to operate Motorized Blinds",
     steps: [
       {
         icon: <FaArrowUp />,
-        title: "Adjust the Cord",
+        title: "Use Remote Control",
         description:
-          "Pull the cord up or down to position the blinds as needed.",
+          "Use your remote to adjust your blinds.",
         isFilled: true,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaLock />,
-        title: "Lock in Place",
+        title: "Smart Home Integration",
         description:
-          "Secure the blinds with the MET Sleeve & bottom safety lock.",
+          "Connect your treatment to your favorite Smart Home system for enhanced control.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaSun />,
-        title: "Enjoy Precise Light Control",
-        description: "Adjust the tilt for privacy & lighting preferences.",
+        title: "Automation",
+        description: "Create automated schedules for privacy/light control.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -189,26 +189,26 @@ const motorizedBlinds = {
    * safety & maintenance data
    */
   safetyMaintenance: {
-    heading: "Safety & Maintenance",
+    heading: "Blinds Safety & Care",
     subHeading:
-      "Motorized blind systems combine advanced safety features with easy maintenance. Regular care ensures smooth operation and extends the life of your investment.",
+      "Despite the added electronics and complex mechanism, Motorized Blinds System doesn’t demand extra care and maintenance. Regular checks are sufficient to maintain proper functionality and ensure extended life.",
     features: [
       {
-        title: "Motor Protection",
+        title: "Motor Check",
         description:
-          "Built-in safety features prevent motor overload and ensure smooth operation.",
+          "Keep an eye on motor performance to avoid overloading and failure.",
         image: "/svgs/child-safe.svg",
-      },
-      {
-        title: "Remote Maintenance",
-        description:
-          "Keep remote controls clean and replace batteries as needed for reliable control.",
-        image: "/svgs/easy-cleaning.svg",
       },
       {
         title: "Track Inspection",
         description:
-          "Regular cleaning of tracks ensures smooth blind movement.",
+          "Clean the tracks regularly for seamless blinds movement.",
+        image: "/svgs/easy-cleaning.svg",
+      },
+      {
+        title: "Remote Maintenance",
+        description:
+          "Keep your remote control clean and dry, and replace batteries as needed.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -217,9 +217,9 @@ const motorizedBlinds = {
    * quote cta section
    */
   quoteCTASection: {
-    heading: "Need Help Choosing the Right Control System?",
+    heading: "Want Us To Help You Choose?",
     subHeading:
-      "Contact us for expert recommendations and customized solutions",
+      "Need expert advice for your home or office? Reach out to use and our team will provide you with personalized recommendations tailored to your preference and style.",
     buttonText: "Request free Quote",
     background: "/banners/about-banner-img.png",
   },
