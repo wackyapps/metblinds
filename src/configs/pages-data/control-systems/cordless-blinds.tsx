@@ -21,9 +21,9 @@ const cordlessBlinds = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Introducing Smart Control Systems",
+    heading: "Discover Smart Control Systems",
     subHeading:
-      "Discover the perfect control system for your blinds, from classic corded options to smart home integrations. Choose the best fit for convenience, safety, and style.",
+      "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
     coverImage: "/banners/about-banner-img.png",
   },
@@ -31,9 +31,9 @@ const cordlessBlinds = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Cordless Blinds?",
+    heading: "Why Cordless Blinds Might Be Perfect for You?",
     subHeading:
-      "Cordless blinds offer a modern, clean look with enhanced safety features. Perfect for homes with children and pets, they eliminate cord hazards while providing smooth, effortless operation. Our cordless blinds combine style with functionality, making them an ideal choice for contemporary homes.",
+      "Cordless blinds combine elegance with safety– no dangling cords. Unlike conventional blinds, for a hazard-free and safe window treatment, perfect for homes with pets and children. A simple push and pull is needed to adjust the light control and privacy levels.",
     features: [
       {
         icon: <FaRegClock />,
@@ -66,34 +66,34 @@ const cordlessBlinds = {
    * production steps data
    */
   productionSteps: {
-    heading: "Features",
+    heading: "Key Features of Cordless Blinds",
     subHeading:
-      "Experience the perfect blend of safety and convenience with our cordless blind systems. Designed for modern homes, these systems offer a clean look while ensuring the safety of children and pets.",
+      "A perfect infusion of style, convenience, and safety– Cordless Window Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
     features: [
       {
         icon: TbDeviceRemote,
-        title: "Cord-Free Operation",
-        description: "Clean, modern look with no exposed cords.",
+        title: "Enduring Performance",
+        description: "Made with industry-grade material that will last.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Child & Pet Safety",
-        description: "Eliminates cord hazards for peace of mind.",
+        title: "No Cord Blinds",
+        description: "Sleek and contemporary look without hanging cords.",
       },
       {
         icon: IoAnalytics,
-        title: "Smooth Control",
-        description: "Spring-loaded mechanism for effortless operation.",
+        title: "Fully Customizable",
+        description: "Come in different cord sizes and materials.",
       },
       {
         icon: FaRegClock,
-        title: "Durable Design",
-        description: "Built to last with quality materials.",
+        title: "Sleek and Stylish",
+        description: "Traditional yet stylish blinds with clutter-free aesthetics.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Style Options",
-        description: "Available in various materials and finishes.",
+        title: "Enhanced Safety",
+        description: "Added layer of protection for children and pets.",
       },
     ],
   },
@@ -108,35 +108,35 @@ const cordlessBlinds = {
       {
         title: "Zebra Blinds",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/zebra-blind.png",
+          "This style of blinds lets you control the light with blackout or light-filtering fabric—perfect for full darkness or natural brightness. A great custom option for any home in Canada.",
+         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Roller Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/roller-shades-blind.png",
+          "These clean, minimalist roller shades offer privacy and style without clutter. Easy to use and clean, they roll up or down to control light in any space.",
+         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Solar Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Solar blinds reduce glare, block harmful UV rays, and help keep your space cool and comfortable. They're a top choice for energy-efficient window shades.",
         image: "/images/blinds/solar-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Drapery",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Add color and personality to your home with custom drapery. Choose from rich fabrics like velvet, silk, and linen—perfect for both modern and traditional styles. Durable and stylish, our drapes resist dust, sun, and drafts.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Trifold",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Save space with trifold shutters, featuring three panels that fold in half. Ideal for large windows, they offer a unique design and come in materials like wood or composite to match your style.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
       },
@@ -144,7 +144,7 @@ const cordlessBlinds = {
         title: "Honeycomb Blinds",
         description:
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/honey-comb-blind.png",
+      image: "/images/blinds/honey-comb-blind.png",
         buttonText: "Learn More",
       },
     ],
@@ -158,24 +158,24 @@ const cordlessBlinds = {
     steps: [
       {
         icon: <FaArrowUp />,
-        title: "Adjust the Cord",
+        title: "Position the Bottom Rail",
         description:
-          "Pull the cord up or down to position the blinds as needed.",
+          "Pull the bottom rail up or down to place the blinds.",
         isFilled: true,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaLock />,
-        title: "Lock in Place",
+        title: "Lock it Securely",
         description:
-          "Secure the blinds with the MET Sleeve & bottom safety lock.",
+          "Use MET Sleeve & bottom safety lock to keep them in place.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaSun />,
-        title: "Enjoy Precise Light Control",
-        description: "Adjust the tilt for privacy & lighting preferences.",
+        title: "Control Light & Privacy",
+        description: "Stop at any height for preferred privacy & lighting.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -185,26 +185,26 @@ const cordlessBlinds = {
    * safety & maintenance data
    */
   safetyMaintenance: {
-    heading: "Safety & Maintenance",
+    heading: "Blinds Safety & Care",
     subHeading:
-      "Cordless blind systems prioritize safety and ease of maintenance. Regular care ensures smooth operation and extends the life of your investment.",
+      "Routine cleaning and maintenance prevents dust build up, wear & tear and allergens, ensuring Cordless Window Shades’ smooth operation and longevity. Additionally, it enhances air quality, keeps the aesthetics intact, and maintains the overall freshness, and style of the place.",
     features: [
-      {
-        title: "Spring Mechanism",
-        description:
-          "Regular inspection of spring tension for safe and smooth operation.",
-        image: "/svgs/child-safe.svg",
-      },
-      {
-        title: "Bottom Rail Care",
-        description:
-          "Keep the bottom rail clean and check for proper alignment.",
-        image: "/svgs/easy-cleaning.svg",
-      },
       {
         title: "System Check",
         description:
-          "Inspect the cordless mechanism for wear and proper function.",
+          "Regularly check the spring mechanism for wear & tear.",
+        image: "/svgs/child-safe.svg",
+      },
+      {
+        title: "Spring Mechanism",
+        description:
+          "Ensure that spring tension remains intact for smooth operation.",
+        image: "/svgs/easy-cleaning.svg",
+      },
+      {
+        title: "Bottom Rail Check",
+        description:
+          "Clean the bottom rain and properly aligned",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -213,9 +213,9 @@ const cordlessBlinds = {
    * quote cta section
    */
   quoteCTASection: {
-    heading: "Need Help Choosing the Right Control System?",
+    heading: "Want Us To Help You Choose?",
     subHeading:
-      "Contact us for expert recommendations and customized solutions",
+      "Need expert advice for your home or office? Reach out to use and our team will provide you with personalized recommendations tailored to your preference and style.",
     buttonText: "Request free Quote",
     background: "/banners/about-banner-img.png",
   },
