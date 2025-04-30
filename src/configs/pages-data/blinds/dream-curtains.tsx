@@ -16,7 +16,7 @@ const dreamCurtains = {
   blindsBanner: {
     heading: "Dream Curtains",
     subHeading:
-      "Dream curtains bring luxury and style to your windows, offering perfect light control and privacy while creating an elegant atmosphere in your home.",
+      "Get the best of all– privacy, light control, and aesthetics. Dream Curtains offers an immaculate blend of luxury, functionality, and elegance, elevating any decor.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -28,27 +28,27 @@ const dreamCurtains = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Elegant Light Control",
-        description: "Perfect balance of light and privacy",
+        title: "Light Control",
+        description: "Regulate the amount and direction of the sunlight, creating a comfortable and glare-free ambience all day.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Complete coverage when needed",
-        image: "/images/contact-section-image-1.png",
+        title: "Optimal Privacy",
+        description: "Maintain your privacy without sacrificing natural light, all thanks to the innovative Trifold design.",
+         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Luxurious Design",
-        description: "Elegant and sophisticated appearance",
+        title: "Ultra Luxury Design",
+        description: "Experience unparalleled  luxury with exquisite fabric and craftsmanship, redefining your personal space.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Reduce heating and cooling costs",
-        image: "/images/contact-section-image-1.png",
+        description: "Control indoor temperatures by reducing heat gain in summer, resulting in increased energy savings and lower cooling cost.",
+       image: "/images/contact-section-image-1.png",
       },
     ],
   },
@@ -59,21 +59,21 @@ const dreamCurtains = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -83,40 +83,40 @@ const dreamCurtains = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of fabrics to create the perfect dream curtains for your space. Our fabrics are specially designed for luxury and durability.",
+      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -125,8 +125,8 @@ const dreamCurtains = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your dream curtains perfectly match your interior design.",
-    hardwareOptions: [
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
+        hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
         name: "Antique Brass",
@@ -151,7 +151,7 @@ const dreamCurtains = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -233,36 +233,37 @@ const dreamCurtains = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What makes dream curtains special?",
+        question: "Are Dream Curtains available in different fabrics?",
         answer:
-          "Dream curtains combine luxurious design with practical functionality, offering elegant window treatments that enhance your home's aesthetic appeal while providing excellent light control and privacy.",
+          "Yes. You can choose from Met Blind’s wide range of dream Curtains fabric to compliment your decor style.",
       },
       {
-        question: "Can dream curtains be motorized?",
+        question: "How can I clean and maintain my Dream Blinds?",
         answer:
-          "Yes, dream curtains can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Just regular dusting with brush or light vacuuming will keep your Dream Curtains clean. For deeper cleaning, you can use a damp cloth with little detergent.",
       },
       {
-        question: "How do I clean dream curtains?",
+        question: "Are Motorized Dream Curtains machine washable?",
         answer:
-          "Dream curtains can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "Most Dream Motorized Curtains can be washed in a machine, while others require dry cleaning. Read the fabric instructions carefully.",
       },
       {
-        question: "What is the installation process?",
+        question: "Do Dream Curtains fade over time?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your dream curtains with precision and care.",
+          "Met Blinds’ Dream Art Blackout Curtains are designed to resist fading. Prevent direct sun exposure to keep them intact for a longer period.",
       },
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Transform your space with our luxurious dream curtains. Contact us today for a free consultation and let our experts help you choose the perfect curtains for your home. Call MET BLINDS now!",
+        text: "Add a touch of luxury and aesthetics with our Dream Curtains and Blinds. Schedule a free consultation and our experts will make a perfect recommendation tailored to your interior and style.",
       },
     ],
   },
