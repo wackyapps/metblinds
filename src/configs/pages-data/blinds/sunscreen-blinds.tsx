@@ -16,7 +16,7 @@ const sunscreenBlinds = {
   blindsBanner: {
     heading: "Sunscreen Blinds",
     subHeading:
-      "Sunscreen blinds provide optimal protection against harsh sunlight while maintaining clear visibility, creating a comfortable and visually appealing environment.",
+      "A contemporary window solution, offering a perfect balance between privacy and natural light, all while keeping you safe from harmful UV rays.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -28,26 +28,26 @@ const sunscreenBlinds = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Glare Control",
-        description: "Reduce harsh sunlight and glare",
+        title: "UV Protection",
+        description: "Protect your floor, furniture, and valuables from harmful ultraviolet rays, which may cause discoloration.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "UV Protection",
-        description: "Protect against harmful UV rays",
+        title: "Glare Reduction",
+        description: "Enhance your comfort by minimizing harmful sunlight and screen reflections.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Clear View",
-        description: "Maintain visibility while filtering light",
+        title: "Maintain Outdoor View",
+        description: "Keep your outdoor views intact with filtered incoming light, and create a cozy interior setting.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Reduce cooling costs",
+        description: "Control indoor temperatures by reducing heat gain in summer, resulting in increased energy savings and lower cooling cost.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -59,21 +59,21 @@ const sunscreenBlinds = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -83,40 +83,40 @@ const sunscreenBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of sunscreen fabrics to create the perfect window treatment for your space. Our fabrics are specially designed to filter sunlight while maintaining visibility.",
+      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -125,8 +125,8 @@ const sunscreenBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your sunscreen blinds perfectly match your interior design.",
-    hardwareOptions: [
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
+     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
         name: "Antique Brass",
@@ -151,7 +151,7 @@ const sunscreenBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -228,37 +228,40 @@ const sunscreenBlinds = {
   faqs: {
     heading: "FAQs",
     faqs: [
+  
+
       {
-        question: "What makes sunscreen blinds special?",
+        question: "Can you see through sunscreen blinds?",
         answer:
-          "Sunscreen blinds are specially designed to filter harsh sunlight and reduce glare while maintaining visibility, making them perfect for spaces where you want to protect against UV rays without losing the view.",
+          "Yes. Sunscreen blinds not only retains the outside view but also allows natural lighting to enter your room.",
       },
       {
-        question: "Can sunscreen blinds be motorized?",
+        question: "How much UV comes through blinds?",
         answer:
-          "Yes, sunscreen blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Solar Blinds with 1% openness block nearly 99% of the UV light, keeping the place safe from glare and heat.",
       },
       {
-        question: "How do I clean sunscreen blinds?",
+        question: "Do sunscreen blinds block heat?",
         answer:
-          "Sunscreen blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "Yes. Sunscreen Blinds filter the sunlight and block UV rays, reducing the heat, while still maintaining the natural lighting conditions.",
       },
       {
-        question: "What is the installation process?",
+        question: "Do sunscreen blinds provide privacy at night?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your sunscreen blinds with precision and care.",
+          "Unfortunately no. Sunscreen Blinds become see-through if indoor lights are turned on. To avoid this, you can layer them with curtains.",
       },
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Protect your space from harsh sunlight with our premium sunscreen blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
+        text: "Add a touch of elegance to your home’s aesthetic with our new Sunscreen Blinds. Schedule a free consultation and our drapery shop experts will make a perfect recommendation suited to your interior aesthetics and style.",
       },
     ],
   },
