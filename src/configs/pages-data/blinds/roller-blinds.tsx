@@ -13,9 +13,9 @@ const rollerBlinds = {
    * blinds banner
    */
   blindsBanner: {
-    heading: "Roller Blinds",
+    heading: "Roller Shades",
     subHeading:
-      "Roller blinds are a versatile and practical window covering solution that provides perfect light control and privacy while maintaining a clean, modern look.",
+      "Roller shades provide a perfect balance between privacy and light control. Whether in your home or office, these versatile window coverings let in soft light while keeping your space private. Available in blackout options for complete darkness, ideal for media rooms or bedrooms, and sheer options for brighter, more active spaces like kitchens and living rooms.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -23,30 +23,30 @@ const rollerBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Roller Blinds",
+    heading: "Why Choose Roller Shades",
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Perfect Light Control",
-        description: "Adjust light levels with precision",
+        title: "Light Control",
+        description: "Easily adjust the amount of light entering your space, creating a comfortable, glare-free environment.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Maximum Privacy",
-        description: "Complete privacy when needed",
+        title: "Privacy",
+        description: "Enjoy complete privacy without sacrificing natural light, thanks to the innovative design of roller shades.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Clean Design",
-        description: "Sleek and modern appearance",
+        title: "Modern Design",
+        description: "Sleek and minimalist, roller shades seamlessly blend into any contemporary decor, offering a clean, stylish appearance.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
-        title: "Energy Efficient",
-        description: "Reduce energy costs with proper insulation",
+        title: "Space Saving",
+        description: "Roller shades retract neatly into a compact roll, saving space and providing unobstructed views.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -58,21 +58,21 @@ const rollerBlinds = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
-      },
-      {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile Operation",
+        description: "Choose between manual, motorized, or even voice-activated systems to operate your blinds.",
+      },
+      {
+        title: "Custom Fit",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Roller shades can be tailored to any window size, from standard to specialty windows, providing seamless fit and style.",
       },
     ],
   },
@@ -82,40 +82,40 @@ const rollerBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our wide range of fabrics to create the perfect roller blinds for your space. From light filtering to blackout options, find the ideal solution for your needs.",
+      "No need to compromise on style—choose from a vast selection of fabric blinds and shades in various textures and colors to perfectly complement your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -124,7 +124,7 @@ const rollerBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your roller blinds perfectly match your interior design.",
+      "Opt for hardware materials that complement your interior decor, enhancing both functionality and aesthetics.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -150,7 +150,7 @@ const rollerBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Upgrade to motorized or smart Control System – control them effortlessly with a remote, voice command, or smart device.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -231,36 +231,37 @@ const rollerBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What are the benefits of roller blinds?",
+        question: "Are roller shades safe for homes with children or pets?",
         answer:
-          "Roller blinds offer excellent light control, privacy, energy efficiency, and a clean, modern appearance. They're also easy to maintain and operate.",
+          "Yes, cordless roller shades are a great choice for homes with young children and pets.",
       },
       {
-        question: "Can roller blinds be motorized?",
+        question: "Do roller shades work on all window types?",
         answer:
-          "Yes, roller blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Yes, they fit standard, specialty, and custom windows.",
       },
       {
-        question: "How do I clean roller blinds?",
+        question: "Can I motorize my roller shades?",
         answer:
-          "Roller blinds can be easily cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services.",
+          "Absolutely! Roller shades can be motorized for added convenience and ease.",
       },
       {
-        question: "What is the installation process?",
+        question: "What is the difference between blackout and light filtering fabrics?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your roller blinds with precision and care.",
+          "Blackout fabrics block all light, while light filtering fabrics allow some natural light to filter in while maintaining privacy.",
       },
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Transform your space with our premium roller blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
+        text: "Enhance your home or office with premium roller shades. Contact us for a free consultation and we’ll help you select the perfect option for your needs.",
       },
     ],
   },

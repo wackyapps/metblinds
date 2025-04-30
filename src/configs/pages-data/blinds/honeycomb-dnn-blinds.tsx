@@ -14,9 +14,9 @@ const honeycombDnnBlinds = {
    * blinds banner
    */
   blindsBanner: {
-    heading: "Honeycomb DNN Blinds",
+    heading: "Honeycomb",
     subHeading:
-      "Honeycomb DNN blinds combine innovative double-layer cellular design with elegant aesthetics to provide superior insulation and light control for your home.",
+      "Looking for light control with tranquility? Honeycomb blinds are for you. Its unique cellular design provides exceptional thermal insulation and noise control, making it an ideal choice for classrooms, meditation centers, or even cozy bedrooms.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -28,26 +28,26 @@ const honeycombDnnBlinds = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Insulation",
-        description: "Double-layer cellular design",
+        title: "Thermal Insulation",
+        description: "Honeycomb design traps the air within its cells, creating a thermal barrier for temperature control.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Perfect light filtering and privacy control",
+        title: "Contemporary Aesthetics",
+        description: "The modern and sleek appearance blends well with nearly all types of interiors, making it a good choice for living room, office, and bedroom.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Design",
-        description: "Clean, contemporary appearance",
+        title: "Sound Absorption",
+        description: "Unique cellular design absorbs the soundwaves, resulting in minimized outside noise like traffic, street, neighbors, etc.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
-        title: "Energy Efficient",
-        description: "Reduce heating and cooling costs",
+        title: "Energy Efficiency",
+        description: "Maintain consistent indoor temperature throughout the year and save energy.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -59,21 +59,21 @@ const honeycombDnnBlinds = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -83,40 +83,40 @@ const honeycombDnnBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium honeycomb fabrics to create the perfect window treatment for your space. Our double-layer cellular design provides superior insulation and light control.",
+      "No need to compromise on style—choose from a vast selection of fabric blinds and shades in various textures and colors to perfectly complement your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -125,7 +125,7 @@ const honeycombDnnBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your honeycomb DNN blinds perfectly match your interior design.",
+      "Premium hardware finishes that complement your space—luxury included.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -149,9 +149,9 @@ const honeycombDnnBlinds = {
    * choose control system
    */
   chooseControlSystem: {
-    heading: "Choose Your Control System",
+    heading: "Ready to Transform Your Space?",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Experience total privacy and insulation with our honeycomb blinds. Schedule a free consultation and our expert will make a perfect recommendation suited to your interior aesthetics and style.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -232,27 +232,28 @@ const honeycombDnnBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What makes honeycomb DNN blinds special?",
+        question: "Can you see through honeycomb blinds at night?",
         answer:
-          "Honeycomb DNN blinds feature a unique double-layer cellular design that creates air pockets, providing superior insulation and energy efficiency compared to traditional blinds.",
+          "No, honeycomb blinds provide excellent privacy, and they are not see-through, even with indoor lights on.",
       },
       {
-        question: "Are honeycomb DNN blinds good for energy savings?",
+        question: "How long do honeycomb blinds last?",
         answer:
-          "Yes, honeycomb DNN blinds are excellent for energy savings. Their double-layer cellular design helps maintain indoor temperature, reducing heating and cooling costs.",
+          "Depending on the usage and maintenance, honeycomb blinds may last for 8-12 years.",
       },
       {
-        question: "Can honeycomb DNN blinds be used in any room?",
+        question: "How can I clean and maintain my honeycomb blinds?",
         answer:
-          "Yes, honeycomb DNN blinds are versatile and suitable for any room. They're particularly effective in bedrooms, living rooms, and areas requiring temperature control.",
+          "Dust regularly, spot clean with mild detergent, and avoid harsh chemicals to maintain fabric and mechanisms for a long time.",
       },
       {
-        question: "How do I clean honeycomb DNN blinds?",
+        question: "Which are better roller shades or honeycomb shades?",
         answer:
-          "Honeycomb DNN blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the cellular structure.",
+          "Honeycomb shades are better for thermal/sound insulation, while roller shades offer simplicity and overall comfort.",
       },
     ],
   },
+  
   /**
    * info banner
    */
