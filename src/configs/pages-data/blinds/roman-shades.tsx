@@ -16,7 +16,7 @@ const romanShades = {
   blindsBanner: {
     heading: "Roman Shades",
     subHeading:
-      "Roman shades offer timeless elegance and practical functionality, creating a sophisticated look while providing excellent light control and privacy.",
+      "Roman shades infuse timeless elegance of drapes and functionality of blinds into one stylish window treatment. Its horizontal fold design gives your window a clean yet sophisticated look that blends with any interior style.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -28,26 +28,26 @@ const romanShades = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Elegant Light Control",
-        description: "Perfect balance of light and privacy",
+        title: "Custom Light Control",
+        description: "Control the level of natural lighting with numerous window blinds with fabric.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Complete coverage when needed",
+        title: "Privacy Control",
+        description: "With enhanced coverage, seamlessly adjust your privacy levels for the living room, bedroom, and office.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Classic Design",
-        description: "Timeless aesthetic appeal",
+        title: "Timeless Elegance",
+        description: "The classic design, tailored for both contemporary and vintage interiors.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
-        title: "Space Efficient",
-        description: "Compact when raised",
+        title: "Uncluttered Design",
+        description: "Neatly stack up when raised and lay smooth when lowered.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -59,21 +59,21 @@ const romanShades = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -83,40 +83,40 @@ const romanShades = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of fabrics to create the perfect roman shades for your space. From sheer to blackout options, find the ideal solution for your needs.",
+      "No need to compromise on style—choose from a vast selection of fabric blinds and shades in various textures and colors to perfectly complement your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -125,7 +125,7 @@ const romanShades = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your roman shades perfectly match your interior design.",
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -151,7 +151,7 @@ const romanShades = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -233,36 +233,37 @@ const romanShades = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What are the benefits of roman shades?",
+        question: "What type of fabric is best for Roman shades?",
         answer:
-          "Roman shades offer elegant aesthetics, excellent light control, privacy, and space efficiency. They're also versatile and can be customized to match any interior style.",
+          "Roman Shades work best with lightweight materials such as silk, linen, and cotton. These fabrics create elegant overlapping folds and reduce strain on the operating mechanism.",
       },
       {
-        question: "Can roman shades be motorized?",
+        question: "Can I motorize the Roman Shades?",
         answer:
-          "Yes, roman shades can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Absolutely. Roman Shades can be motorized for added convenience and can be operated via remote control, Google Home, Alexa, and other smart home systems.",
       },
       {
-        question: "How do I clean roman shades?",
+        question: "How long do Roman shades last?",
         answer:
-          "Roman shades can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "With proper care and installation, high-quality Roman Shades can last between 12 to 15 years.",
       },
       {
-        question: "What is the installation process?",
+        question: "Are Roman shades washable?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your roman shades with precision and care.",
+          "Roman shades made from durable fabrics like polyblends and cotton can be washed using cold water on a delicate cycle. Always follow fabric care instructions or consult a professional cleaner.",
       },
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Transform your space with our elegant roman shades. Contact us today for a free consultation and let our experts help you choose the perfect shades for your home. Call MET BLINDS now!",
+        text: "Take window treatment to the next level with Custom Roman Shades. Schedule a free consultation and our expert will make a perfect recommendation suited to your interior aesthetics and style.",
       },
     ],
   },
