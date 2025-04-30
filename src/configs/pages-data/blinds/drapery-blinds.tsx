@@ -16,7 +16,7 @@ const draperyBlinds = {
   blindsBanner: {
     heading: "Drapery Blinds",
     subHeading:
-      "Drapery blinds bring together the best of both worlds - the timeless elegance of draperies and the practical functionality of blinds.",
+      "A practical window solution for new age homes– bring the elegance of classic draperies and functionality of modern blinds together.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -28,51 +28,52 @@ const draperyBlinds = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Perfect Light Control",
-        description: "Adjust light levels with precision",
+        title: "Light Control",
+        description: "The best of both worlds– set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Complete privacy when needed",
+        title: "Privacy Control",
+        description: "Adjust your privacy levels with absolute coverage, ideal for living room, bedroom, and even home theatre.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Elegant Design",
-        description: "Sophisticated and timeless appearance",
+        title: "HIgh End Design",
+        description: "Luxury Roman Shades, where luxury meets functionality. Customize your light/privacy with refined fabrics and premium features.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Reduce heating and cooling costs",
+        description: "Conserve energy by minimizing heat gain in summer and maintaining warmth during winter.",
         image: "/images/contact-section-image-1.png",
       },
     ],
   },
   /**
    * key features
-   */ keyFeaures: {
+   */   
+  keyFeaures: {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -82,40 +83,40 @@ const draperyBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of fabrics to create the perfect drapery blinds for your space. Our fabrics are specially designed for elegance and durability.",
+      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -124,8 +125,8 @@ const draperyBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your drapery blinds perfectly match your interior design.",
-    hardwareOptions: [
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
+   hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
         name: "Antique Brass",
@@ -150,7 +151,7 @@ const draperyBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -228,37 +229,40 @@ const draperyBlinds = {
   faqs: {
     heading: "FAQs",
     faqs: [
+
       {
-        question: "What makes drapery blinds special?",
+        question: "What is the difference between blinds and drapes?",
         answer:
-          "Drapery blinds combine the elegant look of traditional draperies with the practical functionality of modern blinds, offering the best of both worlds in one window treatment.",
+          "Blinds are typically made from hard materials like wood, PVC, or metal with vanes that tilt to control light. Drapes are soft fabric panels that hang from rods and offer a more flowing, decorative look.",
       },
       {
-        question: "Can drapery blinds be motorized?",
+        question: " How can I clean and maintain my Drapery Blinds?",
         answer:
-          "Yes, drapery blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Just regular dusting with brush or light vacuuming will keep your drapes with blinds clean. For deeper cleaning, you can use a damp cloth with little detergent.",
       },
       {
-        question: "How do I clean drapery blinds?",
+        question: "Which is cheaper: blinds or drapes?",
         answer:
-          "Drapery blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "Blinds are generally more affordable due to lower material costs. However, the final price depends on the fabric, size, mechanism, and level of customization.",
       },
       {
-        question: "What is the installation process?",
+        question: "How can I clean and maintain my Drapery Blinds?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your drapery blinds with precision and care.",
+          "Light cleaning can be done using a soft cloth, brush, or vacuum with a gentle upholstery attachment. For deeper stains, use a damp cloth with mild detergent or opt for professional cleaning services.",
       },
+ 
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Transform your space with our elegant drapery blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
+        text: "Add a touch of elegance to your home’s aesthetic with our new Drapery Blinds. Schedule a free consultation and our drapery shop experts will make a perfect recommendation suited to your interior aesthetics and style.",
       },
     ],
   },

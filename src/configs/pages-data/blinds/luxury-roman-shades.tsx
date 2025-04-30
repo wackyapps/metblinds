@@ -84,7 +84,7 @@ const luxuryRomanShades = {
     subHeading:
       "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
-    lightFilteringHeading: "For darkness and privacy",
+    lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
         name: "Midnight Black",
