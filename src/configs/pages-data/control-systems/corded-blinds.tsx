@@ -22,9 +22,9 @@ const cordedBlinds = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Introducing Smart Control Systems",
+    heading: "Discover Smart Control Systems",
     subHeading:
-      "Discover the perfect control system for your blinds, from classic corded options to smart home integrations. Choose the best fit for convenience, safety, and style.",
+      "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
     coverImage: "/banners/about-banner-img.png",
   },
@@ -32,9 +32,9 @@ const cordedBlinds = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Corded Blinds?",
+    heading: "Why Corded Blinds Might Be Perfect for You?",
     subHeading:
-      "Corded blinds are a classic and reliable choice for window coverings. With smooth manual operation and durable cord options, they offer precise light control and long-lasting performance. Our corded blinds come with MET Sleeve protection and a child-lock safety system, making them a safe option for homes with children and pets.",
+      "For a long time, Corded window blinds have been the top choice for homeowners, due to its straightforward design, reliable performance, and precise control over light and privacy. Our new-age blinded cords also feature advanced safety options like MET Sleeve protection and Child-lock safety system, making them ideal for various settings.",
     features: [
       {
         icon: <FaRegClock />,
@@ -67,34 +67,34 @@ const cordedBlinds = {
    * production steps data
    */
   productionSteps: {
-    heading: "Features",
+    heading: "Key Features of Corded Blinds",
     subHeading:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Corded Blinds have it all– timeless elegance, lasting performance, and precision. They come with hassle-free manual operation while offering you top-notch control over light and privacy. Their low-cost maintenance and state-of-the-art safety features make them a practical choice for any interior setting.",
     features: [
       {
         icon: FaRegClock,
-        title: "Durability & Longevity",
-        description: "Built to last with premium-quality cords.",
+        title: "Enduring Performance",
+        description: "Made with industry-grade material that will last.",
       },
       {
         icon: TbDeviceRemote,
-        title: "Smooth & Effortless Control",
-        description: "Adjust blinds with precision for better lighting.",
+        title: "Precise Control",
+        description: "Adjust your blinds accurately for lighting and privacy.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Child & Pet Safety",
-        description: "Comes with a secure bottom lock for protection.",
+        title: "Fully Customizable",
+        description: "Come in different cord sizes and materials.",
       },
       {
         icon: IoAnalytics,
-        title: "Customization Options",
-        description: "Available in different cord materials and sizes.",
+        title: "Sleek and Stylish",
+        description: "Traditional yet stylish blinds with strings that suits any decor.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Aesthetic Appeal",
-        description: "Minimalist design that blends with any decor.",
+        title: "Enhanced Safety",
+        description: "Added lock protection for child safety",
       },
     ],
   },
@@ -109,15 +109,15 @@ const cordedBlinds = {
       {
         title: "Zebra Blinds",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/zebra-blind.png",
+          "This style of blinds lets you control the light with blackout or light-filtering fabric—perfect for full darkness or natural brightness. A great custom option for any home in Canada.",
+         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
         link: "/blinds/zebra-blinds",
       },
       {
         title: "Roller Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "These clean, minimalist roller shades offer privacy and style without clutter. Easy to use and clean, they roll up or down to control light in any space.",
         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
         link: "/blinds/roller-shades",
@@ -125,7 +125,7 @@ const cordedBlinds = {
       {
         title: "Drapery",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Add color and personality to your home with custom drapery. Choose from rich fabrics like velvet, silk, and linen—perfect for both modern and traditional styles. Durable and stylish, our drapes resist dust, sun, and drafts.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
         link: "/blinds/drapery",
@@ -133,7 +133,7 @@ const cordedBlinds = {
       {
         title: "Trifold",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Save space with trifold shutters, featuring three panels that fold in half. Ideal for large windows, they offer a unique design and come in materials like wood or composite to match your style.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
         link: "/blinds/triflod",
@@ -142,7 +142,7 @@ const cordedBlinds = {
         title: "Honeycomb Blinds",
         description:
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/honey-comb-blind.png",
+       image: "/images/blinds/honey-comb-blind.png",
         buttonText: "Learn More",
         link: "/blinds/honeycomb-blinds",
       },
@@ -157,24 +157,24 @@ const cordedBlinds = {
     steps: [
       {
         icon: <FaArrowUp />,
-        title: "Adjust the Cord",
+        title: "Position the Cord",
         description:
-          "Pull the cord up or down to position the blinds as needed.",
+          "Pull the cord up or down to place the blinds where you need.",
         isFilled: true,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaLock />,
-        title: "Lock in Place",
+        title: "Lock it Securely",
         description:
-          "Secure the blinds with the MET Sleeve & bottom safety lock.",
+          "Use MET Sleeve & bottom safety lock to keep them in place.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaSun />,
-        title: "Enjoy Precise Light Control",
-        description: "Adjust the tilt for privacy & lighting preferences.",
+        title: "Control Light & Privacy",
+        description: "Tilt for privacy & lighting preferences.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -184,25 +184,25 @@ const cordedBlinds = {
    * safety & maintenance data
    */
   safetyMaintenance: {
-    heading: "Safety & Maintenance",
+    heading: "Blinds Safety & Care",
     subHeading:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Routine cleaning and maintenance prevents dust build up, wear & tear and allergens, ensuring blinds’ smooth operation and longevity. Additionally, it enhances air quality, keeps the aesthetics intact, and maintains the overall freshness, and style of the place.",
     features: [
       {
-        title: "Child-Safe Design",
+        title: "Child Lock",
         description:
-          "Corded blinds come with a built-in safety lock to prevent accidents.",
+          "Use the Child Safety lock to prevent accidents.",
         image: "/svgs/child-safe.svg",
       },
       {
-        title: "Easy Cleaning",
+        title: "Clean with Care",
         description:
-          "Wipe with a dry cloth or light vacuuming for dust removal.",
+          "Use a dry fabric or light vacuum for dust removal.",
         image: "/svgs/easy-cleaning.svg",
       },
       {
-        title: "Durability Check",
-        description: "Inspect the cord tension regularly to avoid fraying.",
+        title: "Regular Inspection",
+        description: "Regularly check the cord tension to ensure durability.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -211,9 +211,9 @@ const cordedBlinds = {
    * quote cta section
    */
   quoteCTASection: {
-    heading: "Need Help Choosing the Right Control System?",
+    heading: "Want Us To Help You Choose?",
     subHeading:
-      "Contact us for expert recommendations and customized solutions",
+      "Need expert advice for your home or office? Reach out to use and our team will provide you with personalized recommendations tailored to your preference and style.",
     buttonText: "Request free Quote",
     background: "/banners/about-banner-img.png",
   },
