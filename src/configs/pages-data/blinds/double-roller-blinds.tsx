@@ -16,7 +16,7 @@ const doubleRollerBlinds = {
   blindsBanner: {
     heading: "Double Roller Blinds",
     subHeading:
-      "Double roller blinds offer the perfect combination of light control and privacy with two independent layers of fabric that can be adjusted separately.",
+      "Whether it’s your cozy personal space or high-end office, Double Roller Blinds offer a perfect blend of elegance, style, lighting, and privacy. A seamless integration of light-filtering and blackout fabrics– allowing you to adjust between natural brightness and complete privacy. With the dual-layer system, you can effortlessly control the lighting and privacy to suit your moodṣ and occasion.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -29,25 +29,25 @@ const doubleRollerBlinds = {
       {
         icon: <WiDaySunny />,
         title: "Dual Light Control",
-        description: "Independent control of light and privacy",
+        description: "The best of both worlds– natural lighting during the day and pitch darkness during night time.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Maximum Privacy",
-        description: "Complete privacy when needed",
+        title: "Privacy Control",
+        description: "Interplay between two fabric layers gives you the freedom to adjust your privacy levels for the living room, bedroom, and office.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Design",
-        description: "Clean, contemporary appearance",
+        title: "Style with Functionality",
+        description: "Up and Down Window Shades, where minimalism meets functionality. Customize your light/privacy with a corded, cordless, motorized, or smart integraṣtion control system.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Reduce heating and cooling costs",
+        description: "Conserve energy by minimizing heat gain in summer and maintaining warmth during winter.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -60,21 +60,21 @@ const doubleRollerBlinds = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -84,40 +84,40 @@ const doubleRollerBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of fabrics to create the perfect double roller blinds for your space. Choose different fabrics for each layer to achieve your desired level of light control and privacy.",
+      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
-    lightFilteringHeading: "Light Filtering Fabrics",
+    lightFilteringHeading: "For darkness and privacy",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -126,7 +126,7 @@ const doubleRollerBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your double roller blinds perfectly match your interior design.",
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -152,7 +152,7 @@ const doubleRollerBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -230,24 +230,24 @@ const doubleRollerBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What makes double roller blinds special?",
+        question: "Are Double Roller Blinds suitable for all types of windows?",
         answer:
-          "Double roller blinds feature two independent layers of fabric that can be controlled separately, allowing you to adjust both light and privacy levels independently.",
+          "Yes. The Double Roller Blinds blends well with nearly all types of window styles and sizes, including floor-to-ceiling, bay, and standard ones.",
       },
       {
-        question: "Can double roller blinds be motorized?",
+        question: "What is the difference between single and double roller blinds?",
         answer:
-          "Yes, double roller blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "A single roller blind has only one layer of fabric while double roller blinds have two layers– one for natural lighting and one for total blackout.",
       },
       {
-        question: "How do I clean double roller blinds?",
+        question: "How can I clean and maintain my double roller blinds?",
         answer:
-          "Double roller blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "Just regular dusting with brush or light vacuuming will keep your roller blinds clean. For deeper cleaning, you can use a damp cloth with a little detergent.",
       },
       {
-        question: "What is the installation process?",
+        question: "Can I put 2 roller blinds together?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your double roller blinds with precision and care.",
+          "Absolutely. You can install two roller blinds in a window for better light control.",
       },
     ],
   },
@@ -255,11 +255,11 @@ const doubleRollerBlinds = {
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Experience the ultimate in light control with our double roller blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
+        text: "ETake the lighting control to the next level with Double Roller Window Shades. Schedule a free consultation and our expert will make a perfect recommendation suited to your interior aesthetics and style.",
       },
     ],
   },
