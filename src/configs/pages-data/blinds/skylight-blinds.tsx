@@ -16,7 +16,7 @@ const skylightBlinds = {
   blindsBanner: {
     heading: "Skylight Blinds",
     subHeading:
-      "Skylight blinds offer perfect control over natural light from above, providing comfort and energy efficiency for your overhead windows.",
+      "For spaces with overhead windows, Skylight Blinds provides a good balance between privacy and natural lighting, while ensuring UV protection and energy efficiency.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -28,26 +28,26 @@ const skylightBlinds = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Overhead Light Control",
-        description: "Perfect control for skylights",
+          title: "Light Control",
+        description: "Regulate the amount and direction of the sunlight, creating a comfortable and glare-free ambience all day.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "UV Protection",
-        description: "Protect against harmful UV rays",
+        title: "Optimal Privacy",
+        description: "Maintain your privacy without sacrificing natural light, all thanks to the innovative Trifold design.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Clean Design",
-        description: "Sleek and modern appearance",
+        title: "UV Protection",
+        description: "Protect your floor, furniture, and valuables from harmful ultraviolet rays, which may cause discoloration.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Reduce heating and cooling costs",
+        description: "Control indoor temperatures by reducing heat gain in summer, resulting in increased energy savings and lower cooling cost.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -59,21 +59,21 @@ const skylightBlinds = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -83,40 +83,40 @@ const skylightBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of fabrics to create the perfect skylight blinds for your space. Our fabrics are specially designed for overhead windows.",
+      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -125,8 +125,8 @@ const skylightBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of hardware options to ensure your skylight blinds perfectly match your interior design.",
-    hardwareOptions: [
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
+       hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
         name: "Antique Brass",
@@ -151,7 +151,7 @@ const skylightBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -230,36 +230,37 @@ const skylightBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What makes skylight blinds special?",
+        question: "Do skylight blinds help with temperature control?",
         answer:
-          "Skylight blinds are specially designed for overhead windows, providing excellent light control and insulation. They're perfect for controlling natural light from skylights and roof windows.",
+          "Yes. Skylight Blinds block the heat in summer and retain warmth in winter, controlling the temperature naturally.",
       },
       {
-        question: "Can skylight blinds be motorized?",
+        question: "Are skylight blinds waterproof?",
         answer:
-          "Yes, skylight blinds can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Yes, certain skylight blinds are made from moisture-resistant materials, making them perfect for humid spaces like bathrooms and kitchens.",
       },
       {
-        question: "How do I clean skylight blinds?",
+        question: "Can I motorize the Skylight Blinds?",
         answer:
-          "Skylight blinds can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "Absolutely. (Motorized) Automatic skylight covers can be used via remote control, Google Home, Alexa, etc– a perfect solution for hard-to-reach windows.",
       },
       {
-        question: "What is the installation process?",
+        question: "How to cover a skylight without blinds?",
         answer:
-          "Our professional installation team will measure your skylights, ensure perfect fit, and install your skylight blinds with precision and care.",
+          "If you don’t want to use blinds, drapes or curtains can be an ideal solution to cover the skylight.",
       },
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Control the light from above with our premium skylight blinds. Contact us today for a free consultation and let our experts help you choose the perfect blinds for your home. Call MET BLINDS now!",
+        text: "Add a touch of elegance to your home’s aesthetic with our Skylight Window Shades. Schedule a free consultation and our experts will make a perfect recommendation suited to your interior aesthetics and style.",
       },
     ],
   },
