@@ -15,7 +15,7 @@ const luxuryRomanShades = {
   blindsBanner: {
     heading: "Luxury Roman Shades",
     subHeading:
-      "Luxury roman shades bring timeless elegance and premium quality to your windows, offering perfect light control and privacy while creating a sophisticated atmosphere.",
+      "Elevate your space with handcrafted Roman Shades—where opulent fabrics meet flawless functionality. Choose from sumptuous silks, rich linens, or textured jacquards, all tailored for a custom fit that exudes luxury.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -27,26 +27,26 @@ const luxuryRomanShades = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Premium Light Control",
-        description: "Perfect balance of light and privacy",
+        title: "Light Control",
+        description: "The best of both worlds– set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Complete coverage when needed",
+        title: "Privacy Control",
+        description: "Adjust your privacy levels with absolute coverage, ideal for living room, bedroom, and even home theatre.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Luxurious Design",
-        description: "Premium materials and craftsmanship",
+        title: "HIgh End Design",
+        description: "Luxury Roman Shades, where luxury meets functionality. Customize your light/privacy with refined fabrics and premium features.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
-        description: "Reduce heating and cooling costs",
+        description: "Conserve energy by minimizing heat gain in summer and maintaining warmth during winter.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -58,21 +58,21 @@ const luxuryRomanShades = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "Premium Material",
+        description: "Choose between various fabric blends, PVC, wood, and aluminum",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
-      },
-      {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Light Adjustment",
+        description: "Light filtering, total blackout, UV protection",
       },
       {
         title: "Smart Integration",
+        description: "Control the blinds through Google Home, Alexa, and Apple HomeKit",
+      },
+      {
+        title: "Versatile",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Manual, cordless, motorized, or SmartHome compatibility",
       },
     ],
   },
@@ -82,40 +82,40 @@ const luxuryRomanShades = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Select from our premium collection of luxury fabrics to create the perfect roman shades for your space. Our fabrics are specially selected for their quality and elegance.",
+      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
-    lightFilteringHeading: "Light Filtering Fabrics",
+    lightFilteringHeading: "For darkness and privacy",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Black",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Soft Gray",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Warm Sandstone",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Pure White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Misty Blue",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
+      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -124,8 +124,8 @@ const luxuryRomanShades = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Select from our range of premium hardware options to ensure your luxury roman shades perfectly match your interior design.",
-    hardwareOptions: [
+      "Exquisite hardware material that matches your decor style, without sacrificing the luxury.",
+     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
         name: "Antique Brass",
@@ -150,7 +150,7 @@ const luxuryRomanShades = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Add motorization and/or smart AI voice controls to help automate your light control and simplify your life. Set scenes to enjoy your favourite weather and more!",
+      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -231,37 +231,40 @@ const luxuryRomanShades = {
   faqs: {
     heading: "FAQs",
     faqs: [
+ 
       {
-        question: "What makes luxury roman shades special?",
+        question: "Are Roman shades still in style?",
         answer:
-          "Luxury roman shades combine premium materials, expert craftsmanship, and elegant design to create sophisticated window treatments that enhance your home's aesthetic appeal.",
+          "Undoubtedly! With their versatility, elegance, and efficiency, Luxury Roman Shades remain a popular window treatment choice for both classic and modern interiors.",
       },
       {
-        question: "Can luxury roman shades be motorized?",
+        question: "What blinds are in style in 2025?",
         answer:
-          "Yes, luxury roman shades can be motorized for added convenience. We offer both manual and motorized options to suit your needs.",
+          "Top trending blinds in 2025 include motorized blinds, roller shades, natural cordless drapes, and Roman shades—especially in neutral tones and smart-enabled options.",
       },
       {
-        question: "How do I clean luxury roman shades?",
+        question: "Can luxury Roman shades be motorized?",
         answer:
-          "Luxury roman shades can be cleaned with a soft cloth or vacuum attachment. For deeper cleaning, we recommend professional cleaning services to maintain the fabric's quality.",
+          "Absolutely. Luxury Roman Shades can be motorized and operated via remote control, Google Home, Alexa, and other smart home systems for added convenience.",
       },
       {
-        question: "What is the installation process?",
+        question: "Which material blinds last the longest?",
         answer:
-          "Our professional installation team will measure your windows, ensure perfect fit, and install your luxury roman shades with precision and care.",
+          "PVC, wood, and aluminum tend to last the longest due to their durability and moisture resistance. Aluminum blinds, in particular, can last up to 20 years with proper care.",
       },
+
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Transform your space with our luxurious roman shades. Contact us today for a free consultation and let our experts help you choose the perfect shades for your home. Call MET BLINDS now!",
+        text: "TStep into the world of luxury with Deluxe Roman Shades and Curtains. Schedule a free consultation and our expert will make a perfect recommendation suited to your interior aesthetics and style.",
       },
     ],
   },
