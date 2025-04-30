@@ -15,7 +15,7 @@ const zebraBlinds = {
   blindsBanner: {
     heading: "Zebra Blinds",
     subHeading:
-      "Zebra blinds are modern window coverings that combine the functionality of roller blinds with the aesthetic appeal of sheer curtains.",
+      "Zebra Blinds – A stylish and versatile window covering combining the softness of shades with the light control of blinds. Perfect for homes and offices seeking a modern, clean aesthetic with superior privacy and brightness control.",
     cta: "Shop Now",
     background: "/banners/about-banner-img.png",
   },
@@ -27,26 +27,26 @@ const zebraBlinds = {
     features: [
       {
         icon: <WiDaySunny />,
-        title: "Superior Light Control",
-        description: "Adjust natural light to your preference",
+        title: "Smart Light Management",
+        description: "Easily switch between complete darkness and filtered light using alternating sheer and opaque fabric bands.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdSecurity />,
-        title: "Enhanced Privacy",
-        description: "Maintain your privacy with adjustable blinds",
+        title: "Stylish & Modern",
+        description: "A contemporary look with bold horizontal stripes that add texture, depth, and elegance to your interior.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <MdOutlineDesignServices />,
-        title: "Modern Aesthetic",
-        description: "Enhance your interior with stylish designs",
+        title: "Ultimate Privacy",
+        description: "Control visibility without losing natural light. Adjust how much you reveal or conceal with effortless control.",
         image: "/images/contact-section-image-1.png",
       },
       {
         icon: <BsLightningChargeFill />,
-        title: "Energy Efficient",
-        description: "Save energy with optimized light control",
+        title: "Safe & Cordless Options",
+        description: "Child- and pet-friendly cordless systems are available for worry-free use.",
         image: "/images/contact-section-image-1.png",
       },
     ],
@@ -58,21 +58,21 @@ const zebraBlinds = {
     heading: "KEY FEATURES",
     features: [
       {
-        title: "Material",
-        description: "Fabric/Wood/Aluminum/Polyester",
+        title: "High-Quality Construction",
+        description: "Zebra Blinds feature dust- and water-resistant polyester, non-toxic flame-retardant material, and durable aluminum hardware.",
       },
       {
-        title: "Operation",
-        description: "Manual, Cordless, Motorized, Smart Home Compatible",
+        title: "Dual Functionality",
+        description: "One blind offers multiple light settings — from light filtering to full blackout.",
       },
       {
-        title: "Light Filtration",
-        description: " Blackout, Light Filtering, UV Protection",
+        title: "Custom Fit for Every Space",
+        description: "Suitable for residential or commercial spaces, custom-made to match your window size and décor style.",
       },
       {
-        title: "Smart Integration",
+        title: "Flexible Design",
         description:
-          "Compatible with Alexa, Google Home, Apple HomeKit (If applicable)",
+          "Offered in Zebra Roller or Cordless Zebra styles, with a choice of sleek or textured designs.",
       },
     ],
   },
@@ -82,40 +82,40 @@ const zebraBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "Choose your fabric to give your new zebra blinds light filtering or blackout properties to suit your preferences for each space in your home. Enhance your privacy in coveted spaces like bedrooms and bathrooms. Bring more light into the heart of your home with light filtering fabrics to showcase your decor etc.",
+      "Customize for privacy, mood, and design. All fabrics are durable, high-performance, and stylish.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
+        name: "Midnight Shadow",
         color: "linear-gradient(to bottom, #87847E, #4C4940)",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
+        name: "Cool Charcoal",
         color: "linear-gradient(to bottom, #88705B, #4E403D)",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
+        name: "Soft Taupe",
         color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
         textColor: "text-white",
       },
       {
-        name: "Alabaster Mist",
+        name: "Crisp White",
         color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Ivory Glow", color: "#838B92", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
+        name: "Sand Mist",
         color: "#D9DAD7",
         textColor: "text-[#464644]",
       },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+      { name: "Pale Gray", color: "#464644", textColor: "text-white" },
+      { name: "Ocean Breeze", color: "#C9B692", textColor: "text-white" },
     ],
   },
   /**
@@ -124,7 +124,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "We offer a variety of metal colours for hardware to ensure your new blinds will fit seamlessly into your existing home design.",
+      "Enhance your experience with motorized/ smart control systems– adjust your Zebra Blinds Curtains with a remote, voice control, or smartphone app.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",
@@ -232,36 +232,47 @@ const zebraBlinds = {
     heading: "FAQs",
     faqs: [
       {
-        question: "What is Flash Loan",
+        question: "How do Zebra Blinds work?",
         answer:
-          "A Flash Loan is a type of decentralized loan that allows users to borrow funds instantly without collateral, provided the borrowed amount is returned within the same transaction.",
+          "Zebra blinds alternate between opaque and sheer fabric bands. Align opaque bands to block light or sheer bands to let light in.",
       },
       {
-        question: "How long does it take to process a Flash Loan transaction?",
+        question: "Can I change the appearance of my Zebra Blinds?",
         answer:
-          "Flash Loan transactions are processed instantly within a single blockchain block, typically taking only a few seconds to complete.",
+          "Yes. Choose bold striped designs for impact or soft fabrics for subtlety. There are many styles to suit your aesthetic.",
       },
       {
-        question: "Is Simplex regulated?",
+        question: "Are Cordless Zebra Blinds safe?",
         answer:
-          "Yes, Simplex is a fully regulated financial institution that complies with all relevant financial regulations and security standards.",
+          "Yes. Cordless blinds eliminate dangling cords, making them safer for children and pets, while keeping the look sleek.",
       },
       {
-        question: "How do I deposit funds into Simplex?",
+        question: "Why choose Zebra Roller Blinds?",
         answer:
-          "You can deposit funds into Simplex using various payment methods including credit/debit cards, bank transfers, and cryptocurrency transfers through our secure platform.",
+          "They’re cost-effective, easy to operate, and come in many design options for a clean, modern appearance.",
+      },
+      {
+        question: "What window sizes are ideal for Zebra Blinds?",
+        answer:
+          "Standard-size windows are ideal, but custom solutions are available for large or uniquely shaped windows.",
+      },
+      {
+        question: "What do Zebra Blinds look like from outside?",
+        answer:
+          "Zebra blinds maintain a consistent look from both inside and out, offering style and privacy.",
       },
     ],
   },
+  
   /**
    * info banner
    */
   infoBanner: {
-    heading: "What We Have to Offer?",
+    heading: "Ready to Transform Your Space?",
     backgroundImage: "/images/home/info-banner-bg.png",
     points: [
       {
-        text: "Controlling your blinds has never been so easy. Contact us today to see how convenient motorized blinds really are. Our highly trained design consultants will help you make the right choice for your home or Call MET BLINDS!",
+        text: "Add a touch of luxury and aesthetics with our Zebra Blinds and Curtain. Schedule a free consultation and our experts will make a perfect recommendation tailored to your interior and style.",
       },
     ],
   },
