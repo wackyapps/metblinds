@@ -202,9 +202,13 @@ export default function ContactForm({
           }`}
           {...register("source")}
         >
-          <option value="">Friends And Family</option>
-          <option value="friends">Friends And Family</option>
-          <option value="online">Online</option>
+          <option value="">How Did You Hear About Us?</option>
+<option value="google-search">Google Search</option>
+<option value="social-media">Social Media</option>
+<option value="friend-family">Friend or Family</option>
+<option value="advertisement">Advertisement</option>
+<option value="other">Other</option>
+
           {/* Add more source options as needed */}
         </select>
         {errors.source && (
