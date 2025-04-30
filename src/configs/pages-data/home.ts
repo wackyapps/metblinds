@@ -13,9 +13,9 @@ export const homePage = {
    * services locatoin section data
    */
   servicesLocation: {
-    heading: "Serving Your Windows",
+    heading: "Custom Blinds in Canada",
     description:
-      "You can visit our Calgary and Red Deer locations for custom window blinds installation. As part of our strategic growth plan, we are exploring opportunities to establish ourselves as a leading provider among window shade companies, with a focus on expanding our presence in Kelowna and Edmonton to better serve the Western Canadian market.",
+      "Your home or office should be a place of comfort and happiness. Blinds, drapes, and shades can greatly influence its look and feel. With locations across Western Canada, Met Blinds offers custom solutions for even the most uniquely shaped windows and doors. Explore our range of fabrics, hardware, and control systems to find blinds tailored to your needs.",
     locations: [
       { name: "Calgary", link: "" },
       { name: "Cochrane", link: "" },
@@ -32,7 +32,7 @@ export const homePage = {
    */
   blindsCustomization: {
     heading:
-      "CUSTOMIZE YOUR WINDOW BLINDS, CALGARY HOMEOWNERS, AND HAVE THEM INSTALLED WITHIN 8 - 10 BUSINESS DAYS!",
+      "Calgary homeowners — customize your window blinds and have them professionally installed in just 8–10 business days!",
     subHeading: "BYOB (Build Your Own Blinds)",
     buttonText: "Request a Free Quote",
     background: "/images/home/custom-blind-bg.png",
@@ -59,32 +59,32 @@ export const homePage = {
    * blind advantages data
    */
   blindsAdvantages: {
-    heading: "PREMIUM WINDOW BLINDS IN CALGARY",
-    subHeading: "THAT ENHANCE YOUR HOME",
+    heading: "What Else",
+    subHeading: "Makes Us Stand Out?",
     features: [
       {
         icon: BsCalendar2Check,
-        title: "FREE ESTIMATES",
+        title: "Added Warranties",
         description:
-          "Get a no-obligation quote for your custom blinds at no cost.",
+          "Zebra, roller, sunscreen, and tri-fold blinds have a 5-year fabric warranty. Dream curtains and honeycomb blinds come with 2 years. Motors and smart HUBs are covered for 5 years.",
       },
       {
         icon: PiMedal,
         title: "10 years warranty",
-        description: "Enjoy peace of mind with a durable 10-year warranty.",
+        description: "Every piece of hardware or component for Zebra blinds, rollers, sun screens, tri-folds, and side rails are covered for 10 years.",
         isHighlited: true,
       },
       {
         icon: GiSandsOfTime,
-        title: "INSTALLED IN 8-10 BUSINESS DAYS",
+        title: "Top-Quality Construction",
         description:
-          "Get a no-obligation quote for your custom blinds at no cost.",
+          "With 100% aluminum casing and 100% polyester fabric, our blinds are top-quality, energy efficient, and have UV protection",
       },
       {
         icon: GiUpgrade,
-        title: "UPGRADE AS NEEDED",
+        title: "Upgrades When You Want",
         description:
-          "Get a no-obligation quote for your custom blinds at no cost.",
+          "If you decide you want to switch things up and have new fabric installed, we can make this happen for you, anytime, at a discounted rate.",
       },
     ],
   },
@@ -96,35 +96,35 @@ export const homePage = {
       {
         title: "Zebra Blinds",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "This style of blinds lets you control the light with blackout or light-filtering fabric—perfect for full darkness or natural brightness. A great custom option for any home in Canada.",
         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Roller Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "These clean, minimalist roller shades offer privacy and style without clutter. Easy to use and clean, they roll up or down to control light in any space.",
         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Solar Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Solar blinds reduce glare, block harmful UV rays, and help keep your space cool and comfortable. They're a top choice for energy-efficient window shades.",
         image: "/images/blinds/solar-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Drapery",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Add color and personality to your home with custom drapery. Choose from rich fabrics like velvet, silk, and linen—perfect for both modern and traditional styles. Durable and stylish, our drapes resist dust, sun, and drafts.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Trifold",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Save space with trifold shutters, featuring three panels that fold in half. Ideal for large windows, they offer a unique design and come in materials like wood or composite to match your style.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
       },
@@ -141,38 +141,38 @@ export const homePage = {
    * production steps data for homepage
    */
   productionSteps: {
-    heading: "WHY MET BLINDS?",
-    subHeading: "The Met Blinds Post-Sale Manufacturing Process",
+    heading: "WHY CHOOSE MET BLINDS?",
+    subHeading: "As your custom blinds and shades provider, we ensure a transparent and thorough post-sale manufacturing process.",
     features: [
       {
         title: "Work Order Processing",
         description:
-          "The work order is entered and fabricating instructions are prepared.",
+          "We process your order with precise instructions, including dimensions, materials, assembly, and delivery details, ensuring you get exactly what you want.",
       },
       {
         title: "Material Preparation",
         description:
-          "Your chosen colour of aluminum and desired fabric are cut to size.",
+          "Choose your fabric, hardware color, and system type. We custom-cut everything, adding final finishes like sanding or water resistance as needed.",
       },
       {
         title: "Component Assembly",
         description:
-          "The cut pieces of aluminum and fabric go to our assembly tables.",
+          "At the assembly stage, we add all components, including slats, roller mechanisms, louvres, caps, trims, and decorative elements to the hardware and fabric.",
       },
       {
         title: "Hardware Installation",
         description:
-          "End caps, clutch and control systems are added to the aluminum and fabric.",
+          "After adding the end caps, clutch, and control systems, we test everything to ensure proper functionality and add any additional hardware as needed.",
       },
       {
         title: "Quality Inspection",
         description:
-          "Blinds are mounted on inspector machine for quality assurance.",
+          "Your blinds are inspected to ensure they meet the original specifications and tested for safety, ensuring excellent quality and safe use.",
       },
       {
         title: "Final Packaging & Delivery",
         description:
-          "Your beautiful custom blinds are packed and ready to be installed in your home!",
+          "Once complete, your blinds or shades are securely packed to prevent damage and prepared for installation in your home or office.",
       },
     ],
   },
@@ -180,9 +180,9 @@ export const homePage = {
    * media spotlight section data for homepage
    */
   mediaSpotlight: {
-    heading: "As seen on *HGTV’S* hoarder house flippers",
+    heading: "AS SEEN ON HGTV'S HOARDER HOUSE FLIPPERS",
     subHeading:
-      "Metbinds Calgary is the official sponsor of the show. Our blinds are used in all renovations",
+      "Met Blinds is the official sponsor for HGTV’s “Hoarder House Flippers” show. You will see our blinds in all the renovations. Our blinds will make your home look just as famous as the ones on TV!",
     buttonText: "Give us a call",
     background: "/images/home/media-spotlight-bg.png",
   },
@@ -190,7 +190,7 @@ export const homePage = {
    * data for our partners section
    */
   ourPartners: {
-    heading: "OUR PARTNERS",
+    heading: "AWARDS & RECOGNITIONS",
     partners: [
       {
         image: "/images/logo-text.png",
