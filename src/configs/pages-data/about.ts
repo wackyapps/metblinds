@@ -18,7 +18,7 @@ export const aboutPage = {
     coverImage: "/banners/about-banner-img.png",
   },
   aboutMission: {
-    heading: "Our Mission",
+    heading: "OUR MISSION",
     subHeading:
       "To bring high-quality, stylish, and innovative window coverings that improve privacy, energy efficiency, and interior aesthetics, all while ensuring ease of use through smart automation.",
     features: [
@@ -76,7 +76,7 @@ export const aboutPage = {
     features: [
       {
         id: 1,
-        title: "Free Consultation",
+        title: "FREE CONSULTATION",
         description:
           "Our experts help you choose the best blinds for your space.",
         icon: FaComments,
@@ -85,7 +85,7 @@ export const aboutPage = {
       },
       {
         id: 2,
-        title: "Custom Manufacturing",
+        title: "CUSTOM MANUFACTURING",
         description: "Each blind is made to your specifications.",
         icon: MdFactory,
         bgColor: "bg-[#F7F9FA]",
@@ -93,7 +93,7 @@ export const aboutPage = {
       },
       {
         id: 3,
-        title: "Professional Installation",
+        title: "PROFESSIONAL INSTALLATION",
         description: "We ensure a perfect fit and seamless operation.",
         icon: BsTools,
         bgColor: "bg-[#F7F9FA]",
@@ -101,7 +101,7 @@ export const aboutPage = {
       },
       {
         id: 4,
-        title: "After-Sales Support",
+        title: "AFTER-SALES SUPPORT",
         description: "We provide guidance on maintenance and smart features.",
         icon: BiSupport,
         bgColor: "bg-[#F7F9FA]",
