@@ -152,8 +152,8 @@ const cordedBlinds = {
    * how it works data
    */
   howItWorks: {
-    heading: "How It Works",
-    subHeading: "Operating Corded Blinds in 3 Simple Steps",
+    heading: "Operating Mechanism",
+    subHeading: "3-Step Guide to Perfect Blind Control",
     steps: [
       {
         icon: <FaArrowUp />,

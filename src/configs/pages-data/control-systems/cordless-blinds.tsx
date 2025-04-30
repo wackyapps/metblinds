@@ -153,8 +153,8 @@ const cordlessBlinds = {
    * how it works data
    */
   howItWorks: {
-    heading: "How It Works",
-    subHeading: "Operating Cordless Blinds in 3 Simple Steps",
+    heading: "Operating Mechanism",
+    subHeading: "3-Step Guide to handle Cordless Window Shades and Blinds",
     steps: [
       {
         icon: <FaArrowUp />,

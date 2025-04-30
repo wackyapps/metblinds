@@ -21,9 +21,9 @@ const manualWand = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Introducing Smart Control Systems",
+    heading: "Discover Smart Control Systems",
     subHeading:
-      "Discover the perfect control system for your blinds, from classic corded options to smart home integrations. Choose the best fit for convenience, safety, and style.",
+      "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
     coverImage: "/banners/about-banner-img.png",
   },
@@ -31,9 +31,9 @@ const manualWand = {
    * why choose control slider data
    */
   whyChooseControlSlider: {
-    heading: "Why Choose Manual Wand Control?",
+    heading: "Why Manual Wands Might Be Perfect for You?",
     subHeading:
-      "Manual wand control systems offer a simple, reliable solution for operating blinds. With no cords or complex mechanisms, they provide easy-to-use functionality while maintaining a clean, modern appearance. Perfect for standard height windows and everyday use.",
+      "A simple mechanism without motor or cords– Manual wand is a user-friendly yet effective window treatment, particularly for the elderly. There are no hanging wires, complex mechanisms, or high-maintenance cost, just clean blinds with modern appearance and top-notch reliability.",
     features: [
       {
         icon: <FaRegClock />,
@@ -66,34 +66,34 @@ const manualWand = {
    * production steps data
    */
   productionSteps: {
-    heading: "Features",
+    heading: "Key Features of Manual Wand",
     subHeading:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A perfect infusion of style, convenience, and safety– Manual Wand Control Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
     features: [
       {
         icon: FaRegClock,
-        title: "Durability & Longevity",
-        description: "Built to last with premium-quality cords.",
+        title: "Cost-effective Solution",
+        description: "Affordable yet highly effective and stylish.",
       },
       {
         icon: TbDeviceRemote,
-        title: "Smooth & Effortless Control",
-        description: "Adjust blinds with precision for better lighting.",
+        title: "Reliable and Safe",
+        description: "Hazard-free design is ideal for homes with pets and children.",
       },
       {
         icon: IoShieldCheckmarkOutline,
-        title: "Child & Pet Safety",
-        description: "Comes with a secure bottom lock for protection.",
+        title: "Easy to Operate",
+        description: "Simple push/pull/twist manual blinds rod control, perfect for all ages.",
       },
       {
         icon: IoAnalytics,
-        title: "Customization Options",
-        description: "Available in different cord materials and sizes.",
+        title: "Clutter-free Design",
+        description: "A neat window design without dangling cords.",
       },
       {
         icon: PiVolleyballLight,
-        title: "Aesthetic Appeal",
-        description: "Minimalist design that blends with any decor.",
+        title: "Customizable",
+        description: "Comes in numerous cord materials and sizes.",
       },
     ],
   },
@@ -103,40 +103,40 @@ const manualWand = {
   compatibleBlinds: {
     heading: "Compatible Blinds",
     subHeading:
-      "Manual wand control is compatible with multiple blind types, offering a simple and reliable solution.",
+      "Cordless control is compatible with multiple blind types, offering a modern and safe solution.",
     blinds: [
       {
         title: "Zebra Blinds",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/zebra-blind.png",
+          "This style of blinds lets you control the light with blackout or light-filtering fabric—perfect for full darkness or natural brightness. A great custom option for any home in Canada.",
+         image: "/images/blinds/zebra-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Roller Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/roller-shades-blind.png",
+          "These clean, minimalist roller shades offer privacy and style without clutter. Easy to use and clean, they roll up or down to control light in any space.",
+         image: "/images/blinds/roller-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Solar Shades",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Solar blinds reduce glare, block harmful UV rays, and help keep your space cool and comfortable. They're a top choice for energy-efficient window shades.",
         image: "/images/blinds/solar-shades-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Drapery",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Add color and personality to your home with custom drapery. Choose from rich fabrics like velvet, silk, and linen—perfect for both modern and traditional styles. Durable and stylish, our drapes resist dust, sun, and drafts.",
         image: "/images/blinds/drapery-blind.png",
         buttonText: "Learn More",
       },
       {
         title: "Trifold",
         description:
-          "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
+          "Save space with trifold shutters, featuring three panels that fold in half. Ideal for large windows, they offer a unique design and come in materials like wood or composite to match your style.",
         image: "/images/blinds/triflod-blind.png",
         buttonText: "Learn More",
       },
@@ -144,7 +144,7 @@ const manualWand = {
         title: "Honeycomb Blinds",
         description:
           "A sleek and modern look at a budget-friendly price. Its versatile, moisture-resistant design makes it perfect for any room.",
-        image: "/images/blinds/honey-comb-blind.png",
+      image: "/images/blinds/honey-comb-blind.png",
         buttonText: "Learn More",
       },
     ],
@@ -153,29 +153,29 @@ const manualWand = {
    * how it works data
    */
   howItWorks: {
-    heading: "How It Works",
-    subHeading: "Operating Manual Wand Blinds in 3 Simple Steps",
+    heading: "Operating Mechanism",
+    subHeading: "3-Step Guide to operate Manual Wand Control Blinds",
     steps: [
       {
         icon: <FaArrowUp />,
-        title: "Adjust the Cord",
+        title: "Twist the Wand",
         description:
-          "Pull the cord up or down to position the blinds as needed.",
+          "To adjust light, rotate the manual wand.",
         isFilled: true,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaLock />,
-        title: "Lock in Place",
+        title: "Push/Pull",
         description:
-          "Secure the blinds with the MET Sleeve & bottom safety lock.",
+          "Push/pull the wand to position the blinds.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
       {
         icon: <FaSun />,
-        title: "Enjoy Precise Light Control",
-        description: "Adjust the tilt for privacy & lighting preferences.",
+        title: "Control Light & Privacy",
+        description: "Choose the preferred angle for privacy & lighting.",
         isFilled: false,
         image: "/images/white-blind.png",
       },
@@ -185,25 +185,25 @@ const manualWand = {
    * safety & maintenance data
    */
   safetyMaintenance: {
-    heading: "Safety & Maintenance",
+    heading: "Blinds Safety & Care",
     subHeading:
-      "Manual wand control systems are designed for durability and safety. Simple maintenance practices ensure long-lasting performance and reliable operation.",
+      "Routine cleaning and maintenance prevents dust build up, wear & tear and allergens, ensuring Manual Wand control system operates without hindrance. Regular check ups are essential to maintain safety and longevity of the system.",
     features: [
-      {
-        title: "Wand Safety",
-        description:
-          "Regular inspection of wand connections and movement for safe operation.",
-        image: "/svgs/child-safe.svg",
-      },
       {
         title: "Mechanism Care",
         description:
-          "Keep the control mechanism clean and free from debris for smooth operation.",
+          "Make sure that the mechanism is clean and free from debris.",
+        image: "/svgs/child-safe.svg",
+      },
+      {
+        title: "Wand Inspection",
+        description:
+          "Regularly inspect wand connections and movement for uninterrupted operation.",
         image: "/svgs/easy-cleaning.svg",
       },
       {
-        title: "Durability Check",
-        description: "Inspect wand and brackets for wear and proper alignment.",
+        title: "General Check",
+        description: "Examine wands and brackets for wear & tear and mispositioning.",
         image: "/svgs/durability-check.svg",
       },
     ],
@@ -212,9 +212,9 @@ const manualWand = {
    * quote cta section
    */
   quoteCTASection: {
-    heading: "Need Help Choosing the Right Control System?",
+    heading: "Want Us To Help You Choose?",
     subHeading:
-      "Contact us for expert recommendations and customized solutions",
+      "Need expert advice for your home or office? Reach out to use and our team will provide you with personalized recommendations tailored to your preference and style.",
     buttonText: "Request free Quote",
     background: "/banners/about-banner-img.png",
   },
