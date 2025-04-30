@@ -107,8 +107,15 @@ export default function ContactForm({
           {...register("location")}
         >
           <option value="">Location</option>
-          <option value="location1">Location 1</option>
-          <option value="location2">Location 2</option>
+<option value="calgary">Calgary</option>
+<option value="cochrane">Cochrane</option>
+<option value="airdrie">Airdrie</option>
+<option value="red-deer">Red Deer</option>
+<option value="okotoks">Okotoks</option>
+<option value="medicine-hat">Medicine Hat</option>
+<option value="canmore">Canmore</option>
+<option value="strathmore">Strathmore</option>
+
           {/* Add  more location options as needed */}
         </select>
         {errors.location && (
@@ -132,8 +139,17 @@ export default function ContactForm({
           {...register("product")}
         >
           <option value="">Products</option>
-          <option value="product1">Product 1</option>
-          <option value="product2">Product 2</option>
+<option value="zebra-blinds">Zebra Blinds</option>
+<option value="roller-blinds">Roller Blinds</option>
+<option value="vertical-blinds">Vertical Blinds</option>
+<option value="venetian-blinds">Venetian Blinds</option>
+<option value="roman-blinds">Roman Blinds</option>
+<option value="wooden-blinds">Wooden Blinds</option>
+<option value="motorized-blinds">Motorized Blinds</option>
+<option value="outdoor-blinds">Outdoor Blinds</option>
+<option value="curtains">Curtains</option>
+<option value="window-shades">Window Shades</option>
+
           {/* Add more product options as needed */}
         </select>
         {errors.product && (
@@ -157,8 +173,13 @@ export default function ContactForm({
           {...register("inquiry")}
         >
           <option value="">What Are You Looking For?</option>
-          <option value="inquiry1">Inquiry 1</option>
-          <option value="inquiry2">Inquiry 2</option>
+          <option value="">Select Inquiry Type</option>
+<option value="product-availability">Product Availability</option>
+<option value="customization-options">Customization Options</option>
+<option value="warranty-info">Warranty Info</option>
+<option value="customer-service">Customer Service</option>
+<option value="other">Other</option>
+
           {/* Add more inquiry options as needed */}
         </select>
         {errors.inquiry && (
