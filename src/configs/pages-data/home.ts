@@ -13,7 +13,7 @@ export const homePage = {
    * services locatoin section data
    */
   servicesLocation: {
-    heading: "Custom Blinds in Canada",
+    heading: "CUSTOM BLINDS IN CANADA",
     description:
       "Your home or office should be a place of comfort and happiness. Blinds, drapes, and shades can greatly influence its look and feel. With locations across Western Canada, Met Blinds offers custom solutions for even the most uniquely shaped windows and doors. Explore our range of fabrics, hardware, and control systems to find blinds tailored to your needs.",
     locations: [
@@ -32,8 +32,8 @@ export const homePage = {
    */
   blindsCustomization: {
     heading:
-      "Calgary homeowners — customize your window blinds and have them professionally installed in just 8–10 business days!",
-    subHeading: "BYOB (Build Your Own Blinds)",
+      "CALGARY HOMEOWNERS — CUSTOMIZE YOUR WINDOW BLINDS AND HAVE THEM PROFESSIONALLY INSTALLED IN JUST 8–10 BUSINESS DAYS!",
+    subHeading: "BYOB (BUILD YOUR OWN BLINDS)",
     buttonText: "Request a Free Quote",
     background: "/images/home/custom-blind-bg.png",
     features: [
@@ -59,30 +59,30 @@ export const homePage = {
    * blind advantages data
    */
   blindsAdvantages: {
-    heading: "What Else",
-    subHeading: "Makes Us Stand Out?",
+    heading: "WHAT ELSE",
+    subHeading: "MAKES US STAND OUT?",
     features: [
       {
         icon: BsCalendar2Check,
-        title: "Added Warranties",
+        title: "ADDED WARRANTIES",
         description:
           "Zebra, roller, sunscreen, and tri-fold blinds have a 5-year fabric warranty. Dream curtains and honeycomb blinds come with 2 years. Motors and smart HUBs are covered for 5 years.",
       },
       {
         icon: PiMedal,
-        title: "10 years warranty",
+        title: "10 YEARS WARRANTY",
         description: "Every piece of hardware or component for Zebra blinds, rollers, sun screens, tri-folds, and side rails are covered for 10 years.",
         isHighlited: true,
       },
       {
         icon: GiSandsOfTime,
-        title: "Top-Quality Construction",
+        title: "TOP-QUALITY CONSTRUCTION",
         description:
           "With 100% aluminum casing and 100% polyester fabric, our blinds are top-quality, energy efficient, and have UV protection",
       },
       {
         icon: GiUpgrade,
-        title: "Upgrades When You Want",
+        title: "UPGRADES WHEN YOU WANT",
         description:
           "If you decide you want to switch things up and have new fabric installed, we can make this happen for you, anytime, at a discounted rate.",
       },
