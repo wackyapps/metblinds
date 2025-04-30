@@ -14,7 +14,7 @@ export const aboutPage = {
   aboutBanner: {
     heading: "Who We Are",
     subHeading:
-      "At Met Blinds, we specialize in providing premium, custom window blinds that combine style, functionality, and smart technology to enhance your living and working spaces. Our commitment to quality craftsmanship, expert installation, and exceptional customer service has made us a trusted choice for homeowners and businesses looking to upgrade their interiors with elegant and efficient window treatments.",
+      "Welcome to our Canada blinds store! We offer top-quality, stylish, and easy-to-use blinds for both residential and commercial spaces. From blinds and shades to shutters and drapes, everything is handcrafted using locally and sustainably sourced materials. As a proud Canadian company, your support helps reinvest in our nation.\n\nShop online or visit our showroom to see samples in person!",
     coverImage: "/banners/about-banner-img.png",
   },
   aboutMission: {
