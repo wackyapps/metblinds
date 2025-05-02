@@ -41,7 +41,7 @@ const draperyBlinds = {
       {
         icon: <MdOutlineDesignServices />,
         title: "HIgh End Design",
-        description: "Luxury Roman Shades, where luxury meets functionality. Customize your light/privacy with refined fabrics and premium features.",
+        description: "Drapery Blinds, where luxury meets the functionality. Customize your light/privacy with refined fabrics and premium features.",
         image: "/images/contact-section-image-1.png",
       },
       {
