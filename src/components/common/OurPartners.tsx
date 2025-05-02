@@ -14,30 +14,19 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
     if (glideRef.current) {
       new Glide(glideRef.current, {
         type: "carousel",
-        perView: 7,
-        gap: 16,
-        autoplay: 3000,
-        hoverpause: true,
+        perView: 3,      // Only 3 items
+        gap: 16,         // Adjust if you want tighter spacing
+        autoplay: false, // No auto sliding
+        hoverpause: false,
         breakpoints: {
-          1400: {
-            perView: 6,
-          },
-          1200: {
-            perView: 5,
-          },
-          992: {
-            perView: 4,
-          },
-          768: {
-            perView: 3,
-          },
-          576: {
-            perView: 2,
-          },
+          // Optional: fine-tune for mobile views
+          768: { perView: 1 },
+          992: { perView: 2 },
         },
       }).mount();
     }
   }, []);
+  
 
   return (
     <div className="py-32">
