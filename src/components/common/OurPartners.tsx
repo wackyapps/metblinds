@@ -17,14 +17,14 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
           </h2>
           
           {/* Static awards display - no carousel/swipe */}
-          <div className="w-full max-w-5xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="flex flex-wrap justify-center items-center gap-2 md:gap-0">
               {data.partners.map((partner, index) => (
-                <div key={index} className="flex-1 min-w-[200px] px-3 flex justify-center">
+                <div key={index} className="flex-1 min-w-[240px] px-4 flex justify-center">
                   <div className="flex justify-center w-full py-2">
                     <img
                       src={partner.image}
-                      className="mx-auto w-full max-w-[220px]"
+                      className="mx-auto w-full max-w-[280px]"
                       height="auto"
                       alt={`Partner ${index + 1}`}
                     />
