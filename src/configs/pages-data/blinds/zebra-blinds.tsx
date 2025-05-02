@@ -92,7 +92,7 @@ const zebraBlinds = {
         "/images/hardwares/hardware-4.png",
     ],
     lightoutFabrics: [
-   "/images/contact-section-image-1.png",
+   "/images/blinds/Zebra/How-It-Works.jpg",
    "/images/hardwares/hardware-1.png",
      "/banners/home-banner-1.png",
      "/images/hardwares/hardware-4.png",
