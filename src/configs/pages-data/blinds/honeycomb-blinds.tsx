@@ -113,8 +113,7 @@ const honeycombBlinds = {
       {
         name: "Stormy Driftwood",
         color: "#D9DAD7",
-        textColor: "text-[#464644]",
-      },
+        textColor: "text-white",      },
       { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
       { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
     ],
