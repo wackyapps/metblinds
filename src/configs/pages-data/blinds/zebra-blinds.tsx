@@ -87,35 +87,35 @@ const zebraBlinds = {
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "         ",
+        name: "Midnight Black",
         image: "/images/contact-section-image-1.png",
        textColor: "text-white",
       },
       {
-        name: "         ",
+        name: "Soft Gray",
         image: "/images/hardwares/hardware-1.png",
         textColor: "text-white",
       },
       {
-        name: "         ",
+        name: "Warm Sandstone",
         image: "/banners/home-banner-1.png",
         textColor: "text-white",
       },
       {
-        name: "         ",
+        name: "Pure White",
         image: "/images/hardwares/hardware-4.png",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      {   name: "         ", image: "/images/contact-section-image-1.png", textColor: "text-white" },
+      { name: "Sheer Ivory", image: "/images/contact-section-image-1.png", textColor: "text-white" },
       {
-        name: "         ",
+        name: "Misty Blue",
         image: "/images/contact-section-image-1.png",
         textColor: "text-[#464644]",
       },
-      {    name: "         ",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
-      {   name: "         ",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
+      { name: "Cloudy Gray",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
+      { name: "Soft Beige",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
     ],
   },
   /**
