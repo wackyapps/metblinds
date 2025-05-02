@@ -3,9 +3,9 @@
   margin: 0 auto;
 }
 
-.glide * {
+/* .glide * {
   box-sizing: inherit;
-}
+} */
 
 .glide__track {
   overflow: hidden;
