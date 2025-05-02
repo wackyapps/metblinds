@@ -87,34 +87,35 @@ const zebraBlinds = {
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Midnight Shadow",
-        color: "linear-gradient(to bottom, #87847E, #4C4940)",
+        name: "Midnight Black",
+        image: "/images/contact-section-image-1.png",
+       textColor: "text-white",
+      },
+      {
+        name: "Soft Gray",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
       {
-        name: "Cool Charcoal",
-        color: "linear-gradient(to bottom, #88705B, #4E403D)",
+        name: "Warm Sandstone",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
       {
-        name: "Soft Taupe",
-        color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
-        textColor: "text-white",
-      },
-      {
-        name: "Crisp White",
-        color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
+        name: "Pure White",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Ivory Glow", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", image: "/images/contact-section-image-1.png", textColor: "text-white" },
       {
-        name: "Sand Mist",
-        color: "#D9DAD7",
-        textColor: "text-white",      },
-      { name: "Pale Gray", color: "#464644", textColor: "text-white" },
-      { name: "Ocean Breeze", color: "#C9B692", textColor: "text-white" },
+        name: "Misty Blue",
+        image: "/images/contact-section-image-1.png",
+        textColor: "text-[#464644]",
+      },
+      { name: "Cloudy Gray",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
+      { name: "Soft Beige",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
     ],
   },
   /**

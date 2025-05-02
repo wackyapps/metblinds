@@ -85,7 +85,7 @@ const luxuryRomanShades = {
       "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
-   blackoutFabrics: [
+    blackoutFabrics: [
       {
         name: "Midnight Black",
         image: "/images/contact-section-image-1.png",
@@ -112,7 +112,8 @@ const luxuryRomanShades = {
       {
         name: "Misty Blue",
         image: "/images/contact-section-image-1.png",
-        textColor: "text-white",      },
+        textColor: "text-[#464644]",
+      },
       { name: "Cloudy Gray",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
       { name: "Soft Beige",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
     ],
