@@ -141,7 +141,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
+                      className={`h-[184px] w-[140px] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
