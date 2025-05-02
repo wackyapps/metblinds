@@ -93,17 +93,17 @@ const zebraBlinds = {
       },
       {
         name: "Soft Gray",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/hardwares/hardware-1.png",
         textColor: "text-white",
       },
       {
         name: "Warm Sandstone",
-        image: "/images/contact-section-image-1.png",
+        image: "/banners/home-banner-1.png",
         textColor: "text-white",
       },
       {
         name: "Pure White",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/hardwares/hardware-4.png",
         textColor: "text-white",
       },
     ],
