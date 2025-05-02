@@ -14,12 +14,11 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
     if (glideRef.current) {
       new Glide(glideRef.current, {
         type: "carousel",
-        perView: 3,      // Only 3 items
-        gap: 16,         // Adjust if you want tighter spacing
-        autoplay: false, // No auto sliding
+        perView: 3,      // Show 3 items at once
+        gap: 0,          // Reduced gap to 0 for tighter spacing
+        autoplay: false,
         hoverpause: false,
         breakpoints: {
-          // Optional: fine-tune for mobile views
           768: { perView: 1 },
           992: { perView: 2 },
         },
@@ -41,18 +40,17 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
             <div className="glide__track" data-glide-el="track">
               <ul className="glide__slides">
                 {data.partners.map((partner, index) => (
-                  <li key={index} className="glide__slide w-32">
-                  <div className="rounded-full px-6 py-4"> {/* No border */}
-                    <img
-                      src={partner.image}
-                      className="mx-auto"
-                      width={135}
-                      height={25}
-                      alt=""
-                    />
-                  </div>
-                </li>
-                
+                  <li key={index} className="glide__slide">
+                    <div className="px-2 py-4"> {/* Reduced padding */}
+                      <img
+                        src={partner.image}
+                        className="mx-auto"
+                        width={135}
+                        height={25}
+                        alt={`Partner ${index + 1}`}
+                      />
+                    </div>
+                  </li>
                 ))}
               </ul>
             </div>
