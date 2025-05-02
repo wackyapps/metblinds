@@ -193,29 +193,15 @@ export const homePage = {
     heading: "AWARDS & RECOGNITIONS",
     partners: [
       {
-        image: "/images/logo-text.png",
+        image: "/images/home/award1.png",
       },
       {
-        image: "/images/logo-text.png",
+        image: "/images/home/award2.png",
       },
       {
-        image: "/images/logo-text.png",
+        image: "/images/home/award3.png",
       },
-      {
-        image: "/images/logo-text.png",
-      },
-      {
-        image: "/images/logo-text.png",
-      },
-      {
-        image: "/images/logo-text.png",
-      },
-      {
-        image: "/images/logo-text.png",
-      },
-      {
-        image: "/images/logo-text.png",
-      },
+      
     ],
   },
   // testimonial section  data for home
