@@ -15,7 +15,7 @@ const KeyFeatures: React.FC<Props> = ({ data }) => {
         <div className="flex flex-col items-center justify-start gap-20 min-[1100px]:flex-row">
           <div className="relative hidden min-h-[400px] max-w-[894px] overflow-hidden rounded-3xl bg-[#D9D9D9] xl:block">
             <img
-              src="/images/contact-section-image-1.png" // Add your image path here
+              src="/images/blinds/Zebra/features.jpg" // Add your image path here
               alt="Contact background"
               width={900}
               height={1200}

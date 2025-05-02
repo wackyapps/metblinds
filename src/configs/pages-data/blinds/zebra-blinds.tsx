@@ -29,25 +29,25 @@ const zebraBlinds = {
         icon: <WiDaySunny />,
         title: "Smart Light Management",
         description: "Easily switch between complete darkness and filtered light using alternating sheer and opaque fabric bands.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Zebra/Smart-Light-Management.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Stylish & Modern",
         description: "A contemporary look with bold horizontal stripes that add texture, depth, and elegance to your interior.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Zebra/Stylish-&-Modern.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Ultimate Privacy",
         description: "Control visibility without losing natural light. Adjust how much you reveal or conceal with effortless control.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Zebra/Ultimate-Privacy.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Safe & Cordless Options",
         description: "Child- and pet-friendly cordless systems are available for worry-free use.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Zebra/Safe-&-Cordless-Options.jpg",
       },
     ],
   },
@@ -138,7 +138,7 @@ const zebraBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/Zebra/How-It-Works.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
