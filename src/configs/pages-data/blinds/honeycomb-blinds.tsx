@@ -88,34 +88,35 @@ const honeycombBlinds = {
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
       {
-        name: "Moonlit Taupe",
-        color: "linear-gradient(to bottom, #87847E, #4C4940)",
+        name: "Midnight Black",
+        image: "/images/contact-section-image-1.png",
+       textColor: "text-white",
+      },
+      {
+        name: "Soft Gray",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
       {
-        name: "Stormy Driftwood",
-        color: "linear-gradient(to bottom, #88705B, #4E403D)",
+        name: "Warm Sandstone",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
       {
-        name: "Desert Sandstone",
-        color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
-        textColor: "text-white",
-      },
-      {
-        name: "Alabaster Mist",
-        color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
+        name: "Pure White",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Moonlit Taupe", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", image: "/images/contact-section-image-1.png", textColor: "text-white" },
       {
-        name: "Stormy Driftwood",
-        color: "#D9DAD7",
-        textColor: "text-white",      },
-      { name: "Desert Sandstone", color: "#464644", textColor: "text-white" },
-      { name: "Alabaster Mist", color: "#C9B692", textColor: "text-white" },
+        name: "Misty Blue",
+        image: "/images/contact-section-image-1.png",
+        textColor: "text-[#464644]",
+      },
+      { name: "Cloudy Gray",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
+      { name: "Soft Beige",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
     ],
   },
   /**

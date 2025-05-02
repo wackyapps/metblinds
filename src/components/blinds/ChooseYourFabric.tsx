@@ -10,11 +10,10 @@ import {
 } from "@/components/ui/carousel";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
-// Ensure type definitions are clear and explicit
+// Interface for fabric options
 interface FabricOption {
-  name: string;
-  image: string;  // Image path
-  textColor?: string; // Optional text color class
+  id: string;
+  image: string;
 }
 
 type Props = {
@@ -29,12 +28,11 @@ type Props = {
 };
 
 const ChooseYourFabric = ({ data }: Props) => {
-  // Make sure there's always a default value
+  // Set default fabric
   const [currentFabric, setCurrentFabric] = useState<FabricOption>(
     data.blackoutFabrics?.[0] || {
-      name: "Default",
+      id: "default",
       image: "/placeholder.jpg",
-      textColor: "text-black"
     }
   );
 
@@ -52,17 +50,20 @@ const ChooseYourFabric = ({ data }: Props) => {
           </p>
         </div>
       </div>
-      {/* fabric image display */}
+      
+      {/* Large fabric image display */}
       <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px]">
         {currentFabric?.image && (
           <img 
             src={currentFabric.image} 
-            alt={`${currentFabric.name} fabric`} 
+            alt="Selected fabric" 
             className="w-full h-full object-cover"
           />
         )}
       </div>
+      
       <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-end">
+        {/* Blackout fabrics section */}
         <div className="flex flex-col items-center gap-11">
           <div
             className={`${rubik.className} text-center text-2xl font-semibold text-[#023D64]`}
@@ -91,27 +92,20 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] overflow-hidden p-6 relative ${
-                        currentFabric?.image === fabric.image
+                      className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
+                        currentFabric?.id === fabric.id
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
-                      {/* Background image */}
+                      {/* Fabric image without text */}
                       {fabric.image && (
                         <img 
                           src={fabric.image} 
-                          alt={`${fabric.name} thumbnail`} 
-                          className="absolute inset-0 w-full h-full object-cover z-0"
+                          alt="Fabric option" 
+                          className="w-full h-full object-cover"
                         />
                       )}
-                      
-                      {/* Fabric name with text color */}
-                      <h3
-                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor || 'text-black'}`}
-                      >
-                        {fabric.name}
-                      </h3>
                     </div>
                   </div>
                 </CarouselItem>
@@ -122,9 +116,13 @@ const ChooseYourFabric = ({ data }: Props) => {
             </CarouselNext>
           </Carousel>
         </div>
+        
+        {/* Divider for desktop */}
         <div className="hidden h-full xl:block">
           <div className="h-[191px] w-[2.5px] bg-[#A39F9F]"></div>
         </div>
+        
+        {/* Light filtering fabrics section */}
         <div className="flex flex-col items-center gap-11">
           <div
             className={`${rubik.className} text-center text-2xl font-semibold text-[#023D64]`}
@@ -153,27 +151,20 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] overflow-hidden p-6 relative ${
-                        currentFabric?.image === fabric.image
+                      className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
+                        currentFabric?.id === fabric.id
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
-                      {/* Background image */}
+                      {/* Fabric image without text */}
                       {fabric.image && (
                         <img 
                           src={fabric.image} 
-                          alt={`${fabric.name} thumbnail`} 
-                          className="absolute inset-0 w-full h-full object-cover z-0"
+                          alt="Fabric option" 
+                          className="w-full h-full object-cover"
                         />
                       )}
-                      
-                      {/* Fabric name with text color */}
-                      <h3
-                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor || 'text-black'}`}
-                      >
-                        {fabric.name}
-                      </h3>
                     </div>
                   </div>
                 </CarouselItem>
