@@ -157,7 +157,7 @@ const zebraBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/Zebra/How-It-Works.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
