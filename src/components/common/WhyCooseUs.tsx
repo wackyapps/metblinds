@@ -12,7 +12,7 @@ const WhyCooseUS: React.FC<Props> = ({ data }) => {
     <section className={`relative py-16 xl:py-0`}>
       <div className="absolute left-0 top-0 hidden h-full min-h-[400px] w-[45%] overflow-hidden rounded-r-3xl bg-[#D9D9D9] min-[1100px]:block xl:w-1/2">
         <img
-          src="public/images/aboutus/why_choose_us.webp" // Add your image path here
+          src="/images/aboutus/why_choose_us.webp" // Add your image path here
           alt="Contact background"
           width={900}
           height={1200}
