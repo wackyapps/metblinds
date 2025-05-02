@@ -10,10 +10,11 @@ import {
 } from "@/components/ui/carousel";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
+// Ensure type definitions are clear and explicit
 interface FabricOption {
   name: string;
-  image: string;  // Changed from color to image
-  textColor?: string;
+  image: string;  // Image path
+  textColor?: string; // Optional text color class
 }
 
 type Props = {
@@ -27,9 +28,14 @@ type Props = {
   };
 };
 
-const ChooseYourFabric: React.FC<Props> = ({ data }) => {
+const ChooseYourFabric = ({ data }: Props) => {
+  // Make sure there's always a default value
   const [currentFabric, setCurrentFabric] = useState<FabricOption>(
-    data.blackoutFabrics[0],
+    data.blackoutFabrics?.[0] || {
+      name: "Default",
+      image: "/placeholder.jpg",
+      textColor: "text-black"
+    }
   );
 
   return (
@@ -46,15 +52,15 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
           </p>
         </div>
       </div>
-      {/*
-       * fabric image display
-       */}
+      {/* fabric image display */}
       <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px]">
-        <img 
-          src={currentFabric.image} 
-          alt={`${currentFabric.name} fabric`} 
-          className="w-full h-full object-cover"
-        />
+        {currentFabric?.image && (
+          <img 
+            src={currentFabric.image} 
+            alt={`${currentFabric.name} fabric`} 
+            className="w-full h-full object-cover"
+          />
+        )}
       </div>
       <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-end">
         <div className="flex flex-col items-center gap-11">
@@ -76,8 +82,8 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
             <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
               <FaCircleChevronLeft />
             </CarouselPrevious>
-            <CarouselContent className="">
-              {data.blackoutFabrics.map((fabric, index) => (
+            <CarouselContent>
+              {data.blackoutFabrics?.map((fabric, index) => (
                 <CarouselItem
                   key={index}
                   className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
@@ -86,21 +92,23 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                     <div
                       onClick={() => setCurrentFabric(fabric)}
                       className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] overflow-hidden p-6 relative ${
-                        currentFabric.image === fabric.image
+                        currentFabric?.image === fabric.image
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
                       {/* Background image */}
-                      <img 
-                        src={fabric.image} 
-                        alt={`${fabric.name} thumbnail`} 
-                        className="absolute inset-0 w-full h-full object-cover z-0"
-                      />
+                      {fabric.image && (
+                        <img 
+                          src={fabric.image} 
+                          alt={`${fabric.name} thumbnail`} 
+                          className="absolute inset-0 w-full h-full object-cover z-0"
+                        />
+                      )}
                       
                       {/* Fabric name with text color */}
                       <h3
-                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor}`}
+                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor || 'text-black'}`}
                       >
                         {fabric.name}
                       </h3>
@@ -136,8 +144,8 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
             <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
               <FaCircleChevronLeft />
             </CarouselPrevious>
-            <CarouselContent className="">
-              {data.lightoutFabrics.map((fabric, index) => (
+            <CarouselContent>
+              {data.lightoutFabrics?.map((fabric, index) => (
                 <CarouselItem
                   key={index}
                   className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
@@ -146,21 +154,23 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                     <div
                       onClick={() => setCurrentFabric(fabric)}
                       className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] overflow-hidden p-6 relative ${
-                        currentFabric.image === fabric.image
+                        currentFabric?.image === fabric.image
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
                       {/* Background image */}
-                      <img 
-                        src={fabric.image} 
-                        alt={`${fabric.name} thumbnail`} 
-                        className="absolute inset-0 w-full h-full object-cover z-0"
-                      />
+                      {fabric.image && (
+                        <img 
+                          src={fabric.image} 
+                          alt={`${fabric.name} thumbnail`} 
+                          className="absolute inset-0 w-full h-full object-cover z-0"
+                        />
+                      )}
                       
                       {/* Fabric name with text color */}
                       <h3
-                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor}`}
+                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor || 'text-black'}`}
                       >
                         {fabric.name}
                       </h3>

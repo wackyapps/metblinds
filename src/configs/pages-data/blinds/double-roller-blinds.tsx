@@ -114,8 +114,7 @@ const doubleRollerBlinds = {
       {
         name: "Misty Blue",
         image: "/images/contact-section-image-1.png",
-        textColor: "text-[#464644]",
-      },
+        textColor: "text-white",      },
       { name: "Cloudy Gray",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
       { name: "Soft Beige",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
     ],

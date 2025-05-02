@@ -112,8 +112,7 @@ const zebraBlinds = {
       {
         name: "Sand Mist",
         color: "#D9DAD7",
-        textColor: "text-[#464644]",
-      },
+        textColor: "text-white",      },
       { name: "Pale Gray", color: "#464644", textColor: "text-white" },
       { name: "Ocean Breeze", color: "#C9B692", textColor: "text-white" },
     ],
