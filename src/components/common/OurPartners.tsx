@@ -42,16 +42,17 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
               <ul className="glide__slides">
                 {data.partners.map((partner, index) => (
                   <li key={index} className="glide__slide w-32">
-                    <div className="rounded-full border px-6 py-4">
-                      <img
-                        src={partner.image}
-                        className="mx-auto"
-                        width={135}
-                        height={25}
-                        alt=""
-                      />
-                    </div>
-                  </li>
+                  <div className="rounded-full px-6 py-4"> {/* No border */}
+                    <img
+                      src={partner.image}
+                      className="mx-auto"
+                      width={135}
+                      height={25}
+                      alt=""
+                    />
+                  </div>
+                </li>
+                
                 ))}
               </ul>
             </div>
