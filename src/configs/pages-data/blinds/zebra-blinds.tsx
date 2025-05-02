@@ -17,7 +17,7 @@ const zebraBlinds = {
     subHeading:
       "Zebra Blinds – A stylish and versatile window covering combining the softness of shades with the light control of blinds. Perfect for homes and offices seeking a modern, clean aesthetic with superior privacy and brightness control.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/Zebra/Banner.jpg",
   },
   /**
    * why choose blinds slider
