@@ -90,7 +90,7 @@ const draperyBlinds = {
       {
         name: "Midnight Black",
         image: "/images/contact-section-image-1.png",
-        textColor: "/images/contact-section-image-1.png",
+       textColor: "text-white",
       },
       {
         name: "Soft Gray",
