@@ -14,9 +14,10 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
     if (glideRef.current) {
       new Glide(glideRef.current, {
         type: "carousel",
-        perView: 7,
+        perView: 3,
         gap: 16,
-        autoplay: 3000,
+        // autoplay: 3000,
+        autoplay: false,
         hoverpause: true,
         breakpoints: {
           1400: {
