@@ -14,8 +14,9 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
     if (glideRef.current) {
       new Glide(glideRef.current, {
         type: "carousel",
-        perView: 3,      // Show 3 items at once
-        gap: 0,          // Reduced gap to 0 for tighter spacing
+        perView: 3,      // Show all 3 items at once
+        gap: 0,          // No gap between slides
+        bound: true,     // Prevent additional sliding beyond the last slide
         autoplay: false,
         hoverpause: false,
         breakpoints: {
@@ -36,17 +37,16 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
           >
             {data.heading}
           </h2>
-          <div ref={glideRef} className="glide w-full">
+          <div ref={glideRef} className="glide w-full max-w-5xl mx-auto">
             <div className="glide__track" data-glide-el="track">
-              <ul className="glide__slides">
+              <ul className="glide__slides flex items-center">
                 {data.partners.map((partner, index) => (
-                  <li key={index} className="glide__slide">
-                    <div className="px-2 py-4"> {/* Reduced padding */}
+                  <li key={index} className="glide__slide flex items-center justify-center">
+                    <div className="px-0 py-2 flex justify-center w-full"> 
                       <img
                         src={partner.image}
-                        className="mx-auto"
-                        width={135}
-                        height={25}
+                        className="mx-auto w-full max-w-[220px]" 
+                        height="auto"
                         alt={`Partner ${index + 1}`}
                       />
                     </div>
