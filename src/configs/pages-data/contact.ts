@@ -184,6 +184,6 @@ export const contactPage = {
     heading: "Contact Us",
     subHeading:
       "Have any questions? Feel free to contact us at help@metblindsx.com or fill out the form.",
-    image: "/images/contact-section-image-1.png",
+    image: "/images/contactus/contact-us.jpg",
   },
 };
