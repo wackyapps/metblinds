@@ -31,9 +31,9 @@ const ChooseYourFabric = ({ data }: Props) => {
   );
 
   return (
-    <div className="global-container py-24">
+    <div className="global-container py-16 px-4">
       <div>
-        <div className="mb-14 flex flex-col items-center">
+        <div className="mb-10 flex flex-col items-center">
           <h2
             className={`${rubik.className} relative z-[1] mb-6 text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:mb-8 sm:text-4xl md:mb-10 md:text-5xl`}
           >
@@ -45,8 +45,7 @@ const ChooseYourFabric = ({ data }: Props) => {
         </div>
       </div>
       
-      {/* Large fabric image display */}
-      <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px]">
+      <div className="mx-auto mb-16 aspect-[16/9] max-w-[850px] rounded-lg overflow-hidden">
         <img 
           src={currentFabric} 
           alt="Selected fabric" 
@@ -66,27 +65,26 @@ const ChooseYourFabric = ({ data }: Props) => {
             opts={{
               align: "start",
               loop: true,
-              skipSnaps: true,
+              skipSnaps: false,
               containScroll: "trimSnaps",
-              dragFree: false,
             }}
-            className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
+            className="flex w-full items-center gap-2"
           >
-            <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+            <CarouselPrevious className="!static h-10 w-10 rounded-full bg-white text-2xl text-[#FFBB3D] duration-300 hover:opacity-100 border border-gray-200">
               <FaCircleChevronLeft />
             </CarouselPrevious>
-            <CarouselContent>
+            <CarouselContent className="gap-2 ml-0">
               {data.blackoutFabrics?.map((fabric, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
+                  className="basis-auto pl-1"
                 >
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
+                      className={`w-[158px] h-[148px] cursor-pointer rounded-md overflow-hidden ${
                         currentFabric === fabric
-                          ? "border-4 border-[#FFBB3D]"
+                          ? "border-2 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
@@ -101,7 +99,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+            <CarouselNext className="!static h-10 w-10 rounded-full bg-white text-2xl text-[#FFBB3D] duration-300 hover:opacity-100 border border-gray-200">
               <FaCircleChevronRight />
             </CarouselNext>
           </Carousel>
@@ -123,27 +121,26 @@ const ChooseYourFabric = ({ data }: Props) => {
             opts={{
               align: "start",
               loop: true,
-              skipSnaps: true,
+              skipSnaps: false,
               containScroll: "trimSnaps",
-              dragFree: false,
             }}
-            className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
+            className="flex w-full items-center gap-2"
           >
-            <CarouselPrevious className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+            <CarouselPrevious className="!static h-10 w-10 rounded-full bg-white text-2xl text-[#FFBB3D] duration-300 hover:opacity-100 border border-gray-200">
               <FaCircleChevronLeft />
             </CarouselPrevious>
-            <CarouselContent>
+            <CarouselContent className="gap-2 ml-0">
               {data.lightoutFabrics?.map((fabric, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
+                  className="basis-auto pl-1"
                 >
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
+                      className={`w-[158px] h-[148px] cursor-pointer rounded-md overflow-hidden ${
                         currentFabric === fabric
-                          ? "border-4 border-[#FFBB3D]"
+                          ? "border-2 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
@@ -158,7 +155,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className="!static rounded-full bg-white text-3xl text-[#FFBB3D] duration-300 hover:opacity-100">
+            <CarouselNext className="!static h-10 w-10 rounded-full bg-white text-2xl text-[#FFBB3D] duration-300 hover:opacity-100 border border-gray-200">
               <FaCircleChevronRight />
             </CarouselNext>
           </Carousel>
