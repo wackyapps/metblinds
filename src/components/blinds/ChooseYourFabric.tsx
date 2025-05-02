@@ -10,11 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
-// Interface for fabric options
-interface FabricOption {
-  id: string;
-  image: string;
-}
+// Just using string type for image paths
+type FabricOption = string;
 
 type Props = {
   data: {
@@ -22,18 +19,15 @@ type Props = {
     subHeading: string;
     blackoutHeading: string;
     lightFilteringHeading: string;
-    blackoutFabrics: FabricOption[];
-    lightoutFabrics: FabricOption[];
+    blackoutFabrics: string[];
+    lightoutFabrics: string[];
   };
 };
 
 const ChooseYourFabric = ({ data }: Props) => {
-  // Set default fabric
-  const [currentFabric, setCurrentFabric] = useState<FabricOption>(
-    data.blackoutFabrics?.[0] || {
-      id: "default",
-      image: "/placeholder.jpg",
-    }
+  // Set default fabric image
+  const [currentFabric, setCurrentFabric] = useState<string>(
+    data.blackoutFabrics?.[0] || "/placeholder.jpg"
   );
 
   return (
@@ -53,13 +47,11 @@ const ChooseYourFabric = ({ data }: Props) => {
       
       {/* Large fabric image display */}
       <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px]">
-        {currentFabric?.image && (
-          <img 
-            src={currentFabric.image} 
-            alt="Selected fabric" 
-            className="w-full h-full object-cover"
-          />
-        )}
+        <img 
+          src={currentFabric} 
+          alt="Selected fabric" 
+          className="w-full h-full object-cover"
+        />
       </div>
       
       <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-end">
@@ -93,19 +85,17 @@ const ChooseYourFabric = ({ data }: Props) => {
                     <div
                       onClick={() => setCurrentFabric(fabric)}
                       className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
-                        currentFabric?.id === fabric.id
+                        currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
                       {/* Fabric image without text */}
-                      {fabric.image && (
-                        <img 
-                          src={fabric.image} 
-                          alt="Fabric option" 
-                          className="w-full h-full object-cover"
-                        />
-                      )}
+                      <img 
+                        src={fabric} 
+                        alt="Fabric option" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </CarouselItem>
@@ -152,19 +142,17 @@ const ChooseYourFabric = ({ data }: Props) => {
                     <div
                       onClick={() => setCurrentFabric(fabric)}
                       className={`aspect-[1/1] w-32 h-32 md:w-40 md:h-40 cursor-pointer rounded-lg overflow-hidden ${
-                        currentFabric?.id === fabric.id
+                        currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
                       {/* Fabric image without text */}
-                      {fabric.image && (
-                        <img 
-                          src={fabric.image} 
-                          alt="Fabric option" 
-                          className="w-full h-full object-cover"
-                        />
-                      )}
+                      <img 
+                        src={fabric} 
+                        alt="Fabric option" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </CarouselItem>
