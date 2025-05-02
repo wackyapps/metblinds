@@ -12,7 +12,7 @@ import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
 interface FabricOption {
   name: string;
-  color: string;
+  image: string;  // Changed from color to image
   textColor?: string;
 }
 
@@ -47,12 +47,15 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
         </div>
       </div>
       {/*
-       * fabric color shower
+       * fabric image display
        */}
-      <div
-        className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] sm:rounded-[55px] md:rounded-[74px]"
-        style={{ background: currentFabric.color }}
-      ></div>
+      <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px]">
+        <img 
+          src={currentFabric.image} 
+          alt={`${currentFabric.name} fabric`} 
+          className="w-full h-full object-cover"
+        />
+      </div>
       <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-end">
         <div className="flex flex-col items-center gap-11">
           <div
@@ -82,15 +85,22 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] p-6 ${
-                        currentFabric.color === fabric.color
+                      className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] overflow-hidden p-6 relative ${
+                        currentFabric.image === fabric.image
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
-                      style={{ background: fabric.color }}
                     >
+                      {/* Background image */}
+                      <img 
+                        src={fabric.image} 
+                        alt={`${fabric.name} thumbnail`} 
+                        className="absolute inset-0 w-full h-full object-cover z-0"
+                      />
+                      
+                      {/* Fabric name with text color */}
                       <h3
-                        className={`${rubik.className} text-lg font-semibold ${fabric.textColor}`}
+                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor}`}
                       >
                         {fabric.name}
                       </h3>
@@ -135,15 +145,22 @@ const ChooseYourFabric: React.FC<Props> = ({ data }) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] p-6 ${
-                        currentFabric.color === fabric.color
+                      className={`flex aspect-[154/184] max-w-[160px] cursor-pointer flex-col items-center justify-end rounded-[34px] overflow-hidden p-6 relative ${
+                        currentFabric.image === fabric.image
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
-                      style={{ background: fabric.color }}
                     >
+                      {/* Background image */}
+                      <img 
+                        src={fabric.image} 
+                        alt={`${fabric.name} thumbnail`} 
+                        className="absolute inset-0 w-full h-full object-cover z-0"
+                      />
+                      
+                      {/* Fabric name with text color */}
                       <h3
-                        className={`${rubik.className} text-lg font-semibold ${fabric.textColor}`}
+                        className={`${rubik.className} text-lg font-semibold relative z-10 ${fabric.textColor}`}
                       >
                         {fabric.name}
                       </h3>

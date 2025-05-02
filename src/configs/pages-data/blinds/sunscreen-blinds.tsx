@@ -86,37 +86,37 @@ const sunscreenBlinds = {
       "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
-    blackoutFabrics: [
+   blackoutFabrics: [
       {
         name: "Midnight Black",
-        color: "linear-gradient(to bottom, #87847E, #4C4940)",
-        textColor: "text-white",
+        image: "/images/contact-section-image-1.png",
+       textColor: "text-white",
       },
       {
         name: "Soft Gray",
-        color: "linear-gradient(to bottom, #88705B, #4E403D)",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
       {
         name: "Warm Sandstone",
-        color: "linear-gradient(to bottom, #C5BDA4, #5F5B4F)",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
       {
         name: "Pure White",
-        color: "linear-gradient(to bottom, #C4C1B0, #908E79)",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-white",
       },
     ],
     lightoutFabrics: [
-      { name: "Sheer Ivory", color: "#838B92", textColor: "text-white" },
+      { name: "Sheer Ivory", image: "/images/contact-section-image-1.png", textColor: "text-white" },
       {
         name: "Misty Blue",
-        color: "#D9DAD7",
+        image: "/images/contact-section-image-1.png",
         textColor: "text-[#464644]",
       },
-      { name: "Cloudy Gray", color: "#464644", textColor: "text-white" },
-      { name: "Soft Beige", color: "#C9B692", textColor: "text-white" },
+      { name: "Cloudy Gray",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
+      { name: "Soft Beige",  image: "/images/contact-section-image-1.png", textColor: "text-white" },
     ],
   },
   /**
