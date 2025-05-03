@@ -17,7 +17,7 @@ const rollerBlinds = {
     subHeading:
       "Roller shades provide a perfect balance between privacy and light control. Whether in your home or office, these versatile window coverings let in soft light while keeping your space private. Available in blackout options for complete darkness, ideal for media rooms or bedrooms, and sheer options for brighter, more active spaces like kitchens and living rooms.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/Roller/banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -29,25 +29,25 @@ const rollerBlinds = {
         icon: <WiDaySunny />,
         title: "Light Control",
         description: "Easily adjust the amount of light entering your space, creating a comfortable, glare-free environment.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Roller/Light Control.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Privacy",
         description: "Enjoy complete privacy without sacrificing natural light, thanks to the innovative design of roller shades.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Roller/Privacy.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Modern Design",
         description: "Sleek and minimalist, roller shades seamlessly blend into any contemporary decor, offering a clean, stylish appearance.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Roller/Modern Design.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Space Saving",
         description: "Roller shades retract neatly into a compact roll, saving space and providing unobstructed views.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Roller/Space Saving.jpg",
       },
     ],
   },
@@ -158,7 +158,7 @@ const rollerBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/Roller/How It Works_.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
