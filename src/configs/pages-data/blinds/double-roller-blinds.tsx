@@ -56,8 +56,9 @@ const doubleRollerBlinds = {
   /**
    * key features
    */
-  keyFeaures: {
+ keyFeaures: {
     heading: "KEY FEATURES",
+    image: "/images/blinds/HoneycombBlinds/Enhanced Privacy.jpg",
     features: [
       {
         title: "Premium Material",
