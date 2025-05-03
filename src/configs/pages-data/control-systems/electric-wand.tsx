@@ -21,7 +21,7 @@ const electricWand = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Discover Smart Control Systems",
+    heading: "Discover Electric Wand",
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
