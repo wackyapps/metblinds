@@ -18,7 +18,7 @@ const honeycombBlinds = {
     subHeading:
       "Honeycomb blinds combine innovative cellular design with elegant aesthetics to provide superior insulation and light control for your home.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/HoneycombBlinds/banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const honeycombBlinds = {
         icon: <WiDaySunny />,
         title: "Superior Insulation",
         description: "Keep your home comfortable year-round",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombBlinds/Superior Insulation.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Enhanced Privacy",
         description: "Perfect light filtering and privacy control",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombBlinds/Enhanced Privacy.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Modern Design",
         description: "Clean, contemporary appearance",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombBlinds/Modern Design.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Reduce heating and cooling costs",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombBlinds/Energy Efficient.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const honeycombBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/HoneycombBlinds/how its works.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
