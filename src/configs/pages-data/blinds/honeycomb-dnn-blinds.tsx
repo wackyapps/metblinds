@@ -18,7 +18,7 @@ const honeycombDnnBlinds = {
     subHeading:
       "Looking for light control with tranquility? Honeycomb blinds are for you. Its unique cellular design provides exceptional thermal insulation and noise control, making it an ideal choice for classrooms, meditation centers, or even cozy bedrooms.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/HoneycombDNNBlinds/Banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const honeycombDnnBlinds = {
         icon: <WiDaySunny />,
         title: "Thermal Insulation",
         description: "Honeycomb design traps the air within its cells, creating a thermal barrier for temperature control.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombDNNBlinds/Thermal Insulation.avif",
       },
       {
         icon: <MdSecurity />,
         title: "Contemporary Aesthetics",
         description: "The modern and sleek appearance blends well with nearly all types of interiors, making it a good choice for living room, office, and bedroom.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombDNNBlinds/Contemporary Aesthetics.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Sound Absorption",
         description: "Unique cellular design absorbs the soundwaves, resulting in minimized outside noise like traffic, street, neighbors, etc.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombDNNBlinds/Sound Absorption.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficiency",
         description: "Maintain consistent indoor temperature throughout the year and save energy.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/HoneycombDNNBlinds/Energy Efficiency.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const honeycombDnnBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/HoneycombDNNBlinds/how its works_.avif",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
