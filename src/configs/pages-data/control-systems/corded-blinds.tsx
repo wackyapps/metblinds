@@ -59,7 +59,7 @@ const cordedBlinds = {
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/controlsystem/cordedblind/5.jpg",
+        image: "/images/controlsystem/cordedblind/5.avif",
       },
     ],
   },
