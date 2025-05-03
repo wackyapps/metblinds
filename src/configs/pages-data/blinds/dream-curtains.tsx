@@ -18,7 +18,7 @@ const dreamCurtains = {
     subHeading:
       "Get the best of all– privacy, light control, and aesthetics. Dream Curtains offers an immaculate blend of luxury, functionality, and elegance, elevating any decor.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/DreamCurtains/banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const dreamCurtains = {
         icon: <WiDaySunny />,
         title: "Light Control",
         description: "Regulate the amount and direction of the sunlight, creating a comfortable and glare-free ambience all day.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/DreamCurtains/Light Control.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Optimal Privacy",
         description: "Maintain your privacy without sacrificing natural light, all thanks to the innovative Trifold design.",
-         image: "/images/contact-section-image-1.png",
+         image: "/images/blinds/DreamCurtains/Optimal Privacy.avif",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Ultra Luxury Design",
         description: "Experience unparalleled  luxury with exquisite fabric and craftsmanship, redefining your personal space.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/DreamCurtains/Ultra Luxury Design.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Control indoor temperatures by reducing heat gain in summer, resulting in increased energy savings and lower cooling cost.",
-       image: "/images/contact-section-image-1.png",
+       image: "/images/blinds/DreamCurtains/Energy Efficient.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const dreamCurtains = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/DreamCurtains/how its works.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
