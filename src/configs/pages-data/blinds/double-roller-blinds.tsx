@@ -18,7 +18,7 @@ const doubleRollerBlinds = {
     subHeading:
       "Whether it’s your cozy personal space or high-end office, Double Roller Blinds offer a perfect blend of elegance, style, lighting, and privacy. A seamless integration of light-filtering and blackout fabrics– allowing you to adjust between natural brightness and complete privacy. With the dual-layer system, you can effortlessly control the lighting and privacy to suit your moodṣ and occasion.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/Double Roller Blinds/banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const doubleRollerBlinds = {
         icon: <WiDaySunny />,
         title: "Dual Light Control",
         description: "The best of both worlds– natural lighting during the day and pitch darkness during night time.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Double Roller Blinds/drb2.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Privacy Control",
         description: "Interplay between two fabric layers gives you the freedom to adjust your privacy levels for the living room, bedroom, and office.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Double Roller Blinds/drb3.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Style with Functionality",
         description: "Up and Down Window Shades, where minimalism meets functionality. Customize your light/privacy with a corded, cordless, motorized, or smart integraṣtion control system.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Double Roller Blinds/drb4.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Conserve energy by minimizing heat gain in summer and maintaining warmth during winter.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Double Roller Blinds/Energy Efficient.jpg",
       },
     ],
   },
@@ -140,7 +140,7 @@ const doubleRollerBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/Double Roller Blinds/How It Works.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
