@@ -22,11 +22,11 @@ const cordedBlinds = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Discover Smart Control Systems",
+    heading: "Discover Corded Blinds",
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
-    coverImage: "/banners/about-banner-img.png",
+    coverImage: "/images/controlsystem/corded blind/banner.jpg",
   },
   /**
    * why choose control slider data
@@ -39,27 +39,27 @@ const cordedBlinds = {
       {
         icon: <FaRegClock />,
         title: "Strong and durable manual control",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/corded blind/1.jpg",
       },
       {
         icon: <FiSun />,
         title: "Precise light and privacy control",
-        image: "/images/banner-side-image-3.png",
+        image: "/images/controlsystem/corded blind/2.jpg",
       },
       {
         icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/corded blind/3.jpg",
       },
       {
         icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/corded blind/4.jpg",
       },
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/corded blind/5.jpg",
       },
     ],
   },
@@ -161,7 +161,7 @@ const cordedBlinds = {
         description:
           "Pull the cord up or down to place the blinds where you need.",
         isFilled: true,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/corded blind/5.avif",
       },
       {
         icon: <FaLock />,
@@ -169,14 +169,14 @@ const cordedBlinds = {
         description:
           "Use MET Sleeve & bottom safety lock to keep them in place.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/corded blind/6.avif",
       },
       {
         icon: <FaSun />,
         title: "Control Light & Privacy",
         description: "Tilt for privacy & lighting preferences.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/corded blind/7.jpg",
       },
     ],
   },
