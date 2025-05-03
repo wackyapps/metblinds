@@ -28,11 +28,11 @@ const BlindsBanner: React.FC<Props> = ({ data }) => {
             {heading}
           </h1>
           {/* Orange Border Frame */}
-          <div className="inline-flex w-fit rounded-[21px] border border-[#FFB033] px-6 py-2 text-sm sm:px-8 sm:text-base md:px-10 md:text-[22px] md:text-lg lg:px-12">
+          {/* <div className="inline-flex w-fit rounded-[21px] border border-[#FFB033] px-6 py-2 text-sm sm:px-8 sm:text-base md:px-10 md:text-[22px] md:text-lg lg:px-12">
             <span className={`${inter.className} font-medium text-[#FFB033]`}>
               {cta}
             </span>
-          </div>
+          </div> */}
           {/* subHeading Text */}
           <p
             className={`${inter.className} max-w-[629px] text-base leading-relaxed text-white sm:text-lg md:text-[22px]`}
