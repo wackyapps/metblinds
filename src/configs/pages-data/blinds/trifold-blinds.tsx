@@ -18,7 +18,7 @@ const trifoldBlinds = {
     subHeading:
       "Trifold Blinds – A perfect solution for sliding glass doors and large windows, maintaining privacy and light balance while preserving aesthetic appeal.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/TrifoldBlinds/Banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const trifoldBlinds = {
         icon: <WiDaySunny />,
         title: "Smart Light Management",
         description: "Get the amount of light you want– regulate the ambience for any time of the day.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/TrifoldBlinds/Smart Light Management.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Optimal Privacy",
         description: "Maintain your privacy without sacrificing natural light, all thanks to the innovative Trifold design.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/TrifoldBlinds/Optimal Privacy.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Modern Design",
         description: "The sleek folding panels compliment nearly every modern interior design, adding a touch of style.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/TrifoldBlinds/Modern Design.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Space Saving",
         description: "With a compact folding mechanism, Trifold blinds occupy minimal space when opened, providing unhindered views.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/TrifoldBlinds/Space Saving.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const trifoldBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/TrifoldBlinds/How It Works_.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
