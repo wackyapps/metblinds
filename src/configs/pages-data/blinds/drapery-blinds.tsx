@@ -18,7 +18,7 @@ const draperyBlinds = {
     subHeading:
       "A practical window solution for new age homes– bring the elegance of classic draperies and functionality of modern blinds together.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/banners/about-banner-img-2.png",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const draperyBlinds = {
         icon: <WiDaySunny />,
         title: "Light Control",
         description: "The best of both worlds– set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/DraperyBlinds/Light Control.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Privacy Control",
         description: "Adjust your privacy levels with absolute coverage, ideal for living room, bedroom, and even home theatre.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/DraperyBlinds/Privacy Control.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "HIgh End Design",
         description: "Drapery Blinds, where luxury meets the functionality. Customize your light/privacy with refined fabrics and premium features.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/DraperyBlinds/HIgh End Design.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Conserve energy by minimizing heat gain in summer and maintaining warmth during winter.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/DraperyBlinds/Energy Efficient.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const draperyBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/DraperyBlinds/How It Works_.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
