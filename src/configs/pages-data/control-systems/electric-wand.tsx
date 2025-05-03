@@ -25,7 +25,7 @@ const electricWand = {
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
-    coverImage: "/images/controlsystem/electric wand/9.jpg",
+    coverImage: "/images/controlsystem/electricwand/9.jpg",
   },
   /**
    * why choose control slider data
@@ -39,27 +39,27 @@ const electricWand = {
       {
         icon: <FaRegClock />,
         title: "Strong and durable manual control",
-        image: "/images/controlsystem/electric wand/1.jpg",
+        image: "/images/controlsystem/electricwand/1.jpg",
       },
       {
         icon: <FiSun />,
         title: "Precise light and privacy control",
-        image: "/images/controlsystem/electric wand/2.jpg",
+        image: "/images/controlsystem/electricwand/2.jpg",
       },
       {
         icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
-        image: "/images/controlsystem/electric wand/3.jpg",
+        image: "/images/controlsystem/electricwand/3.jpg",
       },
       {
         icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
-        image: "/images/controlsystem/electric wand/4.jpg",
+        image: "/images/controlsystem/electricwand/4.jpg",
       },
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/controlsystem/electric wand/5.jpg",
+        image: "/images/controlsystem/electricwand/5.jpg",
       },
     ],
   },
@@ -163,7 +163,7 @@ const electricWand = {
         description:
           "Push the button to turn on/off the Electric wand.",
         isFilled: true,
-        image: "/images/controlsystem/electric wand/6.jpg",
+        image: "/images/controlsystem/electricwand/6.jpg",
       },
       {
         icon: <FaLock />,
@@ -171,14 +171,14 @@ const electricWand = {
         description:
           "Raise, tilt, or lower the blinds using the electric wand.",
         isFilled: false,
-        image: "/images/controlsystem/electric wand/7.jpg",
+        image: "/images/controlsystem/electricwand/7.jpg",
       },
       {
         icon: <FaSun />,
         title: "Control Light & Privacy",
         description: "Stop at any height for preferred privacy & lighting.",
         isFilled: false,
-        image: "/images/controlsystem/electric wand/8.jpg",
+        image: "/images/controlsystem/electricwand/8.jpg",
       },
     ],
   },

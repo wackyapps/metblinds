@@ -25,7 +25,7 @@ const cordlessBlinds = {
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
-    coverImage: "/images/controlsystem/cordless blinds/banner.jpg",
+    coverImage: "/images/controlsystem/cordlessblinds/banner.jpg",
   },
   /**
    * why choose control slider data
@@ -38,27 +38,27 @@ const cordlessBlinds = {
       {
         icon: <FaRegClock />,
         title: "Strong and durable manual control",
-        image: "/images/controlsystem/cordless blinds/1.jpg",
+        image: "/images/controlsystem/cordlessblinds/1.jpg",
       },
       {
         icon: <FiSun />,
         title: "Precise light and privacy control",
-        image: "/images/controlsystem/cordless blinds/2.jpg",
+        image: "/images/controlsystem/cordlessblinds/2.jpg",
       },
       {
         icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
-        image: "/images/controlsystem/cordless blinds/3.jpg",
+        image: "/images/controlsystem/cordlessblinds/3.jpg",
       },
       {
         icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
-        image: "/images/controlsystem/cordless blinds/4.jpg",
+        image: "/images/controlsystem/cordlessblinds/4.jpg",
       },
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/controlsystem/cordless blinds/5.jpg",
+        image: "/images/controlsystem/cordlessblinds/5.jpg",
       },
     ],
   },
@@ -162,7 +162,7 @@ const cordlessBlinds = {
         description:
           "Pull the bottom rail up or down to place the blinds.",
         isFilled: true,
-        image: "/images/controlsystem/cordless blinds/6.jpg",
+        image: "/images/controlsystem/cordlessblinds/6.jpg",
       },
       {
         icon: <FaLock />,
@@ -170,14 +170,14 @@ const cordlessBlinds = {
         description:
           "Use MET Sleeve & bottom safety lock to keep them in place.",
         isFilled: false,
-        image: "/images/controlsystem/cordless blinds/7.avif",
+        image: "/images/controlsystem/cordlessblinds/7.avif",
       },
       {
         icon: <FaSun />,
         title: "Control Light & Privacy",
         description: "Stop at any height for preferred privacy & lighting.",
         isFilled: false,
-        image: "/images/controlsystem/cordless blinds/8.jpg",
+        image: "/images/controlsystem/cordlessblinds/8.jpg",
       },
     ],
   },
