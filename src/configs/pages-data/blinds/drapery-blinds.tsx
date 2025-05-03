@@ -18,7 +18,7 @@ const draperyBlinds = {
     subHeading:
       "A practical window solution for new age homes– bring the elegance of classic draperies and functionality of modern blinds together.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/DraperyBlinds/banner.jpg",
   },
   /**
    * why choose blinds slider
