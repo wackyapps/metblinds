@@ -18,7 +18,7 @@ const skylightBlinds = {
     subHeading:
       "For spaces with overhead windows, Skylight Blinds provides a good balance between privacy and natural lighting, while ensuring UV protection and energy efficiency.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/Skylight Blinds/Banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const skylightBlinds = {
         icon: <WiDaySunny />,
           title: "Light Control",
         description: "Regulate the amount and direction of the sunlight, creating a comfortable and glare-free ambience all day.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Skylight Blinds/Light Control.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Optimal Privacy",
         description: "Maintain your privacy without sacrificing natural light, all thanks to the innovative Trifold design.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Skylight Blinds/Optimal Privacy.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "UV Protection",
         description: "Protect your floor, furniture, and valuables from harmful ultraviolet rays, which may cause discoloration.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Skylight Blinds/UV Protection.webp",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Control indoor temperatures by reducing heat gain in summer, resulting in increased energy savings and lower cooling cost.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Skylight Blinds/Energy Efficient.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const skylightBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/Skylight Blinds/How It Works_.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
