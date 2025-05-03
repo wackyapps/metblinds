@@ -18,7 +18,7 @@ const sunscreenBlinds = {
     subHeading:
       "A contemporary window solution, offering a perfect balance between privacy and natural light, all while keeping you safe from harmful UV rays.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/Sunscreen Blinds/banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const sunscreenBlinds = {
         icon: <WiDaySunny />,
         title: "UV Protection",
         description: "Protect your floor, furniture, and valuables from harmful ultraviolet rays, which may cause discoloration.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Sunscreen Blinds/UV Protection.avif",
       },
       {
         icon: <MdSecurity />,
         title: "Glare Reduction",
         description: "Enhance your comfort by minimizing harmful sunlight and screen reflections.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Sunscreen Blinds/Glare Reduction.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Maintain Outdoor View",
         description: "Keep your outdoor views intact with filtered incoming light, and create a cozy interior setting.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Sunscreen Blinds/Maintain Outdoor View.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Control indoor temperatures by reducing heat gain in summer, resulting in increased energy savings and lower cooling cost.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/Sunscreen Blinds/Maintain Outdoor View(1).jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const sunscreenBlinds = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/Sunscreen Blinds/How It Works_.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
