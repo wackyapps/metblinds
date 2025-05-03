@@ -21,11 +21,11 @@ const manualWand = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Discover Smart Control Systems",
+    heading: "Discover Manual Wands",
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
-    coverImage: "/banners/about-banner-img.png",
+    coverImage: "/images/controlsystem/manualwand/banner.jpg",
   },
   /**
    * why choose control slider data
@@ -38,27 +38,27 @@ const manualWand = {
       {
         icon: <FaRegClock />,
         title: "Strong and durable manual control",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/manualwand/0.jpg",
       },
       {
         icon: <FiSun />,
         title: "Precise light and privacy control",
-        image: "/images/banner-side-image-3.png",
+        image: "/images/controlsystem/manualwand/1.jpg",
       },
       {
         icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/manualwand/2.jpg",
       },
       {
         icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/manualwand/3.jpg",
       },
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/manualwand/4.jpg",
       },
     ],
   },
@@ -162,7 +162,7 @@ const manualWand = {
         description:
           "To adjust light, rotate the manual wand.",
         isFilled: true,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/manualwand/5.jpg",
       },
       {
         icon: <FaLock />,
@@ -170,14 +170,14 @@ const manualWand = {
         description:
           "Push/pull the wand to position the blinds.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/manualwand/6.jpg",
       },
       {
         icon: <FaSun />,
         title: "Control Light & Privacy",
         description: "Choose the preferred angle for privacy & lighting.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/manualwand/7.jpg",
       },
     ],
   },
