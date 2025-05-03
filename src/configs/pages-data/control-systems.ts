@@ -19,7 +19,7 @@ export const controlSystemPage = {
     subHeading:
       "Discover the perfect control system for your blinds, from classic corded options to smart home integrations. Choose the best fit for convenience, safety, and style.",
     buttonText: "Request free Quote",
-    coverImage: "/banners/about-banner-img.png",
+    coverImage: "/banners/about-banner-img-2.png",
   },
   /**
    * control system table

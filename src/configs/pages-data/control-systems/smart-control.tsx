@@ -25,7 +25,7 @@ const smartControl = {
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
-    coverImage: "/banners/about-banner-img.png",
+    coverImage: "/images/controlsystem/smartcontrol/banner.jpeg",
   },
   /**
    * why choose control slider data
@@ -38,27 +38,27 @@ const smartControl = {
       {
         icon: <FaRegClock />,
         title: "Strong and durable manual control",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/smartcontrol/0.jpg",
       },
       {
         icon: <FiSun />,
         title: "Precise light and privacy control",
-        image: "/images/banner-side-image-3.png",
+        image: "/images/controlsystem/smartcontrol/1.jpg",
       },
       {
         icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/smartcontrol/2.jpg",
       },
       {
         icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/smartcontrol/3.jpg",
       },
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/smartcontrol/4.jpg",
       },
     ],
   },
@@ -164,7 +164,7 @@ const smartControl = {
         description:
           "Use smartphone app to adjust your blinds anytime anywhere.",
         isFilled: true,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/smartcontrol/6.jpg",
       },
       {
         icon: <FaLock />,
@@ -172,14 +172,14 @@ const smartControl = {
         description:
           "Say the commands to control light and privacy hands-free.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/smartcontrol/7.jpg",
       },
       {
         icon: <FaSun />,
         title: "Smart Home Integration",
         description: "Connect your treatment to your favorite Smart Home system for enhanced control.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/smartcontrol/3.jpg",
       },
     ],
   },
