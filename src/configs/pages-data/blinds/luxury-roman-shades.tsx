@@ -17,7 +17,7 @@ const luxuryRomanShades = {
     subHeading:
       "Elevate your space with handcrafted Roman Shades—where opulent fabrics meet flawless functionality. Choose from sumptuous silks, rich linens, or textured jacquards, all tailored for a custom fit that exudes luxury.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/LuxuryRomanShades/banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -29,25 +29,25 @@ const luxuryRomanShades = {
         icon: <WiDaySunny />,
         title: "Light Control",
         description: "The best of both worlds– set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/LuxuryRomanShades/Light Control.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Privacy Control",
         description: "Adjust your privacy levels with absolute coverage, ideal for living room, bedroom, and even home theatre.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/LuxuryRomanShades/privacy Control.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "HIgh End Design",
         description: "Luxury Roman Shades, where luxury meets functionality. Customize your light/privacy with refined fabrics and premium features.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/LuxuryRomanShades/HIgh End Design.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Energy Efficient",
         description: "Conserve energy by minimizing heat gain in summer and maintaining warmth during winter.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/LuxuryRomanShades/Energy Efficient.jpg",
       },
     ],
   },
@@ -138,7 +138,7 @@ const luxuryRomanShades = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/LuxuryRomanShades/How It Works_.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
