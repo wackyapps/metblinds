@@ -14,7 +14,7 @@ const draperyBlinds = {
    * blinds banner
    */
   blindsBanner: {
-    heading: "Drapery Blinds",
+    heading: "Drapery",
     subHeading:
       "A practical window solution for new age homes– bring the elegance of classic draperies and functionality of modern blinds together.",
     cta: "Shop Now",
@@ -24,7 +24,7 @@ const draperyBlinds = {
    * why choose blinds slider
    */
   whyChooseBlindsSlider: {
-    heading: "Why Choose Drapery Blinds",
+    heading: "Why Choose Drapery",
     features: [
       {
         icon: <WiDaySunny />,
