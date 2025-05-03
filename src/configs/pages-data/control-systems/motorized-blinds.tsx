@@ -21,11 +21,11 @@ const motorizedBlinds = {
    * control system banner
    */
   controlSystemBanner: {
-    heading: "Discover Smart Control Systems",
+    heading: "Discover Motorized Blinds",
     subHeading:
       "From a traditional corded mechanism to cutting-edge Smart Home integrations, we offer a wide range of control systems, tailored to your interior, style, and preferences. Pick your best fit!",
     buttonText: "Request free Quote",
-    coverImage: "/banners/about-banner-img.png",
+    coverImage: "/images/controlsystem/motorizedblinds/banner.jpg",
   },
   /**
    * why choose control slider data
@@ -38,27 +38,27 @@ const motorizedBlinds = {
       {
         icon: <FaRegClock />,
         title: "Strong and durable manual control",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/motorizedblinds/1.jpg",
       },
       {
         icon: <FiSun />,
         title: "Precise light and privacy control",
-        image: "/images/banner-side-image-3.png",
+        image: "/images/controlsystem/motorizedblinds/2.jpg",
       },
       {
         icon: <FaShieldAlt />,
         title: "Child-safe lock mechanism prevents hazards",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/motorizedblinds/3.jpg",
       },
       {
         icon: <CiWallet />,
         title: "Budget-friendly and easy to maintain",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/motorizedblinds/4.jpg",
       },
       {
         icon: <FaRegCircleCheck />,
         title: "Available in PVC, fabric, and stainless steel cord options",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/controlsystem/motorizedblinds/5.jpg",
       },
     ],
   },
@@ -166,7 +166,7 @@ const motorizedBlinds = {
         description:
           "Use your remote to adjust your blinds.",
         isFilled: true,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/motorizedblinds/6.jpg",
       },
       {
         icon: <FaLock />,
@@ -174,14 +174,14 @@ const motorizedBlinds = {
         description:
           "Connect your treatment to your favorite Smart Home system for enhanced control.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/motorizedblinds/7.jpg",
       },
       {
         icon: <FaSun />,
         title: "Automation",
         description: "Create automated schedules for privacy/light control.",
         isFilled: false,
-        image: "/images/white-blind.png",
+        image: "/images/controlsystem/motorizedblinds/8.jpg",
       },
     ],
   },
