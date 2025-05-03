@@ -57,6 +57,7 @@ const honeycombBlinds = {
    */
   keyFeaures: {
     heading: "KEY FEATURES",
+    image: "/images/honeycomb/dark/5.jpg",
     features: [
       {
         title: "Material",
