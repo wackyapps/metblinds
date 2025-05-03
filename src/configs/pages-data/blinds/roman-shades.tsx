@@ -18,7 +18,7 @@ const romanShades = {
     subHeading:
       "Roman shades infuse timeless elegance of drapes and functionality of blinds into one stylish window treatment. Its horizontal fold design gives your window a clean yet sophisticated look that blends with any interior style.",
     cta: "Shop Now",
-    background: "/banners/about-banner-img.png",
+    background: "/images/blinds/RomanShades/Banner.jpg",
   },
   /**
    * why choose blinds slider
@@ -30,25 +30,25 @@ const romanShades = {
         icon: <WiDaySunny />,
         title: "Custom Light Control",
         description: "Control the level of natural lighting with numerous window blinds with fabric.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/RomanShades/Custom Light Control.jpg",
       },
       {
         icon: <MdSecurity />,
         title: "Privacy Control",
         description: "With enhanced coverage, seamlessly adjust your privacy levels for the living room, bedroom, and office.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/RomanShades/Privacy Control.jpg",
       },
       {
         icon: <MdOutlineDesignServices />,
         title: "Timeless Elegance",
         description: "The classic design, tailored for both contemporary and vintage interiors.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/RomanShades/Timeless Elegance.jpg",
       },
       {
         icon: <BsLightningChargeFill />,
         title: "Uncluttered Design",
         description: "Neatly stack up when raised and lay smooth when lowered.",
-        image: "/images/contact-section-image-1.png",
+        image: "/images/blinds/RomanShades/Uncluttered Design.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const romanShades = {
    */
   blindsFeatures: {
     heading: "How It Works?",
-    image: "/banners/home-banner-1.png",
+    image: "/images/blinds/RomanShades/howitworks.jpg",
     features: [
       {
         icon: "/svgs/easy-operation.svg",
