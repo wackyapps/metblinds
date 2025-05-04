@@ -57,7 +57,7 @@ const trifoldBlinds = {
    */
  keyFeaures: {
     heading: "KEY FEATURES",
-    image: "/images/blinds/HoneycombBlinds/Enhanced Privacy.jpg",
+    image: "/images/blinds/TrifoldBlinds/FEATURES.jpg",
     features: [
       {
         title: "Premium Material",

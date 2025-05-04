@@ -56,7 +56,7 @@ const zebraBlinds = {
    */
  keyFeaures: {
     heading: "KEY FEATURES",
-    image: "/images/blinds/HoneycombBlinds/Enhanced Privacy.jpg",
+    image: "/images/blinds/Zebra/features.jpg",
     features: [
       {
         title: "High-Quality Construction",

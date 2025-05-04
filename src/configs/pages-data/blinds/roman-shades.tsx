@@ -57,7 +57,7 @@ const romanShades = {
    */
  keyFeaures: {
     heading: "KEY FEATURES",
-    image: "/images/blinds/HoneycombBlinds/Enhanced Privacy.jpg",
+    image: "/images/blinds/RomanShades/FEATURES.jpg",
     features: [
       {
         title: "Premium Material",

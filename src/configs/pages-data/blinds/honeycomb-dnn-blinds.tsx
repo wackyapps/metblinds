@@ -57,7 +57,7 @@ const honeycombDnnBlinds = {
    */
  keyFeaures: {
     heading: "KEY FEATURES",
-    image: "/images/blinds/HoneycombBlinds/Enhanced Privacy.jpg",
+    image: "/images/blinds/HoneycombDNNBlinds/features.jpg",
     features: [
       {
         title: "Premium Material",
