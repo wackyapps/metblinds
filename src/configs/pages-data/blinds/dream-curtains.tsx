@@ -88,16 +88,23 @@ const dreamCurtains = {
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/contact-section-image-1.png",
-      "/images/hardwares/hardware-1.png",
-        "/banners/home-banner-1.png",
-        "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/honeycomb/dark/3.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/4.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/5.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/6.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/8.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/9.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/10.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/11.jpg",
+
+   
     ],
     lightoutFabrics: [
-   "/images/contact-section-image-1.png",
-   "/images/hardwares/hardware-1.png",
-     "/banners/home-banner-1.png",
-     "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/honeycomb/light/1.jpg",
+      "/images/blinds/fabrics/honeycomb/light/2.jpg",
+      "/images/blinds/fabrics/honeycomb/light/7.jpg",
+      "/images/blinds/fabrics/honeycomb/light/13.jpg",
+      "/images/blinds/fabrics/honeycomb/light/12.jpg",
     ],
   },
   /**
