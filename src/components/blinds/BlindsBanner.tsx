@@ -16,6 +16,9 @@ const BlindsBanner: React.FC<Props> = ({ data }) => {
       className="relative w-full py-[153px] md:py-[183px] lg:py-[213px]"
       style={{
         background: ` linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${background})`,
+        backgroundSize: 'cover',       // Ensures image covers the entire element
+        backgroundPosition: 'center',  // Centers the image
+        backgroundRepeat: 'no-repeat', // Prevents image from repeating
       }}
     >
       {/* Content Container */}

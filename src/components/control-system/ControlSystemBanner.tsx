@@ -12,6 +12,9 @@ function ControlSystemBanner({ data }: Props) {
       className="min-h-[600px] w-full bg-cover md:min-h-[700px]"
       style={{
         background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${data.coverImage})`,
+        backgroundSize: 'cover',       // Ensures image covers the entire element
+        backgroundPosition: 'center',  // Centers the image
+        backgroundRepeat: 'no-repeat', // Prevents image from repeating
       }}
     >
       <div className="mx-auto flex max-w-[1560px] flex-col items-start gap-[57px] px-3 py-[150px] sm:py-[180px] md:py-[227px]">
