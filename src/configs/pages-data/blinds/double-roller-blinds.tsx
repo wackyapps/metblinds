@@ -89,16 +89,20 @@ const doubleRollerBlinds = {
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/contact-section-image-1.png",
-      "/images/hardwares/hardware-1.png",
-        "/banners/home-banner-1.png",
-        "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/doubleroller/dark/4.jpg",
+      "/images/blinds/fabrics/doubleroller/dark/5.jpg",
+      "/images/blinds/fabrics/doubleroller/dark/6.jpg",
+      "/images/blinds/fabrics/doubleroller/dark/9.jpg",
+      "/images/blinds/fabrics/doubleroller/dark/3.jpg",
+
+   
     ],
     lightoutFabrics: [
-   "/images/contact-section-image-1.png",
-   "/images/hardwares/hardware-1.png",
-     "/banners/home-banner-1.png",
-     "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/doubleroller/light/1.jpg",
+      "/images/blinds/fabrics/doubleroller/light/2.jpg",
+      "/images/blinds/fabrics/doubleroller/light/7.jpg",
+      "/images/blinds/fabrics/doubleroller/light/8.jpg",
+      "/images/blinds/fabrics/doubleroller/light/10.jpg",
     ],
   },
   /**
