@@ -79,18 +79,18 @@ const ChooseYourFabric = ({ data }: Props) => {
               {data.blackoutFabrics?.map((fabric, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
+                  className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
                 >
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-24 w-24 cursor-pointer overflow-hidden rounded-lg transition-all duration-300 ${
+                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
-                      {/* Fabric image with equal height/width */}
+                      {/* Fabric image without text */}
                       <img 
                         src={fabric} 
                         alt="Fabric option" 
@@ -136,18 +136,18 @@ const ChooseYourFabric = ({ data }: Props) => {
               {data.lightoutFabrics?.map((fabric, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
+                  className="basis-full sm:basis-1/2 min-[650px]:basis-1/3 md:basis-1/4"
                 >
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-24 w-24 cursor-pointer overflow-hidden rounded-lg transition-all duration-300 ${
+                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
-                      {/* Fabric image with equal height/width */}
+                      {/* Fabric image without text */}
                       <img 
                         src={fabric} 
                         alt="Fabric option" 
