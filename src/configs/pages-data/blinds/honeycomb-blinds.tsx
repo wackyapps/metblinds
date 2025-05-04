@@ -93,6 +93,8 @@ const honeycombBlinds = {
       "/images/blinds/fabrics/honeycomb/dark/6.jpg",
       "/images/blinds/fabrics/honeycomb/dark/8.jpg",
       "/images/blinds/fabrics/honeycomb/dark/9.jpg",
+      "/images/blinds/fabrics/honeycomb/dark/10.jpg",
+
    
     ],
     lightoutFabrics: [
@@ -101,7 +103,6 @@ const honeycombBlinds = {
       "/images/blinds/fabrics/honeycomb/light/3.jpg",
       "/images/blinds/fabrics/honeycomb/light/4.jpg",
       "/images/blinds/fabrics/honeycomb/light/7.jpg",
-      "/images/blinds/fabrics/honeycomb/light/10.jpg",
     ],
   },
   /**
