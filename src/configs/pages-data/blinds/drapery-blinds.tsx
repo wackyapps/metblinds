@@ -88,16 +88,25 @@ const draperyBlinds = {
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/contact-section-image-1.png",
-      "/images/hardwares/hardware-1.png",
-        "/banners/home-banner-1.png",
-        "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/drapery/dark/4.jpg",
+      "/images/blinds/fabrics/drapery/dark/6.jpg",
+      "/images/blinds/fabrics/drapery/dark/7.jpg",
+      "/images/blinds/fabrics/drapery/dark/8.jpg",
+      "/images/blinds/fabrics/drapery/dark/10.jpg",
+      "/images/blinds/fabrics/drapery/dark/12.jpg",
+      "/images/blinds/fabrics/drapery/dark/15.jpg",
+
+   
     ],
     lightoutFabrics: [
-   "/images/contact-section-image-1.png",
-   "/images/hardwares/hardware-1.png",
-     "/banners/home-banner-1.png",
-     "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/drapery/light/1.jpg",
+      "/images/blinds/fabrics/drapery/light/2.jpg",
+      "/images/blinds/fabrics/drapery/light/3.jpg",
+      "/images/blinds/fabrics/drapery/light/5.jpg",
+      "/images/blinds/fabrics/drapery/light/9.jpg",
+      "/images/blinds/fabrics/drapery/light/11.jpg",
+      "/images/blinds/fabrics/drapery/light/13.jpg",
+      "/images/blinds/fabrics/drapery/light/14.jpg",
     ],
   },
   /**
