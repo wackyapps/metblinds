@@ -19,7 +19,6 @@ const BlindsBanner: React.FC<Props> = ({ data }) => {
         backgroundSize: 'cover',       // Ensures image covers the entire element
         backgroundPosition: 'center',  // Centers the image
         backgroundRepeat: 'no-repeat', // Prevents image from repeating
-        backgroundAttachment: 'fixed'  // Optional: makes image fixed during scroll
       }}
     >
       {/* Content Container */}
