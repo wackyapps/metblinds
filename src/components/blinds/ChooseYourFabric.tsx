@@ -84,13 +84,13 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
+                      className={`h-32 w-32 cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
-                      {/* Fabric image without text */}
+                      {/* Fabric image with equal height/width */}
                       <img 
                         src={fabric} 
                         alt="Fabric option" 
@@ -141,13 +141,13 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
+                      className={`h-32 w-32 cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
-                      {/* Fabric image without text */}
+                      {/* Fabric image with equal height/width */}
                       <img 
                         src={fabric} 
                         alt="Fabric option" 
