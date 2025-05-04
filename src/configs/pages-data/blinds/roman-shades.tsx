@@ -88,20 +88,21 @@ const romanShades = {
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/blinds/fabrics/honeycomb/dark/5.jpg",
-      "/images/blinds/fabrics/honeycomb/dark/6.jpg",
-      "/images/blinds/fabrics/honeycomb/dark/8.jpg",
-      "/images/blinds/fabrics/honeycomb/dark/9.jpg",
-      "/images/blinds/fabrics/honeycomb/dark/10.jpg",
+      "/images/blinds/fabrics/romanshades/dark/4.png",
+      "/images/blinds/fabrics/romanshades/dark/5.png",
+      "/images/blinds/fabrics/romanshades/dark/8.png",
+      "/images/blinds/fabrics/romanshades/dark/3.png",
+      "/images/blinds/fabrics/romanshades/dark/10.png",
 
    
     ],
     lightoutFabrics: [
-      "/images/blinds/fabrics/honeycomb/light/1.jpg",
-      "/images/blinds/fabrics/honeycomb/light/2.jpg",
-      "/images/blinds/fabrics/honeycomb/light/3.jpg",
-      "/images/blinds/fabrics/honeycomb/light/4.jpg",
-      "/images/blinds/fabrics/honeycomb/light/7.jpg",
+      "/images/blinds/fabrics/romanshades/light/1.jpg",
+      "/images/blinds/fabrics/romanshades/light/2.png",
+      "/images/blinds/fabrics/romanshades/light/6.png",
+      "/images/blinds/fabrics/romanshades/light/7.png",
+      "/images/blinds/fabrics/romanshades/light/8.png",
+      "/images/blinds/fabrics/romanshades/light/9.png",
     ],
   },
   /**
