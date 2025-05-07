@@ -46,7 +46,7 @@ const ChooseYourFabric = ({ data }: Props) => {
       </div>
       
       {/* Large fabric image display */}
-      <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px]">
+      <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px] border-2 border-[#A39F9F]">
         <img 
           src={currentFabric} 
           alt="Selected fabric" 
