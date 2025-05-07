@@ -16,7 +16,7 @@ const motorizedBlinds = {
   icon: "/icons/control-systems/motorized-blinds.svg",
   description:
     "Motorized blinds allow for convenient operation at the touch of a button, eliminating the need for cords or wands.",
-  image: "/images/corded-system.png",
+  image: "/images/controlsystem/motorizedblinds/1.jpg",
   /**
    * control system banner
    */

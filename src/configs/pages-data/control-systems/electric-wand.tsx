@@ -16,7 +16,7 @@ const electricWand = {
   icon: "/icons/control-systems/electric-wand.svg",
   description:
     "Electric wand control makes operating your blinds effortless with motorized technology built into a convenient handheld wand.",
-  image: "/images/corded-system.png",
+  image: "/images/controlsystem/electricwand/1.jpg",
   /**
    * control system banner
    */

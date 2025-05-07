@@ -16,7 +16,7 @@ const cordlessBlinds = {
   icon: "/icons/control-systems/cordless-blinds.svg",
   description:
     "Cordless blinds are a modern and safe alternative to traditional corded blinds, offering a clean look with simple manual operation.",
-  image: "/images/corded-system.png",
+  image: "/images/controlsystem/cordlessblinds/1.jpg",
   /**
    * control system banner
    */

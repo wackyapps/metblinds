@@ -16,7 +16,7 @@ const manualWand = {
   icon: "/icons/control-systems/manual-wand.svg",
   description:
     "Manual wand control is a cordless option that uses a rotating wand to open and close your blinds.",
-  image: "/images/corded-system.png",
+  image: "/images/controlsystem/manualwand/0.jpg",
   /**
    * control system banner
    */
