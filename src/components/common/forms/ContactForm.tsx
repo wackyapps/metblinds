@@ -137,9 +137,10 @@ export default function ContactForm({
           className={`w-full rounded-[23px] bg-[#EFEFEF] ${
             isSmall ? "p-3 text-xs" : "p-4 text-sm"
           }`}
+          defaultValue=""
           {...register("product")}
         >
-          <option value="">Products</option>
+          <option value="" disabled>Select a Product</option>
 <option value="zebra-blinds">Zebra Blinds</option>
 <option value="roller-blinds">Roller Blinds</option>
 <option value="vertical-blinds">Vertical Blinds</option>
@@ -171,10 +172,10 @@ export default function ContactForm({
           className={`w-full rounded-[23px] bg-[#EFEFEF] ${
             isSmall ? "p-3 text-xs" : "p-4 text-sm"
           }`}
+          defaultValue=""
           {...register("inquiry")}
         >
-          <option value="">What Are You Looking For?</option>
-          <option value="">Select Inquiry Type</option>
+          <option value="" disabled>Select Inquiry Type</option>
 <option value="product-availability">Product Availability</option>
 <option value="customization-options">Customization Options</option>
 <option value="warranty-info">Warranty Info</option>
@@ -201,9 +202,10 @@ export default function ContactForm({
           className={`w-full rounded-[23px] bg-[#EFEFEF] ${
             isSmall ? "p-3 text-xs" : "p-4 text-sm"
           }`}
+          defaultValue=""
           {...register("source")}
         >
-          <option value="">How Did You Hear About Us?</option>
+          <option value="" disabled>How Did You Hear About Us?</option>
 <option value="google-search">Google Search</option>
 <option value="social-media">Social Media</option>
 <option value="friend-family">Friend or Family</option>
