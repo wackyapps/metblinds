@@ -15,7 +15,7 @@ const zebraBlinds = {
   blindsBanner: {
     heading: "Zebra Blinds",
     subHeading:
-      "Zebra Blinds – A stylish and versatile window covering combining the softness of shades with the light control of blinds. Perfect for homes and offices seeking a modern, clean aesthetic with superior privacy and brightness control.",
+      "Zebra Blinds A stylish and versatile window covering combining the softness of shades with the light control of blinds. Perfect for homes and offices seeking a modern, clean aesthetic with superior privacy and brightness control.",
     cta: "Shop Now",
     background: "/images/blinds/Zebra/Banner.jpg",
   },
@@ -116,7 +116,7 @@ const zebraBlinds = {
   chooseHardware: {
     heading: "Choose Your Hardware",
     subHeading:
-      "Enhance your experience with motorized/ smart control systems– adjust your Zebra Blinds Curtains with a remote, voice control, or smartphone app.",
+      "Enhance your experience with motorized/ smart control systems adjust your Zebra Blinds Curtains with a remote, voice control, or smartphone app.",
     hardwareOptions: [
       {
         image: "/images/hardwares/hardware-1.png",

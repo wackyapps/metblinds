@@ -137,7 +137,7 @@ const romanShades = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

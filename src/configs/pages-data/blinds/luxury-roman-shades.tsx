@@ -28,7 +28,7 @@ const luxuryRomanShades = {
       {
         icon: <WiDaySunny />,
         title: "Light Control",
-        description: "The best of both worlds– set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
+        description: "The best of both worlds set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
         image: "/images/blinds/LuxuryRomanShades/Light Control.jpg",
       },
       {
@@ -83,7 +83,7 @@ const luxuryRomanShades = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
+      "No more compromise with your style pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -134,7 +134,7 @@ const luxuryRomanShades = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

@@ -29,7 +29,7 @@ const draperyBlinds = {
       {
         icon: <WiDaySunny />,
         title: "Light Control",
-        description: "The best of both worlds– set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
+        description: "The best of both worlds set the privacy and natural lighting to match your mood, while keeping a sleek, clutter-free look.",
         image: "/images/blinds/DraperyBlinds/Light Control.jpg",
       },
       {
@@ -141,7 +141,7 @@ const draperyBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

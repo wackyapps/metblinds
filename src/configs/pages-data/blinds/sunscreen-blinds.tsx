@@ -84,7 +84,7 @@ const sunscreenBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
+      "No more compromise with your style pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -134,7 +134,7 @@ const sunscreenBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

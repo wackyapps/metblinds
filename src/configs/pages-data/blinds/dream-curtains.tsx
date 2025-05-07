@@ -16,7 +16,7 @@ const dreamCurtains = {
   blindsBanner: {
     heading: "Dream Curtains",
     subHeading:
-      "Get the best of all– privacy, light control, and aesthetics. Dream Curtains offers an immaculate blend of luxury, functionality, and elegance, elevating any decor.",
+      "Get the best of all privacy, light control, and aesthetics. Dream Curtains offers an immaculate blend of luxury, functionality, and elegance, elevating any decor.",
     cta: "Shop Now",
     background: "/images/blinds/DreamCurtains/banner.jpg",
   },
@@ -84,7 +84,7 @@ const dreamCurtains = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
+      "No more compromise with your style pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -139,7 +139,7 @@ const dreamCurtains = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

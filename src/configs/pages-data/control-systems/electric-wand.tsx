@@ -34,7 +34,7 @@ const electricWand = {
     heading: "Why Electric Wands Might Be Perfect for You?",
     subHeading:
       
-    "The simplicity of the wand system can be modernized with a motorized operation. Electric Wand– A treatment, perfect for overhead windows, transforms any space into a mesmerizing one, while offering effortless control and reliability.",
+    "The simplicity of the wand system can be modernized with a motorized operation. Electric Wand A treatment, perfect for overhead windows, transforms any space into a mesmerizing one, while offering effortless control and reliability.",
     features: [
       {
         icon: <FaRegClock />,
@@ -69,7 +69,7 @@ const electricWand = {
   productionSteps: {
     heading: "Key Features of Electric Wand",
     subHeading:
-      "A perfect infusion of style, convenience, and safety– Electric Window Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
+      "A perfect infusion of style, convenience, and safety Electric Window Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
     features: [
       {
         icon: FaRegClock,

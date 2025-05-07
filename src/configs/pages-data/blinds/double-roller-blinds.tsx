@@ -29,7 +29,7 @@ const doubleRollerBlinds = {
       {
         icon: <WiDaySunny />,
         title: "Dual Light Control",
-        description: "The best of both worlds– natural lighting during the day and pitch darkness during night time.",
+        description: "The best of both worlds natural lighting during the day and pitch darkness during night time.",
         image: "/images/blinds/DoubleRollerBlinds/drb2.jpg",
       },
       {
@@ -137,7 +137,7 @@ const doubleRollerBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

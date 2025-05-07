@@ -69,7 +69,7 @@ const cordedBlinds = {
   productionSteps: {
     heading: "Key Features of Corded Blinds",
     subHeading:
-      "Corded Blinds have it all– timeless elegance, lasting performance, and precision. They come with hassle-free manual operation while offering you top-notch control over light and privacy. Their low-cost maintenance and state-of-the-art safety features make them a practical choice for any interior setting.",
+      "Corded Blinds have it all timeless elegance, lasting performance, and precision. They come with hassle-free manual operation while offering you top-notch control over light and privacy. Their low-cost maintenance and state-of-the-art safety features make them a practical choice for any interior setting.",
     features: [
       {
         icon: FaRegClock,

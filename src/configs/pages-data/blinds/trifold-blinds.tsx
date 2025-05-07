@@ -16,7 +16,7 @@ const trifoldBlinds = {
   blindsBanner: {
     heading: "Trifold Blinds",
     subHeading:
-      "Trifold Blinds – A perfect solution for sliding glass doors and large windows, maintaining privacy and light balance while preserving aesthetic appeal.",
+      "Trifold Blinds  A perfect solution for sliding glass doors and large windows, maintaining privacy and light balance while preserving aesthetic appeal.",
     cta: "Shop Now",
     background: "/images/blinds/TrifoldBlinds/Banner.jpg",
   },
@@ -29,7 +29,7 @@ const trifoldBlinds = {
       {
         icon: <WiDaySunny />,
         title: "Smart Light Management",
-        description: "Get the amount of light you want– regulate the ambience for any time of the day.",
+        description: "Get the amount of light you want regulate the ambience for any time of the day.",
         image: "/images/blinds/TrifoldBlinds/Smart Light Management.jpg",
       },
       {
@@ -84,7 +84,7 @@ const trifoldBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
+      "No more compromise with your style pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -131,7 +131,7 @@ const trifoldBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**

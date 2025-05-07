@@ -95,7 +95,7 @@ const smartControl = {
         icon: PiVolleyballLight,
         title: "Easy to Operate",
         description:
-          "Voice Commands–Quick and effective control, from anywhere.",
+          "Voice CommandsQuick and effective control, from anywhere.",
       },
     ],
   },

@@ -33,7 +33,7 @@ const manualWand = {
   whyChooseControlSlider: {
     heading: "Why Manual Wands Might Be Perfect for You?",
     subHeading:
-      "A simple mechanism without motor or cords– Manual wand is a user-friendly yet effective window treatment, particularly for the elderly. There are no hanging wires, complex mechanisms, or high-maintenance cost, just clean blinds with modern appearance and top-notch reliability.",
+      "A simple mechanism without motor or cords Manual wand is a user-friendly yet effective window treatment, particularly for the elderly. There are no hanging wires, complex mechanisms, or high-maintenance cost, just clean blinds with modern appearance and top-notch reliability.",
     features: [
       {
         icon: <FaRegClock />,
@@ -68,7 +68,7 @@ const manualWand = {
   productionSteps: {
     heading: "Key Features of Manual Wand",
     subHeading:
-      "A perfect infusion of style, convenience, and safety– Manual Wand Control Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
+      "A perfect infusion of style, convenience, and safety Manual Wand Control Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
     features: [
       {
         icon: FaRegClock,

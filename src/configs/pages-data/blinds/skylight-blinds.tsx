@@ -84,7 +84,7 @@ const skylightBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "No more compromise with your style– pick from a wide range of textures and colors to compliment your interior.",
+      "No more compromise with your style pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
@@ -136,7 +136,7 @@ const skylightBlinds = {
   chooseControlSystem: {
     heading: "Choose Your Control System",
     subHeading:
-      "Enhance your experience with a motorized/ smart control system– adjust your retractable blinds with a remote, voice control, or smartphone app.",
+      "Enhance your experience with a motorized/ smart control system adjust your retractable blinds with a remote, voice control, or smartphone app.",
     buttonText: "Request  free Quote",
   },
   /**
@@ -227,7 +227,7 @@ const skylightBlinds = {
       {
         question: "Can I motorize the Skylight Blinds?",
         answer:
-          "Absolutely. (Motorized) Automatic skylight covers can be used via remote control, Google Home, Alexa, etc– a perfect solution for hard-to-reach windows.",
+          "Absolutely. (Motorized) Automatic skylight covers can be used via remote control, Google Home, Alexa, etc a perfect solution for hard-to-reach windows.",
       },
       {
         question: "How to cover a skylight without blinds?",

@@ -33,7 +33,7 @@ const cordlessBlinds = {
   whyChooseControlSlider: {
     heading: "Why Cordless Blinds Might Be Perfect for You?",
     subHeading:
-      "Cordless blinds combine elegance with safety– no dangling cords. Unlike conventional blinds, for a hazard-free and safe window treatment, perfect for homes with pets and children. A simple push and pull is needed to adjust the light control and privacy levels.",
+      "Cordless blinds combine elegance with safety no dangling cords. Unlike conventional blinds, for a hazard-free and safe window treatment, perfect for homes with pets and children. A simple push and pull is needed to adjust the light control and privacy levels.",
     features: [
       {
         icon: <FaRegClock />,
@@ -68,7 +68,7 @@ const cordlessBlinds = {
   productionSteps: {
     heading: "Key Features of Cordless Blinds",
     subHeading:
-      "A perfect infusion of style, convenience, and safety– Cordless Window Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
+      "A perfect infusion of style, convenience, and safety Cordless Window Blinds come with a hassle-free manual mechanism without sacrificing control over light and privacy. Their low-maintenance design and state-of-the-art safety features make them an ideal pick for parents and pet owners.",
     features: [
       {
         icon: TbDeviceRemote,
