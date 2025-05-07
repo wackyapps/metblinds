@@ -84,7 +84,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 border-2 border-[#606060] ${
+                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 border-2 border-[#A39F9F] ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
@@ -141,7 +141,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
+                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 border-2 border-[#A39F9F] ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
