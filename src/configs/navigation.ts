@@ -33,11 +33,6 @@ export const mainNavbarNavigation: NavigationType[] = [
     icon: IoHomeOutline,
   },
   {
-    title: "About Us",
-    link: "/about",
-    icon: LuInfo,
-  },
-  {
     title: "Blinds",
     icon: LuBlinds,
     items: blinds.map((blind) => ({
@@ -62,6 +57,11 @@ export const mainNavbarNavigation: NavigationType[] = [
     title: "Blogs",
     link: "/blog",
     icon: TiDocumentText,
+  },
+  {
+    title: "About Us",
+    link: "/about",
+    icon: LuInfo,
   },
   {
     title: "Contact Us",
