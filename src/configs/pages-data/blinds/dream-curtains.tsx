@@ -88,16 +88,23 @@ const dreamCurtains = {
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/contact-section-image-1.png",
-      "/images/hardwares/hardware-1.png",
-        "/banners/home-banner-1.png",
-        "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/dreamcurtains/dark/3.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/4.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/5.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/6.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/8.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/9.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/10.jpg",
+      "/images/blinds/fabrics/dreamcurtains/dark/11.jpg",
+
+   
     ],
     lightoutFabrics: [
-   "/images/contact-section-image-1.png",
-   "/images/hardwares/hardware-1.png",
-     "/banners/home-banner-1.png",
-     "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/dreamcurtains/light/1.jpg",
+      "/images/blinds/fabrics/dreamcurtains/light/2.jpg",
+      "/images/blinds/fabrics/dreamcurtains/light/7.jpg",
+      "/images/blinds/fabrics/dreamcurtains/light/13.jpg",
+      "/images/blinds/fabrics/dreamcurtains/light/12.jpg",
     ],
   },
   /**
