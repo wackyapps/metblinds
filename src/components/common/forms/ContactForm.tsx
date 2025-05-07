@@ -101,12 +101,12 @@ export default function ContactForm({
         </label>
         <select
           id="location"
-          placeholder="Location*"
           className={`w-full rounded-[23px] bg-[#EFEFEF] ${
             isSmall ? "p-3 text-xs" : "p-4 text-sm"
           }`}
           {...register("location")}
         >
+          <option value="" disabled hidden>Location</option>
 <option value="calgary">Calgary</option>
 <option value="cochrane">Cochrane</option>
 <option value="airdrie">Airdrie</option>
