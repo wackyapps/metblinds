@@ -106,7 +106,7 @@ export default function ContactForm({
           }`}
           {...register("location")}
         >
-          <option value="" disabled hidden>Location</option>
+          <option value="" disabled>Select a Location</option>
 <option value="calgary">Calgary</option>
 <option value="cochrane">Cochrane</option>
 <option value="airdrie">Airdrie</option>
