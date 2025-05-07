@@ -104,6 +104,7 @@ export default function ContactForm({
           className={`w-full rounded-[23px] bg-[#EFEFEF] ${
             isSmall ? "p-3 text-xs" : "p-4 text-sm"
           }`}
+          defaultValue=""
           {...register("location")}
         >
           <option value="" disabled>Select a Location</option>
