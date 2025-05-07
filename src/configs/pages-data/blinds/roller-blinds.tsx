@@ -83,20 +83,21 @@ const rollerBlinds = {
   chooseYourFabric: {
     heading: "Choose Your Fabric",
     subHeading:
-      "No need to compromise on style—choose from a vast selection of fabric blinds and shades in various textures and colors to perfectly complement your interior.",
+      "No more compromise with your style pick from a wide range of textures and colors to compliment your interior.",
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/contact-section-image-1.png",
-      "/images/hardwares/hardware-1.png",
-        "/banners/home-banner-1.png",
-        "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/rollerblinds/dark/3.jpg",
+      "/images/blinds/fabrics/rollerblinds/dark/4.jpg",
+      "/images/blinds/fabrics/rollerblinds/dark/7.jpg",
+      "/images/blinds/fabrics/rollerblinds/dark/8.jpg",
+   
     ],
     lightoutFabrics: [
-   "/images/contact-section-image-1.png",
-   "/images/hardwares/hardware-1.png",
-     "/banners/home-banner-1.png",
-     "/images/hardwares/hardware-4.png",
+      "/images/blinds/fabrics/rollerblinds/light/1.jpg",
+      "/images/blinds/fabrics/rollerblinds/light/2.jpg",
+      "/images/blinds/fabrics/rollerblinds/light/5.jpg",
+      "/images/blinds/fabrics/rollerblinds/light/6.jpg",
     ],
   },
   /**
