@@ -87,19 +87,19 @@ const luxuryRomanShades = {
     blackoutHeading: "Blackout Fabrics",
     lightFilteringHeading: "Light Filtering Fabrics",
     blackoutFabrics: [
-      "/images/blinds/fabrics/luxuryromanshade/dark/1.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/dark/2.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/dark/3.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/dark/7.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/dark/9.jpg",
+      "/images/blinds/fabrics/luxuryromanshade/dark/1.png",
+      "/images/blinds/fabrics/luxuryromanshade/dark/2.png",
+      "/images/blinds/fabrics/luxuryromanshade/dark/3.png",
+      "/images/blinds/fabrics/luxuryromanshade/dark/7.png",
+      "/images/blinds/fabrics/luxuryromanshade/dark/9.png",
 
    
     ],
     lightoutFabrics: [
-      "/images/blinds/fabrics/luxuryromanshade/light/4.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/light/5.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/light/6.jpg",
-      "/images/blinds/fabrics/luxuryromanshade/light/8.jpg",
+      "/images/blinds/fabrics/luxuryromanshade/light/4.png",
+      "/images/blinds/fabrics/luxuryromanshade/light/5.png",
+      "/images/blinds/fabrics/luxuryromanshade/light/6.png",
+      "/images/blinds/fabrics/luxuryromanshade/light/8.png",
     ],
   },
   /**
