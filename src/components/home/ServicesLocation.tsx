@@ -57,9 +57,28 @@ const ServicesLocation: React.FC<{
   data: typeof homePage.servicesLocation;
   className?: string;
 }> = ({ data, className }) => {
-  const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
+  const [hoveredLocationTitle, setHoveredLocationTitle] = useState<
+    string | null
+  >(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const imageContainerRef = useRef<HTMLDivElement>(null);
+  const locationShowerPopup = useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    // close popup function
+    function closePopup(event: any) {
+      if (
+        !locationShowerPopup.current?.contains(event?.target) &&
+        !locationShowerPopup.current?.classList.contains("hidden")
+      ) {
+        locationShowerPopup.current?.classList.add("hidden");
+      }
+    }
+    document.addEventListener("click", closePopup);
+    return () => {
+      document.removeEventListener("click", closePopup);
+    };
+  });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAreaElement>) => {
     if (imageContainerRef.current) {
@@ -81,7 +100,7 @@ const ServicesLocation: React.FC<{
               {data.heading}
             </h2>
             <h5 className="text-[#767676]">{data.description}</h5>
-            <div className="grid max-w-[560px] grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:max-w-[560px]">
               {data.locations.map((loc, index) => (
                 <div
                   key={index}
@@ -97,7 +116,7 @@ const ServicesLocation: React.FC<{
           {/* Image section with map */}
           <div
             ref={imageContainerRef}
-            className="relative flex w-full flex-grow justify-end lg:w-auto"
+            className="relative flex w-full flex-grow justify-center lg:w-auto lg:justify-end"
           >
             <img
               src={"/images/home/services-location-map.png"}
@@ -111,30 +130,36 @@ const ServicesLocation: React.FC<{
                   key={index}
                   shape={area.shape}
                   coords={area.coords}
-                  onMouseEnter={(e) => {
-                    setHoveredLocation(area.title);
+                  // onMouseEnter={(e) => {
+                  //   setHoveredLocationTitle(area.title);
+                  //   handleMouseMove(e);
+                  //   locationShowerPopup.current?.classList.remove("hidden");
+                  // }}
+                  // onMouseMove={handleMouseMove}
+                  onClick={(e) => {
+                    setHoveredLocationTitle(area.title);
                     handleMouseMove(e);
+                    locationShowerPopup.current?.classList.remove("hidden");
                   }}
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={() => setHoveredLocation(null)}
                   className="cursor-pointer"
                 />
               ))}
             </map>
-            {hoveredLocation && (
+            {hoveredLocationTitle && (
               <div
-                className="absolute z-10 w-80 rounded-2xl bg-white p-6 text-sm shadow-lg max-[320px]:max-w-80"
+                ref={locationShowerPopup}
+                className="absolute z-10 hidden w-80 rounded-2xl bg-white p-6 text-sm shadow-lg max-[320px]:max-w-80"
                 style={{
                   left: `${mousePosition.x}px`,
                   top: `${mousePosition.y}px`,
-                  transform: "translate(-100%, -100%)",
+                  transform: "translate(-50%, -100%)",
                   marginTop: "-10px",
                 }}
               >
                 <div className="flex items-center gap-3">
                   <FaLocationDot className="text-5xl" color="#FFA600" />
                   <h5 className="text-4xl font-bold text-[#676767]">
-                    {hoveredLocation}
+                    {hoveredLocationTitle}
                   </h5>
                 </div>
               </div>
