@@ -9,8 +9,8 @@ import { IconType } from "react-icons";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
+  FaLink,
+  FaSearch,
 } from "react-icons/fa";
 import controlSystemPages from "./pages-data/control-systems";
 import blinds from "./pages-data/blinds";
@@ -106,19 +106,19 @@ export const footer = {
   socialLinks: [
     {
       icon: FaFacebookF,
-      link: "/",
+      link: "https://www.facebook.com/metblinds/",
     },
     {
       icon: FaInstagram,
-      link: "/",
+      link: "https://www.instagram.com/metblindsca/",
     },
     {
-      icon: FaTwitter,
-      link: "/",
+      icon: FaLink,
+      link: "https://www.bbb.org/ca/ab/calgary/profile/window-coverings/met-blinds-0017-132364/#sealclick",
     },
     {
-      icon: FaLinkedinIn,
-      link: "/",
+      icon: FaSearch,
+      link: "https://www.renovationfind.com/companies/met-blinds-7816",
     },
   ],
 
