@@ -42,7 +42,7 @@ const Testimonials: React.FC<Props> = ({ data }) => {
       <div className="mx-auto max-w-[1560px] px-3 md:px-5">
         <div className="flex flex-col items-center justify-center">
           <h2
-            className={`${rubik.className} relative z-0 mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
+            className={`${rubik.className} relative z-0 mb-10 text-center text-3xl font-semibold text-[#013F68] after:absolute after:left-[30%] after:top-0 after:-z-10 after:h-full after:w-[50%] after:rounded-full after:bg-[#FFA600] sm:text-4xl md:text-5xl`}
           >
             {data.heading}
           </h2>

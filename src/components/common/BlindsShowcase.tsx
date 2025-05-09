@@ -38,7 +38,7 @@ const BlindsShowcase: React.FC<Props> = ({ data, isSlider = false }) => {
 
   return (
     <div className="py-24">
-      <div className="mx-auto max-w-[1490px] px-3 md:px-5">
+      <div className="mx-auto max-w-[1300px] px-3 md:px-5">
         {data.heading && (
           <div className="mb-14 flex justify-center">
             <div className="relative mb-2">
