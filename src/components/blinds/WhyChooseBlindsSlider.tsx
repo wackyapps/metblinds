@@ -2,6 +2,12 @@
 import { JSX, useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
 import { inter, roboto, rubik } from "@/fonts";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+} from "../ui/carousel";
 
 interface Feature {
   icon: JSX.Element;
@@ -18,40 +24,44 @@ type Props = {
 };
 
 const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const [api, setApi] = useState<CarouselApi>();
   const [activeIndex, setActiveIndex] = useState(0);
-  const glideInstance = useRef<Glide | null>(null);
-
   useEffect(() => {
-    if (!sliderRef.current) return;
+    if (!api) return;
 
-    glideInstance.current = new Glide(sliderRef.current, {
-      type: "carousel",
-      perView: 1,
-      gap: 0,
-      autoplay: 2000,
-    });
+    const handleSelect = () => {
+      setActiveIndex(api.selectedScrollSnap());
+    };
 
-    glideInstance.current.on("run.after", () => {
-      setActiveIndex(glideInstance.current!.index);
-    });
-
-    glideInstance.current.mount();
+    api.on("select", handleSelect);
+    setActiveIndex(api.selectedScrollSnap());
 
     return () => {
-      glideInstance.current?.destroy();
+      api.off("select", handleSelect);
     };
-  }, []);
+  }, [api]);
+  useEffect(() => {
+    if (!api) return;
 
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 15000);
+
+    return () => {
+      clearInterval(interval); // Clean up interval on unmount
+    };
+  }, [api]);
   const handleFeatureClick = (index: number) => {
     setActiveIndex(index);
-    glideInstance.current?.go(`=${index}`);
+    if (api) {
+      api.scrollTo(index);
+    }
   };
 
   return (
     <div className="w-full py-16">
       <div className="mx-auto max-w-[1586px] px-4">
-        <div className="flex flex-col items-center justify-between gap-16 px-8 lg:flex-row lg:gap-8 xl:gap-16 2xl:gap-28">
+        <div className="flex flex-col items-center justify-between gap-10 px-8 lg:flex-row lg:gap-8 xl:gap-16 2xl:gap-28">
           {/* Left Content */}
           <div className="w-full lg:w-1/2">
             <div className="mb-4">
@@ -106,41 +116,37 @@ const WhyChooseBlindsSlider: React.FC<Props> = ({ data }) => {
           </div>
 
           {/* Right Content - Slider */}
-          <div className="aspect-[749/753] h-full max-h-[650px] w-full lg:w-1/2">
-            <div className="glide h-full" ref={sliderRef}>
-              <div className="glide__track h-full" data-glide-el="track">
-                <ul className="glide__slides h-full">
-                  {data.features.map((feature, index) => (
-                    <li key={index} className="glide__slide h-full">
-                      <div className="relative h-full">
-                        <img
-                          width={1000}
-                          height={1000}
-                          src={feature.image}
-                          alt={feature.title}
-                          className="h-full w-full rounded-[42px] object-cover"
-                        />
-                        {/* Dots Indicator */}
-                        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                          {data.features.map((_, i) => (
-                            <button
-                              key={i}
-                              onClick={() => handleFeatureClick(i)}
-                              className={`h-3 w-3 rounded-full transition-all ${
-                                activeIndex === i
-                                  ? "w-6 bg-gray-500"
-                                  : "bg-gray-300"
-                              }`}
-                            ></button>
-                          ))}
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Carousel className="w-full lg:w-1/2" setApi={setApi}>
+            <CarouselContent>
+              {data.features.map((feature, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative h-full">
+                    <img
+                      width={1000}
+                      height={1000}
+                      src={feature.image}
+                      alt={feature.title}
+                      className="h-full max-h-[600px] w-full rounded-[42px] object-cover"
+                    />
+                    {/* Dots Indicator */}
+                    <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+                      {data.features.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => handleFeatureClick(i)}
+                          className={`h-3 w-3 rounded-full transition-all ${
+                            activeIndex === i
+                              ? "w-6 bg-gray-500"
+                              : "bg-gray-300"
+                          }`}
+                        ></button>
+                      ))}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>

@@ -2,6 +2,12 @@
 import React, { JSX, useEffect, useRef, useState } from "react";
 import Glide from "@glidejs/glide";
 import { inter } from "@/fonts";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+} from "../ui/carousel";
 
 interface Step {
   icon: React.ReactNode;
@@ -37,9 +43,9 @@ const StepItem: React.FC<{
         {isFirst && (
           <div className="absolute -top-[25px] left-1/2 h-[25px] w-[8px] -translate-x-1/2 rounded-t-full bg-[#FFA600]"></div>
         )}
-        {!isFirst && (
+        {/* {!isFirst && (
           <div className="absolute -top-[52px] left-1/2 h-[52px] w-[8px] -translate-x-1/2 bg-[#FFA600]"></div>
-        )}
+        )} */}
 
         {/* Circle background */}
         <div className="h-[98px] w-[98px] rounded-full bg-[#F7F9FA]"></div>
@@ -81,57 +87,39 @@ const StepItem: React.FC<{
 };
 
 const HowItWorks = ({ data }: Props) => {
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const [api, setApi] = useState<CarouselApi>();
   const [activeIndex, setActiveIndex] = useState(0);
-  const glideInstance = useRef<Glide | null>(null);
 
   useEffect(() => {
-    if (!sliderRef.current || !data.steps || data.steps.length === 0) return;
+    if (!api) return;
 
-    // Small timeout to ensure DOM is fully rendered
-    const timer = setTimeout(() => {
-      if (!sliderRef.current) return;
+    const handleSelect = () => {
+      setActiveIndex(api.selectedScrollSnap());
+    };
 
-      try {
-        glideInstance.current = new Glide(sliderRef.current, {
-          type: "carousel",
-          perView: 1,
-          gap: 0,
-          autoplay: 2000,
-        });
-
-        glideInstance.current.on("run.after", () => {
-          if (glideInstance.current) {
-            setActiveIndex(glideInstance.current.index);
-          }
-        });
-
-        glideInstance.current.mount();
-      } catch (error) {
-        console.error("Error initializing Glide:", error);
-      }
-    }, 100);
+    api.on("select", handleSelect);
+    setActiveIndex(api.selectedScrollSnap());
 
     return () => {
-      clearTimeout(timer);
-      if (glideInstance.current) {
-        try {
-          glideInstance.current.destroy();
-        } catch (error) {
-          console.error("Error destroying Glide instance:", error);
-        }
-      }
+      api.off("select", handleSelect);
     };
-  }, [data.steps]);
+  }, [api]);
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 15000);
+
+    return () => {
+      clearInterval(interval); // Clean up interval on unmount
+    };
+  }, [api]);
 
   const handleFeatureClick = (index: number) => {
     setActiveIndex(index);
-    if (glideInstance.current) {
-      try {
-        glideInstance.current.go(`=${index}`);
-      } catch (error) {
-        console.error("Error navigating slide:", error);
-      }
+    if (api) {
+      api.scrollTo(index);
     }
   };
 
@@ -148,7 +136,7 @@ const HowItWorks = ({ data }: Props) => {
             {data.subHeading}
           </p>
         </div>
-        <div className="flex flex-col items-center justify-between gap-16 px-8 lg:flex-row">
+        <div className="flex flex-col items-center justify-between gap-10 px-8 lg:flex-row">
           {/* Left Content */}
           <div className="w-full lg:w-1/2">
             {/* Features Rendering Section */}
@@ -172,41 +160,39 @@ const HowItWorks = ({ data }: Props) => {
           </div>
 
           {/* Right Content - Slider */}
-          <div className="aspect-[749/753] h-full max-h-[650px] w-full lg:w-1/2">
-            <div className="glide h-full" ref={sliderRef}>
-              <div className="glide__track h-full" data-glide-el="track">
-                <ul className="glide__slides h-full">
-                  {data.steps?.map((feature, index) => (
-                    <li key={index} className="glide__slide h-full">
-                      <div className="relative h-full">
-                        <img
-                          width={1000}
-                          height={1000}
-                          src={feature.image}
-                          alt={feature.title}
-                          className="h-full w-full rounded-[42px] object-cover"
-                        />
-                        {/* Dots Indicator */}
-                        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                          {data.steps?.map((_, i) => (
-                            <button
-                              key={i}
-                              onClick={() => handleFeatureClick(i)}
-                              className={`h-3 w-3 rounded-full transition-all ${
-                                activeIndex === i
-                                  ? "w-6 bg-gray-500"
-                                  : "bg-gray-300"
-                              }`}
-                            ></button>
-                          ))}
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Carousel
+            setApi={setApi}
+            opts={{ loop: true }}
+            className="w-full lg:w-1/2"
+          >
+            <CarouselContent>
+              {data.steps?.map((feature, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative h-full">
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className="h-full max-h-[600px] w-full rounded-[42px] object-cover"
+                    />
+                    {/* Dots Indicator */}
+                    <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+                      {data.steps?.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => handleFeatureClick(i)}
+                          className={`h-3 w-3 rounded-full transition-all ${
+                            activeIndex === i
+                              ? "w-6 bg-gray-500"
+                              : "bg-gray-300"
+                          }`}
+                        ></button>
+                      ))}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>

@@ -66,9 +66,6 @@ const ChooseYourFabric = ({ data }: Props) => {
             opts={{
               align: "start",
               loop: true,
-              skipSnaps: true,
-              containScroll: "trimSnaps",
-              dragFree: false,
             }}
             className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
           >
@@ -84,7 +81,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] border-2 border-[#A39F9F] transition-all duration-300 ${
+                      className={`aspect-[150/125] h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] border-2 border-[#A39F9F] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
@@ -123,9 +120,6 @@ const ChooseYourFabric = ({ data }: Props) => {
             opts={{
               align: "start",
               loop: true,
-              skipSnaps: true,
-              containScroll: "trimSnaps",
-              dragFree: false,
             }}
             className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
           >
@@ -141,7 +135,7 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] border-2 border-[#A39F9F] transition-all duration-300 ${
+                      className={`aspect-[150/125] h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] border-2 border-[#A39F9F] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""

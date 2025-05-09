@@ -65,9 +65,6 @@ const ChooseHardware = ({ data }: Props) => {
             opts={{
               align: "start",
               loop: true,
-              skipSnaps: true,
-              containScroll: "trimSnaps",
-              dragFree: false,
             }}
             className="flex w-full items-center gap-5 [&>*:nth-child(2)]:flex-grow"
           >
@@ -82,7 +79,7 @@ const ChooseHardware = ({ data }: Props) => {
                 >
                   <div className="flex justify-center">
                     <div
-                      className={`h-[184px] w-[154px] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
+                      className={`aspect-[184/154] h-[184px] w-[154px] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 ${
                         selectedImage === option.image
                           ? "border-3 border-[#FFA600]"
                           : ""
