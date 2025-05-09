@@ -31,7 +31,7 @@ const TopNav = () => {
         {/* Right: Catalogue Link */}
         <div className="text-center sm:text-right">
           <Link
-            href="/catalogue"
+            href="/"
             className="flex items-center justify-center gap-1 text-sm font-semibold text-white sm:text-base md:text-lg"
           >
             <ClipboardDocumentListIcon className="h-5 w-5" />
