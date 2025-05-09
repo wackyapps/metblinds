@@ -94,6 +94,30 @@ const BannerItem: React.FC<BannerItemProps> = ({
           {isAdminDelete && (
             <div className="">
               <Tooltip
+  content={
+    banner.postStatus == "published"
+      ? "Published banner cannot be deleted, Set to draft and delete"
+      : "Delete"
+  }
+>
+  <button
+    className={twMerge(
+      "rounded bg-red-400 px-3 py-1.5 text-white",
+      banner.postStatus == "published" && "bg-gray-500",
+    )}
+    onClick={(event) => {
+      event.stopPropagation(); // Prevent event from bubbling to parent
+      if (banner.postStatus == "published") {
+        return;
+      }
+      onOpen();
+    }}
+    disabled={isAdminDelete && banner.postStatus == "published"}
+  >
+    <FaTrash />
+  </button>
+</Tooltip>
+              {/* <Tooltip
                 content={
                   banner.postStatus == "published"
                     ? "Published banner cannot be deleted, Set to draft and delete"
@@ -115,7 +139,7 @@ const BannerItem: React.FC<BannerItemProps> = ({
                 >
                   <FaTrash />
                 </button>
-              </Tooltip>
+              </Tooltip> */}
             </div>
           )}
         </div>
