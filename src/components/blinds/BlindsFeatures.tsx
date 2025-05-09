@@ -17,12 +17,15 @@ const BlindsFeatures = ({ data }: Props) => {
       <div className="mx-auto max-w-[1240px] px-4 py-16">
         <div className="flex flex-col items-stretch gap-16 lg:flex-row">
           <div className="w-full py-10 ps-4 sm:ps-6 lg:w-1/2">
-            <h2 className="mb-12 text-left text-4xl font-bold text-[#FFA600]">
+            <h2 className="mb-12 text-left text-4xl font-bold text-[#FFA600] max-lg:text-center">
               {data.heading}
             </h2>
             <div className="grid grid-cols-2 [column-gap:80px] [row-gap:36px] lg:pr-10">
               {data.features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-start gap-4">
+                <div
+                  key={index}
+                  className="flex flex-col items-center gap-4 lg:items-start"
+                >
                   <div className="flex-shrink-0 items-center">
                     <img
                       src={feature.icon}

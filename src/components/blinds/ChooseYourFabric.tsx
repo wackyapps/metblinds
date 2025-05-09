@@ -27,7 +27,7 @@ type Props = {
 const ChooseYourFabric = ({ data }: Props) => {
   // Set default fabric image
   const [currentFabric, setCurrentFabric] = useState<string>(
-    data.blackoutFabrics?.[0] || "/placeholder.jpg"
+    data.blackoutFabrics?.[0] || "/placeholder.jpg",
   );
 
   return (
@@ -44,19 +44,19 @@ const ChooseYourFabric = ({ data }: Props) => {
           </p>
         </div>
       </div>
-      
+
       {/* Large fabric image display */}
-      <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] rounded-[40px] overflow-hidden sm:rounded-[55px] md:rounded-[74px] border-2 border-[#A39F9F]">
-        <img 
-          src={currentFabric} 
-          alt="Selected fabric" 
-          className="w-full h-full object-cover"
+      <div className="mx-auto mb-20 aspect-[1156/628] max-w-[1156px] overflow-hidden rounded-[40px] border-2 border-[#A39F9F] sm:rounded-[55px] md:rounded-[74px]">
+        <img
+          src={currentFabric}
+          alt="Selected fabric"
+          className="h-full w-full object-cover"
         />
       </div>
-      
+
       <div className="flex max-w-full flex-col justify-center [column-gap:30px] [row-gap:40px] xl:flex-row xl:items-end">
         {/* Blackout fabrics section */}
-        <div className="flex flex-col items-center gap-11">
+        <div className="flex flex-col items-center gap-11 xl:w-1/2">
           <div
             className={`${rubik.className} text-center text-2xl font-semibold text-[#023D64]`}
           >
@@ -84,17 +84,17 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 border-2 border-[#A39F9F] ${
+                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] border-2 border-[#A39F9F] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
                       {/* Fabric image without text */}
-                      <img 
-                        src={fabric} 
-                        alt="Fabric option" 
-                        className="w-full h-full object-cover"
+                      <img
+                        src={fabric}
+                        alt="Fabric option"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>
@@ -106,14 +106,14 @@ const ChooseYourFabric = ({ data }: Props) => {
             </CarouselNext>
           </Carousel>
         </div>
-        
+
         {/* Divider for desktop */}
         <div className="hidden h-full xl:block">
           <div className="h-[191px] w-[2.5px] bg-[#A39F9F]"></div>
         </div>
-        
+
         {/* Light filtering fabrics section */}
-        <div className="flex flex-col items-center gap-11">
+        <div className="flex flex-col items-center gap-11 xl:w-1/2">
           <div
             className={`${rubik.className} text-center text-2xl font-semibold text-[#023D64]`}
           >
@@ -141,17 +141,17 @@ const ChooseYourFabric = ({ data }: Props) => {
                   <div className="flex justify-center">
                     <div
                       onClick={() => setCurrentFabric(fabric)}
-                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] transition-all duration-300 border-2 border-[#A39F9F] ${
+                      className={`h-[150px] w-[125x] cursor-pointer overflow-hidden rounded-[34px] border-2 border-[#A39F9F] transition-all duration-300 ${
                         currentFabric === fabric
                           ? "border-4 border-[#FFBB3D]"
                           : ""
                       }`}
                     >
                       {/* Fabric image without text */}
-                      <img 
-                        src={fabric} 
-                        alt="Fabric option" 
-                        className="w-full h-full object-cover"
+                      <img
+                        src={fabric}
+                        alt="Fabric option"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>

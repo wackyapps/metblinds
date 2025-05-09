@@ -48,14 +48,16 @@ const ChooseHardware = ({ data }: Props) => {
         <div className="order-1 w-full space-y-[26px] xl:order-2 xl:w-[673px] xl:flex-shrink">
           {/* Title Section */}
           <div className="space-y-[18px]">
-            <div className="relative flex items-center justify-start">
+            <div className="relative flex items-center justify-start max-xl:justify-center">
               <h2
-                className={` ${roboto.className} relative z-0 text-3xl font-semibold text-[#023D64] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] sm:text-4xl`}
+                className={` ${roboto.className} relative z-0 text-3xl font-semibold text-[#023D64] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600] max-xl:text-center sm:text-4xl`}
               >
                 {data.heading}
               </h2>
             </div>
-            <p className="text-lg text-[#767676]">{data.subHeading}</p>
+            <p className="text-lg text-[#767676] max-xl:text-center">
+              {data.subHeading}
+            </p>
           </div>
 
           {/* Carousel */}
