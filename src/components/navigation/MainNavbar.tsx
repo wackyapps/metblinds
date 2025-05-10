@@ -55,7 +55,7 @@ const MainNavbar = () => {
     );
   };
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <div className="global-container">
         <div className="flex items-center justify-between px-3">
           {/* Left: Logo */}
