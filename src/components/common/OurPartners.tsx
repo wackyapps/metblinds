@@ -7,7 +7,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
   data,
 }) => {
   return (
-    <div className="py-32">
+    <div className="py-20">
       <div className="global-container">
         <div className="flex flex-col items-center justify-center">
           <h2
@@ -24,7 +24,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
                   <div className="flex justify-center w-full py-2">
                     <img
                       src={partner.image}
-                      className="mx-auto w-full max-w-[280px]"
+                      className="mx-auto w-full"
                       height="auto"
                       alt={`Partner ${index + 1}`}
                     />
