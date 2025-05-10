@@ -11,7 +11,7 @@ const TopNav = () => {
   // extracting phone number form website info
   const phoneNumber = websiteInfo.phoneNumber;
   return (
-    <div className="w-full bg-[#013F68] sticky top-0 z-50 py-3">
+    <div className="w-full bg-[#013F68] py-3">
       <div className="global-container flex flex-row items-center justify-between">
         {/* Left: Phone Number link with Icon */}
         <div className=" ">
