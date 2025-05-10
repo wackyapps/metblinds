@@ -38,7 +38,7 @@ const Testimonials: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <div className="py-12 md:py-24">
+    <div className="py-12 md:py-14">
       <div className="mx-auto max-w-[1560px] px-3 md:px-5">
         <div className="flex flex-col items-center justify-center">
           <h2
