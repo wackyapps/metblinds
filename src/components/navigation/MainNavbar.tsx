@@ -54,9 +54,20 @@ const MainNavbar = () => {
       </Link>
     );
   };
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="sticky top-0 z-50 w-full bg-white shadow-md">
-      <div className="global-container">
+    <div className={`sticky top-0 z-50 w-full bg-white shadow-md transition-all duration-300 ${scrolled ? "h-0 overflow-hidden" : ""}`}>
+      <div className={`global-container transition-all duration-300 ${scrolled ? "opacity-0" : "opacity-100"}`}>
         <div className="flex items-center justify-between px-3">
           {/* Left: Logo */}
           <div className="flex items-center">
@@ -64,10 +75,9 @@ const MainNavbar = () => {
               <img width={200} height={50} src={logo.src} alt={logo.alt} />
             </Link>
           </div>
-          {/* Floating Hamburger Menu - Only on mobile */}
-          <div className="fixed right-4 top-4 z-50 xl:hidden">
+          {/* Floating Hamburger (always shown but positioned differently) */}
+          <div className={`fixed right-4 z-50 transition-all duration-300 ${scrolled ? "top-4" : "top-[calc(50%-24px)]"}`}>
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg">
-              {/* Hamburger Menu */}
               <Hamburger
                 toggled={isOpen}
                 toggle={onOpenChange}
