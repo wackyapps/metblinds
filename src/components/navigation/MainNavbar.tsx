@@ -59,12 +59,12 @@ const MainNavbar = () => {
       <div className="global-container">
         <div className="flex items-center justify-between px-3">
           {/* Left: Logo */}
-          <div className="flex items-center">
+          <div className="hidden xl:flex items-center">
             <Link href="/">
               <img width={200} height={50} src={logo.src} alt={logo.alt} />
             </Link>
           </div>
-          <div className="py-10 xl:hidden">
+          <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full xl:hidden">
             <Hamburger
               toggled={isOpen}
               toggle={onOpenChange}
