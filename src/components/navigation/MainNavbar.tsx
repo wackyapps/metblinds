@@ -84,13 +84,13 @@ const MainNavbar = () => {
                */
               if (navigation.isButton && navigation.link) {
                 return (
-                  <div key={index-1} className="flex items-center gap-10">
+                  <div key={index} className="flex items-center gap-10">
                     <button
                       className={`flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]`}
                       onClick={openDialog}
                     >
                       <PiMedal className="h-5 w-5" />
-                      <span>Warranty</span>
+                      <span>Warrantty</span>
                     </button>
 
                     <Link
