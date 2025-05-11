@@ -7,7 +7,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
   data,
 }) => {
   return (
-    <div className="py-32">
+    <div className="py-22">
       <div className="global-container">
         <div className="flex flex-col items-center justify-center">
           <h2
