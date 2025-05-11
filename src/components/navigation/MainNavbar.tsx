@@ -22,11 +22,15 @@ const MainNavbar = () => {
   const { isOpen, onOpenChange } = useDisclosure();
   const router = useRouter();
   const { openDialog } = useWarrantyDialog();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    // Move console.log inside useEffect for client-side only execution
-    console.log("pathname:", pathname);
-  }, [pathname]);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const ImageInnerNavigation = ({
     title,
@@ -55,7 +59,7 @@ const MainNavbar = () => {
     );
   };
   return (
-    <div className="sticky top-0 z-50 w-full bg-white shadow-md">
+    <div className={`sticky top-0 z-40 w-full bg-white shadow-md transition-all duration-300 xl:block ${scrolled ? 'hidden' : 'block'}`}>
       <div className="global-container">
         <div className="flex items-center justify-between px-3">
           {/* Left: Logo */}
@@ -152,6 +156,17 @@ const MainNavbar = () => {
               }
             })}
           </div>
+        </div>
+      </div>
+      {/* Floating Hamburger (shown when scrolled) */}
+      <div className={`fixed right-4 top-4 z-50 transition-opacity duration-300 xl:hidden ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg">
+          <Hamburger
+            toggled={isOpen}
+            toggle={onOpenChange}
+            size={24}
+            color="#013F68"
+          />
         </div>
       </div>
       <Drawer
