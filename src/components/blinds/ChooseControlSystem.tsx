@@ -13,11 +13,11 @@ const ChooseControlSystem = ({ data }: Props) => {
     <div>
       <div className="mx-auto flex max-w-[1300px] flex-col items-center gap-10 py-24">
         <h2
-          className={`${roboto.className} relative z-[1] text-[32px] font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
+          className={`${roboto.className} text-center relative z-[1] text-[32px] font-semibold text-[#013F68] after:absolute after:left-[45%] after:top-0 after:-z-10 after:h-14 after:w-[140px] after:rounded-full after:bg-[#FFA600]`}
         >
           {data.heading}
         </h2>
-        <p className="max-w-[1300px] text-center text-xl text-[#767676] sm:text-2xl">
+        <p className="max-w-[1300px] text-center text-xl text-[#767676] sm:text-2xl px-4">
           {data.subHeading}
         </p>
         <button

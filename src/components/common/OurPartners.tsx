@@ -7,7 +7,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
   data,
 }) => {
   return (
-    <div className="py-22">
+    <div className="py-24">
       <div className="global-container">
         <div className="flex flex-col items-center justify-center">
           <h2
@@ -17,7 +17,7 @@ const OurPartners: React.FC<{ data: typeof homePage.ourPartners }> = ({
           </h2>
           
           {/* Static awards display - no carousel/swipe */}
-          <div className="w-full max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto pt-8">
             <div className="flex flex-wrap justify-center items-center gap-2 md:gap-0">
               {data.partners.map((partner, index) => (
                 <div key={index} className="flex-1 min-w-[240px] px-4 flex justify-center">

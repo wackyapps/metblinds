@@ -113,11 +113,11 @@ export const footer = {
       link: "https://www.instagram.com/metblindsca/",
     },
     {
-      icon: FaLink,
+      icon: '/icons/footer/BBB.svg',
       link: "https://www.bbb.org/ca/ab/calgary/profile/window-coverings/met-blinds-0017-132364/#sealclick",
     },
     {
-      icon: FaSearch,
+      icon: '/icons/footer/Search.svg',
       link: "https://www.renovationfind.com/companies/met-blinds-7816",
     },
   ],

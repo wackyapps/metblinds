@@ -138,7 +138,15 @@ const Footer = () => {
                   href={social.link}
                   className="rounded bg-[#01405F] p-2.5 transition-colors hover:bg-[#FFA600]"
                 >
-                  <social.icon className="h-5 w-5" />
+                  {typeof social.icon === 'string' ? (
+                    <img 
+                      src={social.icon} 
+                      alt="Social icon" 
+                      className="h-5 w-5"
+                    />
+                  ) : (
+                    <social.icon className="h-5 w-5" />
+                  )}
                 </Link>
               ))}
             </div>

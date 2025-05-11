@@ -19,7 +19,7 @@ const ContactSection = ({ data }: Props) => {
           className="top-[5px] h-full w-full object-cover"
         />
       </div>
-      <div className="mx-auto flex max-w-[1560px] flex-col gap-[122px] px-3 xl:flex-row">
+      <div className="mx-auto flex max-w-[1560px] flex-col gap-[20px] px-3 xl:flex-row xl:gap-[122px]">
         {/* Right Form Section */}
         <div className="w-1/2"></div>
         <div className="flex flex-col items-stretch gap-[61px] py-[69px] xl:ps-10">
