@@ -1,10 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
 import { websiteInfo } from "@/configs/info";
 import { mainNavbarNavigation } from "@/configs/navigation";
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 import {
   Drawer,
   DrawerContent,
@@ -18,6 +18,7 @@ import useWarrantyDialog from "@/hooks/useWarrantyDialog";
 const MainNavbar = () => {
   const logo = websiteInfo.logo;
   const pathname = usePathname();
+  // onOpen,
   const { isOpen, onOpenChange } = useDisclosure();
   const router = useRouter();
   const { openDialog } = useWarrantyDialog();
@@ -57,105 +58,106 @@ const MainNavbar = () => {
       </Link>
     );
   };
-
   return (
-    <>
-      {/* Regular Navbar (shown when not scrolled) */}
-      <div className={`bg-white shadow-md transition-all duration-300 ${scrolled ? 'opacity-100 -translate-y-100' : 'opacity-100 translate-y-0'}`}>
-        <div className="global-container">
-          <div className="flex items-center justify-between px-3">
-            <div className="flex items-center">
-              <Link href="/">
-                <img width={200} height={50} src={logo.src} alt={logo.alt} />
-              </Link>
-            </div>
-            <div className="py-10 xl:hidden">
-              <Hamburger
-                toggled={isOpen}
-                toggle={onOpenChange}
-                size={30}
-                color="#013F68"
-              />
-            </div>
-            <div className="hidden items-center gap-10 xl:flex">
-              {mainNavbarNavigation.map((navigation, index) => {
-                if (navigation.isButton && navigation.link) {
-                  return (
-                    <div key={index} className="flex items-center gap-10">
-                      <button
-                        className={`flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]`}
-                        onClick={openDialog}
-                      >
-                        <PiMedal className="h-5 w-5" />
-                        <span>Warranty</span>
-                      </button>
-                      <Link
-                        href={navigation.link}
-                        className={`my-8 flex items-center gap-1 rounded-full bg-[#FFA600] px-5 py-2 text-white`}
-                      >
-                        <navigation.icon className="h-5 w-5" />
-                        <span> {navigation.title}</span>
-                      </Link>
-                    </div>
-                  );
-                } else if (
-                  navigation.link &&
-                  !navigation.isButton &&
-                  !navigation.items
-                ) {
-                  return (
+    <div className={`sticky top-0 z-40 w-full bg-white shadow-md transition-all duration-300 xl:block ${scrolled ? 'hidden' : 'block'}`}>
+      <div className="global-container">
+        <div className="flex items-center justify-between px-3">
+          {/* Left: Logo */}
+          <div className="flex items-center">
+            <Link href="/">
+              <img width={200} height={50} src={logo.src} alt={logo.alt} />
+            </Link>
+          </div>
+          <div className="py-10 xl:hidden">
+            <Hamburger
+              toggled={isOpen}
+              toggle={onOpenChange}
+              size={30}
+              color="#013F68"
+            />
+          </div>
+          {/* Navigation  for desktop */}
+          <div className="hidden items-center gap-10 xl:flex">
+            {mainNavbarNavigation.map((navigation, index) => {
+              /**
+               * warranty will appear if the link is button
+               */
+              if (navigation.isButton && navigation.link) {
+                return (
+                  <div key={index} className="flex items-center gap-10">
+                    <button
+                      className={`flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]`}
+                      onClick={openDialog}
+                    >
+                      <PiMedal className="h-5 w-5" />
+                      <span>Warrantty</span>
+                    </button>
+
                     <Link
-                      key={index}
-                      className={`flex items-center gap-1 py-10 text-sm duration-150 ${pathname == navigation.link ? "text-[#FFA600]" : "text-[#013F68] hover:text-[#FFA600]"}`}
                       href={navigation.link}
+                      className={`my-8 flex items-center gap-1 rounded-full bg-[#FFA600] px-5 py-2 text-white`}
                     >
                       <navigation.icon className="h-5 w-5" />
                       <span> {navigation.title}</span>
                     </Link>
-                  );
-                } else if (navigation.items) {
-                  return (
-                    <div key={index} className="group relative inline-block">
-                      <button
-                        className="flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]"
-                        onClick={() => {
-                          if (navigation.link) {
-                            router.push(navigation.link);
-                          }
-                        }}
-                      >
-                        <navigation.icon className="h-5 w-5" />
-                        <span> {navigation.title}</span>
-                      </button>
-                      <div
-                        className={`absolute top-[calc(100%+20px)] z-50 grid -translate-x-1/2 cursor-default overflow-auto rounded-lg bg-white px-10 py-9 opacity-0 duration-300 [column-gap:50px] [row-gap:19px] [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100`}
-                        style={{
-                          gridTemplateColumns: navigation?.itemsCount
-                            ? `repeat(${navigation?.itemsCount}, 1fr)`
-                            : "repeat(2, 1fr)",
-                          minWidth: navigation?.itemsContainerWidth
-                            ? `${navigation?.itemsContainerWidth}px`
-                            : "300px",
-                        }}
-                      >
-                        {navigation.items.map((item, index) => (
-                          <ImageInnerNavigation
-                            key={index}
-                            title={item.title}
-                            link={item.link}
-                            image={item.image}
-                          />
-                        ))}
-                      </div>
+                  </div>
+                );
+              } else if (
+                navigation.link &&
+                !navigation.isButton &&
+                !navigation.items
+              ) {
+                return (
+                  <Link
+                    key={index}
+                    className={`flex items-center gap-1 py-10 text-sm duration-150 ${pathname == navigation.link ? "text-[#FFA600]" : "text-[#013F68] hover:text-[#FFA600]"}`}
+                    href={navigation.link}
+                  >
+                    <navigation.icon className="h-5 w-5" />
+                    <span> {navigation.title}</span>
+                  </Link>
+                );
+              } else if (navigation.items) {
+                return (
+                  <div key={index} className="group relative inline-block">
+                    <button
+                      className="flex items-center gap-1 py-10 text-sm text-[#013F68] duration-150 hover:text-[#FFA600]"
+                      onClick={() => {
+                        if (navigation.link) {
+                          router.push(navigation.link);
+                        }
+                      }}
+                    >
+                      <navigation.icon className="h-5 w-5" />
+                      <span> {navigation.title}</span>
+                    </button>
+                    <div
+                      className={`absolute top-[calc(100%+20px)] z-50 grid -translate-x-1/2 cursor-default overflow-auto rounded-lg bg-white px-10 py-9 opacity-0 duration-300 [column-gap:50px] [row-gap:19px] [visibility:hidden] group-hover:visible group-hover:top-full group-hover:opacity-100`}
+                      style={{
+                        gridTemplateColumns: navigation?.itemsCount
+                          ? `repeat(${navigation?.itemsCount}, 1fr)`
+                          : "repeat(2, 1fr)",
+                        minWidth: navigation?.itemsContainerWidth
+                          ? `${navigation?.itemsContainerWidth}px`
+                          : "300px",
+                      }}
+                    >
+                      {navigation.items.map((item, index) => (
+                        <ImageInnerNavigation
+                          key={index}
+                          title={item.title}
+                          link={item.link}
+                          image={item.image}
+                        />
+                      ))}
                     </div>
-                  );
-                }
-              })}
-            </div>
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
       </div>
-
       {/* Floating Hamburger (shown when scrolled) */}
       <div className={`fixed right-4 top-4 z-50 transition-opacity duration-300 xl:hidden ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg">
@@ -167,8 +169,6 @@ const MainNavbar = () => {
           />
         </div>
       </div>
-
-      {/* Drawer */}
       <Drawer
         isOpen={isOpen}
         size="lg"
@@ -177,7 +177,7 @@ const MainNavbar = () => {
       >
         <DrawerContent className="rounded-none">
           {(onClose) => (
-            <nav className="flex-col items-start p-4">
+            <nav className="flex-col items-start p-4 xl:flex">
               {mainNavbarNavigation.map((navigation, index) => {
                 if (navigation.items) {
                   return (
@@ -193,12 +193,14 @@ const MainNavbar = () => {
                                   if (navigation.link) {
                                     router.push(navigation.link);
                                     onClose();
+                                  } else {
+                                    console.log("item", item);
                                   }
                                 }}
                               >
                                 <navigation.icon className="h-5 w-5" />
                                 {navigation.title}
-                              </button>
+                              </button>{" "}
                               {item.children}
                             </div>
                           )}
@@ -207,7 +209,9 @@ const MainNavbar = () => {
                             {navigation.items.map((item, index) => (
                               <ImageInnerNavigation
                                 key={index}
-                                onClose={onClose}
+                                onClose={() => {
+                                  onClose();
+                                }}
                                 {...item}
                               />
                             ))}
@@ -221,7 +225,9 @@ const MainNavbar = () => {
                     <div key={index}>
                       <Link
                         href={navigation?.link || ""}
-                        onClick={onClose}
+                        onClick={() => {
+                          onClose();
+                        }}
                         className={`flex items-center gap-3 rounded-full px-5 py-6 text-lg text-[#013F68] ${pathname == navigation.link ? "text-[#FFA600]" : "hover:text-[#FFA600]"}`}
                       >
                         <navigation.icon className="h-5 w-5" />
@@ -247,7 +253,7 @@ const MainNavbar = () => {
           )}
         </DrawerContent>
       </Drawer>
-    </>
+    </div>
   );
 };
 
