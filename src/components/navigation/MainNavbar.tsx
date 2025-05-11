@@ -64,13 +64,17 @@ const MainNavbar = () => {
               <img width={200} height={50} src={logo.src} alt={logo.alt} />
             </Link>
           </div>
-          <div className="py-10 xl:hidden">
-            <Hamburger
-              toggled={isOpen}
-              toggle={onOpenChange}
-              size={30}
-              color="#013F68"
-            />
+          {/* Floating Hamburger Menu - Only on mobile */}
+          <div className="fixed right-4 top-4 z-50 xl:hidden">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg">
+              {/* Hamburger Menu */}
+              <Hamburger
+                toggled={isOpen}
+                toggle={onOpenChange}
+                size={24}
+                color="#013F68"
+              />
+            </div>
           </div>
           {/* Navigation  for desktop */}
           <div className="hidden items-center gap-10 xl:flex">
